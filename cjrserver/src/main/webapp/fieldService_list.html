@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>残疾人体育公共服务平台</title>
+
+    <link href="css/city-picker.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="index/css/bootstrap.min.css" rel="stylesheet">
+    <link href="index/css/theme.css" rel="stylesheet">
+    <link href="index/css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="index/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="index/css/flexslider.css"/>
+    <link href="index/assets/bxslider/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="index/css/animate.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+
+    <!-- Custom styles for this template -->
+    <link href="index/css/style.css" rel="stylesheet">
+    <link href="index/css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+    <script src="index/js/html5shiv.js"></script>
+
+<![endif]-->
+    <style>
+        #note img{width:550px;height: 350px;}
+    </style>
+  </head>
+
+  <body>
+    <!--header start-->
+    <header class="head-section">
+        <div class="navbar navbar-default navbar-static-top container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">残疾人<span style=" font-size:16px">体育公共服务平台</span></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">首页 </a>
+                    </li>
+                    <li class="dropdown">
+                        <a id="A1" class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
+                                "dropdown" data-toggle="dropdown" onclick='window.open("news.html","_self")'>新闻
+                        </a>
+                        <ul id="UL1"class="dropdown-menu">
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a id="A2" class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
+                                "dropdown" data-toggle="dropdown" onclick='window.open("policy.html","_self")'>政策
+                        </a>
+                        <ul id="UL2" class="dropdown-menu">
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a id="A3" class="dropdown-toggle"  href="show.html">需求表
+                        </a>
+                        <ul id="UL3" class="dropdown-menu">
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a id="A4" class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
+                                "dropdown" data-toggle="dropdown" onclick='window.open("fieldService_list.html.html","_self")'>服务
+                        </a>
+                        <ul id="UL4" class="dropdown-menu">
+                            <li><a href="fieldService_list.html">场地服务</a></li>
+                            <li><a href="artificialService_list.html">人工服务</a></li>
+                            <li><a href="activityService_list.html">活动服务</a></li>
+                            <li><a href="equipmentService_list.html">器材服务</a></li>
+                            <li><a href="sportService_list.html">赛事服务</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contacts.html">联系我们</a>
+                    </li>
+                    <li><a href="#">欢迎您，游客！</a></li>
+                    <li><input class="form-control search" placeholder=" Search" type="text"></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--header end-->
+
+    <!--breadcrumbs start-->
+    <div class="breadcrumbs">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-4">
+            <h1>
+              场地服务展示
+            </h1>
+          </div>
+          <div class="col-lg-8 col-sm-8">
+            <ol class="breadcrumb pull-right">
+              <li>
+                <a href="index.html">
+                  首页
+                </a>
+              </li>
+              <li class="active">
+                  场地服务展示
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--breadcrumbs end-->
+    <div class="container" style="margin-bottom: 32px;">
+        <div class="row">
+            <div class="col-md-1 col-md-offset-5">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;筛选 :</h4>
+            </div>
+        <div class="docs-methods col-md-6">
+            <form class="form-inline">
+                <div id="distpicker">
+                    <div class="form-group">
+                        <div style="position: relative;">
+                            <input style="min-width: 360px;" id="city-picker3" class="form-control" readonly type="text" data-toggle="city-picker">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-warning" id="reset" type="button" style="margin-left: 16px;margin-right: 16px;">重置</button>
+                        <button class="btn btn-danger" id="destroy" type="button">确定</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+    <!--container start-->
+    <div class="container">
+
+      <div id="note" class="row">
+
+          <!--blog end-->
+      </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-6">
+            <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <!--<li>-->
+                    <!--<a href="#" aria-label="Previous">-->
+                        <!--<span aria-hidden="true">&laquo;</span>-->
+                    <!--</a>-->
+                <!--</li>-->
+                <!--<li class="active"><a href="#" onclick="$.doQuery(1)">1</a></li>-->
+                <!--<li><a onclick="$.doQuery(2)">2</a></li>-->
+                <!--<li><a href="#">3</a></li>-->
+                <!--<li><a href="#">4</a></li>-->
+                <!--<li><a href="#">5</a></li>-->
+                <!--<li>-->
+                    <!--<a href="#" aria-label="Next">-->
+                        <!--<span aria-hidden="true">&raquo;</span>-->
+                    <!--</a>-->
+                <!--</li>-->
+            </ul>
+            </nav>
+            </div>
+        </div>
+    </div>
+    <!--container end-->
+
+    <!--footer start-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!--联系方式-->
+                <div id="Foot1" class="col-lg-3 col-sm-3 address wow fadeInUp" data-wow-duration="2s" data-wow-delay=".1s">
+                    <h1 id="FootTitle1">
+                        联系方式
+                    </h1>
+                    <address>
+                        <p id="Address" ><i class="fa fa-home pr-10"></i>地址: 福建师范大学 软件学院</p>
+                        <p id="City" ><i class="fa fa-globe pr-10"></i>所在城市： 福州 </p>
+                        <p id="MobilePhone" ><i class="fa fa-mobile pr-10"></i>移动电话 : (123) 456-7890 </p>
+                        <p id="FixedLinePhone" ><i class="fa fa-phone pr-10"></i>固定电话 : (123) 456-7890 </p>
+                        <p id="Email" ><i class="fa fa-envelope pr-10"></i>邮箱 :   <a href="javascript:;">support@example.com</a></p>
+                    </address>
+                </div>
+                <!--最新资讯-->
+                <div id="Foot2"  class="col-lg-3 col-sm-3 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">
+                    <h1>
+                        最新资讯
+                    </h1>
+                    <div class="tweet-box" id="WeiBoDiv" >
+                        <i class="fa fa-weibo fa-weibo"></i>
+                        <em>
+                            关注最新残联微博
+                            <a href="javascript:;"id="WeiBo">@example</a>
+                            享受最新最好看的新闻速递!
+                        </em>
+                    </div>
+                    <div class="tweet-box" id="WeiXinDiv" >
+                        <i class="fa fa-cloud"></i>
+                        <em>
+                            关注最新残联微信公共服务平台
+                            <a href="javascript:;" id="WeiXin">@example</a>
+                            享受最新最好看的新闻速递!
+                        </em>
+                    </div>
+                    <div class="tweet-box" id="KeFuDiv" >
+                        <i class="fa fa-phone"></i>
+                        <em>
+                            请联系
+                            <a href="javascript:;" id="KeFu">@example</a>
+                            残联客服人员为您解答！
+                        </em>
+                    </div>
+                </div>
+                <!--我们残联-->
+                <div id="Foot3"  class="col-lg-3 col-sm-3">
+                    <div class="page-footer wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
+                        <h1 id="FootTitle3">
+                            我们残联
+                        </h1>
+                        <ul class="page-footer-list">
+                            <li id="AboutLi" >
+                                <i class="fa fa-angle-right"></i>
+                                <a id="About" href="#">关于残联</a>
+                            </li>
+                            <li id="SupportLi" >
+                                <i class="fa fa-angle-right"></i>
+                                <a id="Support" href="#">生活提供</a>
+                            </li>
+                            <li id="ServeLi" >
+                                <i class="fa fa-angle-right"></i>
+                                <a id="Serve" href="#">社会服务</a>
+                            </li>
+                            <li id="PolicyLi" >
+                                <i class="fa fa-angle-right"></i>
+                                <a id="Policy" href="#">国家政策</a>
+                            </li>
+                            <li id="Company2Li" >
+                                <i class="fa fa-angle-right"></i>
+                                <a id="Company2" href="#">企业&评价机构</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--残疾人体育公共服务平台-->
+                <div id="Foot4"  class="col-lg-3 col-sm-3">
+                    <div class="page-footer wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
+                        <h1 id="FootTitle4">
+                            残疾人公共体育服务平台
+                        </h1>
+                        <p id="Introduce">
+                            为创建更友好的助残文化而生。
+                            为您的美好生活而努力奋斗》》
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+
+        $(function () {
+
+            //add by zugen for get url-param and page turn to：
+            (function ($) {
+                $.getUrlParam = function (name) {
+                    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                    var r = window.location.search.substr(1).match(reg);
+                    if (r != null) return unescape(r[2]); return null;
+                }
+                $.doQuery = function (pageNumber) {
+                    $(location).attr('href', 'fieldService_list.html?pageNumber='+pageNumber);
+                }
+            })(jQuery);
+            //add by tzw for city-picker reset
+            $("#reset").click(function() {
+                // 获取输入框，并在点击按钮后清空输入框中内容
+                $("#city-picker3").citypicker("reset");
+            });
+        });
+
+        window.onload=function () {
+            var note=document.getElementById("note");
+            var div="";
+            var pageNumber = $.getUrlParam('pageNumber');
+            if(pageNumber == null){
+                pageNumber = "";
+            }
+            $.ajax({
+                type: "POST",
+                url:"/FieldService/getFieldServiceByPage?pageNumber=" + pageNumber + "&&pageSize=10",
+                success: function(data){
+
+                    //add by zugen for page turn to：
+                    if (data.prePage) {
+                        var content = '<li>' +
+                            '<a onclick="$.doQuery(' + (data.pageNumber-1) + ')" aria-label="Previous">' +
+                            '<span aria-hidden="true">&laquo;</span>' +
+                            '</a>' +
+                            '</li>';
+                    } else {
+                        var content = '<li class="disabled">' +
+                            '<a aria-label="Previous">' +
+                            '<span aria-hidden="true">&laquo;</span>' +
+                            '</a>' +
+                            '</li>';
+                    }
+
+                    for (var j=1;j<=data.totalPageNum;j++) {
+
+                        content += '<li><a onclick="$.doQuery('+j+')">'+j+'</a></li>';
+
+                    }
+
+                    if (data.nextPage) {
+                        content += '<li>' +
+                            '<a onclick="$.doQuery('+ (data.pageNumber+1) +')" aria-label="Next">' +
+                            '<span aria-hidden="true">&raquo;</span>' +
+                            '</a>' +
+                            '</li>';
+                    } else {
+                        content += '<li class="disabled">' +
+                            '<a aria-label="Next">' +
+                            '<span aria-hidden="true">&raquo;</span>' +
+                            '</a>' +
+                            '</li>';
+                    }
+
+                    $(".pagination").html(content);
+
+                    for (var i=0;i<data.rows.length;i++){
+                        var tt = document.createElement('div');
+                        if(data.rows[i].fieldImg == null){
+                            tt.innerHTML='<div class="blog-img">' +
+                                '<img src="asset-image/images/int1.jpg" alt=""/>' +
+                                // '<img src="'+ data.rows[i].fieldImg +'" alt=""/>' +
+                                '</div>' +
+                                '<div class="row">' +
+                                '<div class="col-md-12">' +
+                                '<div class="blog-two-info">' +
+                                '<p>' +
+                                '<i class="fa fa-home">' +
+                                '</i>' +
+                                ' 赞助商：' +
+                                '<a href="#">' +
+                                ' 倪氏集团' +
+                                '</a>' +
+                                ' |' +
+                                '<i class="fa fa-calendar">' +
+                                '</i>' +
+                                ' 营业时间：'+ data.rows[i].businessTime +
+                                '<br>' +
+                                '<i class="fa fa-arrow-circle-o-right">' +
+                                '</i>' +
+                                ' 地址：' +data.rows[i].province+data.rows[i].city+data.rows[i].county+data.rows[i].fieldAddress+
+                                '<br>' +
+                                '<i class="fa fa-shopping-cart">' +
+                                '</i>' +
+                                ' 价格：' +data.rows[i].price+
+                                ' |' +
+                                '<i class="fa fa-phone">' +
+                                '</i>' +
+                                ' 电话：' +data.rows[i].phone+
+                                '<br>' +
+                                '</p>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '<div class="blog-content">' +
+                                '<h3>'+ data.rows[i].fieldName +'</h3>' +
+                                //                                    '<p>'+ msg[i].remarks +'</p>' +
+                                '</div>' +
+                                '<a  href="fieldService_Info.html?fieldID= '+data.rows[i].fieldID+ '"><button class="btn btn-primary">详细介绍</button></a>';
+
+                            div=div+'<div class="col-md-6"><div class="blog-left wow fadeInLeft">'+ tt.innerHTML+'</div></div>';
+
+                        }else{
+                            tt.innerHTML='<div class="blog-img">' +
+                                //'<img src="asset-image/images/int1.jpg" alt=""/>' +
+                                '<img src="'+ data.rows[i].fieldImg +'" alt=""/>' +
+                                '</div>' +
+                                '<div class="row">' +
+                                '<div class="col-md-12">' +
+                                '<div class="blog-two-info">' +
+                                '<p>' +
+                                '<i class="fa fa-home">' +
+                                '</i>' +
+                                ' 赞助商：' +
+                                '<a href="#">' +
+                                ' 倪氏集团' +
+                                '</a>' +
+                                ' |' +
+                                '<i class="fa fa-calendar">' +
+                                '</i>' +
+                                ' 营业时间：'+ data.rows[i].businessTime +
+                                '<br>' +
+                                '<i class="fa fa-arrow-circle-o-right">' +
+                                '</i>' +
+                                ' 地址：' +data.rows[i].province+data.rows[i].city+data.rows[i].county+data.rows[i].fieldAddress+
+                                '<br>' +
+                                '<i class="fa fa-shopping-cart">' +
+                                '</i>' +
+                                ' 价格：' +data.rows[i].price+
+                                ' |' +
+                                '<i class="fa fa-phone">' +
+                                '</i>' +
+                                ' 电话：' +data.rows[i].phone+
+                                '<br>' +
+                                '</p>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '<div class="blog-content">' +
+                                '<h3>'+ data.rows[i].fieldName +'</h3>' +
+                                //                                    '<p>'+ msg[i].remarks +'</p>' +
+                                '</div>' +
+                                '<a  href="fieldService_Info.html?fieldID= '+data.rows[i].fieldID+ '"><button class="btn btn-primary">详细介绍</button></a>';
+
+                            div=div+'<div class="col-md-6"><div class="blog-left wow fadeInLeft">'+ tt.innerHTML+'</div></div>';
+                        }
+                    }
+                    note.innerHTML=div;
+                }
+            });
+
+        };
+        $('#destroy').click(function () {
+            var tt=document.getElementById("city-picker3");
+            if (tt.value==""){
+                window.location.reload();
+            }
+            else{
+                //
+                var address = getSearch();
+                var province = address[0];
+                var city = address[1]
+                if(typeof city == "undefined"){
+                    city = "";
+                }
+                var county=address[2];
+                if(typeof county == "undefined"){
+                    county = "";
+                }
+                //
+                $.ajax({
+                    type: "POST",
+                    url:"/FieldService/findFieldByAdd?Province="+province+"&City="+city+"&County="+county,
+                    success: function(datas){
+                        $("#note").empty();
+                        var note=document.getElementById("note");
+                        var div="";
+                        for (var i=0;i<datas.rows.length;i++){
+                            var tt = document.createElement('div');
+                            if(datas.rows[i].fieldImg == null){
+                                tt.innerHTML='<div class="blog-img">' +
+                                    '<img src="asset-image/images/int1.jpg" alt=""/>' +
+                                    '</div>' +
+                                    '<div class="row">' +
+                                    '<div class="col-md-12">' +
+                                    '<div class="blog-two-info">' +
+                                    '<p>' +
+                                    '<i class="fa fa-home">' +
+                                    '</i>' +
+                                    ' 赞助商：' +
+                                    '<a href="#">' +
+                                    ' 倪氏集团' +
+                                    '</a>' +
+                                    ' |' +
+                                    '<i class="fa fa-calendar">' +
+                                    '</i>' +
+                                    ' 营业时间：'+  datas.rows[i].businessTime +
+                                    '<br>' +
+                                    '<i class="fa fa-arrow-circle-o-right">' +
+                                    '</i>' +
+                                    ' 地址：' + datas.rows[i].province+ datas.rows[i].city+ datas.rows[i].county+ datas.rows[i].fieldAddress+
+                                    '<br>' +
+                                    '<i class="fa fa-shopping-cart">' +
+                                    '</i>' +
+                                    ' 价格：' + datas.rows[i].price+
+                                    ' |' +
+                                    '<i class="fa fa-phone">' +
+                                    '</i>' +
+                                    ' 电话：' + datas.rows[i].phone+
+                                    '<br>' +
+                                    '</p>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '<div class="blog-content">' +
+                                    '<h3>'+  datas.rows[i].fieldName +'</h3>' +
+                                    //                                    '<p>'+ msg[i].remarks +'</p>' +
+                                    '</div>' +
+                                    '<a  href="fieldService_Info.html?fieldID= '+ datas.rows[i].fieldID+ '"><button class="btn btn-primary">详细介绍</button></a>';
+                                div=div+'<div class="col-md-6"><div class="blog-left wow fadeInLeft">'+ tt.innerHTML+'</div></div>';
+                            }else{
+                                tt.innerHTML='<div class="blog-img">' +
+                                    '<img src="'+ datas.rows[i].fieldImg +'" alt=""/>' +
+                                    '</div>' +
+                                    '<div class="row">' +
+                                    '<div class="col-md-12">' +
+                                    '<div class="blog-two-info">' +
+                                    '<p>' +
+                                    '<i class="fa fa-home">' +
+                                    '</i>' +
+                                    ' 赞助商：' +
+                                    '<a href="#">' +
+                                    ' 倪氏集团' +
+                                    '</a>' +
+                                    ' |' +
+                                    '<i class="fa fa-calendar">' +
+                                    '</i>' +
+                                    ' 营业时间：'+  datas.rows[i].businessTime +
+                                    '<br>' +
+                                    '<i class="fa fa-arrow-circle-o-right">' +
+                                    '</i>' +
+                                    ' 地址：' + datas.rows[i].province+ datas.rows[i].city+ datas.rows[i].county+ datas.rows[i].fieldAddress+
+                                    '<br>' +
+                                    '<i class="fa fa-shopping-cart">' +
+                                    '</i>' +
+                                    ' 价格：' + datas.rows[i].price+
+                                    ' |' +
+                                    '<i class="fa fa-phone">' +
+                                    '</i>' +
+                                    ' 电话：' + datas.rows[i].phone+
+                                    '<br>' +
+                                    '</p>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '<div class="blog-content">' +
+                                    '<h3>'+  datas.rows[i].fieldName +'</h3>' +
+                                    //                                    '<p>'+ msg[i].remarks +'</p>' +
+                                    '</div>' +
+                                    '<a  href="fieldService_Info.html?fieldID= '+ datas.rows[i].fieldID+ '"><button class="btn btn-primary">详细介绍</button></a>';
+                                div=div+'<div class="col-md-6"><div class="blog-left wow fadeInLeft">'+ tt.innerHTML+'</div></div>';
+                            }
+
+                        }
+                        note.innerHTML=div;
+                    }
+                });
+            }
+        });
+        function getSearch(){
+            //
+            var address = $('#city-picker3').val();
+            var array = address.split("/");
+            return array;
+        }
+
+
+//         //头部导航栏
+//         $.ajax({
+//             type: "POST",
+//             async :false,
+//             url:"/Floder/ReturnRootHeadFloder",
+//             success: function(data) {
+//                 for(var i=1;i<5;i++)
+//                 {
+//                     document.getElementById("A"+i).innerHTML = data[i-1].name;
+//                 }//for
+//             }//success
+//         });//ajax
+//         //底部标题 最新资讯中h2标题不能含id，否则“菱形”样式会偏移
+//         $.ajax({
+//             type: "post",
+//             traditional: true,
+//             async: false,    // 使用同步操作
+//             url: "/Floder/ReturnFootTitle",//请求地址
+//             success: function (data) {
+//                 document.getElementById("FootTitle1").innerHTML = data[0].name;
+// //                    document.getElementById("FootTitle2").innerHTML = data[1].name;
+//                 document.getElementById("Foot2").children[0].innerHTML = data[1].name;
+//                 document.getElementById("FootTitle3").innerHTML = data[2].name;
+//                 document.getElementById("FootTitle4").innerHTML = data[3].name;
+//                 if(data[0].myShow == 1)
+//                     document.getElementById("Foot1").style.display = "";
+//                 if(data[1].myShow == 1)
+//                     document.getElementById("Foot2").style.display = "";
+//                 if(data[2].myShow == 1)
+//                     document.getElementById("Foot3").style.display = "";
+//                 if(data[3].myShow == 1)
+//                     document.getElementById("Foot4").style.display = "";
+//             },
+//             error: function (XMLHttpRequest, textStatus, errorThrown) {
+//                 alert(XMLHttpRequest.status);
+//                 alert(XMLHttpRequest.readyState);
+//                 alert(textStatus);
+//             },
+//         })
+//         //联系方式数据
+//         var title1 = document.getElementById("FootTitle1").innerHTML;
+//         $.ajax({
+//             type: "post",
+//             traditional: true,
+//             async: false,    // 使用同步操作
+//             url: "/Floder/ReturnWebInfo",//请求地址
+//             data: {"InfoType":title1 },//向后台提交的参数
+//             success: function (data) {
+//                 for (var i = 0; i < data.length; i++) {
+//                     if (data[i].infoName == "地址") {
+//                         document.getElementById("Address").innerHTML= '<i class="fa fa-home pr-10"></i>'+data[i].infoName+" : "+data[i].infoValue;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("Address").style.display = "";
+//                     }
+//                     if (data[i].infoName == "所在城市") {
+//                         document.getElementById("City").innerHTML = '<i class="fa fa-globe pr-10"></i>'+data[i].infoName+" : "+data[i].infoValue;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("City").style.display = "";
+//                     }
+//                     if (data[i].infoName == "移动电话") {
+//                         document.getElementById("MobilePhone").innerHTML = '<i class="fa fa-mobile pr-10"></i>'+data[i].infoName+" : "+data[i].infoValue;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("MobilePhone").style.display = "";
+//                     }
+//                     if (data[i].infoName == "固定电话") {
+//                         document.getElementById("FixedLinePhone").innerHTML = '<i class="fa fa-phone pr-10"></i>'+data[i].infoName+" : "+data[i].infoValue;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("FixedLinePhone").style.display = "";
+//                     }
+//                     if (data[i].infoName == "邮箱") {
+//                         document.getElementById("Email").innerHTML = '<i class="fa fa-envelope pr-10"></i>'+data[i].infoName+" : "+data[i].infoValue;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("Email").style.display = "";
+//                     }
+//                 }
+//             },
+//             error: function (XMLHttpRequest, textStatus, errorThrown) {
+//                 alert(XMLHttpRequest.status);
+//                 alert(XMLHttpRequest.readyState);
+//                 alert(textStatus);
+//             },
+//         })
+//         //    最新咨询
+//         //            var title2 = document.getElementById("FootTitle2").innerHTML;
+//         var title2 = document.getElementById("Foot2").children[0].innerHTML;
+//         $.ajax({
+//             type: "post",
+//             traditional: true,
+//             async: false,    // 使用同步操作
+//             url: "/Floder/ReturnWebInfo",//请求地址
+//             data: {"InfoType": title2},//向后台提交的参数
+//             success: function (data) {
+//                 for (var i = 0; i < data.length; i++) {
+//                     if (data[i].infoName == "微博") {
+//                         document.getElementById("WeiBo").innerHTML = data[i].infoValue;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("WeiBoDiv").style.display = "";
+//                     }
+//                     if (data[i].infoName == "微信") {
+//                         document.getElementById("WeiXin").innerHTML = data[i].infoValue;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("WeiXinDiv").style.display = "";
+//                     }
+//                     if (data[i].infoName == "客服") {
+//                         document.getElementById("KeFu").innerHTML = data[i].infoValue;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("KeFuDiv").style.display = "";
+//                     }
+//                 }
+//             },
+//             error: function (XMLHttpRequest, textStatus, errorThrown) {
+//                 alert(XMLHttpRequest.status);
+//                 alert(XMLHttpRequest.readyState);
+//                 alert(textStatus);
+//             },
+//         })
+//         //    我们残联
+//         var title3 = document.getElementById("FootTitle3").innerHTML;
+//         $.ajax({
+//             type: "post",
+//             traditional: true,
+//             async: false,    // 使用同步操作
+//             url: "/Floder/ReturnWebInfo",//请求地址
+//             data: {"InfoType": title3},//向后台提交的参数
+//             success: function (data) {
+//                 for (var i = 0; i < data.length; i++) {
+//                     if (data[i].infoName == "关于残联") {
+//                         document.getElementById("About").innerHTML = data[i].infoName;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("AboutLi").style.display = "";
+//                     }
+//                     if (data[i].infoName == "生活提供") {
+//                         document.getElementById("Support").innerHTML = data[i].infoName;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("SupportLi").style.display = "";
+//                     }
+//                     if (data[i].infoName == "社会服务") {
+//                         document.getElementById("Serve").innerHTML = data[i].infoName;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("ServeLi").style.display = "";
+//                     }
+//                     if (data[i].infoName == "国家政策") {
+//                         document.getElementById("Policy").innerHTML = data[i].infoName;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("PolicyLi").style.display = "";
+//
+//                     }
+//                     if (data[i].infoName == "企业&评价机构") {
+//                         document.getElementById("Company2").innerHTML = data[i].infoName;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("Company2Li").style.display = "";
+//                     }
+//                 }
+//             },
+//             error: function (XMLHttpRequest, textStatus, errorThrown) {
+//                 alert(XMLHttpRequest.status);
+//                 alert(XMLHttpRequest.readyState);
+//                 alert(textStatus);
+//             },
+//         })
+//         //残疾人体育公共服务平台
+//         var title4 = document.getElementById("FootTitle4").innerHTML;
+//         $.ajax({
+//             type: "post",
+//             traditional: true,
+//             async: false,    // 使用同步操作
+//             url: "/Floder/ReturnWebInfo",//请求地址
+//             data: {"InfoType": title4},//向后台提交的参数
+//             success: function (data) {
+//                 document.getElementById("Introduce").innerHTML = data[0].infoValue;
+//
+//             },
+//             error: function (XMLHttpRequest, textStatus, errorThrown) {
+//                 alert(XMLHttpRequest.status);
+//                 alert(XMLHttpRequest.readyState);
+//                 alert(textStatus);
+//             },
+//         })
+    </script>
+    <script src="index/js/jquery.js"></script>
+    <script src="index/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="index/js/hover-dropdown.js"></script>
+    <script defer src="index/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="index/assets/bxslider/jquery.bxslider.js"></script>
+    <script src="index/js/jquery.easing.min.js"></script>
+    <script src="index/js/link-hover.js"></script>
+    <!--common script for all pages-->
+    <script src="index/js/common-scripts.js"></script>
+    <script src="index/js/wow.min.js"></script>
+    <script type="text/javascript" >
+        wow = new WOW(
+            {
+                boxClass:     'wow',      // default
+                animateClass: 'animated', // default
+                offset:       0          // default
+            }
+        )
+        wow.init();
+    </script>
+    <script src="js/city-picker.data.js"></script>
+    <script src="js/city-picker.js"></script>
+  </body>
+</html>

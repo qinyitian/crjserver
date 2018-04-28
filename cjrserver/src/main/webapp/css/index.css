@@ -1,0 +1,41 @@
+@charset "utf-8";/* CSS Document */
+.btn_style{
+	border-bottom-color:#3B6E8F;
+	border-left-color:#3B6E8F;
+	border-top-color:#3B6E8F;
+	background-color:#3B6E8F;
+	color:#FFFFFF;
+	}
+.botton_style{
+	top:30px; 
+	position:relative; 
+	border-left-color:#FFFFFF; 
+	border-top-color:#FFFFFF; 
+	border-right-color:#FFFFFF;
+	}
+
+
+#header{ width:100%; height:auto;}
+#mainbody{ width:100%; height:auto; margin-bottom:100px;}
+#footer{ width:100%; height:auto;}
+#wrap{ width:100%; margin:0 auto;}
+    #nav-dis{
+        background-color:rgba(72,60,126,1);
+        border: 2px solid #FFFFFF;
+        height:55px;      
+    }
+    #nav-gov{
+        background-color: #3B6E8F;
+        border: 2px solid #FFFFFF;
+        height:55px;
+    }
+    #nav-media{
+        background-color: rgba(129,193,72,1);
+        border: 2px solid #FFFFFF;
+        height:55px;
+    }
+    #nav-com{
+        background-color:rgba(23,153,210,1);
+        border: 2px solid #FFFFFF;
+        height:55px;
+    }

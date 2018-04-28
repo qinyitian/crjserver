@@ -1,0 +1,89 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.fjnu.cjrserver.dao.VoteDemandMapper">
+
+    <!-- 用于记录用户是否投选某期调查表 -->
+    <!-- 向demand_votes插入数据，表的VotesID自增 -->
+    <insert  id="addDemandVote" parameterType="com.edu.fjnu.cjrserver.model.DemandVotes">
+        INSERT INTO demand_votes(Disabled_Identify, DemandTable_ID) VALUES (#{disabledUser.disabilityIdentity}, #{demandTable.demandTableID})
+    </insert>
+    <!-- 查找记录消息 -->
+    <select id="judgeExitMsg" resultType="com.edu.fjnu.cjrserver.model.DemandVotes">
+        SELECT * FROM demand_votes WHERE Disabled_Identify = #{0} AND DemandTable_ID = #{1}
+    </select>
+
+    <!-- 用于记录使用主体投选的服务 -->
+    <!-- 向demand_votes_artificialservice_detail插入数据，表的ID自增 -->
+    <insert id="addDemandVote_ArtificialService_Detail">
+        INSERT INTO demand_votes_artificialservice_detail(Votes_ID,ServiceID) VALUES (#{1}, #{0})
+    </insert>
+    <!-- 向demand_votes_sportservice_detail插入数据，表的ID自增 -->
+    <insert id="addDemandVote_SportService_Detail">
+        INSERT INTO demand_votes_sportservice_detail(Votes_ID,ServiceID) VALUES (#{1}, #{0})
+    </insert>
+    <!-- 向demand_votes_fieldservice_detail插入数据，表的ID自增 -->
+    <insert id="addDemandVote_FieldService_Detail">
+        INSERT INTO demand_votes_fieldservice_detail(Votes_ID,ServiceID) VALUES (#{1}, #{0})
+    </insert>
+    <!-- 向demand_votes_equipment_content_detail插入数据，表的ID自增 -->
+    <insert id="addDemandVote_EquipmentContent_Detail">
+        INSERT INTO demand_votes_equipment_content_detail(Votes_ID,ServiceID) VALUES (#{1}, #{0})
+    </insert>
+    <!-- demand_votes_activityservice_detail，表的ID自增 -->
+    <insert id="addDemandVote_ActivityService_Detail">
+        INSERT INTO demand_votes_activityservice_detail(Votes_ID,ServiceID) VALUES (#{1}, #{0})
+    </insert>
+
+    <!-- 用于更新投票数目 -->
+    <!-- 根据服务ID获取调查表的场地服务条目投票数量+1。 -->
+    <update id="updateDemand_FieldService_Detail">
+        UPDATE demand_fieldservice_detail SET Votes = Votes + 1 WHERE ServiceID = #{0} AND DemandTableID = #{1}
+    </update>
+    <!-- 根据服务ID获取调查表的器材服务条目投票数量+1。 -->
+    <update id="updateDemand_EquipmentContent_Detail">
+        UPDATE demand_equipment_content_detail SET Votes = Votes + 1 WHERE ServiceID = #{0} AND DemandTableID = #{1}
+    </update>
+    <!-- 根据服务ID获取调查表的人工服务条目投票数量+1。 -->
+    <update id="updateDemand_ArtificialService_Detail">
+        UPDATE demand_artificialservice_detail SET Votes = Votes + 1 WHERE ServiceID = #{0} AND DemandTableID = #{1}
+    </update>
+    <!-- 根据服务ID获取调查表的体育赛事服务条目投票数量+1。 -->
+    <update id="updateDemand_SportService_Detail">
+        UPDATE demand_sportservice_detail SET Votes = Votes + 1 WHERE ServiceID = #{0} AND DemandTableID = #{1}
+    </update>
+    <!-- 根据服务ID获取调查表的活动服务条目投票数量+1。 -->
+    <update id="updateDemand_ActivityService_Detail">
+        UPDATE demand_activityservice_detail SET Votes = Votes + 1 WHERE ServiceID = #{0} AND DemandTableID = #{1}
+    </update>
+    <!--查询Demand_Votes最后一个自增ID-->
+    <select id="findDemandVotesLastInsertID" resultType="Integer">
+        SELECT MAX(Votes_ID) from demand_votes;
+    </select>
+
+    <!--根据ID查询投票过的Activity服务-->
+    <select id="getdemandActivityVotes" resultType="Integer" parameterType="Integer">
+        SELECT ServiceID FROM demand_votes_activityservice_detail WHERE Votes_ID IN
+        ( SELECT Votes_ID FROM demand_votes WHERE Disabled_Identify =  #{0} AND DemandTable_ID =  #{1});
+    </select>
+    <!--根据ID查询投票过的Artificial服务-->
+    <select id="getdemandVotesArtificial" resultType="Integer" parameterType="Integer">
+        SELECT ServiceID FROM demand_votes_artificialservice_detail WHERE Votes_ID IN
+        ( SELECT Votes_ID FROM demand_votes WHERE Disabled_Identify = #{0} AND DemandTable_ID =  #{1});
+    </select>
+    <!--根据ID查询投票过的Equipment服务-->
+    <select id="getdemandVotesEquipment" resultType="Integer" parameterType="Integer">
+        SELECT ServiceID FROM demand_votes_equipment_content_detail WHERE Votes_ID IN
+        ( SELECT Votes_ID FROM demand_votes WHERE Disabled_Identify = #{0} AND DemandTable_ID =  #{1});
+    </select>
+    <!--根据ID查询投票过的Activity服务-->
+    <select id="getdemandVotesFiled" resultType="Integer" parameterType="Integer">
+        SELECT ServiceID FROM demand_votes_fieldservice_detail WHERE Votes_ID IN
+        ( SELECT Votes_ID FROM demand_votes WHERE Disabled_Identify = #{0} AND DemandTable_ID =  #{1});
+    </select>
+    <!--根据ID查询投票过的Activity服务-->
+    <select id="getdemandVotesSport" resultType="Integer" parameterType="Integer">
+        SELECT ServiceID FROM demand_votes_sportservice_detail WHERE Votes_ID IN
+        ( SELECT Votes_ID FROM demand_votes WHERE Disabled_Identify = #{0} AND DemandTable_ID =  #{1});
+    </select>
+</mapper>

@@ -1,0 +1,175 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.edu.fjnu.cjrserver.dao.DemandTableMapper">
+
+    <!--根据需求调查表ID查询器材服务-->
+    <select id="findDemandCatalogEquipmentContent" resultMap="getDemandCatalogEquipmentContent" parameterType="Integer">
+        SELECT * FROM demand_equipment_content_detail WHERE DemandTableID = #{DemandTableID}
+    </select>
+    <resultMap type="com.edu.fjnu.cjrserver.model.DemandEquipmentContentDetail" id="getDemandCatalogEquipmentContent">
+        <id column="no" property="no"/>
+        <result column="Votes" property="votes"/>
+        <collection property="serviceID" column="ServiceID" select="getEquipmentContentCollection">
+        </collection>
+    </resultMap>
+    <select id="getEquipmentContentCollection" resultType="com.edu.fjnu.cjrserver.model.EquipmentContent">
+        select * from equipment_content where Demand_ID=#{ServiceID}
+    </select>
+
+
+    <!--根据需求调查表ID查询活动服务-->
+    <select id="findDemandCatalogActivityService" resultMap="getDemandCatalogActivityService" parameterType="Integer">
+        SELECT * FROM demand_activityservice_detail WHERE DemandTableID = #{DemandTableID}
+    </select>
+    <resultMap type="com.edu.fjnu.cjrserver.model.DemandActivityServiceDetail" id="getDemandCatalogActivityService">
+        <id column="no" property="no"/>
+        <result column="Votes" property="votes"/>
+        <collection property="serviceID" column="ServiceID" select="getActivityServiceCollection">
+        </collection>
+    </resultMap>
+    <select id="getActivityServiceCollection" resultType="com.edu.fjnu.cjrserver.model.Activity">
+        select * from activity_service where Activity_ID=#{ServiceID}
+    </select>
+
+
+
+    <!--根据需求调查表ID查询人工服务-->
+    <select id="findDemandCatalogArtificialService" resultMap="getDemandCatalogArtificialService" parameterType="Integer">
+        SELECT * FROM demand_artificialservice_detail WHERE DemandTableID = #{DemandTableID}
+    </select>
+    <resultMap type="com.edu.fjnu.cjrserver.model.DemandArtificialServiceDetail" id="getDemandCatalogArtificialService">
+        <id column="no" property="no"/>
+        <result column="Votes" property="votes"/>
+        <collection property="serviceID" column="ServiceID" select="getArtificialServiceCollection">
+        </collection>
+    </resultMap>
+    <select id="getArtificialServiceCollection" resultType="com.edu.fjnu.cjrserver.model.Artificial">
+        select * from artificial_service where Artificial_ID=#{ServiceID}
+    </select>
+
+
+    <!--根据需求调查表ID查询场地服务-->
+    <select id="findDemandCatalogFieldService" resultMap="getDemandCatalogFieldService" parameterType="Integer">
+        SELECT * FROM demand_fieldservice_detail WHERE DemandTableID = #{DemandTableID}
+    </select>
+    <resultMap type="com.edu.fjnu.cjrserver.model.DemandFieldServiceDetail" id="getDemandCatalogFieldService">
+        <id column="no" property="no"/>
+        <result column="Votes" property="votes"/>
+        <collection property="serviceID" column="ServiceID" select="getFieldServiceCollection">
+        </collection>
+    </resultMap>
+    <select id="getFieldServiceCollection" resultType="com.edu.fjnu.cjrserver.model.FieldServer">
+        select * from field_service where Field_ID=#{ServiceID}
+    </select>
+
+
+    <!--根据需求调查表ID查询器材服务-->
+    <select id="findDemandCatalogSportService" resultMap="getDemandCatalogSportService" parameterType="Integer">
+        SELECT * FROM demand_sportservice_detail WHERE DemandTableID = #{DemandTableID}
+    </select>
+    <resultMap type="com.edu.fjnu.cjrserver.model.DemandSportServiceDetail" id="getDemandCatalogSportService">
+        <id column="no" property="no"/>
+        <result column="Votes" property="votes"/>
+        <collection property="serviceID" column="ServiceID" select="getSportServiceCollection">
+        </collection>
+    </resultMap>
+    <select id="getSportServiceCollection" resultType="com.edu.fjnu.cjrserver.model.Sport">
+        select * from sport_service where Sport_ID=#{ServiceID}
+    </select>
+
+
+
+
+    <!-- 插入需求调查表 -->
+    <insert id="addDemandTable" parameterType="com.edu.fjnu.cjrserver.model.DemandTable">
+      insert into demand_table(DemandTable_Name,DemandTable_StartTime, DemandTable_EndTime,DemandTable_State,Tag)
+      VALUES  (#{demandTableName},#{demandTableStartTime},#{demandTableEndTime},#{demandTableState},0)
+    </insert>
+
+    <!-- 更改需求调查表-->
+    <update id="updateDemandTable" parameterType="com.edu.fjnu.cjrserver.model.DemandTable">
+        UPDATE demand_table set
+        DemandTable_Name=#{demandTableName},DemandTable_StartTime=#{demandTableStartTime}, DemandTable_EndTime=#{demandTableEndTime},DemandTable_State=#{demandTableState},Tag=#{tag}
+        WHERE DemandTable_ID=#{demandTableID}
+    </update>
+
+    <!--获取需求调查表,不包括已删除的-->
+    <select id="getAllDemandTable" resultType="com.edu.fjnu.cjrserver.model.DemandTable">
+        SELECT  * from  demand_table where   2 > tag
+    </select>
+
+    <!-- 获取所有需求调查表包括已删除的-->
+    <select id="getDemandTableList" resultType="com.edu.fjnu.cjrserver.model.DemandTable">
+        SELECT  * from  demand_table
+    </select>
+
+    <!--获取需求调查表ID-->
+    <select id="getLastId" resultType="Integer">
+        SELECT LAST_INSERT_ID()
+    </select>
+
+    <insert id="addDemandActivityServiceDetail">
+          insert into demand_activityservice_detail(ServiceID,DemandTableID,`Count`,Votes,tag)
+          VALUES (#{serviceID.activityID},#{demandTable.demandTableID},#{count},#{votes},0)
+    </insert>
+
+    <insert id="addDemandArtificialServiceDetail">
+          insert into demand_artificialservice_detail(ServiceID,DemandTableID,`Count`,Votes,tag)
+          VALUES (#{serviceID.artificialID},#{demandTable.demandTableID},#{count},#{votes},0)
+
+    </insert>
+
+    <insert id="addDemandEquipmentContentDetail">
+      insert into demand_equipment_content_detail(ServiceID,DemandTableID,`Count`,Votes,tag)
+          VALUES (#{serviceID.demandID},#{demandTable.demandTableID},#{count},#{votes},0)
+
+    </insert>
+
+    <insert id="addDemandFieldServiceDetail">
+      insert into demand_fieldservice_detail(ServiceID,DemandTableID,`Count`,Votes,tag)
+          VALUES (#{serviceID.fieldID},#{demandTable.demandTableID},#{count},#{votes},0)
+    </insert>
+
+    <insert id="addDemandSportServiceDetail">
+       insert into demand_sportservice_detail(ServiceID,DemandTableID,`Count`,Votes,tag)
+          VALUES (#{serviceID.sportID},#{demandTable.demandTableID},#{count},#{votes},0)
+    </insert>
+
+
+
+    <!--删除需求调查表 里各种服务 tag 2 表示已经删除-->
+    <update  id="delDemandActivityServiceDetail" parameterType="Integer">
+          UPDATE demand_activityservice_detail set tag = 2 WHERE DemandTableID = #{DemandTable};
+    </update>
+
+    <update id="delDemandArtificialServiceDetail" parameterType="Integer">
+         UPDATE demand_artificialservice_detail set tag = 2 WHERE DemandTableID = #{DemandTable};
+    </update>
+
+    <update  id="delDemandEquipmentContentDetail" parameterType="Integer">
+        UPDATE demand_equipment_content_detail set tag = 2 WHERE DemandTableID = #{DemandTable};
+    </update>
+
+    <update id="delDemandFieldServiceDetail" parameterType="Integer">
+        UPDATE demand_fieldservice_detail  set tag = 2 WHERE DemandTableID = #{DemandTable};
+    </update>
+
+    <update id="delDemandSportServiceDetail" parameterType="Integer">
+       UPDATE demand_sportservice_detail set tag = 2 WHERE DemandTableID = #{DemandTable};
+    </update>
+
+
+
+    <!--删除需求调查表   tag = 3 表示 调查表已经删除-->
+    <update id="delDemandTable" parameterType="Integer">
+        UPDATE demand_table SET tag=2 WHERE DemandTable_ID=#{demandTableID}
+    </update>
+
+
+    <select id="findDemandTableByID" parameterType="Integer" resultType="com.edu.fjnu.cjrserver.model.DemandTable">
+        SELECT * FROM demand_table WHERE DemandTable_ID = #{DemandTableID} AND  tag=0
+    </select>
+
+</mapper>

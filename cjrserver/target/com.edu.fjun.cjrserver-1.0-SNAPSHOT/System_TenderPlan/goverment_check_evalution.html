@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>查看服务评价</title>
+	<!-- Import google fonts - Heading first/ text second -->
+	<!-- <link rel='stylesheet' type='text/css' href='http://fonts.useso.com/css?family=Open+Sans:400,700|Droid+Sans:400,700' /> -->
+	<!--[if lt IE 9]>
+	<link href="http://fonts.useso.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.useso.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.useso.com/css?family=Droid+Sans:400" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.useso.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<!-- Favicon and touch icons -->
+	<link rel="shortcut icon" href="../asset/ico/favicon.ico" type="image/x-icon" />
+	<!-- Css files -->
+	<link href="../asset/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../asset/css/jquery.mmenu.css" rel="stylesheet">
+	<link href="../asset/css/font-awesome.min.css" rel="stylesheet">
+	<link href="../asset/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+	<link href="../asset/css/style.min.css" rel="stylesheet">
+	<link href="../asset/css/add-ons.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../asset/css/shijian.css"/>
+	<link href="../System_Disable/assets/css/star.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		.icbc{
+			background: url(icbc.jpg);
+		}
+	</style>
+</head>
+
+
+<body>
+<!-- start: Header -->
+<div class="navbar" role="navigation">
+
+	<div class="container-fluid">
+
+		<ul class="nav navbar-nav navbar-right">
+
+			<li class="dropdown visible-md visible-lg">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="user-avatar" src="../asset/img/avatar.jpg" alt="user-mail">政府后台操作员</a>
+			</li>
+			<li><a href="index.html"><i class="fa fa-power-off"></i></a></li>
+		</ul>
+
+	</div>
+
+</div>
+<!-- end: Header -->
+
+<!-- start:    左侧导航栏    -->
+<div class="container-fluid content">
+
+	<div class="row">
+
+		<!-- start: Main Menu -->
+		<div class="sidebar ">
+
+			<div class="sidebar-collapse">
+				<div class="sidebar-header t-center">
+						  <br>
+                    <h2>政府后台</h2>
+				</div>
+				<div class="sidebar-menu">
+					<ul class="nav nav-sidebar">
+						<li><a href="../Admin_Index.html"><i class="fa fa-laptop"></i><span class="text">主页</span></a></li>
+						<li>
+							<a href="#"><i class="fa fa-font"></i><span class="text">首页管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+							<ul class="nav sub">
+								<li><a href="#"><i class="fa fa-th"></i><span class="text">头部导航栏管理</span></a></li>
+								<li><a href="#"><i class="fa fa-th"></i><span class="text">文章管理</span></a></li>
+								<li><a href="#"><i class="fa fa-th"></i><span class="text">内容管理</span></a></li>
+								<li><a href="#"><i class="fa fa-th"></i><span class="text">底部导航栏管理</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-signal"></i><span class="text">服务管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+							<ul class="nav sub">
+								<li><a href="/System_Service/equipment_service.html"><i class="fa fa-list"></i><span class="text">器材管理</span></a></li>
+								<li><a href="/System_Service/field_service.html"><i class="fa fa-list"></i><span class="text">场地服务管理</span></a></li>
+								<li><a href="/System_Service/activity_service.html"><i class="fa fa-list"></i><span class="text">活动服务管理</span></a></li>
+								<li><a href="/System_Service/sport_service.html"><i class="fa fa-list"></i><span class="text">赛事服务管理</span></a></li>
+								<li><a href="/System_Service/artificial_service.html"><i class="fa fa-list"></i><span class="text">人工服务管理</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-signal"></i><span class="text">需求</span> <span class="fa fa-angle-down pull-right"></span></a>
+							<ul class="nav sub">
+								<li><a href="/System_Demand/demand_table_input.html"><i class="fa fa-table"></i><span class="text">需求调查表</span></a></li>
+								<li><a href="/System_Demand/demand_table_list.html"><i class="fa fa-list"></i><span class="text">调查表</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-file-text"></i><span class="text">招标</span> <span class="fa fa-angle-down pull-right"></span></a>
+							<ul class="nav sub">
+								<li><a href="/System_TenderPlan/publish_tender_plan.html"><i class="fa fa-pencil"></i><span class="text">发布招标计划</span></a></li>
+								<!--<li><a href="/System_TenderPlan/goverment_check_evalution.html"><i class="fa fa-table"></i><span class="text">查看招标计划</span></a></li>-->
+								<li><a href="/System_TenderPlan/set_pass_company.html"><i class="fa fa-table"></i><span class="text">确定竞标企业</span></a></li>
+								<li><a href="/System_TenderPlan/set_win_company.html"><i class="fa fa-table"></i><span class="text">确定中标企业</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-file-text"></i><span class="text">评价报告</span> <span class="fa fa-angle-down pull-right"></span></a>
+							<ul class="nav sub">
+								<li><a href="/System_Assess/check_assess_report.html"><i class="fa fa-pencil"></i><span class="text">查看评价报告</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-font"></i><span class="text">认证</span> <span class="fa fa-angle-down pull-right"></span></a>
+							<ul class="nav sub">
+								<li><a href="#"><i class="fa fa-th"></i><span class="text">企业认证</span></a></li>
+								<li><a href="#"><i class="fa fa-th"></i><span class="text">媒体认证</span></a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="sidebar-footer">
+				<div class="sidebar-brand">
+					政府后台
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end:    左侧导航栏   -->
+<!-- start: Content -->
+<div class="main ">
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h3 class="page-header"><i class="fa fa-indent"></i>查看服务评价</h3>
+			<ol class="breadcrumb">
+				<li><i class="fa fa-home"></i><a href="Home.html">主页</a></li>
+				<li><i class="fa fa-indent"></i>查看服务评价</li>
+			</ol>
+		</div>
+	</div>
+	<div id="body">
+	<div class="row" >
+		<div class="clo-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2><i class="fa fa-indent red"></i><strong>已完成服务评价</strong></h2>
+				</div>
+				<div class="panel-body">
+			            <table id="DemandTable" data-toggle="table"  data-url="/Demand/ShowAll">
+			                <thead>
+			                    <tr>
+			                        <th>服务名称</th>
+	                                <th>所属企业</th>
+	                                <th>评价人</th>
+	                                <th>操作</th>
+				                </tr>
+			                </thead>
+			                    <tr>
+	                                <td>test1</td>
+	                                <td>fjnu</td>
+	                                <td>xxxx</td>
+	                                <td><button id="bt2" data-toggle="modal" data-target="#CompleteCommentModal">查看评价</button></td>
+	                            </tr>
+			                                
+			            </table>	
+				</div>
+			</div>
+		</div>
+	</div><!--/row-->
+	</div>
+</div><!--/container-->
+<div class="modal fade" id="myModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Modal title</h4>
+			</div>
+			<div class="modal-body">
+				<p>Here settings can be configured...</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="CompleteCommentModal">
+    <div class="modal-dialog" style="top: 46px;width:750px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">服务评价</h4> 
+            </div>
+            <div class="modal-body">
+                <div id="star">
+                <span>满意度：</span>
+                <ul>
+                     <li><a href="javascript:;">1</a></li>
+                     <li><a href="javascript:;">2</a></li>
+                     <li><a href="javascript:;">3</a></li>
+                     <li><a href="javascript:;">4</a></li>
+                     <li><a href="javascript:;">5</a></li>
+                 </ul>
+                 <span></span>
+                 <p></p> 
+            </div> 
+            <div id="commentarea">
+                <textarea rows="10" cols="90">
+                   
+                </textarea>
+                <div class="modal-footer">
+                   <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div> 
+            </div>
+           
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="clearfix"></div>
+
+
+<!-- start: JavaScript-->
+<!--[if !IE]>-->
+
+<script src="../asset/js/jquery-2.1.1.min.js"></script>
+
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
+</script>
+
+<!--<![endif]-->
+
+<!--[if IE]>
+
+<script type="text/javascript">
+	window.jQuery || document.write("<script src='assets/js/jquery-1.11.1.min.js'>"+"<"+"/script>");
+</script>
+
+<![endif]-->
+<script src="../asset/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../asset/js/bootstrap.min.js"></script>
+
+
+<!-- page scripts -->
+<script src="../asset/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+<script src="../asset/plugins/chosen/js/chosen.jquery.min.js"></script>
+<script src="../asset/plugins/autosize/jquery.autosize.min.js"></script>
+<script src="../asset/plugins/placeholder/jquery.placeholder.min.js"></script>
+<script src="../asset/plugins/maskedinput/jquery.maskedinput.min.js"></script>
+<script src="../asset/plugins/moment/moment.min.js"></script>
+<!-- theme scripts -->
+<script src="../asset/js/SmoothScroll.js"></script>
+<script src="../asset/js/jquery.mmenu.min.js"></script>
+<script src="../asset/js/core.min.js"></script>
+<script>
+    //验证添加器材
+    function checkInput(){
+        var name=document.getElementById("text_input").value;
+        var StarTime=document.getElementById("input1").value;
+        var EndTime=document.getElementById("input3").value;
+        var file=document.getElementById("file_input").value;
+        if(name == "" || StarTime == "" || EndTime == "" || file == "")
+        {
+            alert("请填写完整信息");
+            return false;
+        }
+		else if(checktime() == false)
+		    return false;
+        return true;
+    }
+    //判断时间是否正确
+    function checktime() {
+        var btime = document.getElementById("input1").value;
+        var etime = document.getElementById("input3").value;
+        if (Date.parse(btime.replace(/-/g, '/ ')) > Date.parse(etime.replace(/-/g, '/ '))) {
+            alert("请“开始时间”小于“结束时间”");
+            return false;
+        }
+        if (Date.parse(btime.replace(/-/g, '/ ')) < Date.parse(getNowDate().replace(/-/g, '/ '))) {
+            alert("请“开始时间”大于“现实时间”");
+            return false;
+        }
+        if (Date.parse(etime.replace(/-/g, '/ ')) < Date.parse(getNowDate().replace(/-/g, '/ '))) {
+            alert("请“结束时间”大于“现实时间”");
+            return false;
+        }
+        return true;
+    }
+    //获取当前时间
+    function getNowDate()
+    {
+        var today = new Date();
+        var y = today.getFullYear();
+        var M = today.getMonth()+1;
+        var d = today.getDate();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        if(M>=1 && M<=9)
+            M = "0"+M;
+        if(d>=0 && d<=9)
+            d = "0"+d;
+        if(h>=1 && h<=9)
+            h="0"+h;
+        if(m>=1 && m<=9)
+            m="0"+m;
+        var current = y+"-"+M+"-"+d+" "+h+":"+m;
+        return current;
+    }
+</script>
+</body>
+<script src="../asset/js/jquer_shijian.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    $("#input1").shijian({
+        y:10//当前年份+10
+    })
+</script>
+<script type="text/javascript">
+    sjObj.defaults = {
+        type: "time",
+        Format: "yyyy-mm-dd", //显示时间格式//yyyy表示年份 ，mm月份 ，dd天数  支持三种格式 dd-mm-yyyy ，mm-dd-yyyy yyyy-mm-dd
+        Order: 'yymmdd',
+        width: 100, //默认宽度
+        height: 32,//默认数值高度
+        Year: true, //是否显示年//
+        Month: true, //是否显示月//
+        Day: true, //是否显示日//
+        Hour: true, //是否显示小时
+        Minute: true, //是否显示分钟
+        Seconds: false, //是否显示秒
+        yyyy: "0000", //当前显示年
+        mm: "00", //当前显示月
+        dd: "00", //当前显示日
+        h: "00", //当前显示小时
+        m: "00", //当前显示分
+        s: "00", //当前显示秒
+        yearText: "年", //顶部时间 年单位 文字
+        monthText: "月", //顶部时间 月单位 文字
+        dayText: '日', //顶部时间 日单位 文字
+        hourText: '时', //顶部时间 时单位 文字
+        minuteText: '分', //顶部时间 分单位 文字
+        secondsText: '秒', //顶部时间 秒单位 文字
+        okText: "确认", //按钮确认键文字
+        cancelText: "取消", //按钮取消键文字
+        showNowTime: true, //是否默认显示当前时间
+        alwaysShow: false, //是否默认直接显示插件
+        timeElm: null, //放时间插件的box
+        onfun: function() { //取消改变时间时候执行事件
+
+        },
+        okfun: function() { //确认时间时候执行事件
+
+        },
+    }
+</script>
+<script src="../asset/js/jquer_shijian.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    $("#input3").shijian({
+        y:10//当前年份+10
+    })
+</script>
+ <script type="text/javascript">
+       window.onload = function ()
+        {
+          var oStar = document.getElementById("star");
+          var aLi = oStar.getElementsByTagName("li");
+          var oUl = oStar.getElementsByTagName("ul")[0];
+          var oSpan = oStar.getElementsByTagName("span")[1];
+          var oP = oStar.getElementsByTagName("p")[0];
+          var i = iScore = iStar = 0;
+          var aMsg = [
+                "很不满意|差得太离谱，与卖家描述的严重不符，非常不满",
+                "不满意|部分有破损，与卖家描述的不符，不满意",
+                "一般|质量一般，没有卖家描述的那么好",
+                "满意|质量不错，与卖家描述的基本一致，还是挺满意的",
+                "非常满意|质量非常好，与卖家描述的完全一致，非常满意"
+                ]
+          for (i = 1; i <= aLi.length; i++)
+          {
+            aLi[i - 1].index = i;
+            //鼠标移过显示分数
+            aLi[i - 1].onmouseover = function ()
+            {
+              fnPoint(this.index);
+              //浮动层显示
+              oP.style.display = "block";
+              //计算浮动层位置
+              oP.style.left = oUl.offsetLeft + this.index * this.offsetWidth - 104 + "px";
+              //匹配浮动层文字内容
+              oP.innerHTML = "<em><b>" + this.index + "</b> 分 " + aMsg[this.index - 1].match(/(.+)\|/)[1] + "</em>" + aMsg[this.index - 1].match(/\|(.+)/)[1]
+            };
+            //鼠标离开后恢复上次评分
+            aLi[i - 1].onmouseout = function ()
+            {
+              fnPoint();
+              //关闭浮动层
+              oP.style.display = "none"
+            };
+            //点击后进行评分处理
+            aLi[i - 1].onclick = function ()
+            {
+              iStar = this.index;
+              oP.style.display = "none";
+              oSpan.innerHTML = "<strong>" + (this.index) + " 分</strong> (" + aMsg[this.index - 1].match(/\|(.+)/)[1] + ")"
+            }
+          }
+          //评分处理
+          function fnPoint(iArg)
+          {
+            //分数赋值
+            iScore = iArg || iStar;
+            for (i = 0; i < aLi.length; i++) aLi[i].className = i < iScore ? "on" : "";
+          }
+        };
+         $('#bt2').click(function(){
+
+                $.ajax({
+                type: "POST",
+                url:"/Demand/ShowAll",
+                success: function(msg){
+                    $('#CompleteCommentModal').bootstrapTable('load',msg);
+                }
+            });
+         });
+    </script>
+<script src="../System_Disable/assets/js/jquery.min.js"></script>
+    <script src="../System_Disable/assets/js/amazeui.min.js"></script>
+    <script src="../System_Disable/assets/js/iscroll.js"></script>
+    <script src="../System_Disable/assets/js/app.js"></script>
+    <script src="../System_Disable/assets/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+    <script src="../System_Disable/assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../System_Disable/assets/plugins/datatables/js/dataTables.bootstrap.min.js"></script>
+
+    <!-- theme scripts -->
+    <script src="../System_Disable/assets/js/SmoothScroll.js"></script>    
+    <script src="../System_Disable/assets/js/jquery.mmenu.min.js"></script>
+    <script src="../System_Disable/assets/js/core.min.js"></script>
+    <!-- end: JavaScript-->
+    <script src="../System_Disable/assets/js/jquery-2.1.1.min.js"></script>
+    <script src="../System_Disable/assets/js/avalon.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css"> -->
+<!--    <script src="../js/bootstrap.min.js"></script>-->
+    <script src="../System_Disable/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="../System_Disable/assets/js/bootstrap-table.js"></script>
+    <script src="../System_Disable/assets/js/bootstrap-table-zh-CN.min.js"></script>
+    <script src="../System_Disable/assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../System_Disable/assets/js/bootstrap.min.js"></script>
+    <!-- <script src="assets/js/Demand_catalog.js"></script> -->
+</html>

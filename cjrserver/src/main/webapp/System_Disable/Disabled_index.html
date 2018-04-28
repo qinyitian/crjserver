@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>残疾人首页</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="css/my_style.css">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">	
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">	
+    <script src="assets/js/echarts.min.js"></script>  
+</head>
+
+<body data-type="index">
+
+
+    <header class="am-topbar am-topbar-inverse admin-header">
+        <div class="am-topbar-brand">
+            <a href="javascript:;" class="tpl-logo">
+                <img src="assets/img/logo.png" style="width:160px; height:50px" alt="">
+            </a>
+        </div>
+        <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+        </div>
+
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+        <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+            <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
+                
+                <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen" class="tpl-header-list-link"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+
+                <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                    <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                        <span class="tpl-header-list-user-nick"id="user_name"data-number=""data-style=""data-userid="">吴祖根</span><span class="tpl-header-list-user-ico"> <img src="assets/img/user02.png" style="width:45px;"></span>
+                    </a>
+                    <ul class="am-dropdown-content">
+                        <li><a href="disabled_information_change.html"><span class="am-icon-bell-o"></span> 资料</a></li>               
+                        <li><a href="../System_management/Login.html"><span class="am-icon-power-off"></span> 退出</a></li>
+                    </ul>
+                </li>
+                <li><a href="###" class="tpl-header-list-link"><span class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
+            </ul>
+        </div>
+    </header>
+
+
+
+
+
+
+
+    <div class="tpl-page-container tpl-page-header-fixed">
+
+
+        <div class="tpl-left-nav tpl-left-nav-hover">
+            <div class="tpl-left-nav-title am-lg-text-left">
+                个 人 列 表
+            </div>
+            <div class="tpl-left-nav-list">
+                <ul class="tpl-left-nav-menu">
+                    <li class="tpl-left-nav-item">
+                        <a href="../index.html?type=A"class="nav-link active">
+                            <i class="am-icon-home"></i>
+                            <span >首页</span>
+                        </a>
+                    </li>
+                    
+                    <li class="tpl-left-nav-item">
+                        <a href="disabled_information_change.html" class="nav-link tpl-left-nav-link-list">
+                            <i class="	glyphicon glyphicon-user"></i>
+                            <span>个人信息修改</span>
+                            <i class="tpl-left-nav-content tpl-badge-danger">6</i>
+                        </a>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="	glyphicon glyphicon-flag"></i>
+                            <span>我的权利</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <!--<a href="/Disable/View?act=ShowDemand">-->
+                                    <!--<i class="am-icon-angle-right"></i>-->
+                                    <!--<span>提出我的需求</span>-->
+                                    <!--<i class="tpl-left-nav-content-ico am-fr am-margin-right"></i>&lt;!&ndash;am-icon-star &ndash;&gt;-->
+                                <!--</a>-->
+                                <a href="disabled_voting.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>提出我的需求</span>
+                                    <i class="tpl-left-nav-content"><!-- tpl-badge-success--></i>
+                                </a>
+                                <a href="disabled_ vote_company.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>我要投票</span>
+                                    <i class="tpl-left-nav-content-ico am-fr am-margin-right"></i><!--am-icon-star -->
+                                </a>
+                                <a href="disabled_comment_service.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>评价服务</span>
+                                    <i class="tpl-left-nav-content"><!-- tpl-badge-success--></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-wpforms"></i>
+                            <span>新闻发布</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu" >
+                            <li>
+                                <a href="#">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>图片新闻</span>
+                                    <i class="tpl-left-nav-content-ico am-fr am-margin-right"></i>
+                                </a>
+
+                                <a href="#">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>政策浏览</span>
+                                </a>
+                            </li>
+                           
+                        </ul>
+
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="tpl-content-wrapper">
+            <div class="tpl-content-page-title">
+                个人中心
+            </div>
+            <ol class="am-breadcrumb">
+                <li><a href="../index.html?type=A" class="am-icon-home">首页</a></li>
+                <li class="am-active">个人中心</li>
+            </ol>
+            <div class="tpl-content-scope">
+                <div class="note note-info" style="width: 500px;float: left; border-left: 2px solid white;background-color:white;">
+                    <form class="am-form am-form-horizontal">
+                        <div class="am-form-group">
+                            <label class="am-u-sm-1 am-form-label" style="color:#0e90d2;"><i class="am-icon-exclamation-circle am-icon-sm"></i></label>
+                            <div class="am-u-sm-10" style="padding-top:4px;font-size:18px;color:#0e90d2;">消息通知</div>
+                            <label class="am-u-sm-1 am-form-label" style="color:#0e90d2;" id="refresh"><i class="am-icon-refresh am-icon-sm"></i></label>
+                        </div>
+                        <div class="am-form-group">
+                            <hr>
+                        </div>
+                        <div class="am-form-group" id="message1">
+                            <!-- <div class="am-u-sm-12">有新的需求调查表需要投票！</div> -->
+                        </div>
+                         <div class="am-form-group" id="message2">
+                            <!-- <div class="am-u-sm-12">有新的需求目录发布！</div> -->
+                        </div>
+                        <br>
+                    </form>
+                </div>
+                <!--  -->
+                 <div class="note note-info" style="width: 500px;float: left;border-left: 2px solid white;background-color:white;">
+                     <form class="am-form am-form-horizontal">
+                        <div class="am-form-group">
+                            <label class="am-u-sm-1 am-form-label" style="color:#0e90d2;"><i class="am-icon-calendar-o am-icon-sm"></i></label>
+                            <div class="am-u-sm-11" style="padding-top:4px;font-size:18px;color:#0e90d2;">
+                                 <a href="../index.html">残疾人体育公共服务平台Web</a>
+                            </div>                         
+                        </div>
+                        <div class="am-form-group">
+                            <hr>
+                        </div>
+                        <div class="am-form-group">
+                            <div class="am-u-sm-12">为更好的倾听残疾人的声音而生！</div>
+                        </div>
+                        <br>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+        
+</div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
+    <script src="assets/js/iscroll.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+    <script type="text/javascript">
+        //初始化两个ajax通知刷新
+        $.ajax({
+            type: "post",
+            url: "/demand/notice?disabilityIdentity="+110,
+            cache: false,
+             processData: false,
+             contentType: false,
+        }).done(function(data){
+            console.log(data);
+            $('#message1').empty();
+            for(var i=0;i<data.length;i++){
+              $('#message1').append('<a class="am-u-sm-12" href="'+ data[i].noticePath + '">'+data[i].noticeTitle+"发布，填写需求调查表的截止时间："+ data[i].noticeTime +'</a>');
+            }
+        }).fail(function(res){
+            console.log("暂无新的通知");
+        });
+
+         $.ajax({
+            type: "post",
+            url: "/demanddictionary/notice",
+            cache: false,
+            processData: false,
+            contentType: false,
+        }).done(function(data){
+             console.log(data);
+            $('#message2').empty();
+            for(var i=0;i<data.length;i++){
+
+              $('#message2').append('<a class="am-u-sm-12" href="'+ data[i].noticePath + '">'+data[i].noticeTitle+"发布，需求目录过期时间："+ data[i].noticeTime +'</a>');
+            }            
+        }).fail(function(res){
+            console.log("暂无新的通知");
+        }); 
+        //点击刷新按钮刷新通知
+        $('#refresh').click(function(){
+            // alert(1);
+            $('.am-icon-refresh').addClass('am-icon-spin');
+            setTimeout(wait,1000);
+            $.ajax({
+                type: "post",
+                url: "/demand/notice?disabilityIdentity="+110,
+                cache: false,
+                processData: false,
+                contentType: false,
+            }).done(function(data){
+                console.log(data);
+                $('#message1').empty();
+                for(var i=0;i<data.length;i++){
+                  $('#message1').append('<a class="am-u-sm-12" href="'+ data[i].noticePath + '">'+data[i].noticeTitle+"发布，填写需求调查表的截止时间："+ data[i].noticeTime +'</a>');
+                }
+            }).fail(function(res){
+                console.log("暂无新的通知");
+                
+            });
+            $.ajax({
+                type: "post",
+                url: "/demanddictionary/notice",
+                cache: false,
+                processData: false,
+                contentType: false,
+            }).done(function(data){
+                console.log(data);
+                $('#message2').empty();
+                for(var i=0;i<data.length;i++){
+                  $('#message2').append('<a class="am-u-sm-12" href="'+ data[i].noticePath + '">'+data[i].noticeTitle+"发布，需求目录过期时间："+ data[i].noticeTime +'</a>');
+                }
+            }).fail(function(res){
+                console.log("暂无新的通知");
+
+            });
+
+            // $('#message1').append('<a class="am-u-sm-12" href="'+ "#" + '">'+"xxx"+"发布，填写需求调查表的截止时间："+ "2018-4-21" +'</a>');
+        })
+        //设置刷新按钮持续1s后停止刷新
+        function wait(){
+            $('.am-icon-refresh').removeClass('am-icon-spin');
+        }
+    </script>
+</html>
+<!doctype html>

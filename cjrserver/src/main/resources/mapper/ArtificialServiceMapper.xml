@@ -1,0 +1,50 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.edu.fjnu.cjrserver.dao.ArtificialServiceMapper">
+<!--按分页查询人工服务-->
+    <select id="findArtificialServiceByPage" resultType="com.edu.fjnu.cjrserver.model.Artificial">
+        select * from artificial_service limit #{0},#{1}
+    </select>
+<!--查询人工服务信息-->
+    <select id="findArtificialService" resultType="com.edu.fjnu.cjrserver.model.Artificial">
+        SELECT a.*,b.Company_Name FROM artificial_service a LEFT JOIN  company b  ON(a.Company_ID = b.Company_ID )
+    </select>
+<!--根据ID查询人工服务信息-->
+    <select id="getArtificialServiceByID" resultType="com.edu.fjnu.cjrserver.model.Artificial" parameterType="Integer">
+        select * from artificial_service where Artificial_ID=#{artificialID}
+    </select>
+<!--删除人工服务信息-->
+    <delete id="delArtificialService" parameterType="Integer">
+        delete from artificial_service where Artificial_ID=#{artificialID}
+    </delete>
+<!--添加人工服务信息-->
+    <insert id="addArtificialService" parameterType="com.edu.fjnu.cjrserver.model.Artificial">
+        insert into artificial_service(Artificial_Name,Artificial_File,Phone,Price,Suitable_Crowd,Artificial_State,Company_ID) values(#{artificialName},#{artificialFile},#{phone},#{price},#{suitableCrowd},#{artificialState},#{company.companyID})
+    </insert>
+<!--修改人工服务信息-->
+    <update id="updateArtificialService" parameterType="com.edu.fjnu.cjrserver.model.Artificial">
+        update artificial_service set Artificial_Name=#{artificialName},Artificial_File=#{artificialFile},
+        Phone=#{phone},Price=#{price},Suitable_Crowd=#{suitableCrowd},Artificial_State=#{artificialState} where Artificial_ID=#{artificialID}
+    </update>
+<!--根据ID查询文件存储路径-->
+    <select id="findFilePath" parameterType="Integer" resultType="String">
+        select Artificial_File from artificial_service where Artificial_ID=#{artificialID}
+    </select>
+<!--查询人工服务数量-->
+    <select id="findTotalQty" resultType="Integer">
+         select count(Artificial_ID) from artificial_service
+    </select>
+    <!--根据名称查询人工服务数量-->
+    <select id="findTotalQtyByName" resultType="Integer" parameterType="String">
+        select count(Artificial_ID) from artificial_service where Artificial_Name like CONCAT(CONCAT('%', #{0}), '%');
+    </select>
+
+    <select id="findArtificialServiceByName" resultType="com.edu.fjnu.cjrserver.model.Artificial" >
+      select * from artificial_service where Artificial_Name like CONCAT(CONCAT('%', #{2}), '%') limit #{0},#{1};
+    </select>
+
+
+
+</mapper>

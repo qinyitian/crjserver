@@ -1,0 +1,91 @@
+@charset "utf-8";/* CSS Document */
+.btn_style{
+	border-bottom-color:#3B6E8F;
+	border-left-color:#3B6E8F;
+	border-top-color:#3B6E8F;
+	background-color:#3B6E8F;
+	color:#FFFFFF;
+	}
+.botton_style{
+	top:30px; 
+	position:relative; 
+	border-left-color:#FFFFFF; 
+	border-top-color:#FFFFFF; 
+	border-right-color:#FFFFFF;
+	}
+.div_demo3{
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	overflow:hidden;
+	box-sizing:border-box;
+	}	
+.div_binner{	
+	left: 0px; 
+	top: 90%; 
+	width: 63.35%; 
+	height: 21%; 
+	padding: 0px; 
+	opacity: 0.8; 
+	z-index: 58; 
+	visibility: visible; 
+	transform: scaleX(1) scaleY(1); 
+	position:absolute;
+	}
+.div_binner_text{
+	font-size:50px;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:微软雅黑;
+	color:rgba(255,255,255,1);
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	position:relative;
+	word-wrap:break-word;
+	word-break:break-word;
+	box-sizing:border-box;
+	z-index:1;
+	line-height:100px;
+	overflow:hidden;
+	}
+.div_binner_txt{
+	text-align:center;
+	top:10%;
+	left:0;
+	width:100%;
+	overflow:hidden;
+	position:absolute;
+	line-height:inherit;
+	top:50%;
+	transform:translateY(-50%);
+	}
+.div_binner_demo{
+	width:100%;
+	height:100px;
+	position:absolute;
+	left:1px;
+	z-index:10;
+	}	
+.p_binner{
+	margin:0px;
+	padding:0;
+	width:100%;
+	transform:scale(1);
+	transform-origin:top left;
+	text-overflow:clip;
+	white-space:normal;
+	text-align:center;
+	text-decoration:none;
+	user-select:text;
+	}
+.my_div_style1{  
+    float: none;  
+    display: block;  
+    margin-left: auto;  
+    margin-right: auto;  
+} 

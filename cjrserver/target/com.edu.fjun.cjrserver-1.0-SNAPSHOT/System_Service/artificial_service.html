@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>人工服务管理</title>
+    
+   <!--  <link rel="stylesheet" href="../assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link href="../asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../asset/css/style.min.css" rel="stylesheet">
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script> -->
+    <!-- Import google fonts - Heading first/ text second -->
+    <!-- <link rel='stylesheet' type='text/css' href='http://fonts.useso.com/css?family=Open+Sans:400,700|Droid+Sans:400,700' /> -->
+    <!--[if lt IE 9]>
+    <link href="http://fonts.useso.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Droid+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="../asset/ico/favicon.ico" type="image/x-icon" />
+
+    <!-- Css files -->
+    <link href="../asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../asset/css/jquery.mmenu.css" rel="stylesheet">
+    <link href="../asset/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../asset/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="../asset/css/style.min.css" rel="stylesheet">
+    <link href="../asset/css/add-ons.min.css" rel="stylesheet">
+    <link href="../css/city-picker.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap-multiselect.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../asset/js/html5shiv.js"></script>
+    <script src="../asset/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <style>
+    .form-group span.tip{
+            background-color:#FFFFDA ;
+            border: 1px solid #FFCD00;
+            font-size: 12px;
+            height: 20px;
+            line-height: 20px;
+            display: inline-block;
+            margin-left: 202px ;
+    }
+    .success{
+        background-image: url("li_ok.gif");
+        background-color:#E6FEE4;
+        border-color:#01BE00;
+        background-repeat: no-repeat;
+        background-position: left 2px;
+        padding:0 18px;
+    }
+    .danger{
+        background-image: url("li_err.gif");
+        background-color:#FFF2E5;
+        border-color:#FF3300;
+        background-repeat: no-repeat;
+        background-position: left 2px;
+        padding:0 18px;
+    }
+    </style>
+
+</head>
+<body>
+<!-- start: Header -->
+<div class="navbar" role="navigation">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown visible-md visible-lg">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="user-avatar" src="../asset/img/avatar.jpg" alt="user-mail">政府后台管理员</a>
+            </li>
+            <li><a href="Home.html"><i class="fa fa-power-off"></i></a></li>
+        </ul>
+    </div>
+</div>
+<!-- end: Header -->
+<!-- start:    左侧导航栏    -->
+<div class="container-fluid content">
+    <div class="row">
+        <!-- start: Main Menu -->
+        <div class="sidebar ">
+            <div class="sidebar-collapse">
+                <div class="sidebar-header t-center">
+                    <br>
+                    <h2>政府后台</h2>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="nav nav-sidebar">
+                        <li><a href="../Admin_Index.html"><i class="fa fa-laptop"></i><span class="text">主页</span></a></li>
+                        <li>
+                            <a href="#"><i class="fa fa-font"></i><span class="text">首页管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">头部导航栏管理</span></a></li>
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">文章管理</span></a></li>
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">内容管理</span></a></li>
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">底部导航栏管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-signal"></i><span class="text">服务管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_Service/equipment_service.html"><i class="fa fa-list"></i><span class="text">器材管理</span></a></li>
+                                <li><a href="../System_Service/field_service.html"><i class="fa fa-list"></i><span class="text">场地服务管理</span></a></li>
+                                <li><a href="../System_Service/sport_service.html"><i class="fa fa-list"></i><span class="text">赛事服务管理</span></a></li>
+                                <li><a href="../System_Service/artificial_service.html"><i class="fa fa-list"></i><span class="text">人工服务管理</span></a></li>
+                                <li><a href="../System_Service/activity_service.html"><i class="fa fa-list"></i><span class="text">活动服务管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-signal"></i><span class="text">需求</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_Demand/demand_table_input.html"><i class="fa fa-table"></i><span class="text">发布需求调查表</span></a></li>
+                                <li><a href="../System_Demand/demand_table_list.html"><i class="fa fa-list"></i><span class="text">调查表管理</span></a></li>
+                                <li><a href="../System_Demand/demand_directory.html"><i class="fa fa-list"></i><span class="text">需求目录管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-file-text"></i><span class="text">招标</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_TenderPlan/publish_tender_plan.html"><i class="fa fa-pencil"></i><span class="text">发布招标计划</span></a></li>
+                                <!--<li><a href="/System_TenderPlan/goverment_check_evalution.html"><i class="fa fa-table"></i><span class="text">查看招标计划</span></a></li>-->
+                                <li><a href="../System_TenderPlan/set_pass_company.html"><i class="fa fa-table"></i><span class="text">确定竞标企业</span></a></li>
+                                <li><a href="../System_TenderPlan/set_win_company.html"><i class="fa fa-table"></i><span class="text">确定中标企业</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-file-text"></i><span class="text">评价报告</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_Assess/check_assess_report.html"><i class="fa fa-pencil"></i><span class="text">查看评价报告</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-font"></i><span class="text">认证</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">企业认证</span></a></li>
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">媒体认证</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+
+                <div class="sidebar-brand">
+                    政府后台
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end:    左侧导航栏   -->
+<div class="main ">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header"><i class="fa fa-indent"></i>人工服务管理</h3>
+            <ol class="breadcrumb">
+                <li><i class="fa fa-home"></i><a href="Home.html">主页</a></li>
+
+                <li><i class="fa fa-indent"></i>人工服务管理</li>
+            </ol>
+        </div>
+    </div>
+    <!--已经发布的需求-->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2><i class="fa fa-table red"></i><span class="break"></span><strong>人工服务管理</strong></h2>
+                    <div class="panel-actions">
+                        <a href="table.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                     <div class="am-u-sm-8 am-u-md-4" style="margin-top: 10px;">
+                        <div id="artificialSelect" class="am-btn-toolbar" style="display: block;">
+                            <div class="row">
+                                <button id="addArtificial" type="button" class="btn btn-default col-lg-2 " style="color:#000000"><span class="am-icon-plus"></span> 新增</button>
+                                <button id="delArtificial" type="button" class="btn btn-default col-lg-2 " style="color:#000000"><span class="am-icon-trash-o"></span> 删除</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="artificial" style="margin-top: 10px; margin-bottom: 16px;">
+                        <table id="artificialTable"></table>
+                    </div>
+
+                    <div id="addView" style="display: none;">
+                        <div class="tpl-block ">
+                                
+                            <div class="am-g tpl-amazeui-form">
+                            
+                                <div style="margin-left: 45%">
+                                    <h4 class="h4">添加人工服务</h4>
+                                </div>
+
+                                <div class="am-u-sm-12 am-u-md-9" style="margin-top: 32px;padding-left: 15%">
+                                    <div id="formAdd" class="am-form am-form-horizontal">
+                                        <div class="row form-group">
+                                            <label class="am-u-sm-3 am-form-label" style="text-align: right;">服务名<i style="color: red;font-size: 15px;">*</i></label>
+                                            <div class="am-u-sm-9">
+                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="addName" />
+                                            </div>
+                                            <span class="tip">输入人工服务名称,长度不超过15</span>
+                                        </div>
+                                        
+                                        <div class="row form-group">
+                                            <label class="am-u-sm-3 am-form-label" style="text-align: right;">服务内容文件</label>
+                                            <div class="col-sm-4" style="width: 36%;margin-left: 5px;">
+                                                <input type="file" class="form-control" id="upload_file" name="upload_file" style="display: none;" onchange="change();">  
+                                                <input type="text" class="form-control" id="upload_file_tmp" name="upload_file_tmp" readonly="readonly" onclick="upload_file.click();">
+                                            </div>
+                                            <div class="col-sm-2">  
+                                                 <button type="button" class="am-btn am-btn-primary" id="select_file"onclick="upload_file.click();">浏览</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <label class="am-u-sm-3 am-form-label" style="text-align: right;">价格（元）</label>
+                                            <div class="am-u-sm-9">
+                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Price" />
+                                            </div>
+                                            <span class="tip">输入价格，价格为正数</span>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <label class="am-u-sm-3 am-form-label" style="text-align: right;">联系电话</label>
+                                            <div class="am-u-sm-9">
+                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Telephone" />
+                                            </div>
+                                            <span class="tip">输入联系电话</span>
+                                        </div>
+
+                                         <div class="row form-group" style="overflow: visible;">
+                                            <label class="am-u-sm-3 am-form-label" style="text-align: right;">适用人群<i style="color: red;font-size: 15px;mar">*</i></label>
+                                            <div class="am-u-sm-9">
+                                                <textarea id="Crowd" style="cursor: text;" readonly="readonly" cols="50" rows="3"></textarea>
+                                            </div>
+                                            <span class="tip">至少选择一种</span>
+                                            <select id="addSelectBtn" multiple="multiple" size="2" style="height: 30px;">
+                                                <option value="视觉障碍">视觉障碍</option>
+                                                <option value="听说障碍">听说障碍</option>
+                                                <option value="智力障碍">智力障碍</option>
+                                                <option value="肢体缺陷">肢体缺陷</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                            </select>
+                                        </div>
+
+                                         <div class="row form-group">
+                                            <label class="am-u-sm-3 am-form-label" style="text-align: right;">审核状态<i style="color: red;font-size: 15px;mar">*</i></label>
+                                            <div class="col-sm-1">
+                                                <select class="form-control" name="FieldState" id="State" style="height: 30px;padding:6px 6px;display: block;width: 84px;">
+                                                    <option value="3" selected>审核驳回</option>
+                                                    <option value="1" selected>审核通过</option>
+                                                    <option value="2" selected>正在审核</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <div class="am-u-sm-9 am-u-sm-push-3">
+                                                <button id="submit" type="botton" class="am-btn am-btn-primary" onclick="checkAddInput()">保存</button>
+                                                <button id="cancel" type="button" class="am-btn am-btn-primary am-btn-success">取消</button>
+                                            </div>
+                                        </div>
+                                        <br><br><br></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--修改场地信息-->
+                    <div id="modifyView" style="display: none;">
+                        <div class="tpl-block ">
+
+                            <div class="am-g tpl-amazeui-form">
+
+                                <div style="margin-left: 45%">
+                                    <h4 class="h4">修改人工服务信息</h4>
+                                </div>
+
+                                <div class="am-u-sm-12 am-u-md-9" style="margin-top: 32px;padding-left: 15%">
+                                    <div id="formAdd1" class="am-form am-form-horizontal">
+                                        <div class="row form-group" style="display: none;">
+                                            <label for="IDmdf" class="am-u-sm-3 am-form-label">人工服务ID</label>
+                                            <div class="am-u-sm-9">
+                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="IDmdf" />
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <label for="Namemdf" class="am-u-sm-3 am-form-label">服务名<i style="color: red;font-size: 15px;mar">*</i></label>
+                                            <div class="am-u-sm-9">
+                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Namemdf" />
+                                            </div>
+                                            <span class="tip">输入人工服务名称,长度不超过15</span>
+                                        </div>
+                                        
+                                         <div class="row form-group">
+                                            <label for="upload_filemdf" class="am-u-sm-3 am-form-label">服务内容文件</label>
+                                            <div class="col-sm-4" style="width: 36%;margin-left: 5px;">
+                                                <input type="file" class="form-control" id="upload_filemdf" name="upload_filemdf" style="display: none;" onchange="changemdf();">  
+                                                <input type="text" class="form-control" id="upload_file_tmpmdf" name="upload_file_tmpmdf" readonly="readonly" onclick="upload_filemdf.click();">
+                                            </div>
+                                            <div class="col-sm-2">  
+                                                 <button type="button" class="am-btn am-btn-primary" id="select_filemdf"onclick="upload_filemdf.click();">浏览</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <label class="am-u-sm-3 am-form-label" style="text-align: right;">价格</label>
+                                            <div class="am-u-sm-9">
+                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Pricemdf" />
+                                            </div>
+                                            <span class="tip">输入价格，价格为正数</span>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <label class="am-u-sm-3 am-form-label" style="text-align: right;">联系电话</label>
+                                            <div class="am-u-sm-9">
+                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Telephonemdf" />
+                                            </div>
+                                            <span class="tip">输入联系电话</span>
+                                        </div>
+
+                                         <div class="row form-group" style="overflow: visible;">
+                                            <label class="am-u-sm-3 am-form-label" style="text-align: right;">适用人群<i style="color: red;font-size: 15px;mar">*</i></label>
+                                            <div class="am-u-sm-9">
+                                                <textarea id="Crowdmdf" style="cursor: text;" readonly="readonly" cols="50" rows="3"></textarea>
+                                            </div>
+                                            <span class="tip">至少选择一种</span>
+                                            <select id="mdfSelectBtn" multiple="multiple" size="2" style="height: 30px;">
+                                                <option value="视觉障碍">视觉障碍</option>
+                                                <option value="听说障碍">听说障碍</option>
+                                                <option value="智力障碍">智力障碍</option>
+                                                <option value="肢体缺陷">肢体缺陷</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                            </select>
+                                        </div>
+
+                                         <div class="row form-group">
+                                            <label class="am-u-sm-3 am-form-label" style="text-align: right;">审核状态</label>
+                                            <div class="col-sm-1">
+                                                <select class="form-control" name="FieldState" id="Statemdf" style="height: 30px;padding:6px 6px;display: block;width: 84px;">
+                                                    <option value="3" selected>审核驳回</option>
+                                                    <option value="1" selected>审核通过</option>
+                                                    <option value="2" selected>正在审核</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <div class="am-u-sm-9 am-u-sm-push-3">
+                                                <button id="submitmdf" type="botton" class="am-btn am-btn-primary" onclick="checkMdfInput()">保存</button>
+                                                <button id="cancelmdf" type="button" class="am-btn am-btn-primary am-btn-success">取消</button>
+                                            </div>
+                                        </div>
+                                        <br><br><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--查看详情-->
+                    <div id="detailView" style="display: none">
+                        <div class="tpl-block ">
+                         <div class="am-g tpl-amazeui-form">
+
+                                <div style="margin-left: 45%">
+                                    <h4 class="h4">查看人工服务详情</h4>
+                                </div>
+
+                                <div class="am-u-sm-12 am-u-md-9" style="margin-top: 32px;padding-left: 15%">
+                                    <form id="formAdd2" enctype="multipart/form-data" class="am-form am-form-horizontal">
+
+                                        <div class="row form-group">
+                                            <label class="am-u-sm-3 am-form-label" style="text-align: right;">人工服务名称</label>
+                                            <div class="am-u-sm-9">
+                                                <p class="form-control-static" id = "Namedtl"></p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row form-group">
+                                            <label class="am-u-sm-3 am-form-label">服务内容文件</label>
+                                            <div class="am-u-sm-9">
+                                                <p class="form-control-static" id = "upload_file_tmpdtl"></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <label class="am-u-sm-3 am-form-label">价格</label>
+                                            <div class="am-u-sm-9">
+                                                <p class="form-control-static" id = "Pricedtl"></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <label class="am-u-sm-3 am-form-label">联系电话</label>
+                                            <div class="am-u-sm-9">
+                                                <p class="form-control-static" id = "Telephonedtl"></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <label class="am-u-sm-3 am-form-label">适用人群</label>
+                                            <div class="am-u-sm-9">
+                                                <p class="form-control-static" id = "Crowddtl"></p>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="row form-group">
+                                            <label class="am-u-sm-3 am-form-label">审核状态</label>
+                                            <div class="am-u-sm-9">
+                                                <p class="form-control-static" id = "Statedtl"></p>
+                                            </div>
+                                        </div>
+                                        
+                                        <br>
+                                        <div class="row form-group">
+                                            <div class="am-u-sm-9 am-u-sm-push-3">
+                                                <button id="backdtl" type="button" class="am-btn am-btn-primary am-btn-success">返回</button>
+                                            </div>
+                                        </div>
+                                        <br><br><br>
+                                    </form>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/col-->
+    </div><!--/row-->
+</div>   
+    <script src="../asset/js/jquery-2.1.1.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../asset/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../asset/js/bootstrap.min.js"></script>
+    <!-- page scripts -->
+    <script src="../asset/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+    <script src="../asset/plugins/chosen/js/chosen.jquery.min.js"></script>
+    <script src="../asset/plugins/autosize/jquery.autosize.min.js"></script>
+    <script src="../asset/plugins/placeholder/jquery.placeholder.min.js"></script>
+    <script src="../asset/plugins/maskedinput/jquery.maskedinput.min.js"></script>
+    <script src="../asset/plugins/moment/moment.min.js"></script>
+    <!-- theme scripts -->
+    <script src="../asset/js/jquery.mmenu.min.js"></script>
+    <script src="../asset/js/core.min.js"></script>
+    <!-- inline scripts related to this page -->
+    <!-- end: JavaScript-->
+
+    <script src="../asset/js/jquery-2.1.1.min.js"></script>
+    <script src="../asset/js/avalon.js"></script>
+    <script src="../asset/js/bootstrap.min.js"></script>
+    <script charset="utf-8" src="../kindeditor/lang/zh-CN.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/amazeui.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../js/bootstrap-table.js"></script>
+    <script src="../js/bootstrap-table.min.js"></script>
+    <script src="../js/bootstrap-table-zh-CN.min.js"></script>
+    <script src="../js/city-picker.data.js"></script>
+    <script src="../js/city-picker.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        var $selectedText=$('#Crowd');
+    </script>
+    <script src="bootstrap-multiselect.js"></script>
+    <script>
+
+        $('#addSelectBtn').multiselect();
+        $('#mdfSelectBtn').multiselect();
+        
+        var addname=document.getElementById('addName');
+        var price=document.getElementById('Price');
+        var telephone=document.getElementById('Telephone');
+        var crowd=document.getElementById('Crowd');
+        var state=document.getElementById('State');
+        var addSpan=$("#addView span.tip");
+
+
+        var namemdf=document.getElementById('Namemdf');
+        var pricemdf=document.getElementById('Pricemdf');
+        var telephonemdf=document.getElementById('Telephonemdf');
+        var crowdmdf=document.getElementById('Crowdmdf');
+        var statemdf=document.getElementById('Statemdf');
+        var mdfSpan=$("#modifyView span.tip");
+
+        //提交事件
+        function checkForm(name,price,telephone,crowd,spa){
+            if(!checkName(name,spa))
+            {
+                return false;
+            }
+            if(!checkPrice(price,spa))
+            {
+                return false;
+            }
+            if(!checkTelephone(telephone,spa))
+            {
+                return false;
+            }
+            if(!checkCrowd(crowd,spa))
+            {
+                return false;
+            }
+            return true;
+        };
+
+        //onblur失去焦点事件
+        addname.onblur=function()
+        {
+            checkName(this,addSpan);
+        };
+        telephone.onblur=function()
+        {
+            checkTelephone(this,addSpan);
+        };
+        price.onblur=function()
+        {
+            checkPrice(this,addSpan);
+        };
+        addname.onfocus=function(){
+            addSpan[0].innerText='输入人工服务名称,长度不超过15';
+            addSpan[0].className='tip';
+        };
+        price.onfocus=function(){
+            addSpan[1].innerText='输入价格，价格为正数';
+            addSpan[1].className='tip';
+        };
+        telephone.onfocus=function(){
+            addSpan[2].innerText='输入联系电话';
+            addSpan[2].className='tip';
+        };
+
+        namemdf.onblur=function()
+        {
+            checkName(this,mdfSpan);
+        };
+        pricemdf.onblur=function()
+        {
+            checkPrice(this,mdfSpan);
+        };
+        telephonemdf.onblur=function()
+        {
+            checkTelephone(this,mdfSpan);
+        };
+        namemdf.onfocus=function(){
+            mdfSpan[0].innerText='输入人工服务名称,长度不超过15';
+            mdfSpan[0].className='tip';
+        };
+        
+        pricemdf.onfocus=function(){
+            mdfSpan[1].innerText='输入价格，价格为正数';
+            mdfSpan[1].className='tip';
+        };
+        
+        telephonemdf.onfocus=function(){
+            mdfSpan[2].innerText='输入联系电话';
+            mdfSpan[2].className='tip';
+        };
+
+//---------------------------------函数封装-------------------------------------------------------------
+        function checkName(name,span)
+        {
+            if(name.value.length==0)
+            {
+                span[0].innerText='服务名称不能为空';
+                span[0].className='danger tip';
+                return false;
+            }
+            var pattern=/^.{1,15}$/;
+            if(!pattern.test(name.value))
+            {
+                span[0].innerText='服务名称过长';
+                span[0].className='danger tip';
+                return false;
+            }
+            span[0].innerText='服务名称输入正确';
+            span[0].className='success tip';
+            return true;
+        }
+
+
+
+        function checkPrice(price,span)
+        {
+            var r =  /(^[1-9](\d+)?(\.\d{1,2})?$)|(^(0){1}$)|(^\d\.\d{1,2}?$)/; //正数含0
+            if(price.value!=""){
+                if(r.test(price.value)){
+                    span[1].innerText='数字输入合法';
+                    span[1].className='tip success';
+                    return true;
+                }else{
+                    span[1].innerText='输入价格，价格为正数';
+                    span[1].className='tip danger';
+                    return false;
+                }
+            }else{
+                span[1].innerText='输入价格，价格为正数';
+                span[1].className='tip';
+                return true;
+            }
+        }
+        
+        function checkTelephone(telephone,span)
+        {
+            var pattern1= /^1[34578]\d{9}$/;//手机电话
+            var pattern2= /0\d{2,3}-\d{7,8}/;//固话
+            if(telephone.value==""){
+                span[2].innerText='输入联系电话';
+                span[2].className='tip';
+                return true;
+            }
+
+            if(!pattern1.test(telephone.value))//不是手机电话
+            {   
+                if(!pattern2.test(telephone.value)){//既不是固话也不是手机电话
+                    span[2].innerText='联系电话输格式错误，请重新输入';
+                    span[2].className='danger tip';
+                    return false;
+                }else{
+                    span[2].innerText='联系电话输入正确';
+                    span[2].className='success tip';
+                    return true;
+                }
+            }else{
+                span[2].innerText='联系电话输入正确';
+                span[2].className='success tip';
+                return true;
+            }
+        }
+
+        function checkCrowd(crowd,span)
+        {
+            if(crowd.value.length==0)
+            {
+                span[3].className='danger tip';
+                return false;
+            }
+            span[3].className='success tip';
+            return true;
+        }
+
+
+</script>
+    <script>
+    function change(){  
+        var filePath=document.getElementById("upload_file").value;
+        var path1=filePath.lastIndexOf("\\");
+        var name = filePath.substring(path1+1);
+        document.getElementById("upload_file_tmp").value=name;  
+    }
+     function changemdf(){  
+        var filePath=document.getElementById("upload_filemdf").value;
+        var path1=filePath.lastIndexOf("\\");
+        var name = filePath.substring(path1+1);
+        document.getElementById("upload_file_tmpmdf").value=name;  
+    }
+    $('#test').click(function(){
+        $('#artificialSelect').hide();
+        $('#artificial').hide();
+        $('#detailView').show();
+    });    
+
+    $('#artificialTable').bootstrapTable({
+        url:"../ArtificialService/getArtificialService",
+        //请求方法
+        method: 'get',
+        //dataType: "json",
+        //是否显示行间隔色
+        striped: true,
+        //是否显示 切换试图（table/card）按钮
+        showToggle: "true",
+        //显示搜索框 
+        search: "true", 
+        //显示刷新
+        showRefresh : "true",
+        //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）     
+        cache: false,    
+        //是否显示分页（*）  
+        pagination: true,   
+         //是否启用排序  
+        sortable: true,    
+         //排序方式 
+        sortOrder: "asc",
+        //如果设置了分页，首页页码     
+        pageNumber: 1,   
+        //每页的记录行数（*）   
+        pageSize: 10,  
+        //可供选择的每页的行数（*）    
+        pageList: [10, 25, 50, 100],
+        //客户端处理分页    
+        sidePagination: "client",
+        //指定主键列 idField: "fieldID",
+        columns: [
+            {
+                checkbox: true, 
+            },
+            {
+                field: 'artificialID',//域值
+                title: '服务ID',//标题
+                visible: false,//false表示不显示
+            },
+            {
+                field: 'artificialName',//域值
+                title: '服务名称',//标题
+                visible: true,//false表示不显示
+            },
+             {
+                field: 'companyName',//域值
+                title: '所属企业',//标题
+                visible: true,//false表示不显示
+            },
+             {
+                field: 'suitableCrowd',//域值
+                title: '适用人群',//标题
+                visible: true,//false表示不显示
+            },
+             {
+                field: 'artificialFile',//域值
+                title: '文件路径',//标题
+                visible: false,//false表示不显示
+            },
+            {
+                field: 'artificialState',//域值
+                title: '审核状态',//标题
+                visible: true,//false表示不显示
+                formatter : function (value, row, index) {
+                    if (row['artificialState'] == 1) {
+                        return '审核通过';
+                        //value="审核通过";
+                    }
+                    if (row['artificialState'] == 2) {
+                        return '正在审核';
+                        //value="正在审核";
+                    }
+                    if (row['artificialState'] == 3) {
+                        return '审核驳回';
+                        //value="审核驳回";
+                    }
+                    //return value;
+                }
+            }, {
+                field: 'phone',//域值
+                title: '联系电话',//标题
+                visible: false,//false表示不显示
+            }, {
+                field: 'price',//域值
+                title: '价格',//标题
+                visible: false,//false表示不显示
+            }, {
+                title: '操作',//标题
+                visible: true,//false表示不显示
+                formatter:ActionFormatter,
+                events:window.ActionEvent = {
+                    'click .edit':function (e,value,row,index) {
+                        $('#artificialSelect').hide();
+                        $('#artificial').hide();
+                        $('#modifyView').show();
+                        $selectedText=$('#Crowdmdf');
+                        //ID
+                        document.getElementById("IDmdf").value = row['artificialID'];
+                        //Name
+                        document.getElementById("Namemdf").value = row['artificialName'];
+                        //crowd
+                        document.getElementById("Crowdmdf").value = row['suitableCrowd'];
+                        var str=document.getElementById("Crowdmdf").value;
+                        console.log("适合人群："+str);
+                        var arr=str.split(",");
+                        for(var i=0;i<arr.length;i++){
+                            $('#mdfSelectBtn').multiselect('select', arr[i]);
+                        }
+                        //price
+                        document.getElementById("Pricemdf").value = row['price'];
+                        //联系电话
+                        document.getElementById("Telephonemdf").value = row['phone'];
+                        //审核状态
+                        document.getElementById("Statemdf").value = row['artificialState'];
+                        //内容文件
+                        var filePath=row['artificialFile'];
+                        var path1=filePath.lastIndexOf("\\");
+                        var name = filePath.substring(path1+1);
+                        document.getElementById("upload_file_tmpmdf").value=name;
+                    },
+                    'click .remove':function (e,value,row,index) {
+                        var mymessage=confirm("确定删除吗?");
+                        //根据招标计划ID查询对应CompanyInfo
+                        if (mymessage == true) {
+                            $.ajax({
+                                type: "POST",
+                                url: "../ArtificialService/delArtificialService?ArtificialID=" + row['artificialID'],
+                                success: function () {
+                                    alert("删除成功");
+                                    $table.bootstrapTable('remove', {
+                                        field: 'sportID',
+                                        values: [row['sportID']]
+                                    });
+                                    $table.bootstrapTable('refresh');
+                                    //window.location.reload();
+
+                                },
+                                 error: function (XMLHttpRequest, textStatus, errorThrown) {
+                                    alert(XMLHttpRequest.status);
+                                    alert(XMLHttpRequest.readyState);
+                                    alert(textStatus);
+                                },
+                            });
+                        }
+                        
+                    },
+                    'click .preview':function (e,value,row,index) {
+                        $('#artificialSelect').hide();
+                        $('#artificial').hide();
+                        $('#detailView').show();
+                        //ID
+                        //document.getElementById("IDd").value = row['fieldID'];
+
+                        //Name
+                        document.getElementById("Namedtl").innerText = row['artificialName'];
+                        //适合人群
+                        document.getElementById("Crowddtl").innerText = row['suitableCrowd'];
+                        //price
+                        document.getElementById("Pricedtl").innerText = row['price'];         
+                        //联系电话
+                        document.getElementById("Telephonedtl").innerText = row['phone'];
+                        //审核状态
+                        //document.getElementById("Statedtl").value = row['artificialState'];
+                        var num=row['artificialState'];
+                        if(num == 1){document.getElementById("Statedtl").innerText="审核通过";}
+                        else if(num == 2){document.getElementById("Statedtl").innerText="正在审核";}
+                        else{document.getElementById("Statedtl").innerText="审核驳回";}
+                        //文件
+                        var filePath=row['artificialFile'];
+                        var path1=filePath.lastIndexOf("\\");
+                        var name = filePath.substring(path1+14);
+                        document.getElementById("upload_file_tmpdtl").innerText=name;
+                    }
+                }
+            }
+        ]
+    });
+    //
+    var $table=$("#artificialTable");
+    //
+    function ActionFormatter(value, row, index){
+        return [
+                '<a class="edit" title="Edit" style="display: inline;font-size: 12px;"> 编辑 </a>',
+                '<p style="display: inline;">|</p>',
+                '<a class="remove" title="Remove" style="display: inline;font-size: 12px;"> 删除 </a>',
+                '<p style="display: inline;">|</p>',
+                '<a class="preview" title="Preview" style="display: inline;font-size: 12px;"> 详情 </a>'
+        ].join('');
+    }
+    //
+     $('#addArtificial').click(function(){
+        $('#artificialSelect').hide();
+        $('#artificial').hide();
+        $('#addView').show();
+        $selectedText=$('#Crowd');
+    });
+    //
+    function checkAddInput(){
+       
+        var formData = new FormData();
+        var ArtificialName=document.getElementById("addName").value;
+        var ArtificialFile = document.getElementById("upload_file").files[0];
+        var Phone=document.getElementById("Telephone").value;
+        var Price=document.getElementById("Price").value;
+        if(Price=="")Price="0";
+        var SuitableCrowd=document.getElementById("Crowd").value;
+        var ArtificialState=document.getElementById("State").value;
+        if(!checkForm(addname,price,telephone,crowd,addSpan)){
+             alert("请检查填写是否规范！");
+            return false;
+        }
+        else{
+             formData.append('ArtificialName',ArtificialName);
+             formData.append('ArtificialFile',ArtificialFile);
+             formData.append('Phone',Phone);
+             formData.append('Price', Price);
+             formData.append('SuitableCrowd', SuitableCrowd);
+             formData.append('ArtificialState', ArtificialState);
+             
+            $.ajax({
+                url: '../ArtificialService/addArtificialService',
+                    type: 'POST',
+                    cache: false,
+                    data: formData,//向后台提交的参数
+                    processData: false,
+                    contentType: false,
+                    //success:function(data){alert("添加成功！");console.log(data);}
+            }).done(function(res){
+                alert("添加成功！");
+                $('#addView').hide();
+                $('#artificialSelect').show();
+                $('#artificial').show();
+                $table.bootstrapTable('refresh');
+            }).fail(function(res){
+                alert("添加失败");
+            });
+        }
+       
+    } 
+    //
+    function checkMdfInput(){
+        
+        var formDatamdf = new FormData();
+        var ArtificialID=document.getElementById("IDmdf").value;
+        var ArtificialName=document.getElementById("Namemdf").value;
+        var ArtificialFile=document.getElementById("upload_filemdf").files[0];
+        var Price=document.getElementById("Pricemdf").value;
+        if(Price=="")Price="0";
+        var Phone=document.getElementById("Telephonemdf").value;
+        var SuitableCrowd=document.getElementById("Crowdmdf").value;
+        var ArtificialState=document.getElementById("Statemdf").value;
+        
+        if(!checkForm(namemdf,pricemdf,telephonemdf,crowdmdf,mdfSpan)){
+            alert("请检查填写是否规范！");
+            return false;
+        }
+
+        else{
+             formDatamdf.append('ArtificialID',ArtificialID);
+             formDatamdf.append('ArtificialName',ArtificialName);
+             formDatamdf.append('ArtificialFile',ArtificialFile);
+             formDatamdf.append('Phone',Phone);
+             formDatamdf.append('Price', Price);
+             formDatamdf.append('SuitableCrowd', SuitableCrowd);
+             formDatamdf.append('ArtificialState', ArtificialState);
+            
+            $.ajax({
+                url: '../ArtificialService/updateArtificialService',
+                    type: 'POST',
+                    cache: false,
+                    data: formDatamdf,//向后台提交的参数
+                    processData: false,
+                    contentType: false,
+                    //success:function(data){alert("添加成功！");console.log(data);}
+            }).done(function(res){
+                alert("修改成功！");
+                $('#modifyView').hide();
+                $('#artificialSelect').show();
+                $('#artificial').show();
+                $table.bootstrapTable('refresh');
+            }).fail(function(res){
+                alert("修改失败");
+            });
+        }
+    }
+    //
+    $('#delArtificial').click(function(){
+        var data =$.map($table.bootstrapTable('getSelections'), function (row) {
+                return row.artificialID;
+            });
+            if(data.length != 0) {
+                var mymessage=confirm("确定删除吗?");
+                if (mymessage == true) {
+                    $.ajax({
+                    type: "post",
+                    async: false,
+                    url: "../ArtificialService/delArtificialService?ArtificialID=" + data,//请求地址
+                    //data: {"EquipmentContentId": data[i]},//向后台提交的参数
+                    success: function (data) {
+                        alert("删除成功");
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert(XMLHttpRequest.status);
+                        alert(XMLHttpRequest.readyState);
+                        alert(textStatus);
+                    },
+                })
+                    $table.bootstrapTable('remove', {
+                        field: 'artificialID',
+                        values: data
+                    });
+                    $table.bootstrapTable('refresh');                   
+                }
+                 
+            }
+            else
+            {
+                alert("请选择要删除的服务");
+            }
+    })
+    //
+    $('#cancel').click(function () {
+        $('#artificial').show();
+        $('#addView').hide();
+        $('#artificialSelect').show();
+    })
+    //
+    $('#cancelmdf').click(function () {
+
+        $('#artificial').show();
+        $('#modifyView').hide();
+        $('#artificialSelect').show();
+        $table.bootstrapTable('refresh');
+    })
+    //
+    $('#backdtl').click(function(){
+        $('#artificial').show();
+        $('#detailView').hide();
+        $('#artificialSelect').show();
+    })
+    </script>
+</body>
+</html>

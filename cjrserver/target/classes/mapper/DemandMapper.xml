@@ -1,0 +1,29 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.fjnu.cjrserver.dao.DemandMapper">
+    <!--查询需求调查表-->
+    <select id="findDemandTable" resultType="com.edu.fjnu.cjrserver.model.DemandTable">
+        SELECT * from demand_table
+    </select>
+    <!--根据需求调查表ID查询活动服务-->
+    <select id="findActivityByDemandTableID" resultType="com.edu.fjnu.cjrserver.model.Activity" parameterType="Integer">
+        select * from activity_service where Activity_ID IN (select serviceID from demand_activityservice_detail where DemandTableID =#{DemandTableID})
+    </select>
+    <!--根据需求调查表ID查询人工服务-->
+    <select id="findArtificialByDemandTableID" resultType="com.edu.fjnu.cjrserver.model.Artificial" parameterType="Integer">
+        select * from artificial_service where artificial_ID IN (select serviceID from demand_artificialservice_detail where DemandTableID =#{DemandTableID})
+    </select>
+    <!--根据需求调查表ID查询器材服务-->
+    <select id="findEquipmentContentByDemandTableID" resultType="com.edu.fjnu.cjrserver.model.EquipmentContent" parameterType="Integer">
+        select * from equipment_content where Demand_ID IN (select serviceID from demand_equipment_content_detail where DemandTableID =#{DemandTableID})
+    </select>
+    <!--根据需求调查表ID查询场地服务-->
+    <select id="findFieldServerByDemandTableID" resultType="com.edu.fjnu.cjrserver.model.FieldServer" parameterType="Integer">
+        select * from field_service where Field_ID IN (select serviceID from demand_fieldservice_detail where DemandTableID =#{DemandTableID})
+    </select>
+    <!--根据需求调查表ID查询赛事服务-->
+    <select id="findSportByDemandTableID" resultType="com.edu.fjnu.cjrserver.model.Sport" parameterType="Integer">
+        select * from sport_service where Sport_ID IN (select serviceID from demand_sportservice_detail where DemandTableID =#{DemandTableID})
+    </select>
+</mapper>

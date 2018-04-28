@@ -1,0 +1,411 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>查看需求目录</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="css/my_style.css">
+    <link href="assets/css/bootstrap.css" rel="stylesheet"> 
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet"> 
+    
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/jquery.mmenu.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="assets/css/style.min.css" rel="stylesheet">
+    <link href="assets/css/add-ons.min.css" rel="stylesheet">
+    <!-- <script  defer="defer" src="assets/js/echarts.min.js"></script>
+    <script  defer="defer" src="assets/js/Disabled_index.js"></script> -->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script  defer="defer" src="aset.first.js"></script>
+    <!-- <script  defer="defer" src="../js/all.js"></script> -->
+
+
+    <!-- <script  defer="defer" src="assets/js/jquery.min.js"></script>
+    <script  defer="defer" src="assets/js/amazeui.min.js"></script>
+    <script  defer="defer" src="assets/js/iscroll.js"></script>
+    <script  defer="defer" src="assets/js/app.js"></script> -->
+    <script defer="defer" src="aset.1.js"></script>
+
+    <!-- <script  defer="defer" src="assets/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+    <script  defer="defer" src="assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script  defer="defer" src="assets/plugins/datatables/js/dataTables.bootstrap.min.js"></script> -->
+    <script defer="defer" src="aset.plugin.js"></script>
+    <!-- theme scripts -->
+    <!-- <script  defer="defer" src="assets/js/SmoothScroll.js"></script>    
+    <script  defer="defer" src="assets/js/jquery.mmenu.min.js"></script>
+    <script  defer="defer" src="assets/js/core.min.js"></script> -->
+    <script defer="defer" src="aset.theme.js"></script>
+    <!-- end: JavaScript-->
+   <!--  <script  defer="defer" src="assets/js/jquery-2.1.1.min.js"></script>
+    <script  defer="defer" src="assets/js/avalon.js"></script> -->
+     <script defer="defer" src="aset.end.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    
+    <!-- <script  defer="defer" src="assets/js/jquery-3.2.1.min.js"></script>
+    <script  defer="defer" src="assets/js/bootstrap-table.js"></script>
+    <script  defer="defer" src="assets/js/bootstrap-table-zh-CN.min.js"></script>
+    <script  defer="defer" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script  defer="defer" src="assets/js/bootstrap.min.js"></script>
+    
+    <script  defer="defer" src="../asset/js/jquer_shijian.js" type="text/javascript" charset="utf-8"></script> --> 
+     <script defer="defer" src="aset.table.js"></script>
+</head>
+
+<body data-type="index"onload="load();">
+
+    <header class="am-topbar am-topbar-inverse admin-header">
+        <div class="am-topbar-brand">
+            <a href="javascript:;" class="tpl-logo">
+                <img src="assets/img/logo.png" style="width:160px; height:50px" alt="">
+            </a>
+        </div>
+        <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+        </div>
+
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+        <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+            <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
+               
+                <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen" class="tpl-header-list-link"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+
+                <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                    <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                        <span class="tpl-header-list-user-nick"id="user_name"data-number=""data-style=""data-userid="">吴祖根</span><span class="tpl-header-list-user-ico"> <img src="assets/img/user02.png" style="width:45px;"></span>
+                    </a>
+                    <ul class="am-dropdown-content">
+                        <li><a href="disabled_information_change.html"><span class="am-icon-bell-o"></span> 资料</a></li>               
+                        <li><a href="../System_management/Login.html"><span class="am-icon-power-off"></span> 退出</a></li>
+                    </ul>
+                </li>
+                <li><a href="###" class="tpl-header-list-link"><span class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
+            </ul>
+        </div>
+    </header>
+
+
+
+
+
+
+
+    <div class="tpl-page-container tpl-page-header-fixed">
+
+
+        <div class="tpl-left-nav tpl-left-nav-hover">
+            <div class="tpl-left-nav-title am-lg-text-left">
+                个 人 列 表
+            </div>
+            <div class="tpl-left-nav-list">
+                <ul class="tpl-left-nav-menu">
+                    <li class="tpl-left-nav-item">
+                        <a href="../index.html?type=A" class="nav-link active">
+                            <i class="am-icon-home"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    
+                    <li class="tpl-left-nav-item">
+                        <a href="disabled_information_change.html" class="nav-link tpl-left-nav-link-list">
+                            <i class="  glyphicon glyphicon-user"></i>
+                            <span>个人信息修改</span>
+
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="  glyphicon glyphicon-flag"></i>
+                            <span>我的权利</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <a href="disabled_voting.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>提出我的需求</span>
+                                    <i class="tpl-left-nav-content"><!-- tpl-badge-success--></i>
+                                </a>
+                                <a href="disabled_comment_service.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>评价服务</span>
+                                    <i class="tpl-left-nav-content"><!-- tpl-badge-success--></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-wpforms"></i>
+                            <span>新闻发布</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu" >
+                            <li>
+                                <a href="#">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>图片新闻</span>
+                                    <i class="tpl-left-nav-content-ico am-fr am-margin-right"></i>
+                                </a>
+
+                                <a href="#">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>政策浏览</span>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                            
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="tpl-content-wrapper">
+            <div class="tpl-content-page-title">
+                个人中心
+            </div>
+            <ol class="am-breadcrumb">
+                <li><a href="../index.html?type=A" class="am-icon-home">首页</a></li>
+                <li><a href="Disabled_index.html">个人中心</a></li>
+                <li class="am-active">查看需求目录</li>
+            </ol>
+            
+            <div id="body">
+             <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2><i class="fa fa-table red"></i><span class="break"></span><strong>调查表</strong></h2>
+                        </div>
+                        <div class="panel-body">
+                            <table id="DemandTable" data-toggle="table"  data-url="/Demand/ShowAll">
+                                <thead>
+                                <tr>
+                                    <!-- <th data-checkbox="true"></th> -->
+                                    <th data-field="demand_ID">调查表名</th>
+                                    <th data-field="demand_Name">开始时间</th>
+                                    <th data-field="demand_Category">结束时间</th>
+                                    <th data-field="demandTable_State" data-formatter="StateFormatter" >State</th>
+                                   <!--  <th data-field="action" data-formatter="actionFormatter" data-events="DemandactionEvents">添加</th> -->
+                                </tr>
+                                </thead>
+                                <tr id="tr1" data-toggle="modal" data-target="#DemandTableModal">
+                                    <td>test</td>
+                                    <td>2017-11-28 22:00</td>
+                                    <td>2017-11-29 23:00</td>
+                                    <td>0</td>
+                                </tr>
+                                
+                            </table>
+                           
+                        </div>
+                    </div>
+                </div><!--/col-->
+
+            </div>
+                
+            <!-- <button type="button"class="btn btn-primary" id="Demanded">提出我的需求</button>      -->
+            </div>   
+        </div>
+        
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <p>Here settings can be configured...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!---->
+<!--这段是悬浮窗的代码-->
+
+
+<div class="modal fade" id="DemandTableModal">
+    <div class="modal-dialog" style="top: 46px;width:900px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">需求目录</h4> 
+            </div>
+            <div class="modal-body">
+               
+                  <ul id="select" class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#page_field" aria-controls="page_field" role="tab" data-toggle="tab">场地</a></li>
+                                <li role="presentation"><a href="#page_equipment" aria-controls="page_equipment" role="tab" data-toggle="tab">器材</a></li>
+                                <li role="presentation"><a href="#page_artificial" aria-controls="page_artificial" role="tab" data-toggle="tab">服务</a></li>
+                                <li role="presentation"><a href="#page_sport" aria-controls="page_sport" role="tab" data-toggle="tab">赛事</a></li>
+                                <li role="presentation"><a href="#page_activity" aria-controls="page_activity" role="tab" data-toggle="tab">活动</a></li>
+                            </ul>
+                <div id="content" class="tab-content" style="margin-bottom: 32px;"> 
+                                
+                                <div role="tabpanel" class="tab-pane active" id="page_field">
+                                    <table id="eventfield"
+                                                data-toggle="table"
+                                                data-url="/Demand/ShowFieldService">
+                                        <thead>
+                                        <tr>
+                                           <!--  <th data-checkbox="true"></th> -->
+                                            <th data-field="ID" data-valign="middle" data-formatter="IDFormatter" data-events="IDEvents">行号</th>
+                                            <th data-field="FieldID" data-valign="middle">场地ID</th>
+                                            <th data-field="FieldName" data-valign="middle">场地名</th>
+                                            <th data-field="CompanyName" data-valign="middle">所属企业</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="page_equipment">
+                                    <table id="eventequipment"
+                                           data-toggle="table"
+                                           data-url="/Demand/ShowEquipmentContent">
+                                        <thead>
+                                        <tr>
+                                            <!-- <th data-checkbox="true"></th> -->
+                                            <th data-field="ID" data-valign="middle" data-formatter="IDFormatter" data-events="IDEvents">行号</th>
+                                            <th data-field="DemandID" data-valign="middle" data-visible="false" >器材ID</th>
+                                            <th data-field="DemandName" data-valign="middle" >器材名称</th>
+                                            <th data-field="DemandCategory" data-valign="middle" >器材类别</th>
+                                            <th data-field="CompanyName" data-valign="middle">所属企业</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="page_artificial">
+                                    <table id="eventartificial"
+                                           data-toggle="table"
+                                           data-url="/Demand/ShowArtificialService">
+                                        <thead>
+                                        <tr>
+                                            <!-- <th data-checkbox="true"></th> -->
+                                            <th data-field="ID" data-valign="middle" data-formatter="IDFormatter" data-events="IDEvents">行号</th>
+                                            <th data-field="ArtificialID" data-valign="middle">服务ID</th>
+                                            <th data-field="ArtificialName" data-align="center"data-valign="middle">服务名称</th>
+                                            <th data-field="CompanyName" data-valign="middle">所属企业</th>
+                                            <th data-field="SuitableCrowd" data-valign="middle">适用人群</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="page_sport">
+                                    <table id="eventsport"
+                                           data-toggle="table"
+                                           data-url="/Demand/ShowSportService">
+                                        <thead>
+                                        <tr>
+                                            <!-- <th data-checkbox="true"></th> -->
+                                            <th data-field="ID" data-valign="middle" data-formatter="IDFormatter" data-events="IDEvents">行号</th>
+                                            <th data-field="SportID" data-valign="middle">赛事ID</th>
+                                            <th data-field="SportName" data-valign="middle">赛事名称</th>
+                                            <th data-field="SportType" data-valign="middle">赛事类型</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="page_activity">
+                                    <table id="eventactivity"
+                                           data-toggle="table"
+                                           data-url="/Demand/ShowActivityService">
+                                        <thead>
+                                        <tr>
+                                          <!--   <th data-checkbox="true"></th> -->
+                                            <th data-field="ID" data-valign="middle" data-formatter="IDFormatter" data-events="IDEvents">行号</th>
+                                            <th data-field="ActivityID" data-valign="middle">活动ID</th>
+                                            <th data-field="ActivityName" data-valign="middle">活动名称</th>
+                                            <th data-field="ActivityAddress" data-valign="middle">活动地址</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+
+                            </div>
+            </div>
+            <div class="modal-footer">
+                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> 
+                <!--<button type="button"class="btn btn-primary" id="Demanded">提出我的需求</button>-->
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+ <script>
+    var DemandTableID;
+    function StateFormatter(value, row, index) {
+        if(row['demandTable_State']==0)
+            return '<span class="label label-primary">正在进行</span>';
+        else if(row['demandTable_State']==1)
+            return '<span class="label label-danger">已经完成</span>';
+    }
+    // function actionFormatter(value, row, index) {
+
+    //     return [
+    //         '<a class="like" href="javascript:void(0)" title="Select" data-dismiss="modal">',
+    //         '<i class="glyphicon glyphicon-plus"></i>',
+    //         '</a>'
+    //     ].join('');
+    // }
+    window.DemandactionEvents = {
+        'click .like': function (e, value, row, index) {
+            document.getElementById("DemandTable_input").value=row['demandTable_Name'];
+            DemandTableID = row['demandTable_ID'];
+        }
+    };
+
+
+    $('#Demanded').click(function () {
+            var TenderPlanName = document.getElementById("DemandTable_input").value;
+            var ids = $.map($('#DetailTable').bootstrapTable('getSelections'), function (row) {
+                return row.id;
+            });
+            $('#DetailTable').bootstrapTable('remove', {
+                field: 'id',
+                values: ids
+            });
+            var allTableData =$('#DetailTable').bootstrapTable('getSelections');
+            //获取悬浮框数据
+            var CompanyNameList = new Array();
+           // var allTableData = $('#DetailTable').bootstrapTable('getData');
+            var allTableData2 = JSON.stringify(allTableData);
+            //获取json中demand_ID,生成数组
+            for(var i=0;i<eval(allTableData2).length;i++)
+            {
+                CompanyNameList[i]=allTableData[i].demand_ID;//这里不能用已经转换的JSON格式，要用原本的
+            }
+            var user_id = jQuery("#user_name").data("userid");//==========================================================有错误，输出为空，改====================================================
+            alert(user_id);
+            
+        });
+
+ </script>
+   
+</body>
+
+ 
+</html>
+</html>
+
+<!doctype html>

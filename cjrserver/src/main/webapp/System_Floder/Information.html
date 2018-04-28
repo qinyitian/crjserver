@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>底部导航栏管理</title>
+    <!-- Import google fonts - Heading first/ text second -->
+   <!--  <link rel='stylesheet' type='text/css' href='http://fonts.useso.com/css?family=Open+Sans:400,700|Droid+Sans:400,700' /> -->
+    <!--[if lt IE 9]>
+    <link href="http://fonts.useso.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Droid+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="../asset/ico/favicon.ico" type="image/x-icon" />
+    <!-- Css files -->
+    <link href="../asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../asset/css/jquery.mmenu.css" rel="stylesheet">
+    <link href="../asset/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../asset/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="../asset/css/style.min.css" rel="stylesheet">
+    <link href="../asset/css/add-ons.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../asset/js/html5shiv.js"></script>
+    <script src="../asset/js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .file {
+            position: relative;
+            display: inline-block;
+            background: #D0EEFF;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: #1E88C7;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+        .file input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .file:hover {
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+            text-decoration: none;
+        }
+        .Delete {
+            position: relative;
+            display: inline-block;
+            background: #D0EEFF;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: #1E88C7;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+        .Delete input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .Delete:hover {
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+            text-decoration: none;
+        }
+    </style><!--上传按钮样式-->
+</head>
+<body>
+<!-- start: Header -->
+<div class="navbar" role="navigation">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown visible-md visible-lg">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="user-avatar" src="../asset/img/avatar.jpg" alt="user-mail">政府后台管理员</a>
+            </li>
+            <li><a href="Home.html"><i class="fa fa-power-off"></i></a></li>
+        </ul>
+    </div>
+</div>
+<!-- end: Header -->
+<!-- start:    左侧导航栏    -->
+<div class="container-fluid content">
+    <div class="row">
+        <!-- start: Main Menu -->
+        <div class="sidebar ">
+            <div class="sidebar-collapse">
+                <div class="sidebar-header t-center">
+                   	<br>
+                    <h2>政府后台</h2>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="nav nav-sidebar">
+                        <li><a href="Home.html"><i class="fa fa-laptop"></i><span class="text">主页</span></a></li>
+                        <li>
+                            <a href="#"><i class="fa fa-font"></i><span class="text">首页管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="Floder.html"><i class="fa fa-th"></i><span class="text">头部导航栏管理</span></a></li>
+                                <li><a href="Article_management.html"><i class="fa fa-th"></i><span class="text">文章管理</span></a></li>
+                                <li><a href="Content_management.html"><i class="fa fa-th"></i><span class="text">内容管理</span></a></li>
+                                <li><a href="Information.html"><i class="fa fa-th"></i><span class="text">底部导航栏管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-file-text"></i><span class="text">招标</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_TenderPlan/publish_tender_plan.html"><i class="fa fa-pencil"></i><span class="text">发布招标计划</span></a></li>
+                                <li><a href="../System_TenderPlan/tender_form.html"><i class="fa fa-table"></i><span class="text">公布招标结果</span></a></li>
+                                <li><a href="../System_TenderPlan/BidingResult.html"><i class="fa fa-table"></i><span class="text">查看招标结果</span></a></li>
+                                <li><a href="../System_TenderPlan/goverment_check_evalution.html"><i class="fa fa-table"></i><span class="text">查看服务评价</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-signal"></i><span class="text">需求</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                 <li><a href="../System_Demand/issue_EquipmentContent.html"><i class="fa fa-table"></i><span class="text">需求调查表</span></a></li>
+                                <li><a href="../System_Demand/demand_form.html"><i class="fa fa-list"></i><span class="text">调查表</span></a></li>
+                                <li><a href="../System_Demand/equipment_service.html"><i class="fa fa-list"></i><span class="text">器材管理</span></a></li>
+                                <li><a href="../System_Demand/field_service.html"><i class="fa fa-list"></i><span class="text">场地服务管理</span></a></li>
+                                <li><a href="../System_Demand/activity_service.html"><i class="fa fa-list"></i><span class="text">活动服务管理</span></a></li>
+                                <li><a href="../System_Demand/sport_service.html"><i class="fa fa-list"></i><span class="text">赛事服务管理</span></a></li>
+                                <li><a href="../System_Demand/artificial_service.html"><i class="fa fa-list"></i><span class="text">人工服务管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-font"></i><span class="text">认证</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_Identify/Company_Identify.html"><i class="fa fa-th"></i><span class="text">企业认证</span></a></li>
+                                <li><a href="../System_Identify/Media_Identify.html"><i class="fa fa-th"></i><span class="text">媒体认证</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <div class="sidebar-brand">
+                    政府后台
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end:    左侧导航栏   -->
+    <!-- start:  招标目录表   -->
+    <div class="main sidebar-minified">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header"><i class="fa fa-table"></i>首页管理</h3>
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="Home.html">主页</a></li>
+                    <li><i class="fa fa-table"></i>首页管理</li>
+                </ol>
+            </div>
+        </div>
+        <!--  头部导航栏目录管理  -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2><i class="fa fa-table red"></i><span class="break"></span><strong>底部导航栏管理</strong></h2>
+                        <div class="panel-actions">
+                            <a href="table.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <!-- Nav tabs -->
+                        <ul id="select" class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">条目一</a></li>
+                            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">条目二</a></li>
+                            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">条目三</a></li>
+                            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">条目四</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <!--联系我们-->
+                        <div id="content" class="tab-content" style="margin-bottom: 32px;">
+                            <div role="tabpanel" class="tab-pane active" id="home">
+                                <div class="row" style=" margin-top: 32px;margin-bottom: 32px;">
+                                    <div class="col-md-2"></div>
+                                    <label  class="col-md-1 am-form-label">标题：</label>
+                                    <textarea class="col-md-5" rows="1" id="title1"></textarea>
+                                    <a id="mdf1" class="btn btn-default btn-sm col-md-1 col-md-offset-1" role="button">修改</a>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2 col-sm-offset-9">
+                                        <p>是否显示</p>
+                                    </div>
+                                </div>
+                                <form id="AddFolder">
+                                    <div class="row form-group">
+                                        <label class="col-sm-2 col-sm-offset-1 control-label">地址</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Address" >
+                                            </input>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <input type="checkbox" id="checkboxAddress">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <label class="col-sm-2 col-sm-offset-1 control-label">所在城市</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="City" >
+                                            </input>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <input type="checkbox" id="checkboxCity">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <label class="col-sm-2 col-sm-offset-1 control-label">移动电话</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="MobilePhone" >
+                                            </input>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <input type="checkbox" id="checkboxMobilePhone">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <label class="col-sm-2 col-sm-offset-1 control-label">固定电话</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="FixedLinePhone" >
+                                            </input>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <input type="checkbox" id="checkboxFixedLinePhone">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <label class="col-sm-2 col-sm-offset-1 control-label">邮箱 </label>
+                                        <div class="col-sm-6">
+                                            <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Email" >
+                                            </input>
+                                        </div>
+                                        <div class="col-sm-1 ">
+                                            <input type="checkbox" id="checkboxEmail">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-2 col-sm-offset-7">
+                                            <p>是否显示该模块 <input type="checkbox" id="checkbox1"></p>
+                                        </div>
+                                        <button id="UpdateInfomation1" class="col-sm-1  btn btn-success">确认</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!--最新咨询-->
+                            <div role="tabpanel" class="tab-pane" id="profile">
+                                <div class="row" style=" margin-top: 32px;margin-bottom: 32px;">
+                                    <div class="col-md-2"></div>
+                                    <label  class="col-md-1 am-form-label">标题：</label>
+                                    <textarea class="col-md-5" rows="1" id="title2"></textarea>
+                                    <a id="mdf2" class="btn btn-default btn-sm col-md-1 col-md-offset-1" role="button">修改</a>
+                                    <div class="row">
+                                        <div class="col-sm-2 col-sm-offset-9">
+                                            <p>是否显示</p>
+                                        </div>
+                                    </div>
+                                    <form id="from2">
+                                        <div class="row form-group">
+                                            <label class="col-sm-2 col-sm-offset-1 control-label">微博</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="WeiBo" >
+                                                </input>
+                                            </div>
+                                            <div class="col-sm-1">
+                                                <input type="checkbox" id="checkboxWeiBo">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-sm-2 col-sm-offset-1 control-label">微信</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="WeiXin" >
+                                                </input>
+                                            </div>
+                                            <div class="col-sm-1">
+                                                <input type="checkbox" id="checkboxWeiXin">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-sm-2 col-sm-offset-1 control-label">客服</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="KeFu" >
+                                                </input>
+                                            </div>
+                                            <div class="col-sm-1">
+                                                <input type="checkbox" id="checkboxKeFu">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-2 col-sm-offset-7">
+                                                <p>是否显示该模块 <input type="checkbox" id="checkbox2"></p>
+                                            </div>
+                                            <button id="UpdateInfomation2" class="col-sm-1  btn btn-success">确认</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--我们残联-->
+                            <div role="tabpanel" class="tab-pane" id="messages">
+                                <div class="row" style=" margin-top: 32px;margin-bottom: 32px;">
+                                    <div class="col-md-2"></div>
+                                    <label  class="col-md-1 am-form-label">标题：</label>
+                                    <textarea class="col-md-5" rows="1" id="title3"></textarea>
+                                    <a id="mdf3" class="btn btn-default btn-sm col-md-1 col-md-offset-1" role="button">修改</a>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2 col-sm-offset-9">
+                                        <p>是否显示</p>
+                                    </div>
+                                </div>
+                                <form id="from3">
+                                    <div class="row form-group">
+                                        <label class="col-sm-2 col-sm-offset-1 control-label">关于残联</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="About" >
+                                            </input>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <input type="checkbox" id="checkboxAbout">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <label class="col-sm-2 col-sm-offset-1 control-label">生活提供</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Support" >
+                                            </input>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <input type="checkbox" id="checkboxSupport">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <label class="col-sm-2 col-sm-offset-1 control-label">社会服务</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Serve" >
+                                            </input>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <input type="checkbox" id="checkboxServe">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <label class="col-sm-2 col-sm-offset-1 control-label">国家政策</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Policy" >
+                                            </input>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <input type="checkbox" id="checkboxPolicy">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <label class="col-sm-2 col-sm-offset-1 control-label">企业&评价机构</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Company" >
+                                            </input>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <input type="checkbox" id="checkboxCompany">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-2 col-sm-offset-7">
+                                            <p>是否显示该模块 <input type="checkbox" id="checkbox3"></p>
+                                        </div>
+                                        <button id="UpdateInfomation3" class="col-sm-1  btn btn-success">确认</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!--残疾人体育公共服务平台-->
+                            <div role="tabpanel" class="tab-pane" id="settings">
+                                <div class="row" style=" margin-top: 32px;margin-bottom: 32px;">
+                                    <div class="col-md-2"></div>
+                                    <label  class="col-md-1 am-form-label">标题：</label>
+                                    <textarea class="col-md-5" rows="1" id="title4"></textarea>
+                                    <a id="mdf4" class="btn btn-default btn-sm col-md-1 col-md-offset-1" role="button">修改</a>
+                                </div>
+                                <form id="from4">
+                                    <div class="row form-group">
+                                        <label class="col-sm-1 col-sm-offset-2 control-label">介绍</label>
+                                        <div class="col-sm-8">
+                                            <textarea class="col-md-8" rows="8" id="Introduce"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-2 col-sm-offset-7">
+                                            <p>是否显示该模块 <input type="checkbox" id="checkbox4"></p>
+                                        </div>
+                                        <button id="UpdateInfomation4" class="col-sm-1  btn btn-success">确认</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/col-->
+        </div><!--/row-->
+<!-- start: JavaScript-->
+<!--[if !IE]>-->
+<script src="../asset/js/jquery-2.1.1.min.js"></script>
+<!--<![endif]-->
+<!--[if IE]>
+<script src="../asset/js/jquery-2.1.1.min.js"></script>
+
+<![endif]-->
+<!--[if !IE]>-->
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
+</script>
+<!--<![endif]-->
+<!--[if IE]>
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='assets/js/jquery-1.11.1.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+<script src="../asset/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../asset/js/bootstrap.min.js"></script>
+<!-- page scripts -->
+<script src="../asset/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+<script src="../asset/plugins/datatables/js/jquery.dataTables.min.js"></script>
+<script src="../asset/plugins/datatables/js/dataTables.bootstrap.min.js"></script>
+<!-- theme scripts -->
+<script src="../asset/js/SmoothScroll.js"></script>
+<script src="../asset/js/jquery.mmenu.min.js"></script>
+<script src="../asset/js/core.min.js"></script>
+<!-- end: JavaScript-->
+<script src="../asset/js/jquery-2.1.1.min.js"></script>
+<script src="../asset/js/avalon.js"></script>
+<!-- Latest compiled and minified CSS -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css"> -->
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/bootstrap-table.js"></script>
+<script src="../js/bootstrap-table-zh-CN.min.js"></script>
+<script src="../js/jquery-form.js"></script>
+<!---->
+<!--以下代码是实现查看详情 的js代码-->
+<!---->
+<script>
+        //标题数据/复选框数据
+        $.ajax({
+            type: "post",
+            traditional: true,
+            async: false,    // 使用同步操作
+            url: "/Floder/ReturnFootTitle",//请求地址
+            success: function (data) {
+                document.getElementById("title1").value = data[0].name;
+                document.getElementById("title2").value = data[1].name;
+                document.getElementById("title3").value = data[2].name;
+                document.getElementById("title4").value = data[3].name;
+                if (data[0].myShow == "1")
+                    document.getElementById("checkbox1").checked = true;
+                else
+                    document.getElementById("checkbox1").checked = false;
+                if(data[1].myShow == 1)
+                    document.getElementById("checkbox2").checked = true;
+                else
+                    document.getElementById("checkbox2").checked = false;
+                if(data[2].myShow == 1)
+                    document.getElementById("checkbox3").checked = true;
+                else
+                    document.getElementById("checkbox3").checked = false;
+                if(data[3].myShow == 1)
+                    document.getElementById("checkbox4").checked = true;
+                else
+                    document.getElementById("checkbox4").checked = false;
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            },
+        })
+        //联系方式数据
+        var title1 = document.getElementById("title1").value;
+            $.ajax({
+                type: "post",
+                traditional: true,
+                async: false,    // 使用同步操作
+                url: "/Floder/ReturnWebInfo",//请求地址
+                data: {"InfoType":title1 },//向后台提交的参数
+                success: function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        if (data[i].infoName == "地址") {
+                            document.getElementById("Address").value = data[i].infoValue;
+                            if (data[i].infoShow == "1")
+                                document.getElementById("checkboxAddress").checked = true;
+                            else
+                                document.getElementById("checkboxAddress").checked = false;
+                        }
+                        if (data[i].infoName == "所在城市") {
+                            document.getElementById("City").value = data[i].infoValue;
+                            if (data[i].infoShow == "1")
+                                document.getElementById("checkboxCity").checked = true;
+                            else
+                                document.getElementById("checkboxCity").checked = false;
+                        }
+                        if (data[i].infoName == "移动电话") {
+                            document.getElementById("MobilePhone").value = data[i].infoValue;
+                            if (data[i].infoShow == "1")
+                                document.getElementById("checkboxMobilePhone").checked = true;
+                            else
+                                document.getElementById("checkboxMobilePhone").checked = false;
+                        }
+                        if (data[i].infoName == "固定电话") {
+                            document.getElementById("FixedLinePhone").value = data[i].infoValue;
+                            if (data[i].infoShow == "1")
+                                document.getElementById("checkboxFixedLinePhone").checked = true;
+                            else
+                                document.getElementById("checkboxFixedLinePhone").checked = false;
+                        }
+                        if (data[i].infoName == "邮箱") {
+                            document.getElementById("Email").value = data[i].infoValue;
+                            if (data[i].infoShow == "1")
+                                document.getElementById("checkboxEmail").checked = true;
+                            else
+                                document.getElementById("checkboxEmail").checked = false;
+                        }
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                },
+            })
+        //修改条目一标题
+        $('#mdf1').click(function () {
+            var title = document.getElementById("title1");
+            var tt = title.value;
+            $.ajax({
+                type: "POST",
+                url: "/Floder/UpdateFootTitle?id=1&title=" + tt,
+                success: function (data) {
+                    alert("条目一标题修改成功！");
+                }
+            });
+        });
+        //条目一下信息修改
+        $('#UpdateInfomation1').click(function () {
+            //修改是否显示该模块
+            var check = 1;
+            if (document.getElementById("checkbox1").checked)
+                check = 1;
+            else
+                check = 0;
+            $.ajax({
+                type: "post",
+                traditional: true,
+                async: false,    // 使用同步操作
+                url: "/Floder/UpdateFootTitleShow",//请求地址
+                data: {"id": 1, "show": check},//向后台提交的参数
+                success: function (data) {
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                },
+            })
+            //保存Address
+            var Address = document.getElementById("Address").value;
+            var AddressCheck = 1;
+            if (document.getElementById("checkboxAddress").checked)
+                AddressCheck = 1;
+            else
+                AddressCheck = 0;
+            $.ajax({
+                type: "post",
+                traditional: true,
+                async: false,    // 使用同步操作
+                url: "/Floder/UpdateWebInfo",//请求地址
+                data: {"InfoName": "地址", "InfoValue": Address, "InfoShow": AddressCheck},//向后台提交的参数
+                success: function (data) {
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                },
+            })
+            //City
+            var City = document.getElementById("City").value;
+            var CityCheck = 1;
+            if (document.getElementById("checkboxCity").checked)
+                CityCheck = 1;
+            else
+                CityCheck = 0;
+            $.ajax({
+                type: "post",
+                traditional: true,
+                async: false,    // 使用同步操作
+                url: "/Floder/UpdateWebInfo",//请求地址
+                data: {"InfoName": "所在城市", "InfoValue": City, "InfoShow": CityCheck},//向后台提交的参数
+                success: function (data) {
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                },
+            })
+            //MobilePhone
+            var MobilePhone = document.getElementById("MobilePhone").value;
+            var MobilePhoneCheck = 1;
+            if (document.getElementById("checkboxMobilePhone").checked)
+                MobilePhoneCheck = 1;
+            else
+                MobilePhoneCheck = 0;
+            $.ajax({
+                type: "post",
+                traditional: true,
+                async: false,    // 使用同步操作
+                url: "/Floder/UpdateWebInfo",//请求地址
+                data: {"InfoName": "移动电话", "InfoValue": MobilePhone, "InfoShow": MobilePhoneCheck},//向后台提交的参数
+                success: function (data) {
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                },
+            })
+            //FixedLinePhone
+            var FixedLinePhone = document.getElementById("FixedLinePhone").value;
+            var FixedLinePhoneCheck = 1;
+            if (document.getElementById("checkboxFixedLinePhone").checked)
+                FixedLinePhoneCheck = 1;
+            else
+                FixedLinePhoneCheck = 0;
+            $.ajax({
+                type: "post",
+                traditional: true,
+                async: false,    // 使用同步操作
+                url: "/Floder/UpdateWebInfo",//请求地址
+                data: {"InfoName": "固定电话", "InfoValue": FixedLinePhone, "InfoShow": FixedLinePhoneCheck},//向后台提交的参数
+                success: function (data) {
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                },
+            })
+            //Email
+            var Email = document.getElementById("Email").value;
+            var EmailCheck = 1;
+            if (document.getElementById("checkboxEmail").checked)
+                EmailCheck = 1;
+            else
+                EmailCheck = 0;
+            $.ajax({
+                type: "post",
+                traditional: true,
+                async: false,    // 使用同步操作
+                url: "/Floder/UpdateWebInfo",//请求地址
+                data: {"InfoName": "邮箱", "InfoValue": Email, "InfoShow": EmailCheck},//向后台提交的参数
+                success: function (data) {
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                },
+            })
+            alert("修改成功");
+        })
+</script><!--条目一信息管理-->
+
+<script>
+    //    标题修改
+    $('#mdf3').click(function () {
+        var title = document.getElementById("title3");
+        var tt = title.value;
+        $.ajax({
+            type: "POST",
+            url: "/Floder/UpdateFootTitle?id=3&title=" + tt,
+            success: function (data) {
+                alert("条目三标题修改成功！");
+            }
+        });
+    });
+    //    最新咨询
+    var title3 = document.getElementById("title3").value;
+    $.ajax({
+        type: "post",
+        traditional: true,
+        async: false,    // 使用同步操作
+        url: "/Floder/ReturnWebInfo",//请求地址
+        data: {"InfoType": title3},//向后台提交的参数
+        success: function (data) {
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].infoName == "关于残联") {
+                    document.getElementById("About").value = data[i].infoValue;
+                    if (data[i].infoShow == "1")
+                        document.getElementById("checkboxAbout").checked = true;
+                    else
+                        document.getElementById("checkboxAbout").checked = false;
+                }
+                if (data[i].infoName == "生活提供") {
+                    document.getElementById("Support").value = data[i].infoValue;
+                    if (data[i].infoShow == "1")
+                        document.getElementById("checkboxSupport").checked = true;
+                    else
+                        document.getElementById("checkboxSupport").checked = false;
+                }
+                if (data[i].infoName == "社会服务") {
+                    document.getElementById("Serve").value = data[i].infoValue;
+                    if (data[i].infoShow == "1")
+                        document.getElementById("checkboxServe").checked = true;
+                    else
+                        document.getElementById("checkboxServe").checked = false;
+                }
+                if (data[i].infoName == "国家政策") {
+                    document.getElementById("Policy").value = data[i].infoValue;
+                    if (data[i].infoShow == "1")
+                        document.getElementById("checkboxPolicy").checked = true;
+                    else
+                        document.getElementById("checkboxPolicy").checked = false;
+                }
+                if (data[i].infoName == "企业&评价机构") {
+                    document.getElementById("Company").value = data[i].infoValue;
+                    if (data[i].infoShow == "1")
+                        document.getElementById("checkboxCompany").checked = true;
+                    else
+                        document.getElementById("checkboxCompany").checked = false;
+                }
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            alert(XMLHttpRequest.status);
+            alert(XMLHttpRequest.readyState);
+            alert(textStatus);
+        },
+    })
+    //条目三下信息修改
+    $('#UpdateInfomation3').click(function () {
+        //修改是否显示该模块
+        var check = 1;
+        if (document.getElementById("checkbox3").checked)
+            check = 1;
+        else
+            check = 0;
+        $.ajax({
+            type: "post",
+            traditional: true,
+            async: false,    // 使用同步操作
+            url: "/Floder/UpdateFootTitleShow",//请求地址
+            data: {"id": 3, "show": check},//向后台提交的参数
+            success: function (data) {
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            },
+        })
+        //About
+        var About = document.getElementById("About").value;
+        var AboutCheck = 1;
+        if (document.getElementById("checkboxAbout").checked)
+            AboutCheck = 1;
+        else
+            AboutCheck = 0;
+        $.ajax({
+            type: "post",
+            traditional: true,
+            async: false,    // 使用同步操作
+            url: "/Floder/UpdateWebInfo",//请求地址
+            data: {"InfoName": "关于残联", "InfoValue": About, "InfoShow": AboutCheck},//向后台提交的参数
+            success: function (data) {
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            },
+        })
+        //Support
+        var Support = document.getElementById("Support").value;
+        var SupportCheck = 1;
+        if (document.getElementById("checkboxSupport").checked)
+            SupportCheck = 1;
+        else
+            SupportCheck = 0;
+        $.ajax({
+            type: "post",
+            traditional: true,
+            async: false,    // 使用同步操作
+            url: "/Floder/UpdateWebInfo",//请求地址
+            data: {"InfoName": "生活提供", "InfoValue": Support, "InfoShow": SupportCheck},//向后台提交的参数
+            success: function (data) {
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            },
+        })
+        //Serve
+        var Serve = document.getElementById("Serve").value;
+        var ServeCheck = 1;
+        if (document.getElementById("checkboxServe").checked)
+            ServeCheck = 1;
+        else
+            ServeCheck = 0;
+        $.ajax({
+            type: "post",
+            traditional: true,
+            async: false,    // 使用同步操作
+            url: "/Floder/UpdateWebInfo",//请求地址
+            data: {"InfoName": "社会服务", "InfoValue": Serve, "InfoShow": ServeCheck},//向后台提交的参数
+            success: function (data) {
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            },
+        })
+        //Policy
+        var Policy = document.getElementById("Policy").value;
+        var PolicyCheck = 1;
+        if (document.getElementById("checkboxPolicy").checked)
+            PolicyCheck = 1;
+        else
+            PolicyCheck = 0;
+        $.ajax({
+            type: "post",
+            traditional: true,
+            async: false,    // 使用同步操作
+            url: "/Floder/UpdateWebInfo",//请求地址
+            data: {"InfoName": "国家政策", "InfoValue": Policy, "InfoShow": PolicyCheck},//向后台提交的参数
+            success: function (data) {
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            },
+        })
+        //Company
+        var Company = document.getElementById("Company").value;
+        var CompanyCheck = 1;
+        if (document.getElementById("checkboxCompany").checked)
+            CompanyCheck = 1;
+        else
+            CompanyCheck = 0;
+        $.ajax({
+            type: "post",
+            traditional: true,
+            async: false,    // 使用同步操作
+            url: "/Floder/UpdateWebInfo",//请求地址
+            data: {"InfoName": "企业&评价机构", "InfoValue": Company, "InfoShow": CompanyCheck},//向后台提交的参数
+            success: function (data) {
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            },
+        })
+        alert("修改成功");
+    })
+
+</script><!--条目三信息管理-->
+<script>
+    //    标题修改
+    $('#mdf4').click(function () {
+        var title = document.getElementById("title4");
+        var tt = title.value;
+        $.ajax({
+            type: "POST",
+            url: "/Floder/UpdateFootTitle?id=4&title=" + tt,
+            success: function (data) {
+                alert("条目三标题修改成功！");
+            }
+        });
+    });
+    //残疾人体育公共服务平台
+    var title4 = document.getElementById("title4").value;
+    $.ajax({
+        type: "post",
+        traditional: true,
+        async: false,    // 使用同步操作
+        url: "/Floder/ReturnWebInfo",//请求地址
+        data: {"InfoType": title4},//向后台提交的参数
+        success: function (data) {
+            document.getElementById("Introduce").value = data[0].infoValue;
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            alert(XMLHttpRequest.status);
+            alert(XMLHttpRequest.readyState);
+            alert(textStatus);
+        },
+    })
+    //条目三下信息修改
+    $('#UpdateInfomation4').click(function () {
+        //修改是否显示该模块
+        var check = 1;
+        if (document.getElementById("checkbox4").checked)
+            check = 1;
+        else
+            check = 0;
+        alert(check);
+        $.ajax({
+            type: "post",
+            traditional: true,
+            async: false,    // 使用同步操作
+            url: "/Floder/UpdateFootTitleShow",//请求地址
+            data: {"id": 4, "show": check},//向后台提交的参数
+            success: function (data) {
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            },
+        })
+        //Introduce
+        var Introduce = document.getElementById("Introduce").value;
+        var IntroduceCheck = 1;
+        $.ajax({
+            type: "post",
+            traditional: true,
+            async: false,    // 使用同步操作
+            url: "/Floder/UpdateWebInfo",//请求地址
+            data: {"InfoName": "残疾人体育公共服务平台", "InfoValue": Introduce, "InfoShow": IntroduceCheck},//向后台提交的参数
+            success: function (data) {
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            },
+        })
+        alert("修改成功");
+    })
+</script><!--条目四信息管理-->
+
+</body>
+</html>

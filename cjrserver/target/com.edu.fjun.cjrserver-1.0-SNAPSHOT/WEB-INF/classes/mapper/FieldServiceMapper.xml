@@ -1,0 +1,78 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.edu.fjnu.cjrserver.dao.FieldServiceMapper">
+<!--按分页查询场地服务-->
+    <select id="findFieldServiceByPage" resultType="com.edu.fjnu.cjrserver.model.FieldServer" >
+        select * from field_service limit #{0},#{1};
+    </select>
+<!--查询场地服务信息-->
+    <select id="findFieldService" resultType="com.edu.fjnu.cjrserver.model.FieldServer" >
+        SELECT a.*,b.Company_Name FROM field_service a LEFT JOIN  company b  ON(a.Company_ID = b.Company_ID )
+    </select>
+<!--根据ID查询场地服务信息-->
+    <select id="getFiledServiceByID" resultType="com.edu.fjnu.cjrserver.model.FieldServer" parameterType="Integer">
+        select * from field_service where Field_ID=#{fieldID}
+    </select>
+<!--添加场地服务信息-->
+    <insert id="addFieldService" parameterType="com.edu.fjnu.cjrserver.model.FieldServer">
+        insert into field_service(Field_Name,FieldAddress,Province,City,County,Price,Business_Time,Detail_Introduct,Phone,lon,lat
+        ,Field_State,Field_Img,Company_ID) values(#{fieldName},#{fieldAddress},#{province},#{city},#{county},#{price},#{businessTime},#{detailIntroduct}
+        ,#{phone},#{lon},#{lat},#{fieldState},#{fieldImg},#{company.companyID})
+    </insert>
+<!--删除场地服务信息-->
+    <delete id="delFieldService" parameterType="int">
+        delete from field_service where Field_ID=#{fieldID}
+    </delete>
+<!--修改场地服务信息-->
+    <update id="updateFieldService" parameterType="com.edu.fjnu.cjrserver.model.FieldServer">
+        update field_service set Field_Name=#{fieldName},FieldAddress=#{fieldAddress},Province=#{province},City=#{city},County=#{county},Price=#{price},
+        Business_Time=#{businessTime},Detail_Introduct=#{detailIntroduct},Company_ID=#{company.companyID},Phone=#{phone},lon=#{lon},lat=#{lat},Field_State=#{fieldState},
+        Field_Img=#{fieldImg} where Field_ID=#{fieldID}
+    </update>
+<!--根据ID查询图片路径-->
+    <select id="findImgPath" resultType="String" parameterType="Integer">
+        select Field_Img from field_service where Field_ID=#{filedID}
+    </select>
+<!--查询场地服务数量-->
+    <select id="findTotalQty" resultType="Integer">
+        select count(Field_ID) from field_service;
+    </select>
+<!--根据名称查询场地服务数量-->
+    <select id="findTotalQtyByName" resultType="Integer" parameterType="String">
+        select count(Field_ID) from field_service where Field_Name like CONCAT(CONCAT('%', #{0}), '%');
+    </select>
+<!--根据名称查询场地服务信息-->
+    <select id="findFieldServiceByName" resultType="com.edu.fjnu.cjrserver.model.FieldServer" >
+        select * from field_service where Field_Name like CONCAT(CONCAT('%', #{2}), '%') limit #{0},#{1};
+    </select>
+
+<!--根据三级级联城市查询场地服务-->
+    <select id="findFieldByAdd" resultType="com.edu.fjnu.cjrserver.model.FieldServer">
+        SELECT * from field_service where Province = #{0} AND City = #{1} AND County = #{2} limit #{3},#{4}
+    </select>
+    <!--根据省查询场地服务-->
+    <select id="findFieldByProvince"  resultType="com.edu.fjnu.cjrserver.model.FieldServer">
+        SELECT * from field_service where Province = #{0} limit #{1},#{2}
+    </select>
+    <!--根据省，市查询场地服务-->
+    <select id="findFieldByPC" resultType="com.edu.fjnu.cjrserver.model.FieldServer">
+        SELECT * from field_service where Province = #{0} AND City = #{1} limit #{2},#{3}
+    </select>
+
+    <!--查询数量-->
+    <!--根据三级级联城市查询场地服务-->
+    <select id="findFieldByAddQty" resultType="Integer">
+        SELECT count(Field_ID) from field_service where Province = #{0} AND City = #{1} AND County = #{2}
+    </select>
+    <!--根据省查询场地服务-->
+    <select id="findFieldByProvinceQty"  resultType="Integer">
+        SELECT count(Field_ID) from field_service where Province = #{0}
+    </select>
+    <!--根据省，市查询场地服务-->
+    <select id="findFieldByPCQty" resultType="Integer">
+        SELECT count(Field_ID) from field_service where Province = #{0} AND City = #{1}
+    </select>
+
+</mapper>

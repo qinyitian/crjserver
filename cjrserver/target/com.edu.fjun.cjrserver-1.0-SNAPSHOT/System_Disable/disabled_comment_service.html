@@ -1,0 +1,989 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>评价调查表服务</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="css/my_style.css">
+    <link href=" assets/css/bootstrap.css" rel="stylesheet">
+    <link href=" assets/css/bootstrap.min.css" rel="stylesheet">
+    <script src=" assets/js/echarts.min.js"></script>
+    <script src=" assets/js/Disabled_index.js"></script>
+    <link href=" assets/css/star.css" rel="stylesheet" type="text/css">
+    <link href=" assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href=" assets/css/jquery.mmenu.css" rel="stylesheet">
+    <link href=" assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href=" assets/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href=" assets/css/style.min.css" rel="stylesheet">
+    <link href=" assets/css/add-ons.min.css" rel="stylesheet">
+    <!--<style>-->
+        <!--ul{list-style-type:none;}-->
+        <!--#star{position:relative;margin:10px auto;}-->
+        <!--#star ul,#star span{float:left;display:inline;height:19px;line-height:19px;}-->
+        <!--#star ul{margin:0 10px;}-->
+        <!--#star li{float:left;width:24px;cursor:pointer;text-indent:-9999px;background:url( star.png) no-repeat;}-->
+        <!--#star strong{color:#f60;padding-left:10px;}-->
+        <!--#star li.on{background-position:0 -28px;}-->
+        <!--#star p{position:absolute;top:20px;width:159px;height:60px;display:none;background:url( icon.gif);repeat: no-repeat;padding:7px 10px 0;}-->
+        <!--#star p em{color:#f60;display:block;font-style:normal;}-->
+    <!--</style>-->
+</head>
+
+<body data-type="index"onload="load();">
+
+    <header class="am-topbar am-topbar-inverse admin-header">
+        <div class="am-topbar-brand">
+            <a href="javascript:;" class="tpl-logo">
+                <img src="assets/img/logo.png" style="width:160px; height:50px" alt="">
+            </a>
+        </div>
+        <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+        </div>
+
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+        <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+            <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
+               
+                <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen" class="tpl-header-list-link"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+
+                <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                    <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                        <span class="tpl-header-list-user-nick"id="user_name"data-number=""data-style=""data-userid="">吴祖根</span><span class="tpl-header-list-user-ico"> <img src="assets/img/user02.png" style="width:45px;"></span>
+                    </a>
+                    <ul class="am-dropdown-content">
+                        <li><a href="disabled_information_change.html"><span class="am-icon-bell-o"></span> 资料</a></li>               
+                        <li><a href="../System_management/Login.html"><span class="am-icon-power-off"></span> 退出</a></li>
+                    </ul>
+                </li>
+                <li><a href="###" class="tpl-header-list-link"><span class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
+            </ul>
+        </div>
+    </header>
+
+
+
+
+
+
+
+    <div class="tpl-page-container tpl-page-header-fixed">
+
+
+        <div class="tpl-left-nav tpl-left-nav-hover">
+            <div class="tpl-left-nav-title am-lg-text-left">
+                个 人 列 表
+            </div>
+            <div class="tpl-left-nav-list">
+                <ul class="tpl-left-nav-menu">
+                    <li class="tpl-left-nav-item">
+                        <a href="disabled_index.html" class="nav-link active">
+                            <i class="am-icon-home"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    
+                    <li class="tpl-left-nav-item">
+                        <a href="disabled_information_change.html" class="nav-link tpl-left-nav-link-list">
+                            <i class="	glyphicon glyphicon-user"></i>
+                            <span>个人信息修改</span>
+
+                        </a>
+                    </li>
+                    
+                    <li class="tpl-left-nav-item">
+                        <a href="disabled_remind.html" class="nav-link tpl-left-nav-link-list">
+                            <i class="glyphicon glyphicon-thumbs-up"></i>
+                            <span>与我相关</span>
+                            <i class="tpl-left-nav-content tpl-badge-danger"id="remind_number">0</i>
+                        </a>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="	glyphicon glyphicon-flag"></i>
+                            <span>我的权利</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <a href="Demand_catalog.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>提出我的需求</span>
+                                    <i class="tpl-left-nav-content-ico am-fr am-margin-right"></i><!--am-icon-star -->
+                                </a>
+                                 <a href="disabled_checking.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>查看需求目录</span>
+                                    <i class="tpl-left-nav-content-ico am-fr am-margin-right"></i><!--am-icon-star -->
+                                </a>
+                                <a href="disabled_voting.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>我要投票</span>
+                                </a>
+                                 <a href="disabled_comment.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>服务评价</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-wpforms"></i>
+                            <span>新闻发布</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu" >
+                            <li>
+                                <a href="tabloid.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>图片新闻</span>
+                                    <i class="tpl-left-nav-content-ico am-fr am-margin-right"></i>
+                                </a>
+
+                                <a href="#">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>政策浏览</span>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                            
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="tpl-content-wrapper">
+            <div class="tpl-content-page-title">
+                个人中心
+            </div>
+            <ol class="am-breadcrumb">
+                <li><a href="#" class="am-icon-home">首页</a></li>
+                <li><a href="Disabled_index.html">个人中心</a></li>
+                <li class="am-active">评价调查表服务</li>
+            </ol>
+            
+            
+            <div id="body">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2><i class="fa fa-table red"></i><span class="break"></span><strong></strong></h2>
+                        </div>
+                        <table id="listTable">
+                           
+                        </table>
+                         <!--<button id="test">test</button>-->
+                    </div>
+                </div><!--/col-->
+            </div>
+            
+        </div>
+        
+<div class="modal fade" id="DemandTableModal">
+    <div class="modal-dialog" style="top: 46px;width:900px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">调查表信息</h4>
+                 <div id="star" style="z-index: 100;">
+                    <span>满意度：</span>
+                    <ul>
+                         <li><a href="javascript:;">1</a></li>
+                         <li><a href="javascript:;">2</a></li>
+                         <li><a href="javascript:;">3</a></li>
+                         <li><a href="javascript:;">4</a></li>
+                         <li><a href="javascript:;">5</a></li>
+                     </ul>
+                     <span></span>
+                     <p></p> 
+                </div> 
+                <br>
+            </div>
+            <div class="modal-body">
+                 
+                
+                <!-- Nav tabs -->
+                <ul id="select" class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#page_field" aria-controls="page_field" role="tab" data-toggle="tab">场地</a></li>
+                    <li role="presentation"><a href="#page_equipment" aria-controls="page_equipment" role="tab" data-toggle="tab">器材</a></li>
+                    <li role="presentation"><a href="#page_artificial" aria-controls="page_artificial" role="tab" data-toggle="tab">服务</a></li>
+                    <li role="presentation"><a href="#page_sport" aria-controls="page_sport" role="tab" data-toggle="tab">赛事</a></li>
+                    <li role="presentation"><a href="#page_activity" aria-controls="page_activity" role="tab" data-toggle="tab">活动</a></li>
+                </ul>
+                    
+                <!-- Tab panes -->
+                <div id="content" class="tab-content" style="margin-bottom: 32px;"> 
+                    
+                    <div role="tabpanel" class="tab-pane active" id="page_field">
+                        <table id="fieldTable"></table>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane" id="page_equipment">
+                        <table id="equipmentTable"></table>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane" id="page_artificial">
+                        
+                        <table id="artificialTable"></table>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane" id="page_sport">
+                       
+                        <table id="sportTable"></table>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane" id="page_activity">
+                        
+                        <table id="activityTable"></table>
+                    </div>
+                    
+                </div>
+
+            </div>
+            <div class="modal-footer">                               
+                 <button type="button" class="btn btn-primary" id="CommentTable" onclick="commentTable()">评价需求表</button>
+                 <button type="button" class="btn btn-success" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="CommentModal">
+    <div class="modal-dialog" style="top: 46px;width:750px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">服务评价</h4> 
+            </div>
+            <div class="modal-body">
+             
+                <!--<div id="Star">-->
+                    <!--<span>满意度：</span>-->
+                    <!--<ul>-->
+                         <!--<li><a href="javascript:;">1</a></li>-->
+                         <!--<li><a href="javascript:;">2</a></li>-->
+                         <!--<li><a href="javascript:;">3</a></li>-->
+                         <!--<li><a href="javascript:;">4</a></li>-->
+                         <!--<li><a href="javascript:;">5</a></li>-->
+                     <!--</ul>-->
+                     <!--<span></span>-->
+                     <!--<p></p> -->
+                <!--</div> -->
+            <div id="commentarea">
+                <!-- <textarea rows="10" cols="90">
+                   
+                </textarea> -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="CommentTable">评价需求表</button>
+                    <button type="button" class="btn btn-success" id="close" onclick="closeComment()">关闭</button>
+                </div>
+            </div> 
+            </div>
+           
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+   
+    <script src=" assets/js/jquery.min.js"></script>
+    <script src=" assets/js/amazeui.min.js"></script>
+    <script src=" assets/js/iscroll.js"></script>
+    <script src=" assets/js/app.js"></script>
+    <script src=" assets/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+    <script src=" assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src=" assets/plugins/datatables/js/dataTables.bootstrap.min.js"></script>
+
+    <!-- theme scripts -->
+    <script src=" assets/js/SmoothScroll.js"></script>
+    <script src=" assets/js/jquery.mmenu.min.js"></script>
+    <script src=" assets/js/core.min.js"></script>
+    <!-- end: JavaScript-->
+    <script src=" assets/js/jquery-2.1.1.min.js"></script>
+    <script src=" assets/js/avalon.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css"> -->
+<!--    <script src="../js/bootstrap.min.js"></script>-->
+    <script src=" assets/js/jquery-3.2.1.min.js"></script>
+    <script src=" assets/js/bootstrap-table.js"></script>
+    <script src=" assets/js/bootstrap-table-zh-CN.min.js"></script>
+    <script src=" assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src=" assets/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript">
+        //获取评价等级
+        var assessGrade;
+        window.onload = function ()
+        {
+          var oStar = document.getElementById("star");
+          var aLi = oStar.getElementsByTagName("li");
+          var oUl = oStar.getElementsByTagName("ul")[0];
+          var oSpan = oStar.getElementsByTagName("span")[1];
+          var oP = oStar.getElementsByTagName("p")[0];
+          var i = iScore = iStar = 0;
+          var aMsg = [
+                "很不满意|差得太离谱",
+                "不满意|部分有破损",
+                "一般|质量一般",
+                "满意|质量不错",
+                "非常满意|质量非常好"
+                ]
+          for (i = 1; i <= aLi.length; i++)
+          {
+            aLi[i - 1].index = i;
+            //鼠标移过显示分数
+            aLi[i - 1].onmouseover = function ()
+            {
+              fnPoint(this.index);
+              //浮动层显示
+              oP.style.display = "block";
+              //计算浮动层位置
+              oP.style.left = oUl.offsetLeft + this.index * this.offsetWidth - 104 + "px";
+              //匹配浮动层文字内容
+              oP.innerHTML = "<em><b>" + this.index + "</b> 分 " + aMsg[this.index - 1].match(/(.+)\|/)[1] + "</em>" + aMsg[this.index - 1].match(/\|(.+)/)[1]
+            };
+            //鼠标离开后恢复上次评分
+            aLi[i - 1].onmouseout = function ()
+            {
+              fnPoint();
+              //关闭浮动层
+              oP.style.display = "none"
+            };
+            //点击后进行评分处理
+            aLi[i - 1].onclick = function ()
+            {
+              iStar = this.index;
+              //获取点击时的评价等级
+              assessGrade = iStar;
+              oP.style.display = "none";
+              oSpan.innerHTML = "<strong>" + (this.index) + " 分</strong> (" + aMsg[this.index - 1].match(/\|(.+)/)[1] + ")";
+             // alert(assessGrade);
+            }
+          }
+          //评分处理
+          function fnPoint(iArg)
+          {
+            //分数赋值
+            iScore = iArg || iStar;
+            for (i = 0; i < aLi.length; i++) aLi[i].className = i < iScore ? "on" : "";
+          }
+        };
+        //
+        $('#test').click(function(){
+            $("#DemandTableModal").modal('show');
+        })
+       //获取当前行ID
+       var currentTableID; 
+       
+         $('#listTable').bootstrapTable({
+            url:"/DemandTable/getDemandTableList",
+            //请求方法
+            method: 'get',
+            //dataType: "json",
+            //是否显示行间隔色
+            striped: true,
+            //是否显示 切换试图（table/card）按钮
+            showToggle: "true",
+            //显示搜索框 
+            search: "true", 
+            //显示刷新
+            showRefresh : "true",
+            //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）     
+            cache: false,    
+            //是否显示分页（*）  
+            pagination: true,   
+             //是否启用排序  
+            sortable: true,    
+             //排序方式 
+            sortOrder: "asc",
+            //如果设置了分页，首页页码     
+            pageNumber: 1,   
+            //每页的记录行数（*）   
+            pageSize: 10,  
+            //可供选择的每页的行数（*）    
+            pageList: [10, 25, 50, 100],
+            //客户端处理分页    
+            sidePagination: "client",
+            //指定主键列 idField: "fieldID",
+            columns: [
+                {
+                    field: 'demandTableID',//域值
+                    title: '调查表ID',//标题
+                    visible: false,//false表示不显示
+                },
+                {
+                    field: 'demandTableName',//域值
+                    title: '调查表名',//标题
+                    visible: true,//false表示不显示
+                },{
+                    field: 'demandTableStartTime',//域值
+                    title: '开始时间',//标题
+                    visible: true,//false表示不显示
+                },
+                 {
+                    field: 'demandTableEndTime',//域值
+                    title: '结束时间',//标题
+                    visible: true,//false表示不显示
+                },
+                 {
+                    field: 'demandTableState',//域值
+                    title: '可否投票',//标题
+                    visible: true,//false表示不显示
+                    formatter : function (value, row, index) {
+                        if (row['demandTableState'] == 0) {
+                            if(isVoted(row['demandTableID']))
+                                return '已投票';
+                            else if(!isVoted(row['demandTableID']))
+                                return '可投票';
+                            else
+                                return '投票判定失败';
+                        }else if (row['demandTableState'] == 1) {
+                            return '未到时间';
+                        }else
+                            return '时间判定失败';
+                    }
+                },
+                 {
+                    field: 'assessGrade',//域值
+                    title: '评价等级',//标题
+                    visible: false,//false表示不显示
+                },
+                 {
+                    field: 'assessQty',//域值
+                    title: '已经评价数量',//标题
+                    visible: false,//false表示不显示
+                },{
+                    title: '操作',//标题
+                    visible: true,//false表示不显示
+                    formatter:ActionFormatter,
+                    events:window.ActionEvent = {
+                        'click .check':function (e,value,row,index) {
+                             $("#DemandTableModal").modal('show');
+                             currentTableID=row['demandTableID']; 
+                             loadActivity(currentTableID);
+                             loadArtificial(currentTableID);
+                             loadEquipment(currentTableID);
+                             loadField(currentTableID);   
+                             loadSport(currentTableID);       
+                        }
+                    }
+                }
+            ]
+        });
+        function ActionFormatter(value, row, index){
+            return [
+                    '<a class="check" title="Check" style="display: inline;font-size: 12px;"> 查看调查表服务 </a>'
+            ].join('');
+        };
+        // //
+        // function showComment(){
+        //     $("#DemandTableModal").modal('hide');
+        //     $("#CommentModal").modal('show');
+
+        // }
+        // //
+        // function closeComment(){
+        //     $("#DemandTableModal").modal('show');
+        //     $("#CommentModal").modal('hide');
+        // }
+        //提交需求表评价
+        function commentTable(){
+            // var formData = new FormData();
+            // formData.append('DemandTableID',currentTableID);
+            // formData.append('DisabilityId',111);
+            // formData.append('Grade',assessGrade);
+            // console.log("进入提交评价报告");
+            // $.ajax({
+            //     url: '/Assess/AssessDemand',
+            //     type: 'POST',
+            //     cache: false,
+            //     data: formData,//向后台提交的参数
+            //     processData: false,
+            //     contentType: false,
+            // }).done(function(data){
+            //     alert("评价需求表成功！");
+            //     $("#DemandTableModal").modal('hide');
+            // }).fail(function(msg){
+            //     alert(msg);
+            // });
+            alert("评价成功！");
+            $("#DemandTableModal").modal('hide');
+        }
+        //表格数据加载五个
+        function loadActivity(id){
+            $('#activityTable').bootstrapTable({
+                url:"/DemandCatalog/getActivityService?DemandTableId="+id,
+                //请求方法
+                method: 'get',
+                //dataType: "json",
+                //是否显示行间隔色
+                striped: true,
+                //是否显示 切换试图（table/card）按钮
+                showToggle: "true",
+                //显示搜索框 
+                search: "true", 
+                //显示刷新
+                showRefresh : "true",
+                //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）     
+                cache: false,    
+                //是否显示分页（*）  
+                pagination: true,   
+                 //是否启用排序  
+                sortable: true,    
+                 //排序方式 
+                sortOrder: "asc",
+                //如果设置了分页，首页页码     
+                pageNumber: 1,   
+                //每页的记录行数（*）   
+                pageSize: 10,  
+                //可供选择的每页的行数（*）    
+                pageList: [10, 25, 50, 100],
+                //客户端处理分页    
+                sidePagination: "client",
+                //指定主键列 idField: "fieldID",
+                columns: [
+                    {
+                        field: 'serviceID.activityID',//域值
+                        title: '活动ID',//标题
+                        visible: false,//false表示不显示
+                    },
+                    {
+                        field: 'serviceID.activityName',//域值
+                        title: '活动名称',//标题
+                        visible: true,//false表示不显示
+                    },
+                    {
+                        field: 'serviceID.activityAddress',//域值
+                        title: '活动地址',//标题
+                        visible: true,//false表示不显示
+                    },
+                     {
+                        field: 'serviceID.companyName',//域值
+                        title: '所属企业',//标题
+                        visible: true,//false表示不显示
+                    },{
+                        field: 'serviceID.linkman',//域值
+                        title: '联系人',//标题
+                        visible: false,//false表示不显示
+                    },{
+                        field: 'serviceID.linkmanTelephone',//域值
+                        title: '联系电话',//标题
+                        visible: false,//false表示不显示
+                    },
+                     {
+                        field: 'serviceID.detailFile',//域值
+                        title: '文件路径',//标题
+                        visible: false,//false表示不显示
+                    },{
+                        field: 'votes',
+                        title: '投票数量',
+                        visible: true,
+                    },{
+                        field: 'no',
+                        title: '编号',
+                        visible: false,
+                    },{
+                        field: 'demandTable',
+                        title: '需求调查表ID',
+                        visible: false,
+                    },{
+                        field: 'count',
+                        title: '',
+                        visible: false,
+                    }
+                ]
+            });
+        }
+      
+      function loadArtificial(id){
+          $('#artificialTable').bootstrapTable({
+                url:"/DemandCatalog/getArtificialService?DemandTableId="+id,
+                //请求方法
+                method: 'get',
+                //dataType: "json",
+                //是否显示行间隔色
+                striped: true,
+                //是否显示 切换试图（table/card）按钮
+                showToggle: "true",
+                //显示搜索框 
+                search: "true", 
+                //显示刷新
+                showRefresh : "true",
+                //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）     
+                cache: false,    
+                //是否显示分页（*）  
+                pagination: true,   
+                 //是否启用排序  
+                sortable: true,    
+                 //排序方式 
+                sortOrder: "asc",
+                //如果设置了分页，首页页码     
+                pageNumber: 1,   
+                //每页的记录行数（*）   
+                pageSize: 10,  
+                //可供选择的每页的行数（*）    
+                pageList: [10, 25, 50, 100],
+                //客户端处理分页    
+                sidePagination: "client",
+                //指定主键列 idField: "fieldID",
+                columns: [
+                    {
+                        field: 'serviceID.artificialID',//域值
+                        title: '服务ID',//标题
+                        visible: false,//false表示不显示
+                    },
+                    {
+                        field: 'serviceID.artificialName',//域值
+                        title: '服务名称',//标题
+                        visible: true,//false表示不显示
+                    },
+                    {
+                        field: 'serviceID.companyName',//域值
+                        title: '所属企业',//标题
+                        visible: true,//false表示不显示
+                    },
+                    {
+                        field: 'serviceID.suitableCrowd',//域值
+                        title: '适用人群',//标题
+                        visible: true,//false表示不显示
+                    },
+                    {
+                        field: 'serviceID.artificialFile',//域值
+                        title: '文件路径',//标题
+                        visible: false,//false表示不显示
+                    },
+                    {
+                        field: 'serviceID.artificialState',//域值
+                        title: '审核状态',//标题
+                        visible: true,//false表示不显示
+                    },
+                    {
+                        field: 'serviceID.price',//域值
+                        title: '价格',//标题
+                        visible: false,//false表示不显示
+                    },
+                    {
+                        field: 'serviceID.phone',//域值
+                        title: '联系电话',//标题
+                        visible: false,//false表示不显示
+                    },{
+                        field: 'votes',
+                        title: '投票数量',
+                        visible: true,
+                    },{
+                        field: 'no',
+                        title: '编号',
+                        visible: false,
+                    },{
+                        field: 'demandTable',
+                        title: '需求调查表ID',
+                        visible: false,
+                    },{
+                        field: 'count',
+                        title: '',
+                        visible: false,
+                    }
+                ]
+            });
+      }  
+    
+      function loadEquipment(id){
+            $('#equipmentTable').bootstrapTable({
+                url:"/DemandCatalog/getEquipmentContent?DemandTableId="+id,
+                //请求方法
+                method: 'get',
+                //dataType: "json",
+                //是否显示行间隔色
+                striped: true,
+                //是否显示 切换试图（table/card）按钮
+                showToggle: "true",
+                //显示搜索框 
+                search: "true", 
+                //显示刷新
+                showRefresh : "true",
+                //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）     
+                cache: false,    
+                //是否显示分页（*）  
+                pagination: true,   
+                 //是否启用排序  
+                sortable: true,    
+                 //排序方式 
+                sortOrder: "asc",
+                //如果设置了分页，首页页码     
+                pageNumber: 1,   
+                //每页的记录行数（*）   
+                pageSize: 10,  
+                //可供选择的每页的行数（*）    
+                pageList: [10, 25, 50, 100],
+                //客户端处理分页    
+                sidePagination: "client",
+                //指定主键列 idField: "fieldID",
+                columns: [
+                    {
+                        field: 'serviceID.demandID',//域值
+                        title: '器材ID',//标题
+                        visible: false,//false表示不显示
+                    },
+                    {
+                        field: 'serviceID.demandName',//域值
+                        title: '器材名称',//标题
+                        visible: true,//false表示不显示
+                    },
+                    {
+                        field: 'serviceID.demandCategory',//域值
+                        title: '器材种类',//标题
+                        visible: true,//false表示不显示
+                    },
+                     {
+                        field: 'serviceID.image',//域值
+                        title: '图片路径',//标题
+                        visible: false,//false表示不显示
+                    },
+                     {
+                        field: 'serviceID.demandRemarks',//域值
+                        title: '详细介绍',//标题
+                        visible: false,//false表示不显示
+                    },
+                     {
+                        field: 'serviceID.demandState',//域值
+                        title: '审核状态',//标题
+                        visible: true,//false表示不显示
+                    },{
+                        field: 'votes',
+                        title: '投票数量',
+                        visible: true,
+                    },{
+                        field: 'no',
+                        title: '编号',
+                        visible: false,
+                    },{
+                        field: 'demandTable',
+                        title: '需求调查表ID',
+                        visible: false,
+                    },{
+                        field: 'count',
+                        title: '',
+                        visible: false,
+                    }
+                ]
+            });
+      }
+    
+      function loadField(id){
+            $('#fieldTable').bootstrapTable({
+                url:"/DemandCatalog/getFieldService?DemandTableId="+id,
+                //请求方法
+                method: 'get',
+                //dataType: "json",
+                //是否显示行间隔色
+                striped: true,
+                //是否显示 切换试图（table/card）按钮
+                showToggle: "true",
+                //显示搜索框 
+                search: "true", 
+                //显示刷新
+                showRefresh : "true",
+                //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）     
+                cache: false,    
+                //是否显示分页（*）  
+                pagination: true,   
+                 //是否启用排序  
+                sortable: true,    
+                 //排序方式 
+                sortOrder: "asc",
+                //如果设置了分页，首页页码     
+                pageNumber: 1,   
+                //每页的记录行数（*）   
+                pageSize: 10,  
+                //可供选择的每页的行数（*）    
+                pageList: [10, 25, 50, 100],
+                //客户端处理分页    
+                sidePagination: "client",
+                //指定主键列 idField: "fieldID",
+                columns: [
+                    {
+                        field: 'serviceID.fieldID',//域值
+                        title: '场地服务ID',//标题
+                        visible: false,//false表示不显示
+                    },
+                    {
+                        field: 'serviceID.fieldName',//域值
+                        title: '场地服务名称',//标题
+                        visible: true,//false表示不显示
+                    },
+                     {
+                        field: 'serviceID.companyName',//域值
+                        title: '所属企业',//标题
+                        visible: true,//false表示不显示
+                    },
+                     {
+                        field: 'serviceID.fieldAddress',//域值
+                        title: '详细地址',//标题
+                        visible: false,//false表示不显示
+                    },
+                     {
+                        field: 'serviceID.fieldImg',//域值
+                        title: '图片地址',//标题
+                        visible: false,//false表示不显示
+                    },
+                     {
+                        field: 'serviceID.fieldState',//域值
+                        title: '审核状态',//标题
+                        visible: true,//false表示不显示
+                    },
+                     {
+                        field: 'serviceID.county',//域值
+                        title: '县/街道',//标题
+                        visible: false,//false表示不显示
+                    },
+                     {
+                        field: 'serviceID.businessTime',//域值
+                        title: '营业时间',//标题
+                        visible: false,//false表示不显示
+                    },
+                     {
+                        field: 'serviceID.city',//域值
+                        title: '市',//标题
+                        visible: false,//false表示不显示
+                    },
+                     {
+                        field: 'serviceID.phone',//域值
+                        title: '联系电话',//标题
+                        visible: false,//false表示不显示
+                    },
+                     {
+                        field: 'serviceID.price',//域值
+                        title: '价格',//标题
+                        visible: false,//false表示不显示
+                    },
+                     {
+                        field: 'serviceID.detailIntroduct',//域值
+                        title: '详细介绍',//标题
+                        visible: false,//false表示不显示
+                    },
+                     {
+                        field: 'serviceID.lat',//域值
+                        title: '经度',//标题
+                        visible: false,//false表示不显示
+                    },
+                     {
+                        field: 'serviceID.lon',//域值
+                        title: '纬度',//标题
+                        visible: false,//false表示不显示
+                    },{
+                        field: 'votes',
+                        title: '投票数量',
+                        visible: true,
+                    },{
+                        field: 'no',
+                        title: '编号',
+                        visible: false,
+                    },{
+                        field: 'demandTable',
+                        title: '需求调查表ID',
+                        visible: false,
+                    },{
+                        field: 'count',
+                        title: '',
+                        visible: false,
+                    }
+                ]
+            });
+      }
+    
+      function loadSport(id){
+            $('#sportTable').bootstrapTable({
+            url:"/DemandCatalog/getSportService?DemandTableId="+id,
+            //请求方法
+            method: 'get',
+            //dataType: "json",
+            //是否显示行间隔色
+            striped: true,
+            //是否显示 切换试图（table/card）按钮
+            showToggle: "true",
+            //显示搜索框 
+            search: "true", 
+            //显示刷新
+            showRefresh : "true",
+            //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）     
+            cache: false,    
+            //是否显示分页（*）  
+            pagination: true,   
+             //是否启用排序  
+            sortable: true,    
+             //排序方式 
+            sortOrder: "asc",
+            //如果设置了分页，首页页码     
+            pageNumber: 1,   
+            //每页的记录行数（*）   
+            pageSize: 10,  
+            //可供选择的每页的行数（*）    
+            pageList: [10, 25, 50, 100],
+            //客户端处理分页    
+            sidePagination: "client",
+            //指定主键列 idField: "fieldID",
+            columns: [
+                {
+                    field: 'serviceID.sportID',//域值
+                    title: '赛事ID',//标题
+                    visible: false,//false表示不显示
+                },
+                {
+                    field: 'serviceID.sportName',//域值
+                    title: '赛事名称',//标题
+                    visible: true,//false表示不显示
+                },
+                {
+                    field: 'serviceID.sportType',//域值
+                    title: '类型',//标题
+                    visible: true,//false表示不显示
+                },
+                {
+                    field: 'serviceID.companyName',//域值
+                    title: '所属企业',//标题
+                    visible: true,//false表示不显示
+                },
+                 {
+                    field: 'serviceID.introductFile',//域值
+                    title: '文件路径',//标题
+                    visible: false,//false表示不显示
+                },{
+                    field: 'votes',
+                    title: '投票数量',
+                    visible: true,
+                },{
+                    field: 'no',
+                    title: '编号',
+                    visible: false,
+                },{
+                    field: 'demandTable',
+                    title: '需求调查表ID',
+                    visible: false,
+                },{
+                    field: 'count',
+                    title: '',
+                    visible: false,
+                }
+            ]
+        });
+      }
+    </script>
+</body>
+
+</html>
+<!doctype html>

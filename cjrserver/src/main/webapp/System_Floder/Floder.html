@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>头部导航栏管理</title>
+    <!-- Import google fonts - Heading first/ text second -->
+    <!-- <link rel='stylesheet' type='text/css' href='http://fonts.useso.com/css?family=Open+Sans:400,700|Droid+Sans:400,700' /> -->
+    <!--[if lt IE 9]>
+    <link href="http://fonts.useso.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Droid+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="../asset/ico/favicon.ico" type="image/x-icon" />
+    <!-- Css files -->
+    <link href="../asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../asset/css/jquery.mmenu.css" rel="stylesheet">
+    <link href="../asset/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../asset/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="../asset/css/style.min.css" rel="stylesheet">
+    <link href="../asset/css/add-ons.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../asset/js/html5shiv.js"></script>
+    <script src="../asset/js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .file {
+            position: relative;
+            display: inline-block;
+            background: #D0EEFF;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: #1E88C7;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+        .file input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .file:hover {
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+            text-decoration: none;
+        }
+        .Delete {
+            position: relative;
+            display: inline-block;
+            background: #D0EEFF;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: #1E88C7;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+        .Delete input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .Delete:hover {
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+            text-decoration: none;
+        }
+    <!--</style><!--上传按钮样式-->
+</head>
+<body>
+<!-- start: Header -->
+<div class="navbar" role="navigation">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown visible-md visible-lg">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="user-avatar" src="../asset/img/avatar.jpg" alt="user-mail">政府后台管理员</a>
+            </li>
+            <li><a href="Home.html"><i class="fa fa-power-off"></i></a></li>
+        </ul>
+    </div>
+</div>
+<!-- end: Header -->
+<!-- start:    左侧导航栏    -->
+<div class="container-fluid content">
+    <div class="row">
+        <!-- start: Main Menu -->
+        <div class="sidebar ">
+            <div class="sidebar-collapse">
+                <div class="sidebar-header t-center">
+                   	<br>
+                    <h2>政府后台</h2>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="nav nav-sidebar">
+                        <li><a href="Home.html"><i class="fa fa-laptop"></i><span class="text">主页</span></a></li>
+                        <li>
+                            <a href="#"><i class="fa fa-font"></i><span class="text">首页管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="Floder.html"><i class="fa fa-th"></i><span class="text">头部导航栏管理</span></a></li>
+                                <li><a href="Article_management.html"><i class="fa fa-th"></i><span class="text">文章管理</span></a></li>
+                                <li><a href="Content_management.html"><i class="fa fa-th"></i><span class="text">内容管理</span></a></li>
+                                <li><a href="Information.html"><i class="fa fa-th"></i><span class="text">底部导航栏管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-file-text"></i><span class="text">招标</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_TenderPlan/publish_tender_plan.html"><i class="fa fa-pencil"></i><span class="text">发布招标计划</span></a></li>
+                                <li><a href="../System_TenderPlan/tender_form.html"><i class="fa fa-table"></i><span class="text">公布招标结果</span></a></li>
+                                <li><a href="../System_TenderPlan/BidingResult.html"><i class="fa fa-table"></i><span class="text">查看招标结果</span></a></li>
+                                <li><a href="../System_TenderPlan/goverment_check_evalution.html"><i class="fa fa-table"></i><span class="text">查看服务评价</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-signal"></i><span class="text">需求</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_Demand/issue_EquipmentContent.html"><i class="fa fa-table"></i><span class="text">需求调查表</span></a></li>
+                                <li><a href="../System_Demand/demand_form.html"><i class="fa fa-list"></i><span class="text">调查表</span></a></li>
+                                <li><a href="../System_Demand/equipment_service.html"><i class="fa fa-list"></i><span class="text">器材管理</span></a></li>
+                                <li><a href="../System_Demand/field_service.html"><i class="fa fa-list"></i><span class="text">场地服务管理</span></a></li>
+                                <li><a href="../System_Demand/activity_service.html"><i class="fa fa-list"></i><span class="text">活动服务管理</span></a></li>
+                                <li><a href="../System_Demand/sport_service.html"><i class="fa fa-list"></i><span class="text">赛事服务管理</span></a></li>
+                                <li><a href="../System_Demand/artificial_service.html"><i class="fa fa-list"></i><span class="text">人工服务管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-font"></i><span class="text">认证</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_Identify/Company_Identify.html"><i class="fa fa-th"></i><span class="text">企业认证</span></a></li>
+                                <li><a href="../System_Identify/Media_Identify.html"><i class="fa fa-th"></i><span class="text">媒体认证</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <div class="sidebar-brand">
+                    政府后台
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end:    左侧导航栏   -->
+    <!-- start:  招标目录表   -->
+    <div class="main sidebar-minified">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header"><i class="fa fa-table"></i>首页管理</h3>
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="Home.html">主页</a></li>
+                    <li><i class="fa fa-table"></i>首页管理</li>
+                </ol>
+            </div>
+        </div>
+        <!--  头部导航栏目录管理  -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2><i class="fa fa-table red"></i><span class="break"></span><strong>头部导航栏</strong></h2>
+                        <div class="panel-actions">
+                            <a href="table.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h2><i class="fa fa-table red"></i><span class="break"></span><strong>添加头部导航栏</strong></h2>
+                                    </div>
+                                    <div class="panel-body">
+                                        <form id="AddFolder">
+                                            <div class="row form-group">
+                                                <label class="col-sm-4 col-sm-offset-1 control-label">子目录名称</label>
+                                                <div class="col-sm-6">
+                                                    <input type="text" style="font-size:15px;" class="form-control" placeholder="子目录名称" id="folderName" >
+                                                    </input>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <label class="col-sm-4 col-sm-offset-1 control-label">根目录名称</label>
+                                                <div class="col-sm-6">
+                                                    <select class="form-control" id="RootName" style="height: 30px;">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <label class="col-sm-4 col-sm-offset-1 control-label">查看权限</label>
+                                                <div class="col-sm-6">
+                                                    <select class="form-control" id="Jurisdiction" style="height: 30px;">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <button id="AddFloder" class="col-sm-2 col-sm-offset-8 btn btn-success">确认</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h2><i class="fa fa-table red"></i><span class="break"></span><strong>头部导航栏列表</strong></h2>
+                                    </div>
+                                    <div class="panel-body">
+                                        <table data-toggle="table" id="HeadFloder"
+                                               data-detail-view="true"
+                                               data-detail-formatter="ShowDetail">
+                                            <thead>
+                                            <tr>
+                                                <th data-field="floderID" data-visible="false">目录ID</th>
+                                                <th data-field="fatherID" data-visible="false">父亲Id</th>
+                                                <th data-field="name">名称</th>
+                                                <th data-field="level" data-visible="false">层级</th>
+                                                <th data-field="path" data-visible="false">路径</th>
+                                                <th data-field="pathName">路径</th>
+                                                <th data-field="jurisdiction">查看权限</th>
+                                                <th data-field="action" data-formatter="actionFormatter" data-events="actionEvents">修改</th>
+                                            </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div><!--/col-->
+                        </div><!--/row-->
+                    </div>
+                </div>
+            </div><!--/col-->
+        </div><!--/row-->
+        <!--大图轮播-->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2><i class="fa fa-table red"></i><span class="break"></span><strong>大图轮播</strong></h2>
+                        <div class="panel-actions">
+                            <a href="table.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <table id="eventsTable"
+                                   data-toggle="table"
+                                   data-url="/Floder/ShowMainImgNow"
+                                   data-smart-display="true">
+                                <thead>
+                                <tr>
+                                    <th data-field="iD" data-visible="false" >ID</th>
+                                    <th data-field="path" data-visible="false" >图片路径</th>
+                                    <th data-field="picture" data-formatter="ImgFormatter" data-events="ImgEvents" class="col-sm-3" data-halign="center" data-align="center" data-valign="middle">图片</th>
+                                    <th data-field="src" class="col-sm-6" data-halign="center"data-align="center" data-valign="middle">图片链接</th>
+                                    <th data-field="myOrder" data-visible="false" >图片顺序</th>
+                                    <th data-field="orderby" data-formatter="OrderFormatter" data-events="OrderEvents" class="col-sm-1" data-halign="center"data-align="center" data-valign="middle">排序</th>
+                                    <th data-field="delete" data-formatter="DeleteFormatter" data-events="DeleteEvents" class="col-sm-2" data-halign="center"data-align="center" data-valign="middle">删除/替换</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 col-md-offset-9">
+                                <a class="file">添加图片
+                                <input id="AddMainImg" type="file" onchange="imgADD(this)" >
+                                </a>
+                            </div>
+                            <div class="col-md-1">
+                                <button id="MainImgHold" class="btn btn-danger"><i class="glyphicon glyphicon-save"></i>保存</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--//隐藏的表格-->
+<div id="div1"style="display: none;">
+    <table data-toggle="table" id="table1">
+        <thead>
+        <tr>
+            <th data-field="floderID" data-visible="false">目录ID</th>
+            <th data-field="fatherID" data-visible="false">父亲Id</th>
+            <th data-field="name">名称</th>
+            <th data-field="level" data-visible="false">层级</th>
+            <th data-field="path" data-visible="false">路径</th>
+            <th data-field="pathName">路径</th>
+            <th data-field="jurisdiction">查看权限</th>
+            <th data-field="action" data-formatter="actionFormatter" data-events="actionEvents">修改/删除</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div id="div2"style="display: none;">
+    <table data-toggle="table" id="table2">
+        <thead>
+        <tr>
+            <th data-field="floderID" data-visible="false">目录ID</th>
+            <th data-field="fatherID" data-visible="false">父亲Id</th>
+            <th data-field="name">名称</th>
+            <th data-field="level" data-visible="false">层级</th>
+            <th data-field="path" data-visible="false">路径</th>
+            <th data-field="pathName">路径</th>
+            <th data-field="jurisdiction">查看权限</th>
+            <th data-field="action" data-formatter="actionFormatter" data-events="actionEvents">修改/删除</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div id="div3"style="display: none;">
+    <table data-toggle="table" id="table3">
+        <thead>
+        <tr>
+            <th data-field="floderID" data-visible="false">目录ID</th>
+            <th data-field="fatherID" data-visible="false">父亲Id</th>
+            <th data-field="name">名称</th>
+            <th data-field="level" data-visible="false">层级</th>
+            <th data-field="path" data-visible="false">路径</th>
+            <th data-field="pathName">路径</th>
+            <th data-field="jurisdiction">查看权限</th>
+            <th data-field="action" data-formatter="actionFormatter" data-events="actionEvents">修改/删除</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div id="div4"style="display: none;">
+    <table data-toggle="table" id="table4">
+        <thead>
+        <tr>
+            <th data-field="floderID" data-visible="false">目录ID</th>
+            <th data-field="fatherID" data-visible="false">父亲Id</th>
+            <th data-field="name">名称</th>
+            <th data-field="level" data-visible="false">层级</th>
+            <th data-field="path" data-visible="false">路径</th>
+            <th data-field="pathName">路径</th>
+            <th data-field="jurisdiction">查看权限</th>
+            <th data-field="action" data-formatter="actionFormatter" data-events="actionEvents">修改/删除</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<br><br><br>
+
+<!--这段是悬浮窗的代码-->
+<!--根目录修改-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">根目录修改</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row form-group" style="display:none;">
+                    <label class="col-sm-4 col-sm-offset-1 control-label">根目录ID</label>
+                    <div class="col-sm-6">
+                        <input type="text" style="font-size:15px;" class="form-control" id="URootID" >
+                        </input>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-sm-4 col-sm-offset-1 control-label">根目录名称</label>
+                    <div class="col-sm-6">
+                        <input type="text" style="font-size:15px;" class="form-control" id="URootName" >
+                        </input>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <label class="col-sm-4 col-sm-offset-1 control-label">查看权限</label>
+                    <div class="col-sm-6">
+                        <select class="form-control" id="URootJurisdiction" style="height: 30px;">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button id="RootUpdate" type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--子目录修改-->
+<div class="modal fade" id="DmyModal" tabindex="-1" role="dialog" aria-labelledby="DmyModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">子目录修改</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row form-group" style="display:none;">
+                    <label class="col-sm-4 col-sm-offset-1 control-label">子目录ID</label>
+                    <div class="col-sm-6">
+                        <input type="text" style="font-size:15px;" class="form-control" id="UChildrenID" >
+                        </input>
+                    </div>
+                </div>
+                <div class="row form-group" style="display:none;">
+                    <label class="col-sm-4 col-sm-offset-1 control-label">父目录ID</label>
+                    <div class="col-sm-6">
+                        <input type="text" style="font-size:15px;" class="form-control" id="UCFatherID" >
+                        </input>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-sm-4 col-sm-offset-1 control-label">子目录名称</label>
+                    <div class="col-sm-6">
+                        <input type="text" style="font-size:15px;" class="form-control" id="UChildrenName" >
+                        </input>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-sm-4 col-sm-offset-1 control-label">所属目录名称</label>
+                    <div class="col-sm-6">
+                        <select class="form-control" id="UFatherName" style="height: 30px;">
+                        </select>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-sm-4 col-sm-offset-1 control-label">查看权限</label>
+                    <div class="col-sm-6">
+                        <select class="form-control" id="UChildrenJurisdiction" style="height: 30px;">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button id="UpdateChildren" type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- start: JavaScript-->
+<!--[if !IE]>-->
+<script src="../asset/js/jquery-2.1.1.min.js"></script>
+<!--<![endif]-->
+<!--[if IE]>
+<script src="../asset/js/jquery-2.1.1.min.js"></script>
+
+<![endif]-->
+<!--[if !IE]>-->
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
+</script>
+<!--<![endif]-->
+<!--[if IE]>
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='assets/js/jquery-1.11.1.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+<script src="../asset/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../asset/js/bootstrap.min.js"></script>
+<!-- page scripts -->
+<script src="../asset/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+<script src="../asset/plugins/datatables/js/jquery.dataTables.min.js"></script>
+<script src="../asset/plugins/datatables/js/dataTables.bootstrap.min.js"></script>
+<!-- theme scripts -->
+<script src="../asset/js/SmoothScroll.js"></script>
+<script src="../asset/js/jquery.mmenu.min.js"></script>
+<script src="../asset/js/core.min.js"></script>
+<!-- end: JavaScript-->
+<script src="../asset/js/jquery-2.1.1.min.js"></script>
+<script src="../asset/js/avalon.js"></script>
+<!-- Latest compiled and minified CSS -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css"> -->
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/bootstrap-table.js"></script>
+<script src="../js/bootstrap-table-zh-CN.min.js"></script>
+<script src="../js/jquery-form.js"></script>
+<!---->
+<!--以下代码是实现查看详情 的js代码-->
+<!---->
+<script>
+    //权限表
+    var JurisdictionData;
+    //根目录表
+    var RootData;
+    var ChildrenFlag;
+    //显示表格
+    $('#HeadFloder').bootstrapTable(
+        {
+        method:'post',
+        dataType:'json',
+        url:"/Floder/ReturnRootHeadFloder",
+//        pagination: true,                   //是否显示分页（*）
+//        pageSize: 10 ,//每页的记录行数（*）
+//        columns: [
+//                {
+//                    field: 'floderID',
+//                    visible:false,
+//                    title:'目录ID',
+//                },
+//                {
+//                    field: 'fatherID',
+//                    visible:false,
+//                    title:'父亲Id',
+//                },
+//                {
+//                    field: 'name',
+//                    title:'名称',
+//                    editable: true,
+//                },
+//                {
+//                    field: 'level',
+//                    visible:false,
+//                    title:'层级',
+//                },
+//                {
+//                    field: 'path',
+//                    visible:false,
+//                    title:'路径',
+//                },
+//                {
+//                    field: 'jurisdiction',
+//                    title:'查看权限',
+//                },
+//                {
+//                    field: 'action',
+//                    formatter:'actionFormatter',
+//                    events:'actionEvents',
+//                    title:'修改/删除',
+//                }
+//        ],
+    });
+    $('#table1').bootstrapTable({
+        method:'post',
+        dataType:'json',
+        url:"/Floder/ReturnChildrenHeadFloder?FloderID=1",
+    });
+    $('#table2').bootstrapTable({
+        method:'post',
+        dataType:'json',
+        url:"/Floder/ReturnChildrenHeadFloder?FloderID=2",
+    });
+    $('#table3').bootstrapTable({
+        method:'post',
+        dataType:'json',
+        url:"/Floder/ReturnChildrenHeadFloder?FloderID=3",
+    });
+    $('#table4').bootstrapTable({
+        method:'post',
+        dataType:'json',
+        url:"/Floder/ReturnChildrenHeadFloder?FloderID=4",
+    });
+    //显示表格下拉
+    function ShowDetail(index, row) {
+        var num = index+1;
+        var divid = "div"+num;
+        return document.getElementById(divid).innerHTML;
+    }
+    //显示表格后删除，修改标签
+    function actionFormatter(value, row, index) {
+        if(row['fatherID'] == 0) {
+            return [
+                '<a class="update" href="#myModal" title="update" data-toggle="modal" data-dismiss="modal">',
+                '<i class="glyphicon glyphicon-pencil"></i>',
+                '</a>'
+            ].join('');
+        }
+        else {
+            var name = "\""+row['name']+"\"";
+            var PathName = "\""+row['pathName']+"\"";
+            var jurisdiction = "\""+row['jurisdiction']+"\"";
+            var fatherID = "\""+row['fatherID']+"\"";
+            return[
+                '<a class="updateC" href="#DmyModal" title="update" data-toggle="modal" data-dismiss="modal" onclick=\'update('+row['floderID']+','+name+','+PathName+','+jurisdiction+','+fatherID+')\'>',
+                '<i class="glyphicon glyphicon-pencil"></i>',
+                '</a>',
+                '<a class="remove" href="javascript:void(0)"  title="Remove" onclick=\'deleteChildren('+row['floderID']+')\'>',
+                '<i class="glyphicon glyphicon-remove"></i>',
+                '</a>'
+            ].join('');
+        }
+    }
+    //根目录修改悬浮窗显示
+    window.actionEvents = {
+        'click .update': function (e, value, row, index) {
+//根目录修改
+            document.getElementById("URootID").value = row['floderID'];
+            document.getElementById("URootName").value = row['name'];
+            var programme_sel=[];
+            programme_sel.push('<option value="'+row['jurisdiction']+'" selected>'+row['jurisdiction']+'</option>');
+            for(var i=0;i<JurisdictionData.length;i++)
+            {
+                var programme = JurisdictionData[i];
+                if(programme != row['jurisdiction'])
+                    programme_sel.push('<option value="'+programme+'">'+programme+'</option>')
+            }
+            $("#URootJurisdiction").html(programme_sel.join(' '));
+
+        }
+    };
+    //子目录修改悬浮窗显示
+    function update(id,name,pathName,jurisdiction,fID) {
+        //子目录修改
+        document.getElementById("UChildrenID").value = id;
+        document.getElementById("UChildrenName").value = name;
+        document.getElementById("UCFatherID").value = fID;
+        var programme_sel=[];
+        programme_sel.push('<option value="'+jurisdiction+'" selected>'+jurisdiction+'</option>');
+        for(var i=0;i<JurisdictionData.length;i++)
+        {
+            var programme = JurisdictionData[i];
+            if(programme != jurisdiction)
+                programme_sel.push('<option value="'+programme+'">'+programme+'</option>')
+        }
+        $("#UChildrenJurisdiction").html(programme_sel.join(' '));
+
+        var programme_del=[];
+        var fathername = pathName.replace("-"+name,"");
+        programme_del.push('<option value="'+fathername+'" selected>'+fathername+'</option>');
+        for(var i=0;i<RootData.length;i++)
+        {
+            var programmd = RootData[i];
+            if(programmd != fathername)
+                programme_del.push('<option value="'+programmd+'">'+programmd+'</option>')
+        }
+        $("#UFatherName").html(programme_del.join(' '));
+    };
+    //子目录删除
+    function deleteChildren( id ) {
+        var mymessage=confirm("确定删除吗?删除后该目录下信息需更改所属目录才能显示");
+        if (mymessage == true) {
+            $.ajax({
+                type: "post",
+                async: false,
+                url: "/Floder/ChildrenDelete",//请求地址
+                data: {"folderID": id},//向后台提交的参数
+                success: function (data) {
+                    alert("删除成功");
+                    window.location.reload();
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                },
+            })
+        }
+    }
+    //根目录select
+    $.ajax({
+        url : '/Floder/ReturnRootName',
+        type : 'GET',
+        async : false,
+        datatype : 'json',
+        success : function(data) {
+            if(data){
+                RootData = data;
+                var programme_sel=[];
+                programme_sel.push('<option value="0" selected></option>')
+                for(var i=0,len=data.length;i<len;i++){
+                    var programme = data[i];
+                    programme_sel.push('<option value="'+programme+'">'+programme+'</option>')
+                }
+                $("#RootName").html(programme_sel.join(' '));
+            }
+        },
+        error : function() {
+            alert('查询异常');
+        }
+    });
+    //权限目录select
+    $.ajax({
+        url : '/Floder/ReturnJurisdiction',
+        type : 'GET',
+        async : false,
+        datatype : 'json',
+        success : function(data) {
+            if(data){
+                JurisdictionData = data;
+                var programme_sel=[];
+                programme_sel.push('<option value="0" selected></option>')
+                for(var i=0,len=data.length;i<len;i++){
+                    var programme = data[i];
+                    programme_sel.push('<option value="'+programme+'">'+programme+'</option>')
+                }
+                $("#Jurisdiction").html(programme_sel.join(' '));
+            }
+        },
+        error : function() {
+            alert('查询异常');
+        }
+    });
+    //添加Floder
+    $('#AddFloder').click(function () {
+        var folderName = document.getElementById("folderName").value;
+        var selectRootName = document.getElementById("RootName");
+        var RootName = selectRootName.options[selectRootName.selectedIndex].value;
+        var selectJurisdiction = document.getElementById("Jurisdiction");
+        var Jurisdiction = selectJurisdiction.options[selectJurisdiction.selectedIndex].value;
+        var num;
+        $.ajax({
+            type: "post",
+            async: false,
+            url: "/Floder/ReturnChildrenQty",//请求地址
+            data: {"FolderName": RootName},//向后台提交的参数
+            success: function (data) {
+                num = data;
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            },
+        })
+        if(num>=5)
+        {
+            alert("子目录数量达到上限");
+        }
+        else if(folderName != "" && RootName != "0" && Jurisdiction != "0")
+        {
+            $.ajax({
+                type: "post",
+                async: false,
+                url: "/Floder/AddFloder",//请求地址
+                data: {"FolderName": folderName, "RootName": RootName, "Jurisdiction": Jurisdiction},//向后台提交的参数
+                success: function (data) {
+                    alert("添加成功");
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                },
+            })
+        }
+        else
+        {
+            alert("请填写完整信息");
+        }
+    })
+    //修改根目录
+    $('#RootUpdate').click(function () {
+        var folderID = document.getElementById("URootID").value;
+        var folderName = document.getElementById("URootName").value;
+        var selectJurisdiction = document.getElementById("URootJurisdiction");
+        var Jurisdiction = selectJurisdiction.options[selectJurisdiction.selectedIndex].value;
+        if(folderName != "" ) {
+            if (RootNameCheck(folderID,folderName) == true)
+            {
+                $.ajax({
+                    type: "post",
+                    async: false,
+                    url: "/Floder/RootUpdate",//请求地址
+                    data: {"folderID": folderID, "folderName": folderName, "Jurisdiction": Jurisdiction},//向后台提交的参数
+                    success: function (data) {
+                        alert("修改成功");
+                        window.location.reload();
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert(XMLHttpRequest.status);
+                        alert(XMLHttpRequest.readyState);
+                        alert(textStatus);
+                    },
+                })
+            }
+            else
+                alert("根目录名称重复");
+        }
+        else
+        {
+            alert("请填写完整信息");
+        }
+    });
+    //修改子目录
+    $('#UpdateChildren').click(function () {
+        var folderID = document.getElementById("UChildrenID").value;
+        var folderName = document.getElementById("UChildrenName").value;
+        var fatherID = document.getElementById("UCFatherID").value;
+        var selectFatherName = document.getElementById("UFatherName");
+        var FatherName = selectFatherName.options[selectFatherName.selectedIndex].value;
+        var selectJurisdiction = document.getElementById("UChildrenJurisdiction");
+        var Jurisdiction = selectJurisdiction.options[selectJurisdiction.selectedIndex].value;
+
+        if(folderName != "" )
+        {
+            ChildrenCheck(folderID,folderName,fatherID);
+            if(ChildrenFlag == 1) {
+                $.ajax({
+                    type: "post",
+                    async: false,
+                    url: "/Floder/ChildrenUpdate",//请求地址
+                    data: {
+                        "folderID": folderID,
+                        "folderName": folderName,
+                        "FatherName": FatherName,
+                        "Jurisdiction": Jurisdiction
+                    },//向后台提交的参数
+                    success: function (data) {
+                        alert("修改成功");
+                        window.location.reload();
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert(XMLHttpRequest.status);
+                        alert(XMLHttpRequest.readyState);
+                        alert(textStatus);
+                    },
+                })
+            }
+            else
+                alert("该根目录下子目录名称重复");
+        }
+        else
+        {
+            alert("请填写完整信息");
+        }
+    })
+    //根目录名称检测
+    function RootNameCheck(id,name) {
+        var RootName = RootData;
+        RootName[id-1] = name;
+        var count=0;
+        for(var i=0;i<RootName.length;i++)
+            if(RootName[i]==name)
+                count ++;
+        if(count == 1)
+            return true;
+        return false;
+    }
+    //子目录名称检测
+    function ChildrenCheck(folderID,folderName,FatherID) {
+        var ChildrenName = new Array();
+        var ChildrenID = new Array();
+        var flag;
+        var count=0;
+         $.ajax({
+            type: "POST",
+             async:false,
+             url:"/Floder/ReturnChildrenHeadFloder?FloderID="+FatherID,
+            success: function(msg) {
+                for (var i = 0; i < msg.length; i++) {
+                    ChildrenID[i] = msg[i].floderID;
+                    ChildrenName[i] = msg[i].name;//这里不能用已经转换的JSON格式，要用原本的
+                }
+                //寻找所在位置
+                for (var j = 0; j < msg.length; j++) {
+                    if (ChildrenID[j] == folderID)
+                        flag = j;
+                }
+                ChildrenName[flag] = folderName;
+                for (var n = 0; n < msg.length; n++)
+                    if (ChildrenName[n] == folderName)
+                        count++;
+                if (count == 1)
+                    getResult(1)
+                else
+                    getResult(0);
+            },
+            error :function()
+            {
+                getResult(0);
+            }
+        });
+    }
+    function getResult(result) {
+        ChildrenFlag = result;
+    }
+</script><!--  头部导航栏目录管理  -->
+<script>
+    var formData = new FormData();
+    //图片
+    function ImgFormatter(value, row, index) {
+        if(row['path']!==null)
+            src="../"+row['path'];
+        return '<img id="IMG'+index+'" src="' + src + '" style="width: 200px;height: auto;"/>';
+    }
+    //排序框
+    function OrderFormatter(value, row, index) {
+        if(row['myOrder']!==null)
+        return '<input id="Order'+row['myOrder']+'" type="text" class="form-control" value="'+row['myOrder']+'" onchange="checkOrder(this,'+row['myOrder']+')">';
+    }
+    //删除/替换
+    function DeleteFormatter(value, row, index) {
+        return [
+            '<a href="javascript:;" class="Delete">删除 ' +
+            '</a> ',
+            '<a href="javascript:;" class="file">替换 ' +
+            '<input id="file" type="file" onchange="imgPreview(this,'+index+')" > ' +
+            '</a>',
+        ].join('');
+    }
+    //删除事件
+    window.DeleteEvents = {
+        'click .Delete': function (e, value, row, index) {
+            var mymessage=confirm("确定删除吗?");
+            $.ajax({
+                type: "post",
+                traditional: true,
+                url: "/Floder/ReturnCount",//请求地址
+                success: function (data) {
+                    if(data>2) {
+                            if (mymessage == true) {
+                                $.ajax({
+                                    type: "post",
+                                    traditional: true,
+                                    url: "/Floder/DeleteMainImg",//请求地址
+                                    data: {"id": row['iD']},//向后台提交的参数
+                                    success: function (data) {
+                                        alert("删除成功");
+                                        $('#eventsTable').bootstrapTable('refresh');
+                                    },
+                                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                                        alert(XMLHttpRequest.status);
+                                        alert(XMLHttpRequest.readyState);
+                                        alert(textStatus);
+                                    },
+                                })
+                            }
+                        }
+                    else
+                    {
+                        alert("至少存在一张图");
+                    }
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert(XMLHttpRequest.status);
+                        alert(XMLHttpRequest.readyState);
+                        alert(textStatus);
+                    },
+                })
+        },
+        'click .Update': function (e, value, row, index) {
+
+        }
+    };
+    //检测排序框输入是否为数字
+    function checkOrder(dom,pre) {
+        if( isNaN( dom.value ) )
+        {
+            alert('请输入数字');
+            dom.value=pre;
+        }
+        else if(dom.value > 8 || dom.value <1){
+            alert('请输入1-8的数字');
+            dom.value=pre;
+        }
+    }
+    //表格中图片替换
+    function imgPreview(fileDom,id){
+        //打开窗口判断是否支持FileReader
+        if (window.FileReader) {
+            var reader = new FileReader();
+        } else {
+            alert("您的设备不支持图片预览功能，如需该功能请升级您的设备！");
+        }
+
+        //获取文件
+        var file = fileDom.files[0];
+        var imageType = /^image\//;
+        //是否是图片
+        if (!imageType.test(file.type)) {
+            alert("请选择图片！");
+            return;
+        }
+        //读取完成
+        reader.onload = function(e) {
+            //获取图片dom
+            var img = document.getElementById("IMG"+id);
+            //图片路径设置为读取的图片
+            img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+        formData.append('file', file);
+        $("#eventsTable").bootstrapTable('updateCell', {
+            index : id,
+            field: 'path',
+            value: "index/img/img/"+file.name
+        });
+    }
+    //保存主界面图
+    $('#MainImgHold').click(function () {
+//        var formData = new FormData();
+//        formData.append('file', $('#file')[0].files[0]);
+        //保存修改过的图片数组
+        $.ajax({
+            url: '/Floder/AddMainImg',
+            type: 'POST',
+            cache: false,
+            data: formData,
+            processData: false,
+            contentType: false
+        }).done(function(res) {
+        }).fail(function(res) {
+            alert("false");
+        });
+        //获取表格数据
+        var allTableData = $('#eventsTable').bootstrapTable('getData');
+        if(allTableData != "") {
+            //获取数据
+            var ID = new Array();
+            var Path = new Array();
+            var State = new Array();
+            var MyOrder = new Array();
+            var Src = new Array();
+            var allTableData2 = JSON.stringify(allTableData);
+            //获取json中demand_ID,生成数组
+            for (var i = 0; i < eval(allTableData2).length; i++) {
+                ID[i] = allTableData[i].iD;//这里不能用已经转换的JSON格式，要用原本的
+                Path[i] = allTableData[i].path;
+                State[i] = allTableData[i].state;
+                MyOrder[i] = document.getElementById("Order" + allTableData[i].myOrder).value;
+                Src[i] = allTableData[i].src;
+            }
+            var count = 0;
+            for (var i = 0; i < eval(allTableData2).length; i++) {
+                if (i + 1 == MyOrder[i])
+                    count++;
+            }
+            if (count == eval(allTableData2).length) {
+                $.ajax({
+                    type: "post",
+                    traditional: true,
+                    url: "/Floder/UpdateMainImg",//请求地址
+                    data: {"ID": ID, "Path": Path, "State": State, "MyOrder": MyOrder, "Src": Src},//向后台提交的参数
+                    success: function (data) {
+                        alert("设置成功");
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert(XMLHttpRequest.status);
+                        alert(XMLHttpRequest.readyState);
+                        alert(textStatus);
+                    },
+                })
+            }
+        }
+    })
+    //添加图片
+    function imgADD(fileDom){
+        $.ajax({
+            type: "post",
+            traditional: true,
+            url: "/Floder/ReturnCount",//请求地址
+            success: function (data) {
+               if(data<9) {
+
+                   //打开窗口判断是否支持FileReader
+                   if (window.FileReader) {
+                       var reader = new FileReader();
+                   } else {
+                       alert("您的设备不支持图片预览功能，如需该功能请升级您的设备！");
+                   }
+
+                   //获取文件
+                   var file = fileDom.files[0];
+                   var imageType = /^image\//;
+                   //是否是图片
+                   if (!imageType.test(file.type)) {
+                       alert("请选择图片！");
+                       return;
+                   }
+                   //读取完成
+                   reader.onload = function (e) {
+
+                   };
+                   reader.readAsDataURL(file);
+                   var formData = new FormData();
+                   formData.append('file', file);
+                   //保存图片
+                   $.ajax({
+                       url: '/Floder/AddMainImg',
+                       type: 'POST',
+                       cache: false,
+                       data: formData,
+                       processData: false,
+                       contentType: false
+                   }).done(function (res) {
+                   }).fail(function (res) {
+                       alert("false");
+                   });
+                   //添加信息
+                   $.ajax({
+                       url: '/Floder/AddMainImgInfo',
+                       type: 'POST',
+                       cache: false,
+                       data: formData,
+                       processData: false,
+                       contentType: false
+                   }).done(function (res) {
+                       $('#eventsTable').bootstrapTable('refresh');
+                   }).fail(function (res) {
+                       alert("false");
+                   });
+               }
+               else{
+                   alert("轮播图片上限为8张");
+               }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            },
+        })
+    }
+</script>
+<script src="../js/bootstrap-table.js"></script>
+<script src="../js/bootstrap-table-zh-CN.min.js"></script>
+</body>
+</html>

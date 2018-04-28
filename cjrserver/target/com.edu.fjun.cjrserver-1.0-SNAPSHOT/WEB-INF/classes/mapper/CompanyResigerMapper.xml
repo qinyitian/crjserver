@@ -1,0 +1,23 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.fjnu.cjrserver.dao.CompanyRegisterMapper">
+    <!--根据电话查询企业信息-->
+    <select id="findComapanyByPhone" resultType="com.edu.fjnu.cjrserver.model.Company">
+        SELECT * FROM company where phone = #{phone}
+    </select>
+    <!--根据营业执照查询企业信息-->
+    <select id="findComapanyByLicense" resultType="com.edu.fjnu.cjrserver.model.CompanyInfo">
+        SELECT * FROM company_info where business_license = #{license}
+    </select>
+    <!--插入企业信息到company表-->
+    <insert id="addNewCompany" parameterType="com.edu.fjnu.cjrserver.model.Company" useGeneratedKeys="true" keyProperty="companyID">
+        INSERT INTO company(company_password,company_name,company_invitecode,phone,state)
+        VALUES (#{companyPassword},#{companyName},#{companyInviteCode},#{phone},0)
+    </insert>
+    <!--插入企业信息到company_info表-->
+    <insert id="addNewCompanyInfo" parameterType="com.edu.fjnu.cjrserver.model.CompanyInfo">
+        insert into company_info (company_name,company_address,company_email,company_businessscope,business_license)
+        values (#{companyName},#{companyAddress},#{companyEmail},#{companyBusinessScope},#{businessLicense});
+    </insert>
+</mapper>

@@ -1,0 +1,26 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.fjnu.cjrserver.dao.CategoryListMapper">
+
+    <!-- 增加下拉列表选项，表的no自增 -->
+    <insert  id="addCategory" parameterType="com.edu.fjnu.cjrserver.model.CategoryList">
+        INSERT INTO category_list(Tag, Content) VALUES (#{tag}, #{content})
+    </insert>
+
+    <!-- 删除某个列表选项 -->
+    <delete id="delCategory">
+        DELETE FROM category_list WHERE No = #{0}
+    </delete>
+
+    <!-- 更新某个列表选项 -->
+    <update id="updateCategory" parameterType="com.edu.fjnu.cjrserver.model.CategoryList">
+        UPDATE category_list SET Content = #{content} WHERE No = #{no}
+    </update>
+
+    <!-- 查询类别列表 -->
+    <select id="findAllCategoryList" resultType="com.edu.fjnu.cjrserver.model.CategoryList">
+        SELECT * FROM category_list WHERE Tag = #{0}
+    </select>
+
+</mapper>

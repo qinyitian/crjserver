@@ -1,0 +1,10 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.fjnu.cjrserver.dao.CompanyBusinessScopeMapper">
+    <!--按分页查询活动服务-->
+    <select id="findCompanyInfoByScope" resultType="com.edu.fjnu.cjrserver.model.CompanyInfo">
+        select * from company_info where Company_BusinessScope like CONCAT(CONCAT('%', #{0}), '%')
+    </select>
+
+</mapper>

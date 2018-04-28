@@ -1,0 +1,12 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.fjnu.cjrserver.dao.DemandDictionaryMapper">
+    <!--需求目录通知-->
+    <!-- 1:需求调查表 2:需求目录 -->
+    <!-- 朱仲策-->
+    <select id="findDemandDictionaryNotice" resultType="com.edu.fjnu.cjrserver.model.Notice">
+        SELECT * FROM notice where notice_type = 2
+    </select>
+
+</mapper>

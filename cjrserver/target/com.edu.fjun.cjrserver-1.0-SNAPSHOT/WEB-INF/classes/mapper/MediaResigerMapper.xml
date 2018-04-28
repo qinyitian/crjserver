@@ -1,0 +1,20 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.fjnu.cjrserver.dao.MediaRegisterMapper">
+    <!--根据电话查询企业信息-->
+    <select id="findMediaByPhone" resultType="com.edu.fjnu.cjrserver.model.Media">
+        SELECT * FROM media where phone = #{phone}
+    </select>
+
+    <!--插入企业信息到company表-->
+    <insert id="addNewMedia" parameterType="com.edu.fjnu.cjrserver.model.Media" useGeneratedKeys="true" keyProperty="mediaId">
+        INSERT INTO media(phone,password,invite_code,media_name,state)
+        VALUES (#{phone},#{password},#{inviteCode},#{mediaName},0)
+    </insert>
+    <!--插入企业信息到company_info表-->
+    <insert id="addNewMediaInfo" parameterType="com.edu.fjnu.cjrserver.model.MediaInfo" >
+        insert into media_info (media_name,address,email,introduction)
+        values (#{mediaName},#{address},#{email},#{introduction});
+    </insert>
+</mapper>

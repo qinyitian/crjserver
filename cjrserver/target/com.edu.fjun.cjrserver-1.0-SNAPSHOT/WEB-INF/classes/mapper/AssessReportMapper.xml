@@ -1,0 +1,29 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.fjnu.cjrserver.dao.AssessReportMapper">
+    <!--添加评价报告信息-->
+    <insert id="insertAssessReport" parameterType="com.edu.fjnu.cjrserver.model.AssessReport">
+        INSERT INTO assess_report(Media_ID,Assess_Name,Path,Report_type) VALUES (#{mediaID},#{assessName},#{path},#{reportType})
+    </insert>
+    <!--根据评价机构ID查询评价报告-->
+    <select id="findAssessReportByID" parameterType="Integer" resultType="com.edu.fjnu.cjrserver.model.AssessReport">
+      SELECT * FROM assess_report WHERE Media_ID = #{mediaID}
+    </select>
+    <!--查询评价报告-->
+    <select id="findAssessReport" resultType="com.edu.fjnu.cjrserver.model.AssessReport">
+        SELECT * FROM assess_report
+    </select>
+    <!--根据评价报告ID查询存储路径-->
+    <select id="getReportPathByAssesID" parameterType="Integer" resultType="String">
+        SELECT Path FROM assess_report WHERE Assess_ID = #{assessID}
+    </select>
+    <!--删除评价报告-->
+    <delete id="deleteAssessReport" parameterType="Integer">
+        DELETE FROM assess_report WHERE Assess_ID = #{assessID}
+    </delete>
+    <!--修改评价报告-->
+    <update id="updateAssessReport" parameterType="com.edu.fjnu.cjrserver.model.AssessReport">
+        UPDATE assess_report SET Assess_Name = #{assessName},Path = #{path},Report_type = #{reportType}
+    </update>
+</mapper>

@@ -1,0 +1,309 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>提出需求</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="css/my_style.css">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">	
+   <!--  <link href="assets/css/bootstrap.min.css" rel="stylesheet">	 -->
+    
+   <!--  <link href="assets/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="assets/css/jquery.mmenu.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="assets/css/style.min.css" rel="stylesheet">
+    <link href="assets/css/add-ons.min.css" rel="stylesheet">
+   <!--  <link rel="stylesheet" href="assets/bootstrapTable/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="assets/bootstrapTable/bootstrap-table.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- <script src="../js/all.js"></script> -->
+    <script src="assets/js/echarts.min.js"></script>
+    <script src="assets/js/Disabled_index.js"></script>
+    <script >
+        alert(webapp);
+    </script>
+</head>
+
+<body >
+
+    <header class="am-topbar am-topbar-inverse admin-header">
+        <div class="am-topbar-brand">
+            <a href="javascript:;" class="tpl-logo">
+                <img src="assets/img/logo.png" style="width:160px; height:50px" alt="">
+            </a>
+        </div>
+        <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+        </div>
+
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+        <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+            <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
+               
+                <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen" class="tpl-header-list-link"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+
+                <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                    <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                        <span class="tpl-header-list-user-nick"id="user_name"data-number=""data-style=""data-userid="">吴祖根</span><span class="tpl-header-list-user-ico"> <img src="assets/img/user02.png" style="width:45px;"></span>
+                    </a>
+                    <ul class="am-dropdown-content">
+                        <li><a href="company_information_change.html"><span class="am-icon-bell-o"></span> 资料</a></li>
+                        <li><a href="../System_management/Login.html"><span class="am-icon-power-off"></span> 退出</a></li>
+                    </ul>
+                </li>
+                <li><a href="###" class="tpl-header-list-link"><span class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
+            </ul>
+        </div>
+    </header>
+
+
+
+
+
+
+
+    <div class="tpl-page-container tpl-page-header-fixed">
+
+
+        <div class="tpl-left-nav tpl-left-nav-hover">
+            <div class="tpl-left-nav-title am-lg-text-left">
+                个 人 列 表
+            </div>
+            <div class="tpl-left-nav-list">
+                <ul class="tpl-left-nav-menu">
+                    <li class="tpl-left-nav-item">
+                        <a href="../index.html?type=C" class="nav-link active">
+                            <i class="am-icon-home"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    
+                    <li class="tpl-left-nav-item">
+                        <a href="company_information_change.html" class="nav-link tpl-left-nav-link-list">
+                            <i class="	glyphicon glyphicon-user"></i>
+                            <span>个人信息修改</span>
+
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="	glyphicon glyphicon-flag"></i>
+                            <span>我的权利</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <a href="submit_evaluation_report.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>提交评价报告</span>
+                                    <i class="tpl-left-nav-content-ico am-fr am-margin-right"></i><!--am-icon-star -->
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-wpforms"></i>
+                            <span>新闻发布</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu" >
+                            <li>
+                                <a href="#">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>图片新闻</span>
+                                    <i class="tpl-left-nav-content-ico am-fr am-margin-right"></i>
+                                </a>
+
+                                <a href="#">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>政策浏览</span>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                            
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="tpl-content-wrapper">
+            <div class="tpl-content-page-title">
+                个人中心
+            </div>
+            <ol class="am-breadcrumb">
+                <li><a href="../index.html?type=C" class="am-icon-home">首页</a></li>
+                <li><a href="media_index.html">个人中心</a></li>
+                <li class="am-active">提出需求</li>
+            </ol>
+            
+            <div id="body">
+            	
+           <div class="form-group">
+            <div class="row">
+                <div class="col-md-2 text-center" for="name_input" ><h5 class="h5"><strong>调查表名字:</strong></h5></div>
+                <div class="col-md-3">
+                    <input type="text" id="DemandTable_input" name="text_input" class="form-control" placeholder="调查表名字"
+                          >
+                </div>
+                <button id="searchInfo" class="col-md-1 btn btn-success"  data-toggle="modal" data-target="#DemandTableModal">查询</button>
+            </div>
+           </div>
+
+        <!--  已发布项目  -->
+            <!-- <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2><i class="fa fa-table red"></i><span class="break"></span><strong>调查记录</strong></h2>
+                        </div>
+                        <div class="panel-body">
+                            <table id="DetailTable" data-toggle="table">
+                                <thead>
+                                <tr>
+                                	<th data-checkbox="true"></th>
+                                    <th data-field="demand_ID">器材id</th>
+                                    <th data-field="demand_Name">器材名称</th>
+                                    <th data-field="demand_Category">器材类型</th>
+                                    <th data-field="demand_Remarks">器材简介</th>
+                                </tr>
+                                </thead>
+                            </table>
+
+                        </div>
+                    </div> -->
+                <!--</div>/col-->
+            <!--</div>/row-->
+             <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2><i class="fa fa-table red"></i><span class="break"></span><strong>调查表</strong></h2>
+                        </div>
+                        <div class="panel-body">
+                            <table id="DemandTable" data-toggle="table"  data-url="/Demand/ShowAll">
+                                <thead>
+                                <tr>
+                                    <!-- <th data-checkbox="true"></th> -->
+                                    <th data-field="demand_ID">调查表名</th>
+                                    <th data-field="demand_Name">开始时间</th>
+                                    <th data-field="demand_Category">结束时间</th>
+                                    <th data-field="demandTable_State" data-formatter="StateFormatter" >State</th>
+                                    <th data-field="action" data-formatter="actionFormatter" data-events="DemandactionEvents">添加</th>
+                                </tr>
+                                </thead>
+                                <tr id="tr1" data-toggle="modal" data-target="#DemandTableModal">
+                                    <td>test</td>
+                                    <td>2017-11-28 22:00</td>
+                                    <td>2017-11-29 23:00</td>
+                                    <td>0</td>
+                                </tr>
+                                
+                            </table>
+
+                        </div>
+                    </div>
+                </div><!--/col-->
+            </div>
+            	
+            <!-- <button type="button"class="btn btn-primary" id="Demanded">提出我的需求</button>    	 -->
+            </div>   
+        </div>
+        
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <p>Here settings can be configured...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!---->
+<!--这段是悬浮窗的代码-->
+
+
+<div class="modal fade" id="DemandTableModal">
+    <div class="modal-dialog" style="top: 46px;width:750px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">调查记录</h4> 
+            </div>
+            <div class="modal-body">
+                <table id="DetailTable" data-toggle="table" >
+                    <thead>
+                    <tr>
+                        <!-- <th data-field="demandTable_ID">调查表ID</th>
+                        <th data-field="demandTable_Name">调查表名</th>
+                        <th data-field="demandTable_StartTime">开始时间</th>
+                        <th data-field="demandTable_EndTime">结束时间</th>
+                        <th data-field="demandTable_State" data-formatter="StateFormatter" data-events="StateEvents">State</th>
+                        <th data-field="action" data-formatter="actionFormatter" data-events="DemandactionEvents">添加</th> -->
+                        <!-- <th data-checkbox="true"></th> -->
+                        <th data-field="demand_ID">器材id</th>
+                        <th data-field="demand_Name">器材名称</th>
+                        <th data-field="demand_Category">器材类型</th>
+                        <th data-field="demand_Remarks">器材简介</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> -->
+                <button type="button"class="btn btn-primary" id="Demanded">提出我的需求</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
+    <script src="assets/js/iscroll.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+    <script src="assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="assets/plugins/datatables/js/dataTables.bootstrap.min.js"></script>
+
+    <!-- theme scripts -->
+    <script src="assets/js/SmoothScroll.js"></script>    
+    <script src="assets/js/jquery.mmenu.min.js"></script>
+    <script src="assets/js/core.min.js"></script>
+    <!-- end: JavaScript-->
+    <!-- <script src="assets/js/jquery-2.1.1.min.js"></script> -->
+    <script src="assets/js/avalon.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css"> -->
+<!--    <script src="../js/bootstrap.min.js"></script>-->
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/bootstrap-table.js"></script>
+    <script src="assets/js/bootstrap-table-zh-CN.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/Demand_catalog.js"></script>
+</body>
+
+</html>
+<!doctype html>

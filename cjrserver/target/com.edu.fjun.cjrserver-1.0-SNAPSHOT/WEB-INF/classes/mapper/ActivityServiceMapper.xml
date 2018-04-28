@@ -1,0 +1,65 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.fjnu.cjrserver.dao.ActivityServiceMapper">
+    <!--按分页查询活动服务-->
+    <select id="findActivityServiceByPage" resultType="com.edu.fjnu.cjrserver.model.Activity">
+        select * from activity_service limit #{0},#{1}
+    </select>
+    <!--查询活动服务信息-->
+    <select id="findActivityService" resultType="com.edu.fjnu.cjrserver.model.Activity">
+        SELECT a.*,b.Company_Name FROM activity_service a LEFT JOIN  company b  ON(a.Company_ID = b.Company_ID )
+    </select>
+    <!--根据ID查询活动服务信息-->
+    <select id="getActivityServiceByID" resultType="com.edu.fjnu.cjrserver.model.Activity" parameterType="Integer">
+        select * from activity_service where Activity_ID=#{activityID}
+    </select>
+    <!--根据ID删除活动服务信息-->
+    <delete id="delActivityService" parameterType="Integer">
+        delete from activity_service where Activity_ID=#{activityID}
+    </delete>
+    <!--添加活动服务信息-->
+    <insert id="addActivityService" parameterType="com.edu.fjnu.cjrserver.model.Activity">
+        insert into activity_service(Activity_Name,Detail_File,Activity_Address,Province,City,County,lon,lat,Linkman,LinkmanTelephone,Company_ID)
+        values(#{activityName},#{detailFile},#{activityAddress},#{province},#{city},#{county},#{lon},#{lat},#{linkman},#{linkmanTelephone},#{company.companyID})
+    </insert>
+    <!--修改活动服务信息-->
+    <update id="updateActivityService" parameterType="com.edu.fjnu.cjrserver.model.Activity">
+        update activity_service set Activity_Name=#{activityName},Detail_File=#{detailFile},Activity_Address=#{activityAddress},Province=#{province},City=#{city},County=#{county},lon=#{lon},lat=#{lat},Linkman=#{linkman},LinkmanTelephone=#{linkmanTelephone} where Activity_ID=#{activityID}
+    </update>
+    <!--根据ID查询文件路径-->
+    <select id="findFilepathByID" parameterType="Integer" resultType="String">
+        select Detail_File from activity_service where Activity_ID=#{activityID}
+    </select>
+    <!--查询人工服务数量-->
+    <select id="findTotalQty" resultType="Integer">
+        select count(Activity_ID) from activity_service
+    </select>
+
+    <!--根据三级级联城市查询活动服务-->
+    <select id="findActivityByAdd" resultType="com.edu.fjnu.cjrserver.model.Activity">
+        SELECT * from activity_service where Province = #{0} AND City = #{1} AND County = #{2} limit #{3},#{4}
+    </select>
+    <!--根据省查询活动服务-->
+    <select id="findActivityByProvince"  resultType="com.edu.fjnu.cjrserver.model.Activity">
+        SELECT * from activity_service where Province = #{0} limit #{1},#{2}
+    </select>
+    <!--根据省，市查询活动服务-->
+    <select id="findActivityByPC" resultType="com.edu.fjnu.cjrserver.model.Activity">
+        SELECT * from activity_service where Province = #{0} AND City = #{1} limit #{2},#{3}
+    </select>
+
+    <!--查询数量-->
+    <!--根据三级级联城市查询活动服务-->
+    <select id="findActivityByAddQty" resultType="Integer">
+        SELECT count(Activity_ID) from activity_service where Province = #{0} AND City = #{1} AND County = #{2}
+    </select>
+    <!--根据省查询活动服务-->
+    <select id="findActivityByProvinceQty"  resultType="Integer">
+        SELECT count(Activity_ID) from activity_service where Province = #{0}
+    </select>
+    <!--根据省，市查询活动服务-->
+    <select id="findActivityByPCQty" resultType="Integer">
+        SELECT count(Activity_ID) from activity_service where Province = #{0} AND City = #{1}
+    </select>
+</mapper>

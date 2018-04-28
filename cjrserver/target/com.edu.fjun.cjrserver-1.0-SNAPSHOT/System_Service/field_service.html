@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>场地服务管理</title>
+    
+   <!--  <link rel="stylesheet" href="../assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link href="../asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../asset/css/style.min.css" rel="stylesheet">
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script> -->
+    <!-- Import google fonts - Heading first/ text second -->
+   <!--  <link rel='stylesheet' type='text/css' href='http://fonts.useso.com/css?family=Open+Sans:400,700|Droid+Sans:400,700' /> -->
+    <!--[if lt IE 9]>
+    <link href="http://fonts.useso.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Droid+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="../asset/ico/favicon.ico" type="image/x-icon" />
+
+    <!-- Css files -->
+    <link href="../asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../asset/css/jquery.mmenu.css" rel="stylesheet">
+    <link href="../asset/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../asset/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="../asset/css/style.min.css" rel="stylesheet">
+    <link href="../asset/css/add-ons.min.css" rel="stylesheet">
+    <link href="../css/city-picker.css" rel="stylesheet" type="text/css" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../asset/js/html5shiv.js"></script>
+    <script src="../asset/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <style>
+        .success
+        {
+            background-image: url("images/li_ok.gif");
+            background-color:#E6FEE4;
+            border-color:#01BE00;
+            background-repeat: no-repeat;
+            background-position: left 2px;
+            padding:0 18px;
+        }
+        .danger
+        {
+            background-image: url("images/li_err.gif");
+            background-color:#FFF2E5;
+            border-color:#FF3300;
+            background-repeat: no-repeat;
+            background-position: left 2px;
+            padding:0 18px;
+        }
+        #addForm p
+        {
+            background-color:#FFFFDA ;
+            border: 1px solid #FFCD00;
+            font-size: 12px;
+            height: 20px;
+            line-height: 20px;
+            display: inline-block;           
+
+        }
+        #modifyForm p
+        {
+        	background-color:#FFFFDA ;
+            border: 1px solid #FFCD00;
+            font-size: 12px;
+            height: 20px;
+            line-height: 20px;
+            display: inline-block;   
+        }
+        .city-picker-span{
+        	
+        	width: 280px;
+        }
+    </style>
+
+</head>
+<body>
+<!-- start: Header -->
+
+<div class="navbar" role="navigation">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown visible-md visible-lg">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="user-avatar" src="../asset/img/avatar.jpg" alt="user-mail">政府后台管理员</a>
+            </li>
+            <li><a href="Home.html"><i class="fa fa-power-off"></i></a></li>
+        </ul>
+    </div>
+</div>
+<!-- end: Header -->
+<!-- start:    左侧导航栏    -->
+<div class="container-fluid content">
+    <div class="row">
+        <!-- start: Main Menu -->
+        <div class="sidebar ">
+            <div class="sidebar-collapse">
+                <div class="sidebar-header t-center">
+                    <br>
+                    <h2>政府后台</h2>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="nav nav-sidebar">
+                        <li><a href="../Admin_Index.html"><i class="fa fa-laptop"></i><span class="text">主页</span></a></li>
+                        <li>
+                            <a href="#"><i class="fa fa-font"></i><span class="text">首页管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">头部导航栏管理</span></a></li>
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">文章管理</span></a></li>
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">内容管理</span></a></li>
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">底部导航栏管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-signal"></i><span class="text">服务管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_Service/equipment_service.html"><i class="fa fa-list"></i><span class="text">器材管理</span></a></li>
+                                <li><a href="../System_Service/field_service.html"><i class="fa fa-list"></i><span class="text">场地服务管理</span></a></li>
+                                <li><a href="../System_Service/sport_service.html"><i class="fa fa-list"></i><span class="text">赛事服务管理</span></a></li>
+                                <li><a href="../System_Service/artificial_service.html"><i class="fa fa-list"></i><span class="text">人工服务管理</span></a></li>
+                                <li><a href="../System_Service/activity_service.html"><i class="fa fa-list"></i><span class="text">活动服务管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-signal"></i><span class="text">需求</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_Demand/demand_table_input.html"><i class="fa fa-table"></i><span class="text">发布需求调查表</span></a></li>
+                                <li><a href="../System_Demand/demand_table_list.html"><i class="fa fa-list"></i><span class="text">调查表管理</span></a></li>
+                                <li><a href="../System_Demand/demand_directory.html"><i class="fa fa-list"></i><span class="text">需求目录管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-file-text"></i><span class="text">招标</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_TenderPlan/publish_tender_plan.html"><i class="fa fa-pencil"></i><span class="text">发布招标计划</span></a></li>
+                                <!--<li><a href="/System_TenderPlan/goverment_check_evalution.html"><i class="fa fa-table"></i><span class="text">查看招标计划</span></a></li>-->
+                                <li><a href="../System_TenderPlan/set_pass_company.html"><i class="fa fa-table"></i><span class="text">确定竞标企业</span></a></li>
+                                <li><a href="../System_TenderPlan/set_win_company.html"><i class="fa fa-table"></i><span class="text">确定中标企业</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-file-text"></i><span class="text">评价报告</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_Assess/check_assess_report.html"><i class="fa fa-pencil"></i><span class="text">查看评价报告</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-font"></i><span class="text">认证</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">企业认证</span></a></li>
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">媒体认证</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+
+                <div class="sidebar-brand">
+                    政府后台
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end:    左侧导航栏   -->
+<div class="main ">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header"><i class="fa fa-indent"></i>场地服务管理</h3>
+            <ol class="breadcrumb">
+                <li><i class="fa fa-home"></i><a href="Home.html">主页</a></li>
+
+                <li><i class="fa fa-indent"></i>场地服务管理</li>
+            </ol>
+        </div>
+    </div>
+    <!--已经发布的需求-->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2><i class="fa fa-table red"></i><span class="break"></span><strong>场地服务管理</strong></h2>
+                    <div class="panel-actions">
+                        <a href="table.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                     <div class="am-u-sm-8 am-u-md-4" style="margin-top: 10px;">
+                        <div id="fieldSelect" class="am-btn-toolbar" style="display: block;">
+                            <div class="row">
+                                <button id="addField" type="button" class="btn btn-default col-lg-2 " style="color:#000000"><span class="am-icon-plus"></span> 新增</button>
+                                <button id="delField" type="button" class="btn btn-default col-lg-2 " style="color:#000000"><span class="am-icon-trash-o"></span> 删除</button>
+                                <!-- <button id="test" type="button" class="btn btn-default col-lg-2 " style="color:#000000"><span class="am-icon-trash-o"></span> 修改</button> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="field" style="margin-top: 10px; margin-bottom: 16px;">
+                        <table id="fieldTable"></table>
+                    </div>
+
+                    <!--添加场地信息-->
+                     <div id="addView" style="display: none">
+                         <div class="tpl-block ">
+
+                            <div class="am-g tpl-amazeui-form">
+
+                                    <form id="addForm" class="am-form form-horizontal">
+                        			 	<fieldset>
+					                        <legend style="text-align: center;">添加场地</legend>
+					                        <div class="row form-group" style="overflow:visible;">
+	                                            <label for="Name" class="col-sm-2 control-label">场地服务名称<i style="color:red;font-size: 15px;">*</i></label>
+	                                            <div class="col-sm-3">
+	                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Name" />
+	                                                <p>输入场地服务名称,长度不超过15</p>
+	                                            </div>
+	                                          	<label for="city-picker3" class="col-sm-2 control-label">地址<i style="color:red;font-size: 15px;">*</i></label>
+	                                            <div class="container">
+	                                                <div class="col-sm-4">
+	                                                    <form class="form-inline">
+	                                                        <div id="distpicker">
+	                                                            <div class="form-group">
+	                                                                <div style="position: relative;">
+	                                                                    <input id="city-picker3" class="form-control" readonly type="text" data-toggle="city-picker" style="width: 225px;" >
+	                                                                  <!--   <input type="button" class="btn btn-warning" id="reset" value="重置">
+	                                                                    <input type="button" class="btn btn-danger" id="destroy" value="确定"> -->
+	                                                                    <p>选择省市区</p>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                    </form>
+
+	                                                </div>
+	                                            </div>
+	                                        </div>
+	                                        <div class="row form-group">
+	                                            <label for="Address" class="col-sm-2 control-label" style="text-align: right;">具体地址<i style="color:red;font-size: 15px;">*</i></label>
+
+	                                            <div class="col-sm-3">
+	                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Address" />
+	                                                <p>输入具体地址,长度不超过50</p>
+	                                            </div>
+	                                            <label class="col-sm-2 control-label">价格</label>
+	                                            <div class="col-sm-4">
+
+	                                                <input type="text" class="form-control" placeholder="选填" id="Price" style="font-size:15px;display: inline-block;"/>
+	                                 				<!--  <span style="display: none;font-size:15px;color:red;" id="falsePrice">价格只能为正数，请输入合法数字</span> -->
+	                                 				<p>输入价格，价格为正数</p>
+	                                            </div>
+	                                        </div>
+	                                        <div class="row form-group">
+	                                            <label class="col-sm-2 control-label" style="text-align: right;">场地图片</label>
+	                                            <div class="col-sm-3" style="height: 420px;overflow: auto;">
+	                                                <div class="am-form-group am-form-file">
+	                                                    <div class="tpl-form-file-img">
+	                                                        <img id="preview" src="../assets/img/43.jpg" class="carousel-inner img-responsive img-rounded" alt=""/>
+	                                                        <small>此处为单张大小不超过10M的图片</small>
+	                                                    </div>
+
+	                                                    <button type="button" class="am-btn am-btn-danger am-btn-sm" onclick="image.click()">
+	                                                        <i class="am-icon-cloud-upload"></i>添加图片</button>
+	                                                    <input id="image" type="file" name="FieldImg" onchange="imgPreview(this)" style="display: none;" />
+	                                                </div>
+	                                            </div>
+
+
+	                                             <label class="col-sm-2 control-label" style="text-align: right;">营业时间</label>
+	                                            <div class="col-sm-4">
+
+	                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="选填" id="Time" />
+	                                               <!--  <small>营业时间格式不限，可以输入：“全天”，“工作日”，“9:00~17:00”等</small> -->
+	                                                <p>营业时间格式不限，可以输入：“全天”，“工作日”，“9:00~17:00”等，长度不超过20</p>
+                                            	</div>
+                                            	<label class="col-sm-2 control-label" style="">联系电话</label>
+	                                            <div class="col-sm-4" >
+
+	                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="选填" id="Telephone" />
+	                                                <p>输入联系电话</p>
+	                                            </div>
+	                                            <label for="Introduct" class="col-sm-2 control-label" style="text-align: right;">详情介绍</label>
+	                                            <div class="col-sm-4">
+	                                                <textarea rows="3" id="Introduct" name="DetailIntroduct" class="form-control" placeholder="选填" style="resize:none;"></textarea>
+	                                                <!-- <span style="display: none;font-size:15px;color:red;" id="falseIntroduct">详情介绍长度超过100,请删减多余字数</span> -->
+	                                                <p>输入详情介绍,长度不超过100</p>
+	                                            </div>
+	                                             <label class="col-sm-2 control-label">审核状态<i style="color:red;font-size: 15px;">*</i></label>
+	                                            <div class="col-sm-4" style="margin-bottom: 25px;">
+	                                                <select class="form-control" name="FieldState" id="State" style="height: 30px;padding:6px 6px;display: block;width: 84px;">
+	                                                    <option value="3" selected>审核驳回</option>
+	                                                    <option value="1" selected>审核通过</option>
+	                                                    <option value="2" selected>正在审核</option>
+	                                                </select>
+	                                            </div>
+	                                            <label class="col-sm-2 control-label"></label>
+	                                            <div class="col-sm-4" style="margin-bottom: 15px;">
+	                                                <button id="submit" type="botton" class="am-btn am-btn-primary" onclick="checkAddInput();return false;">保存</button>
+	                                                <button id="cancel" type="button" class="am-btn am-btn-primary am-btn-success" style="margin-left: 10px;">取消</button>
+	                                                <input type="reset" name="reset" style="display: none;" />
+	                                            </div>
+	                                         </div>
+					                    </fieldset> 
+					                </form> 
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                    </div>  
+                    
+                    <!--修改场地信息-->
+                    <div id="modifyView" style="display: none">
+                        <div class="tpl-block ">
+
+                            <div class="am-g tpl-amazeui-form">
+
+                                    <form id="modifyForm" class="am-form form-horizontal">
+                                        <fieldset>
+					                        <legend style="text-align: center;">修改场地</legend>
+					                        <div class="row form-group" style="display: none;">
+	                                            <label for="IDmdf" class="am-u-sm-3 am-form-label">场地服务ID</label>
+	                                            <div class="am-u-sm-9">
+	                                                
+	                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="IDmdf" />
+	                                            </div>
+	                                        </div>					                    
+					                        <div class="row form-group" style="overflow:visible;">
+	                                            <label for="Namemdf" class="col-sm-2 control-label">场地服务名称<i style="color:red;font-size: 15px;">*</i></label>
+	                                            <div class="col-sm-3">
+	                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Namemdf" />
+	                                                <p>输入场地服务名称,长度不超过15</p>
+	                                            </div>                                           
+	                                          	<label for="city-picker3mdf" class="col-sm-2 control-label">地址<i style="color:red;font-size: 15px;">*</i></label>
+	                                            <div class="container">
+	                                                <div class="col-sm-4">
+	                                                    <form class="form-inline">
+	                                                        <div id="distpicker">
+	                                                            <div class="form-group">
+	                                                                <div style="position: relative;">
+	                                                                    <input id="city-picker3mdf" class="form-control" readonly type="text" data-toggle="city-picker" style="width: 225px;" >
+	                                                                    <!-- <input type="button" class="btn btn-warning" id="resetmdf" value="重置">
+	                                                                    <input type="button" class="btn btn-danger" id="destroymdf" value="确定"> -->
+	                                                                    <p>选择省市区</p>
+	                                                                </div>
+	                                                            </div>
+	                                                            
+	                                                        </div>
+	                                                    </form>
+
+	                                                </div>
+	                                            </div>
+	                                        </div>
+	                                        <div class="row form-group">
+	                                            <label for="Addressmdf" class="col-sm-2 control-label" style="text-align: right;">具体地址<i style="color:red;font-size: 15px;">*</i></label>
+	                                            
+	                                            <div class="col-sm-3">
+	                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Addressmdf" />
+	                                                <p>输入具体地址，长度不超过50</p>
+	                                            </div>
+	                                            <label class="col-sm-2 control-label">价格</label>
+	                                            <div class="col-sm-4">
+	                                               
+	                                                <input type="text" class="form-control" placeholder="选填" id="Pricemdf" style="font-size:15px;display: inline-block;"/>
+	                                 				<!--  <span style="display: none;font-size:15px;color:red;" id="falsePrice">价格只能为正数，请输入合法数字</span> -->
+	                                 				<p>输入价格，价格为正数</p>
+	                                            </div>
+	                                        </div>
+	                                        <div class="row form-group">
+	                                            <label class="col-sm-2 control-label" style="text-align: right;">场地图片</label>
+	                                            <div class="col-sm-3" style="height: 420px;overflow: auto;">
+	                                                <div class="am-form-group am-form-file">
+	                                                    <div class="am-form-group am-form-file">
+		                                                    <div class="tpl-form-file-img">
+		                                                        <img id="previewmdf" src="../assets/img/43.jpg" alt="" class="carousel-inner img-responsive img-rounded" />
+		                                                        <small>此处为单张大小不超过10M的图片</small>
+		                                                    </div>
+		                                                   
+		                                                    <button type="button" class="am-btn am-btn-danger am-btn-sm" onclick="imagemdf.click()">
+		                                                        <i class="am-icon-cloud-upload"></i>添加图片</button>
+		                                                    <input id="imagemdf" type="file" name="FieldImgmdf" onchange="imgPreviewmdf(this)" style="display: none;"/>
+	                                                	</div>
+	                                                </div>
+	                                            </div>
+	                                             
+												
+	                                             <label class="col-sm-2 control-label">营业时间</label>
+	                                            <div class="col-sm-4">
+	                                                
+	                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="选填" id="Timemdf" />
+	                                               <!--  <small>营业时间格式不限，可以输入：“全天”，“工作日”，“9:00~17:00”等</small> -->
+	                                                <p>营业时间格式不限，可以输入：“全天”，“工作日”，“9:00~17:00”等，长度不超过20</p>
+                                            	</div>
+                                            	<label class="col-sm-2 control-label" style="">联系电话</label>
+	                                            <div class="col-sm-4" >
+	                                                
+	                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="选填" id="Telephonemdf" />
+	                                                <p>输入联系电话</p>
+	                                            </div>
+	                                            <label for="Introductmdf" class="col-sm-2 control-label" >详情介绍</label>
+	                                            <div class="col-sm-4">
+	                                                <textarea rows="3" id="Introductmdf" name="DetailIntroductmdf" class="form-control" placeholder="选填" style="resize:none;"></textarea>
+	                                                <!-- <span style="display: none;font-size:15px;color:red;" id="falseIntroduct">详情介绍长度超过100,请删减多余字数</span> -->
+	                                                <p>输入详情介绍,长度不超过100</p>
+	                                            </div>
+	                                             <label class="col-sm-2 control-label">审核状态<i style="color:red;font-size: 15px;">*</i></label>
+	                                            <div class="col-sm-4" style="margin-bottom: 25px;">
+	                                                <select class="form-control" name="FieldState" id="Statemdf" style="height: 30px;padding:6px 6px;display: block;width: 84px;">
+	                                                    <option value="3" selected>审核驳回</option>
+	                                                    <option value="1" selected>审核通过</option>
+	                                                    <option value="2" selected>正在审核</option>
+	                                                </select>
+	                                            </div>
+	                                            <label class="col-sm-2 control-label"></label>
+	                                            <div class="col-sm-4" style="margin-bottom: 15px;">
+	                                                <button id="submitmdf" type="botton" class="am-btn am-btn-primary" onclick="checkMdfInput();return false;">保存</button>
+	                                                <button id="cancelmdf" type="button" class="am-btn am-btn-primary am-btn-success" style="margin-left: 10px;">取消</button>
+	                                            </div>
+	                                         </div>
+					                    </fieldset> 
+                                    </form>
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!--查看详情-->
+                    <div id="detailView" style="display: none">
+                        <div class="tpl-block ">
+
+                            <div class="am-g tpl-amazeui-form">
+
+                                <div style="margin-left: 45%">
+                                    <h4 class="h4">场地信息详情</h4>
+                                </div>
+
+                                <div class="am-u-sm-12 am-u-md-9" style="margin-top: 32px;padding-left: 15%">
+                                    <form enctype="multipart/form-data" class="am-form am-form-horizontal">
+
+                                        <div class="row form-group">
+                                            <label for="Namedtl" class="am-u-sm-3 am-form-label">场地服务名称</label>
+                                            <div class="am-u-sm-9">                           
+                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Namedtl"  readonly="readonly"/>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="container">
+                                            <label for="city-picker3dtl" class="am-u-sm-3 am-form-label" style="width: 155.76px;">地址</label>
+                                            <div class="am-u-sm-9" style="float: left;margin-left: 20px;">
+                                                <form class="form-inline">
+                                                    <div id="distpicker">
+                                                        <div class="form-group">
+                                                            <div style="position: relative;" >
+                                                                <input id="city-picker3dtl" class="form-control" type="text" style="width: 290px;" readonly="readonly"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <label for="Addressdtl" class="am-u-sm-3 am-form-label" style="text-align: right;">具体地址</label>
+                                            <div class="am-u-sm-9">
+                                                <textarea rows="5" id="Addressdtl" name="FieldAddressmdf" class="form-control" placeholder="输入具体地址" readonly="readonly"></textarea>
+                                            </div>
+                                        </div>
+
+                                         <div class="row form-group" style="margin-top: 50px;">
+                                            <label class="am-u-sm-3 am-form-label" style="text-align: right;">场地图片</label>
+                                            <div class="am-u-sm-9">
+                                                <div class="am-form-group am-form-file">
+                                                    <div class="tpl-form-file-img">
+                                                        <img id="previewdtl" alt=""/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <label class="am-u-sm-3 am-form-label" style="text-align: right;">价格</label>
+                                            <div class="am-u-sm-9">
+                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Pricedtl" readonly="readonly"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <label class="am-u-sm-3 am-form-label" style="text-align: right;">营业时间</label>
+                                            <div class="am-u-sm-9">
+                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Timedtl" readonly="readonly"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <label class="am-u-sm-3 am-form-label" style="text-align: right;">联系电话</label>
+                                            <div class="am-u-sm-9">
+                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Telephonedtl" readonly="readonly"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <label for="Introductdtl" class="am-u-sm-3 am-form-label" style="text-align: right;">详情介绍</label>
+                                            <div class="am-u-sm-9">
+                                                <textarea rows="5" id="Introductdtl" name="DetailIntroductdtl" class="form-control" placeholder="输入详情介绍" readonly="readonly"></textarea>
+                                            </div>
+                                        </div>
+
+                                         <div class="row form-group">
+                                            <label class="am-u-sm-3 am-form-label" style="text-align: right;">审核状态</label>
+                                            <div class="col-sm-1">
+                                                <select class="form-control" name="FieldStatedtl" id="Statedtl" style="height: 30px;padding:6px 6px;display: block;width: 84px;" disabled="true">
+                                                    <option value="3" selected>审核驳回</option>
+                                                    <option value="1" selected>审核通过</option>
+                                                    <option value="2" selected>正在审核</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <div class="am-u-sm-9 am-u-sm-push-3">
+                                                <button id="backdtl" type="button" class="am-btn am-btn-primary am-btn-success">返回</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/col-->
+    </div><!--/row-->
+</div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../asset/js/jquery-2.1.1.min.js"></script>
+    <!--[if !IE]>-->
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
+    </script>
+    <!--<![endif]-->
+    <!--[if IE]>
+
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='assets/js/jquery-1.11.1.min.js'>"+"<"+"/script>");
+    </script>
+
+    <![endif]-->
+    <script src="../asset/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../asset/js/bootstrap.min.js"></script>
+    <!-- page scripts -->
+    <script src="../asset/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+    <script src="../asset/plugins/chosen/js/chosen.jquery.min.js"></script>
+    <script src="../asset/plugins/autosize/jquery.autosize.min.js"></script>
+    <script src="../asset/plugins/placeholder/jquery.placeholder.min.js"></script>
+    <script src="../asset/plugins/maskedinput/jquery.maskedinput.min.js"></script>
+    <script src="../asset/plugins/moment/moment.min.js"></script>
+    <!-- theme scripts -->
+    <script src="../asset/js/SmoothScroll.js"></script>
+    <script src="../asset/js/jquery.mmenu.min.js"></script>
+    <script src="../asset/js/core.min.js"></script>
+    <!-- inline scripts related to this page -->
+    <!-- end: JavaScript-->
+    <script src="../asset/js/jquery-2.1.1.min.js"></script>
+    <script src="../asset/js/avalon.js"></script>
+    <script src="../asset/js/bootstrap.min.js"></script>
+    <script charset="utf-8" src="../kindeditor/lang/zh-CN.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/amazeui.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../js/bootstrap-table.js"></script>
+    <script src="../js/bootstrap-table.min.js"></script>
+    <script src="../js/bootstrap-table-zh-CN.min.js"></script>
+    <script src="../js/city-picker.data.js"></script>
+    <script src="../js/city-picker.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+    $('#test').click(function(){
+        $('#fieldSelect').hide();
+        $('#field').hide();
+        $('#modifyView').show();
+    }); 
+     
+     	//获取添加界面所需元素
+        var name1=document.querySelector('#Name');
+        var citypicker=document.querySelector('#city-picker3');               
+        var address=document.querySelector('#Address');
+        var price=document.querySelector('#Price');
+        var time=document.querySelector('#Time');
+        var telephone=document.querySelector('#Telephone');
+        var introduct=document.querySelector('#Introduct');
+        var addform=document.querySelector('#addForm');
+        var span1=addform.getElementsByTagName('p');
+        var item1=addform.getElementsByClassName('select-item');
+        //获取修改界面所需元素
+        var namemdf=document.querySelector('#Namemdf');
+        var citypickermdf=document.querySelector('#city-picker3mdf');               
+        var addressmdf=document.querySelector('#Addressmdf');
+        var pricemdf=document.querySelector('#Pricemdf');
+        var timemdf=document.querySelector('#Timemdf');
+        var telephone1=document.querySelector('#Telephonemdf');
+        var introductmdf=document.querySelector('#Introductmdf');
+        var modifyform=document.querySelector('#modifyForm');
+        var span2=modifyform.getElementsByTagName('p');
+        var item2=modifyform.getElementsByClassName('select-item');
+        //checkAddrss();
+////////////////////////////////////////////添加界面的表单验证////////////////////////////////////////////
+        $('#Name').focusout(function(){
+        	checkName(name1,span1);
+        });
+        //
+         $('#Address').focusout(function(){
+        	checkDetailAddrss(address,span1);
+        });
+         //输入数字是否合法
+	    $('#Price').focusout(function(){	    	
+			checkPrice(price,span1);
+		 });
+	    //
+	    $('#Time').focusout(function(){
+	    	checkTime(time,span1);
+	    });
+	    //
+	    $('#Telephone').focusout(function(){
+	    	checkPhone(telephone,span1);
+	    });
+		//判断详情介绍字数是否超过限定
+	    $('#Introduct').focusout(function(){
+	    	checkIntroduct(introduct,span1);
+	    });
+	    //
+	    $('#Name').focusin(function(){
+        	standardName(span1);
+        });
+        //
+         $('#Address').focusin(function(){
+        	standardDetailAddrss(span1);
+        });
+         //
+	    $('#Price').focusin(function(){	    	
+			standardPrice(span1);
+		 });
+	    //
+	    $('#Time').focusin(function(){
+	    	standardTime(span1);
+	    });
+	    //
+	    // $('#Telephone').focusin(function(){
+	    // 	checkPhone(telephone,span1);
+	    // });
+		//
+	    $('#Introduct').focusin(function(){
+	    	standardIntroduct(span1);
+	    });
+////////////////////////////////////////////////////////修改界面的表单验证////////////////////////////////////
+        $('#Namemdf').focusout(function(){
+        	checkName(namemdf,span2);
+        });
+         $('#Addressmdf').focusout(function(){
+        	checkDetailAddrss(addressmdf,span2);
+        });
+         //输入数字是否合法
+	    $('#Pricemdf').focusout(function(){	    	
+			checkPrice(pricemdf,span2);
+		 });
+	    //
+	    $('#Timemdf').focusout(function(){
+	    	checkTime(timemdf,span2);
+	    });
+	    //
+	    $('#Telephonemdf').focusout(function(){
+	    	checkPhone(telephone1,span2);
+	    });
+		//判断详情介绍字数是否超过限定
+	    $('#Introductmdf').focusout(function(){
+	    	checkIntroduct(introductmdf,span2);
+	    });
+	    //
+	    $('#Namemdf').focusin(function(){
+        	standardName(span2);
+        });
+        //
+         $('#Addressmdf').focusin(function(){
+        	standardDetailAddrss(span2);
+        });
+         //
+	    $('#Pricemdf').focusin(function(){	    	
+			standardPrice(span2);
+		 });
+	    //
+	    $('#Timemdf').focusin(function(){
+	    	standardTime(span2);
+	    });
+	    //
+	    // $('#Telephonemdf').focusin(function(){
+	    // 	checkPhone(telephone,span1);
+	    // });
+		//
+	    $('#Introductmdf').focusin(function(){
+	    	standardIntroduct(span2);
+	    });
+	    
+////////////////////////////////////////////////////////////验证函数////////////////////////////////////////////      
+        //
+         function checkName(nam,spa)
+        {	var l = nam.value.length;
+        	var span = spa;
+        	// alert(l);
+            if(l==0)
+            {	
+            	span[0].innerText='场地服务名称不能为空';
+                span[0].className='danger';          
+                return false;
+            }
+            if(l > 15){
+            	span[0].innerText='场地服务名称过长';
+                span[0].className='danger';
+                return false;
+            }
+            span[0].innerText='场地服务名称输入正确';
+            span[0].className='success';
+            return true;
+        }
+        //
+        function standardName(spa){
+        	var span = spa;
+        	span[0].innerText='输入场地服务名称,长度不超过15';
+            span[0].className='none';
+        }
+        //
+	       function checkAddrss(spa,item){
+	    	var arr = item;
+	        var l = arr.length;
+	        var span = spa;
+	    	if(l == 0){
+	    		span[1].innerText='地址不能为空';
+	            span[1].className='danger';	 
+	            // console.log(l);             
+	            return false;
+	    		
+	    	}else if(l == 1){
+	    		span[1].innerText='请选择市区';
+	            span[1].className='danger';	 
+	            console.log(l);             
+	            return false;
+	    	}else if(l == 2){
+	    		span[1].innerText='选择成功';
+	            span[1].className='success';
+	            // $("#city-picker3mdf").citypicker("destroy");	 
+	            // console.log(l);             
+	            return true;
+	    	}else{
+	    		return true;
+	    	}
+    	}
+        //
+	      function checkDetailAddrss(addres,spa)
+	        {	var l = addres.value.length;
+	        	var span = spa;
+	        	// alert(l);
+	            if(l==0)
+	            {	
+	            	span[2].innerText='具体地址不能为空';
+	                span[2].className='danger';	              
+	                return false;
+	            }
+	            if(l > 50){//限制50以内
+	            	span[2].innerText='具体地址过长';
+	                span[2].className='danger';
+	                return false;
+	            }
+	            span[2].innerText='具体地址名称输入正确';
+	            span[2].className='success';
+	            return true;
+	        }
+	     //
+	        function standardDetailAddrss(spa){
+	        	var span = spa;
+	        	span[2].innerText='输入具体地址,长度不超过50';
+	            span[2].className='none';
+	        }
+	    //
+		    function checkPrice(pric,spa){
+		    	var Price = pric.value;
+		    	var span = spa;
+		    	var r =  /(^[1-9](\d+)?(\.\d{1,2})?$)|(^(0){1}$)|(^\d\.\d{1,2}?$)/; //正数含0
+		    	var flag1 = r.test(Price);	    	
+		    	if(Price!=""){
+		    		
+		    		if(flag1){//判断是否玮正数	    			
+		    			span[3].innerText='数字输入合法';
+		                span[3].className='success';
+		                return true;
+			    	}
+			    	else{
+			    		span[3].innerText='输入价格，价格为正数';
+			            span[3].className='danger';
+			            return false;
+			    	}
+		    	}else{
+		    		span[3].innerText='输入价格，价格为正数';
+		            span[3].className='none';
+		            return false;
+		    	}
+		    	
+		    }
+	    //
+	        function standardPrice(spa){
+	        	var span = spa;
+	        	span[3].innerText='输入价格，价格为正数';
+	            span[3].className='none';
+	        }
+	    //
+	    function checkTime(tim,spa){
+	    	var l = tim.value.length;
+	    	var span = spa;
+	    	if(l == 0){
+	    		span[4].innerText='营业时间格式不限，可以输入：“全天”，“工作日”，“9:00~17:00”等,长度不超过20';
+	            span[4].className='none';
+	            return false;
+	    	}else if(l > 20){
+	    		span[4].innerText='营业时间输入长度过长';
+	            span[4].className='danger';
+	            return false;
+	    	}else{
+	    		span[4].innerText='营业时间输入合法';
+	            span[4].className='success';
+	            return true;
+	    	}
+
+	    }
+	    //
+	        function standardTime(spa){
+	        	var span = spa;
+	        	span[4].innerText='营业时间格式不限，可以输入：“全天”，“工作日”，“9:00~17:00”等,长度不超过20';
+	            span[4].className='none';
+	        }
+	    //
+	    function checkPhone(telephon,spa){
+	    	var l = telephon.value.length;
+	    	var span = spa;
+	    	if(l == 0){
+	    		span[5].innerText='输入联系电话';
+	            span[5].className='none';
+	            return false;
+	    	}
+	    	var pattern1= /^1[34578]\d{9}$/;//手机电话
+	    	var pattern2= /0\d{2,3}-\d{7,8}/;//固话
+            if(!pattern1.test(telephon.value))//不是手机电话
+            {	
+            	if(!pattern2.test(telephon.value)){//既不是固话也不是手机电话
+            		span[5].innerText='联系电话输格式错误，请重新输入';
+	                span[5].className='danger';
+	                return false;
+            	}else{//是固话
+            		span[5].innerText='联系电话输入正确';
+		            span[5].className='success';
+		            return true;
+            	}
+                
+            }else{//是手机电话
+            	span[5].innerText='联系电话输入正确';
+	            span[5].className='success';
+	            return true;
+            }
+	    };
+	    //
+	    function checkIntroduct(introduc,spa){
+		    var l = introduc.value.length;
+		    var span = spa;
+	    	if(l > 100){
+	    		span[6].innerText='详情介绍输入长度超过100';
+	            span[6].className='danger';
+	            return false;
+	    	}else if(l == 0){
+	    		//alert(l);
+	    		// $('#falseIntroduct').css('display','none');
+	    		span[6].innerText='输入详情介绍,长度不超过100';
+	            span[6].className='none';
+	            return false;
+	    	}else{
+	    		span[6].innerText='详情介绍输入合法';
+	            span[6].className='success';
+	            return true;
+	    	}
+	       
+     	}
+     	//
+	        function standardIntroduct(spa){
+	        	var span = spa;
+	        	span[6].innerText='输入详情介绍,长度不超过100';
+	            span[6].className='none';
+	        }
+    //
+    $('#fieldTable').bootstrapTable({
+        url:"/FieldService/getFieldService",
+        //请求方法
+        method: 'get',
+        //dataType: "json",
+        //是否显示行间隔色
+        striped: true,
+        //是否显示 切换试图（table/card）按钮
+        showToggle: "true",
+        //显示搜索框 
+        search: "true", 
+        //显示刷新
+        showRefresh : "true",
+        //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）     
+        cache: false,    
+        //是否显示分页（*）  
+        pagination: true,   
+         //是否启用排序  
+        sortable: true,    
+         //排序方式 
+        sortOrder: "asc",
+        //如果设置了分页，首页页码     
+        pageNumber: 1,   
+        //每页的记录行数（*）   
+        pageSize: 10,  
+        //可供选择的每页的行数（*）    
+        pageList: [10, 25, 50, 100],
+        //客户端处理分页    
+        sidePagination: "client",
+        //指定主键列 
+        idField: "fieldID",
+        columns: [
+            {
+                checkbox: true, 
+            },
+            {
+                field: 'fieldID',//域值
+                title: '场地服务ID',//标题
+                visible: false,//false表示不显示
+            },
+            {
+                field: 'fieldName',//域值
+                title: '场地服务名称',//标题
+                visible: true,//false表示不显示
+            },
+             {
+                field: 'companyName',//域值
+                title: '所属企业',//标题
+                visible: true,//false表示不显示
+            },
+             {
+                field: 'fieldAddress',//域值
+                title: '详细地址',//标题
+                visible: false,//false表示不显示
+            },
+             {
+                field: 'fieldImg',//域值
+                title: '图片地址',//标题
+                visible: false,//false表示不显示
+            },
+            {
+                field: 'fieldState',//域值
+                title: '审核状态',//标题
+                visible: true,//false表示不显示
+                formatter : function (value, row, index) {
+                    if (row['fieldState'] == 1) {
+                        return '审核通过';
+                        //value="审核通过";
+                    }
+                    if (row['fieldState'] == 2) {
+                        return '正在审核';
+                        //value="正在审核";
+                    }
+                    if (row['fieldState'] == 3) {
+                        return '审核驳回';
+                        //value="审核驳回";
+                    }
+                    //return value;
+                }
+            },
+             {
+                field: 'county',//域值
+                title: '县/街道',//标题
+                visible: false,//false表示不显示
+            }, {
+                field: 'businessTime',//域值
+                title: '营业时间',//标题
+                visible: false,//false表示不显示
+            }, {
+                field: 'city',//域值
+                title: '市',//标题
+                visible: false//false表示不显示
+            },{
+                field: 'province',//域值
+                title: '省',//标题
+                visible: false//false表示不显示
+            },{
+                field: 'phone',//域值
+                title: '联系电话',//标题
+                visible: false,//false表示不显示
+            }, {
+                field: 'price',//域值
+                title: '价格',//标题
+                visible: false,//false表示不显示
+            }, {
+                field: 'detailIntroduct',//域值
+                title: '详细介绍',//标题
+                visible: false,//false表示不显示
+            }, {
+                field: 'lat',//域值
+                title: '经度',//标题
+                visible: false,//false表示不显示
+            }, {
+                field: 'lon',//域值
+                title: '纬度',//标题
+                visible: false,//false表示不显示
+            },{
+                title: '操作',//标题
+                visible: true,//false表示不显示
+                formatter:ActionFormatter,
+                events:window.ActionEvent = {
+                    'click .edit':function (e,value,row,index) {
+                        $('#fieldSelect').hide();
+                        $('#field').hide();
+                        $('#modifyView').show();
+                        //ID
+                        document.getElementById("IDmdf").value = row['fieldID'];
+                        //Name
+                        document.getElementById("Namemdf").value = row['fieldName'];
+                        //地址
+                        var t1=row['province'];
+                        var t2=row['city'];
+                        var t3=row['county'];
+                        $("#city-picker3mdf").val(t1+"/"+t2+"/"+t3);
+                        $("#city-picker3mdf").citypicker().data('citypicker').refresh();
+                        //详细地址
+                        document.getElementById("Addressmdf").value = row['fieldAddress'];
+                        //price
+                        document.getElementById("Pricemdf").value = row['price'];
+                        //营业时间
+                        document.getElementById("Timemdf").value = row['businessTime'];
+                        //联系电话
+                        document.getElementById("Telephonemdf").value = row['phone'];
+                        //详细介绍
+                         document.getElementById("Introductmdf").value = row['detailIntroduct'];
+                        //审核状态
+                        document.getElementById("Statemdf").value = row['fieldState'];
+                        //图片地址
+                        document.getElementById("previewmdf").src ="../"+ row['fieldImg']
+                        
+                    },
+                    'click .remove':function (e,value,row,index) {
+                        var mymessage=confirm("确定删除吗?");
+                        //根据招标计划ID查询对应CompanyInfo
+                        if (mymessage == true) {
+                            $.ajax({
+                                type: "POST",
+                                url: "/FieldService/delFieldService?FieldID=" + row['fieldID'],
+                                success: function () {
+                                    alert("删除成功");
+                                    window.location.reload();
+                                },
+                                 error: function (XMLHttpRequest, textStatus, errorThrown) {
+                                    alert(XMLHttpRequest.status);
+                                    alert(XMLHttpRequest.readyState);
+                                    alert(textStatus);
+                                },
+                            });
+                        }
+                        
+                    },
+                    'click .preview':function (e,value,row,index) {
+                        $('#fieldSelect').hide();
+                        $('#field').hide();
+                        $('#detailView').show();
+                        //ID
+                        //document.getElementById("IDd").value = row['fieldID'];
+
+                        //Name
+                        document.getElementById("Namedtl").value = row['fieldName'];
+                        //地址
+                        var t1=row['province'];
+                        var t2=row['city'];
+                        var t3=row['county'];
+                        $("#city-picker3dtl").val(t1+"/"+t2+"/"+t3);
+                        $("#city-picker3dtl").citypicker().data('citypicker').refresh();
+                        // document.getElementById("city-picker3dtl").value =row['province']+"/"+row['city']+"/"+row['county'];
+                        //详细地址
+                        document.getElementById("Addressdtl").value = row['fieldAddress'];
+                        //price
+                        document.getElementById("Pricedtl").value = row['price'];
+                        //营业时间
+                        document.getElementById("Timedtl").value = row['businessTime'];
+                        //联系电话
+                        document.getElementById("Telephonedtl").value = row['phone'];
+                        //详细介绍
+                         document.getElementById("Introductdtl").value = row['detailIntroduct'];
+                        //审核状态
+                        document.getElementById("Statedtl").value = row['fieldState'];
+                        //图片地址
+                        document.getElementById("previewdtl").src ="../"+ row['fieldImg']
+                    }
+                }
+            }
+        ]
+    });
+    //
+    var $table=$("#fieldTable");
+    //
+    function ActionFormatter(value, row, index){
+        return [
+                '<a class="edit" title="Edit" style="display: inline;font-size: 12px;"> 编辑 </a>',
+                '<p style="display: inline;">|</p>',
+                '<a class="remove" title="Remove" style="display: inline;font-size: 12px;"> 删除 </a>',
+                '<p style="display: inline;">|</p>',
+                '<a class="preview" title="Preview" style="display: inline;font-size: 12px;"> 详情 </a>'
+        ].join('');
+    }
+    //
+     function imgPreview(fileDom){
+            //判断是否支持FileReader
+            if (window.FileReader) {
+                var reader = new FileReader();
+            } else {
+                alert("您的设备不支持图片预览功能，如需该功能请升级您的设备！");
+            }
+
+            //获取文件
+            var file = fileDom.files[0];
+            var imageType = /^image\//;
+            //是否是图片
+            if (!imageType.test(file.type)) {
+                alert("请选择图片！");
+                return false;
+            }
+            //alert(file.size);
+            if(file.size > 10*1024*1024){
+            	alert("图片大小超过10M，请重新选择！");
+            	return false;
+            }else{
+            	//读取完成
+	            reader.onload = function(e) {
+	                //获取图片dom
+	                var img = document.getElementById("preview");
+	                //图片路径设置为读取的图片
+	                img.src = e.target.result;
+	                Image=img.src;
+	            };
+	            reader.readAsDataURL(file);
+	            }
+            
+        }
+    //
+    function imgPreviewmdf(fileDom){
+        //判断是否支持FileReader
+        if (window.FileReader) {
+            var reader = new FileReader();
+        } else {
+            alert("您的设备不支持图片预览功能，如需该功能请升级您的设备！");
+        }
+
+        //获取文件
+        var file = fileDom.files[0];
+        var imageType = /^image\//;
+        //是否是图片
+        if (!imageType.test(file.type)) {
+            alert("请选择图片！");
+            return false;
+        }
+        //alert(file.size);
+        if(file.size > 10*1024*1024){
+        	alert("图片大小超过10M，请重新选择！");
+        	return false;
+        }else{
+        	 //读取完成
+            reader.onload = function(e) {
+                //获取图片dom
+                var img = document.getElementById("previewmdf");
+                //图片路径设置为读取的图片
+                img.src = e.target.result;
+                Image=img.src;
+            };
+            reader.readAsDataURL(file);
+        }
+       
+    }
+    //
+     $('#addField').click(function(){
+        $('#fieldSelect').hide();
+        $('#field').hide();
+        // $("input[type=reset]").trigger("click");
+        $('#addView').show();
+        var t1="福建省";
+        var t2="福州市";
+        var t3="闽侯县";
+        $("#city-picker3").val(t1+"/"+t2+"/"+t3);
+        $("#city-picker3").citypicker().data('citypicker').refresh();
+    });
+    //
+    function checkAddInput(){
+     
+        var formData = new FormData();
+        //
+        var FieldName=document.getElementById("Name").value;
+        if(checkName(name1,span1)){
+        	formData.append('FieldName',FieldName);
+        }else{
+        	alert('请检查场地名称输入是否规范！');
+        	return false;
+        }
+        //
+        var CityPicker=document.getElementById("city-picker3").value;
+        var arr = new Array();
+        arr=CityPicker.split("/");
+        var Province=arr[0];
+        var City=arr[1];
+        var County=arr[2];
+        if(checkAddrss(span1,item1)){
+        	formData.append('Province', Province);
+            formData.append('City', City);
+            formData.append('County', County);
+        }else{
+        	alert('请检查地址输入是否规范！');
+        	return false;
+        }
+        //
+        var FieldAddress=document.getElementById("Address").value;
+        if(checkDetailAddrss(address,span1)){
+        	formData.append('FieldAddress',FieldAddress);
+        }else{
+        	alert('请检查具体地址输入是否规范！');
+        } 
+        //alert(1);
+        var Price=document.getElementById("Price").value;
+        if(checkPrice(price,span1)){
+        	formData.append('Price', Price);
+        }else if(Price == ""){
+        	console.log("不向后台提交数据");
+        }else {
+        	alert('请检查价格输入是否规范，如果误填该选项请清空！');
+        	return false;
+        }
+        //alert(2);
+        var BusinessTime=document.getElementById("Time").value;
+        if(checkTime(time,span1)){
+        	formData.append('BusinessTime', BusinessTime);
+        }else if(BusinessTime == ""){
+        	console.log("不向后台提交数据");
+        }else {
+        	alert('请检查营业时间输入是否规范，如果误填该选项请清空！');
+        	return false;
+        }
+
+        //alert(3);
+        var Phone=document.getElementById("Telephone").value;
+        if(checkPhone(telephone,span1)){
+        	formData.append('Phone', Phone);
+        }else if(Phone == ""){
+        	console.log("不向后台提交数据");
+        }else {
+        	alert('请检查联系电话输入是否规范，如果误填该选项请清空！');
+        	return false;
+        }
+        //alert(4);
+        var DetailIntroduct=document.getElementById("Introduct").value;
+        if(checkIntroduct(introduct,span1)){
+        	formData.append('DetailIntroduct', DetailIntroduct);
+        }else if(DetailIntroduct == ""){
+        	console.log("不向后台提交数据");
+        }else {
+        	alert('请检查详情介绍输入是否规范，如果误填该选项请清空！');
+        	return false;        	
+        } 
+        //alert(5);
+        var FieldState=document.getElementById("State").value;
+        formData.append('FieldState', FieldState); 
+        //alert(6);
+        var FieldImg = document.getElementById("image").files[0];
+        if(typeof(FieldImg) == 'undefined') {
+            //alert(FieldImg);
+            console.log("不向后台提交数据");
+        }else {
+        	formData.append('FieldImg', FieldImg);
+        }
+        
+        // alert(7);
+        var lon;
+        var lat;
+        //alert(8); 
+        $.ajax({
+            type: "get",
+            dataType: "jsonp",
+            url: "http://api.map.baidu.com/geocoder/v2/?address="+CityPicker+FieldAddress+"&output=json&ak=sVlDEXSzmBGeeSlGpKPeXGhgce3em7oI",//请求地址
+            success:function(data){
+                lon = data.result.location.lng;
+                lat = data.result.location.lat;
+                formData.append('lon', lon);
+                formData.append('lat', lat);
+                $.ajax({
+	                url: '/FieldService/addFieldService',
+	                type: 'POST',
+	                cache: false,
+	                data: formData,//向后台提交的参数
+	                processData: false,
+	                contentType: false,
+	                //success:function(data){console.log(data);}
+	            }).done(function(res){
+	                alert("添加成功！");
+	                $("#addView").hide();
+	                $("#fieldSelect").show();
+	                $("field").show();
+	                $table.bootstrapTable('refresh');
+	            }).fail(function(res){
+	                alert("添加失败");
+	            });
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("地址位置获取失败");
+            }
+        });
+    }              
+    //
+    function checkMdfInput(){
+    	var formDatamdf = new FormData();
+        var FieldID=document.getElementById("IDmdf").value;
+        formDatamdf.append('FieldID',FieldID);
+        //
+        var FieldName=document.getElementById("Namemdf").value;
+        if(checkName(namemdf,span2)){
+        	 formDatamdf.append('FieldName',FieldName);
+        }else{
+        	alert('请检查场地名称输入是否规范！');
+        	return false;
+        }
+        //
+        var CityPicker=document.getElementById("city-picker3mdf").value;
+        var arr = new Array();
+        arr=CityPicker.split("/");
+        var Province=arr[0];
+        var City=arr[1];
+        var County=arr[2];
+        if(checkAddrss(span2,item2)){
+        	formDatamdf.append('Province', Province);
+            formDatamdf.append('City', City);
+            formDatamdf.append('County', County);
+        }else{
+        	alert('请检查地址输入是否规范！');
+        	return false;
+        }
+        //
+        var FieldAddress=document.getElementById("Addressmdf").value;
+        if(checkDetailAddrss(addressmdf,span2)){
+        	formDatamdf.append('FieldAddress',FieldAddress);
+        }else{
+        	alert('请检查具体地址输入是否规范！');
+        	return false;
+        }
+        // 
+        var Price=document.getElementById("Pricemdf").value;
+        if(checkPrice(pricemdf,span2)){
+        	formDatamdf.append('Price', Price);
+        }else if(Price == ""){
+        	console.log("不向后台提交数据");
+        }else {
+        	alert('请检查价格输入是否规范，如果误填该选项请清空！');
+        	return false;        	
+        }
+        //
+        var BusinessTime=document.getElementById("Timemdf").value;
+        if(checkTime(timemdf,span2)){
+        	formDatamdf.append('BusinessTime', BusinessTime);
+        }else if(BusinessTime == ""){
+        	console.log("不向后台提交数据");
+        }else {
+        	alert('请检查营业时间输入是否规范，如果误填该选项请清空！');
+        	return false;        	
+        }
+        //
+        var DetailIntroduct=document.getElementById("Introductmdf").value;
+        if(checkIntroduct(introductmdf,span2)){
+        	formDatamdf.append('DetailIntroduct', DetailIntroduct);
+        }else if(DetailIntroduct == ""){
+        	console.log("不向后台提交数据");
+        }else {
+        	alert('请检查详情介绍输入是否规范，如果误填该选项请清空！');
+        	return false;        	
+        }
+        //
+        var Phone=document.getElementById("Telephonemdf").value;
+        if(checkPhone(telephone1,span2)){
+        	formDatamdf.append('Phone', Phone);
+        }else if(Phone == ""){
+        	console.log("不向后台提交数据");
+        }else {
+        	alert('请检查联系电话输入是否规范，如果误填该选项请清空！');
+        	return false;        	
+        }
+        //
+        var FieldState=document.getElementById("Statemdf").value;
+        formDatamdf.append('FieldState', FieldState);
+        //
+        var FieldImg = document.getElementById("imagemdf").files[0];
+        if(typeof(FieldImg) == 'undefined'){
+        	//alert(FieldImg);
+        	console.log("不向后台提交数据");
+        }else {
+        	formDatamdf.append('FieldImg', FieldImg);
+        }
+        //
+        var lon;
+        var lat;
+        $.ajax({
+        	type: "get",
+            dataType: "jsonp",
+            url: "http://api.map.baidu.com/geocoder/v2/?address="+CityPicker+FieldAddress+"&output=json&ak=sVlDEXSzmBGeeSlGpKPeXGhgce3em7oI",//请求地址
+             success:function(data){
+                 lon = data.result.location.lng;
+                 lat = data.result.location.lat;
+             	formDatamdf.append('lon', lon);
+                formDatamdf.append('lat', lat);
+                 $.ajax({
+                 	url: '/FieldService/updateFieldService',
+                    type: 'POST',
+                    cache: false,
+                    data: formDatamdf,//向后台提交的参数
+                    processData: false,
+                    contentType: false,
+                 }).done(function(res){
+                    alert("修改成功！");
+                    $('#modifyView').hide();
+                    $('#fieldSelect').show();
+                    $('#field').show();
+                    $table.bootstrapTable('refresh');
+                }).fail(function(res){
+                    alert("修改失败！");
+                })
+             },
+             error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("地址位置获取失败");
+            }
+        });
+    }                     
+    //
+    $('#delField').click(function(){
+        var data =$.map($table.bootstrapTable('getSelections'), function (row) {
+                return row.fieldID;
+            });
+            if(data.length != 0) {
+                $.ajax({
+                    type: "post",
+                    async: false,
+                    url: "/FieldService/delFieldService?FieldID=" + data,//请求地址
+                    //data: {"EquipmentContentId": data[i]},//向后台提交的参数
+                    success: function (data) {
+                        alert("删除成功");
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert(XMLHttpRequest.status);
+                        alert(XMLHttpRequest.readyState);
+                        alert(textStatus);
+                    },
+                })
+                  
+                $table.bootstrapTable('remove', {
+                    field: 'fieldID',
+                    values: data
+                });
+                $table.bootstrapTable('refresh');
+            }
+            else
+            {
+                alert("请选择要删除的器材");
+            }
+    })
+    //
+    $('#cancel').click(function () {
+        $('#field').show();
+        $('#addView').hide();
+        $('#fieldSelect').show();
+    })
+    //
+    $('#cancelmdf').click(function () {
+
+        $('#field').show();
+        $('#modifyView').hide();
+        $('#fieldSelect').show();
+        $table.bootstrapTable('refresh');
+    })
+    //
+    $('#backdtl').click(function(){
+        $('#field').show();
+        $('#detailView').hide();
+        $('#fieldSelect').show();
+    })
+    </script>
+</body>
+</html>

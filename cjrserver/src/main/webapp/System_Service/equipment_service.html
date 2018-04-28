@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>器材服务管理</title>
+
+    <!-- Import google fonts - Heading first/ text second -->
+    
+    <!-- Css files -->
+    <!-- <link rel="stylesheet" href="../assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link href="../asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../asset/css/style.min.css" rel="stylesheet"> -->
+    <!-- Import google fonts - Heading first/ text second -->
+    <!-- <link rel='stylesheet' type='text/css' href='http://fonts.useso.com/css?family=Open+Sans:400,700|Droid+Sans:400,700' /> -->
+    <!--[if lt IE 9]>
+    <link href="http://fonts.useso.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Droid+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="../asset/ico/favicon.ico" type="image/x-icon" />
+
+    <!-- Css files -->
+    <link href="../asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../asset/css/jquery.mmenu.css" rel="stylesheet">
+    <link href="../asset/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../asset/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="../asset/css/style.min.css" rel="stylesheet">
+    <link href="../asset/css/add-ons.min.css" rel="stylesheet">
+    
+   <!--  <link href="bootstrap-multiselect.css" rel="stylesheet"> -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../asset/js/html5shiv.js"></script>
+    <script src="../asset/js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+    	.success
+        {
+            background-image: url("images/li_ok.gif");
+            background-color:#E6FEE4;
+            border-color:#01BE00;
+            background-repeat: no-repeat;
+            background-position: left 2px;
+            padding:0 18px;
+        }
+        .danger
+        {
+            background-image: url("images/li_err.gif");
+            background-color:#FFF2E5;
+            border-color:#FF3300;
+            background-repeat: no-repeat;
+            background-position: left 2px;
+            padding:0 18px;
+        }
+        #addForm p
+        {
+            background-color:#FFFFDA ;
+            border: 1px solid #FFCD00;
+            font-size: 12px;
+            height: 20px;
+            line-height: 20px;
+            display: inline-block;           
+
+        }
+        #modifyForm p
+        {
+        	background-color:#FFFFDA ;
+            border: 1px solid #FFCD00;
+            font-size: 12px;
+            height: 20px;
+            line-height: 20px;
+            display: inline-block;   
+        }
+    </style>
+</head>
+<body>
+	<!-- start: Header -->
+<div class="navbar" role="navigation">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown visible-md visible-lg">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="user-avatar" src="../asset/img/avatar.jpg" alt="user-mail">政府后台管理员</a>
+            </li>
+            <li><a href="Home.html"><i class="fa fa-power-off"></i></a></li>
+        </ul>
+    </div>
+</div>
+<!-- end: Header -->
+<!-- start:    左侧导航栏    -->
+<div class="container-fluid content">
+    <div class="row">
+        <!-- start: Main Menu -->
+        <div class="sidebar ">
+            <div class="sidebar-collapse">
+                <div class="sidebar-header t-center">
+                    <br>
+                    <h2>政府后台</h2>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="nav nav-sidebar">
+                        <li><a href="../Admin_Index.html"><i class="fa fa-laptop"></i><span class="text">主页</span></a></li>
+                        <li>
+                            <a href="#"><i class="fa fa-font"></i><span class="text">首页管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">头部导航栏管理</span></a></li>
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">文章管理</span></a></li>
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">内容管理</span></a></li>
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">底部导航栏管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-signal"></i><span class="text">服务管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_Service/equipment_service.html"><i class="fa fa-list"></i><span class="text">器材管理</span></a></li>
+                                <li><a href="../System_Service/field_service.html"><i class="fa fa-list"></i><span class="text">场地服务管理</span></a></li>
+                                <li><a href="../System_Service/sport_service.html"><i class="fa fa-list"></i><span class="text">赛事服务管理</span></a></li>
+                                <li><a href="../System_Service/artificial_service.html"><i class="fa fa-list"></i><span class="text">人工服务管理</span></a></li>
+                                <li><a href="../System_Service/activity_service.html"><i class="fa fa-list"></i><span class="text">活动服务管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-signal"></i><span class="text">需求</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_Demand/demand_table_input.html"><i class="fa fa-table"></i><span class="text">发布需求调查表</span></a></li>
+                                <li><a href="../System_Demand/demand_table_list.html"><i class="fa fa-list"></i><span class="text">调查表管理</span></a></li>
+                                <li><a href="../System_Demand/demand_directory.html"><i class="fa fa-list"></i><span class="text">需求目录管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-file-text"></i><span class="text">招标</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_TenderPlan/publish_tender_plan.html"><i class="fa fa-pencil"></i><span class="text">发布招标计划</span></a></li>
+                                <!--<li><a href="/System_TenderPlan/goverment_check_evalution.html"><i class="fa fa-table"></i><span class="text">查看招标计划</span></a></li>-->
+                                <li><a href="../System_TenderPlan/set_pass_company.html"><i class="fa fa-table"></i><span class="text">确定竞标企业</span></a></li>
+                                <li><a href="../System_TenderPlan/set_win_company.html"><i class="fa fa-table"></i><span class="text">确定中标企业</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-file-text"></i><span class="text">评价报告</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_Assess/check_assess_report.html"><i class="fa fa-pencil"></i><span class="text">查看评价报告</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-font"></i><span class="text">认证</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">企业认证</span></a></li>
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">媒体认证</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+
+                <div class="sidebar-brand">
+                    政府后台
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end:    左侧导航栏   -->
+<!-- start: Content -->
+<div class="main ">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header"><i class="fa fa-indent"></i>需求调查表</h3>
+            <ol class="breadcrumb">
+                <li><i class="fa fa-home"></i><a href="Home.html">主页</a></li>
+
+                <li><i class="fa fa-indent"></i>需求基本表</li>
+            </ol>
+        </div>
+    </div>
+
+
+    <!--已经发布的需求-->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2><i class="fa fa-table red"></i><span class="break"></span><strong>基本表</strong></h2>
+                    <div class="panel-actions">
+                        <a href="table.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="am-u-sm-8 am-u-md-4" style="margin-top: 10px;">
+			            <div id="equipmentSelect" class="am-btn-toolbar" style="display: block;">
+			                <div class="row">
+			                    <button id="addEquipment" type="button" class="btn btn-default col-lg-2 " style="color:#000000"><span class="am-icon-plus"></span> 新增</button>
+			                    <button id="delEquipment" type="button" class="btn btn-default col-lg-2 " style="color:#000000"><span class="am-icon-trash-o"></span> 删除</button>
+                                 <button id="equipmentType" type="button" class="btn btn-default col-lg-2 " style="color:#000000"><span class="am-icon-tags"></span> 类别</button>
+			                </div>
+			            </div>
+			    	</div>
+                    
+                    <div id="equipment" style="margin-top: 10px; margin-bottom: 16px;">
+				        <table id="equipmentTable">
+				            
+				        </table>
+				    </div>
+
+				    <div id="addView" style="display: none">
+				        <div class="tpl-block ">
+
+				            <div class="am-g tpl-amazeui-form">
+				            
+			                    <form id="addForm" class="am-form form-horizontal">
+                    			 	<fieldset>
+				                        <legend style="text-align: center;">添加器材</legend>					                    
+				                        <div class="row form-group" style="overflow:visible;">
+                                            <label for="Name" class="col-sm-2 control-label">器材名称<i style="color:red;font-size: 15px;">*</i></label>
+                                            <div class="col-sm-3">
+                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Name" />
+                                                <p>输入器材名称,长度不超过15</p>
+                                            </div>
+                                            <label class="col-sm-2 control-label">类别<i style="color:red;font-size: 15px;">*</i></label>
+                                            <div class="col-sm-4">
+                                                <select name="CategoryState" id="Category" style="width: 90px;height: 36px; text-align-last: center;">
+                                                  
+                                                </select>
+                                            </div>
+                                        </div>
+                                      
+                                        <div class="row form-group">
+                                            <label class="col-sm-2 control-label" style="text-align: right;">器材图片</label>
+                                            <div class="col-sm-3" style="height: 420px;overflow: auto;">
+                                                <div class="am-form-group am-form-file">
+                                                    <div class="tpl-form-file-img">
+                                                        <img id="preview" src="../assets/img/43.jpg" class="carousel-inner img-responsive img-rounded" alt=""/>
+                                                        <small>此处为单张大小不超过10M的图片</small>
+                                                    </div>
+                                                   
+                                                    <button type="button" class="am-btn am-btn-danger am-btn-sm" onclick="imag.click()">
+                                                        <i class="am-icon-cloud-upload"></i>添加图片</button>
+                                                    <input id="imag" type="file" name="Image" onchange="imgPreview(this)" style="display: none;" />
+                                                </div>
+                                            </div>
+                                        
+                                            <label for="Introduct" class="col-sm-2 control-label" style="text-align: right;">器材描述</label>
+                                            <div class="col-sm-4" style="margin-bottom: 25px;">
+                                                <textarea rows="3" id="Introduce" name="DemandRemarks" class="form-control" placeholder="选填" style="resize:none;"></textarea>
+                                                <p>输入器材描述,长度不超过100</p>
+                                            </div>
+                                             <label class="col-sm-2 control-label">审核状态<i style="color:red;font-size: 15px;">*</i></label>
+                                            <div class="col-sm-4" style="margin-bottom: 25px;">
+                                                <select name="DemandState" id="State" style="height: 36px;width: 90px;text-align-last: center;">
+                                                    <option value="3" selected>审核驳回</option>
+                                                    <option value="1" selected>审核通过</option>
+                                                    <option value="2" selected>正在审核</option>
+                                                </select>
+                                              
+                                            </div>
+                                            <label class="col-sm-2 control-label"></label>
+                                            <div class="col-sm-4" style="margin-bottom: 15px;">
+                                                <button id="submit" type="botton" class="am-btn am-btn-primary" onclick="checkAddInput();return false;">保存</button>
+                                                <button id="cancel" type="button" class="am-btn am-btn-primary am-btn-success" style="margin-left: 10px;">取消</button>
+                                                <input type="reset" name="reset" style="display: none;" />
+                                            </div>
+                                         </div>
+				                    </fieldset> 
+				                </form> 
+			                </div>
+			            </div>
+			        </div>
+				    
+
+				    <div id="modifyView" style="display: none">
+				        <div class="tpl-block ">
+
+				            <div class="am-g tpl-amazeui-form">
+
+			                    <form id="modifyForm" class="am-form form-horizontal">
+                    			 	<fieldset>
+				                        <legend style="text-align: center;">修改器材</legend>					 
+				                        <div class="am-form-group" style="display: none;">
+				                            <label for="IDmdf" class="am-u-sm-3 am-form-label">器材ID</label>
+				                            <div class="am-u-sm-9">
+				                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="IDmdf" />
+				                            </div>
+				                        </div>                   
+				                        <div class="row form-group" style="overflow:visible;">
+                                            <label for="Name" class="col-sm-2 control-label">器材名称<i style="color:red;font-size: 15px;">*</i></label>
+                                            <div class="col-sm-3">
+                                                <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Namemdf" />
+                                                <p>输入器材名称，长度不超过15</p>
+                                            </div>
+                                            <label class="col-sm-2 control-label">类别<i style="color:red;font-size: 15px;">*</i></label>
+                                            <div class="col-sm-4">
+                                                <select name="FieldState" id="Categorymdf" style="width: 90px;height: 36px; text-align-last: center;">
+                                                   
+                                                </select>
+                                            </div>
+                                        </div>
+                                      
+                                        <div class="row form-group">
+                                            <label class="col-sm-2 control-label" style="text-align: right;">器材图片</label>
+                                            <div class="col-sm-3" style="height: 420px;overflow: auto;">
+                                                <div class="am-form-group am-form-file">
+                                                    <div class="tpl-form-file-img">
+                                                        <img id="previewmdf" src="../assets/img/43.jpg" class="carousel-inner img-responsive img-rounded" alt=""/>
+                                                        <small>此处为单张大小不超过10M的图片</small>
+                                                    </div>
+                                                   
+                                                    <button type="button" class="am-btn am-btn-danger am-btn-sm" onclick="Imagemdf.click()">
+                                                        <i class="am-icon-cloud-upload"></i>添加图片</button>
+                                                    <input id="Imagemdf" type="file" name="Image" onchange="imgPreviewmdf(this)" style="display: none;" />
+                                                </div>
+                                            </div>
+                                        
+                                            <label for="Introduct" class="col-sm-2 control-label" style="text-align: right;">器材描述</label>
+                                            <div class="col-sm-4" style="margin-bottom: 25px;">
+                                                <textarea rows="3" id="Introducemdf" name="DemandIntroducemdf" class="form-control" placeholder="选填" style="resize:none;"></textarea>
+                                                <p>输入器材描述,长度不超过100</p>
+                                            </div>
+                                             <label class="col-sm-2 control-label">审核状态<i style="color:red;font-size: 15px;">*</i></label>
+                                            <div class="col-sm-4" style="margin-bottom: 25px;">
+                                                <select name="DemandStatemdf" id="Statemdf" style="height: 36px;width: 90px;text-align-last: center;">
+                                                    <option value="3" selected>审核驳回</option>
+                                                    <option value="1" selected>审核通过</option>
+                                                    <option value="2" selected>正在审核</option>
+                                                </select>
+                                            </div>
+                                            <label class="col-sm-2 control-label"></label>
+                                            <div class="col-sm-4" style="margin-bottom: 15px;">
+                                                <button id="submitmdf" type="botton" class="am-btn am-btn-primary" onclick="checkMdfInput();return false;">保存</button>
+                                                <button id="cancelmdf" type="button" class="am-btn am-btn-primary am-btn-success" style="margin-left: 10px;">取消</button>
+                                                <input type="reset" name="reset" style="display: none;" />
+                                            </div>
+                                         </div>
+				                    </fieldset> 
+				                </form> 
+			                </div>
+			            </div>
+			        </div>
+			    
+
+                    <div id="detailView" style="display: none">
+				        <div class="tpl-block ">
+
+				            <div class="am-g tpl-amazeui-form">
+
+				                <div style="margin-left: 45%">
+				                    <h4 class="h4">详情介绍</h4>
+				                </div>
+
+				                <div class="am-u-sm-12 am-u-md-9" style="margin-top: 32px;padding-left: 15%">
+				                    <form enctype="multipart/form-data" class="am-form am-form-horizontal">
+				                       
+				                        <div class="am-form-group">
+				                            <label for="Namedtl" class="am-u-sm-3 am-form-label" style="padding: 2px;">器材名称</label>
+				                            <div class="am-u-sm-9">
+				                              
+				                               <p class="form-control-static" id = "Namedtl"></p>
+				                            </div>
+				                        </div>
+
+				                        <div class="am-form-group">
+				                            <label for="Categorydtl" class="am-u-sm-3 am-form-label" style="padding: 2px;">类别</label>
+				                            <div class="am-u-sm-9">
+				                               
+				                                <p class="form-control-static" id = "Categorydtl"></p>
+				                            </div>
+				                        </div>
+
+				                        <div class="am-form-group">
+				                            <label  class="am-u-sm-3 am-form-label">图片</label>
+				                            <div class="am-u-sm-9">
+				                                <div class="am-form-group am-form-file">
+				                                    <div class="tpl-form-file-img">
+				                                        <img id="previewdtl" alt="">
+				                                    </div>
+				                                   
+				                                </div>
+
+				                            </div>
+				                        </div>
+
+				                        <div class="am-form-group">
+				                            <label for="Introducedtl" class="am-u-sm-3 am-form-label">描述</label>
+				                            <div class="am-u-sm-9">
+				                                <textarea class="form-control" rows="5" id="Introducedtl" name="DemandIntroducedtl" readonly="readonly"></textarea>
+				                               <!--  <small>长度不超过100</small> -->
+				                            </div>
+				                        </div>
+
+										 <div class="am-form-group">			             
+			                              	<label class="am-u-sm-3 am-form-label">审核状态</label>
+                                            <div class="am-u-sm-9">
+                                                <p class="form-control-static" id = "Statedtl"></p>
+                                            </div>
+				                        </div>
+
+				                        <div class="am-form-group">
+				                            <div class="am-u-sm-9 am-u-sm-push-3">        
+				                               <button id="backdtl" type="button" class="am-btn am-btn-primary am-btn-success">返回</button>
+				                            </div>
+				                        </div>
+				                    </form>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+			   </div>
+            </div>
+        </div><!--/col-->
+    </div><!--/row-->
+
+</div>
+<!-- 模态弹出窗内容 -->
+<div class="modal fade" id="equipmentModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" >
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">器材类别管理</h4>
+            </div>
+            <div class="modal-body">
+                <div class="am-u-sm-8 am-u-md-4" style="margin-top: 10px;">
+                    <div id="modalSelect" class="am-btn-toolbar" style="display: block;">
+                        <div class="row">
+                            <button id="addType" type="button" class="btn btn-default col-lg-3 " style="color:#000000"><span class="am-icon-plus"></span> 新增</button>
+                            <button id="delType" type="button" class="btn btn-default col-lg-3" style="color:#000000"><span class="am-icon-trash-o"></span> 删除</button>
+                        </div>
+                    </div>
+                </div>              
+                <div id="type" style="margin-top: 10px; margin-bottom: 16px;">
+                    <table id="typeTable"></table>
+                </div>
+
+                <div id="modalAdd" style="display: none">
+                    <div class="tpl-block ">
+
+                        <div class="am-g tpl-amazeui-form">
+
+                            <div style="margin-left: 45%">
+                                <h4 class="h4">添加器材类别</h4>
+                            </div>
+
+                            <div class="am-u-sm-12 am-u-md-9" style="margin-top: 32px;padding-left: 15%">
+                                <form class="am-form am-form-horizontal">
+
+                                    <div class="row form-group">
+                                        <label for="content" class="am-u-sm-3 am-form-label">类别描述</label>
+                                        <div class="am-u-sm-9">
+                                            <input type="text" style="font-size:15px;" class="form-control" placeholder="输入类别描述" id="content" />
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="am-u-sm-9 am-u-sm-push-3">
+                                            <button id="submit" type="botton" class="am-btn am-btn-primary" onclick="checkAddModal();return false;">保存</button>
+                                            <button id="cancelModal" type="button" class="am-btn am-btn-primary am-btn-success">取消</button>
+                                        </div>
+                                    </div>
+                                    <br><br>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>      
+
+   <!--  -->
+    <script src="../asset/js/jquery-2.1.1.min.js"></script>
+    <!--[if !IE]>-->
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
+    </script>
+    <!--<![endif]-->
+    <!--[if IE]>
+
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='assets/js/jquery-1.11.1.min.js'>"+"<"+"/script>");
+    </script>
+	
+    <![endif]-->
+    <script src="../asset/js/jquery.mmenu.min.js"></script>
+    <script src="../asset/js/core.min.js"></script>
+    <script src="../asset/js/jquery-migrate-1.2.1.min.js"></script>
+  
+    <script src="../asset/js/jquery-2.1.1.min.js"></script>
+    <script src="../asset/js/avalon.js"></script>
+    <script src="../asset/js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-table.js"></script>
+    <script src="../js/bootstrap-table.min.js"></script>
+    <script src="../js/bootstrap-table-zh-CN.min.js"></script>
+    <script src="bootstrap-multiselect.js"></script>
+    <script>
+    //
+     $('#test').click(function(){
+        $('#equipmentSelect').hide();
+        $('#equipment').hide();
+        $('#modifyView').show();
+    });
+    //
+      $('#equipmentType').click(function(){
+        $('#equipmentModal').modal('show');
+    }); 
+    //
+    var $table1 = $('#typeTable');
+    //
+    $('#typeTable').bootstrapTable({
+        url:"/CategoryListService/showAllOptionsByTag?Tag=2",
+        //请求方法
+        method: 'get',
+        //dataType: "json",
+        //是否显示行间隔色
+        striped: true,
+        //是否显示 切换试图（table/card）按钮
+        showToggle: "true",
+        //显示搜索框 
+        search: "true", 
+        //显示刷新
+        showRefresh : "true",
+        //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）     
+        cache: false,    
+        //是否显示分页（*）  
+        pagination: true,   
+         //是否启用排序  
+        sortable: true,    
+         //排序方式 
+        sortOrder: "asc",
+        //如果设置了分页，首页页码     
+        pageNumber: 1,   
+        //每页的记录行数（*）   
+        pageSize: 10,  
+        //可供选择的每页的行数（*）    
+        pageList: [10, 25, 50, 100],
+        //客户端处理分页    
+        sidePagination: "client",
+        //指定主键列 
+        idField: "no",
+        columns: [
+            {
+                checkbox: true, 
+            },
+            {
+                field: 'no',//域值
+                title: '流水号',//标题
+                visible: false,//false表示不显示
+            },
+            {
+                field: 'content',//域值
+                title: '类别描述',//标题
+                visible: true,//false表示不显示
+            },
+            {
+                title: '操作',//标题
+                visible: true,//false表示不显示
+                formatter:ActionFormatter1,
+                events:window.ActionEvent1 = {                   
+                    'click .remove':function (e,value,row,index) {
+                        var mymessage=confirm("确定删除吗?");
+                        //
+                        if (mymessage == true) {
+                            $.ajax({
+                                type: "POST",
+                                url: "/CategoryListService/delCategory?No=" + row['no'],
+                                success: function () {
+                                    alert("删除成功");
+                                    $table1.bootstrapTable('remove', {
+                                        field: 'no',
+                                        values: [row['no']]
+                                    });
+                                    $table1.bootstrapTable('refresh');
+                                },
+                                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                                    alert(XMLHttpRequest.status);
+                                    alert(XMLHttpRequest.readyState);
+                                    alert(textStatus);
+                                },
+                            });
+                        }
+                    }
+                }
+            }
+        ]
+    })
+     //
+        function ActionFormatter1(value, row, index){
+            return [
+                '<a class="remove" title="Remove" style="display: inline;font-size: 12px;"> 删除 </a>'
+            ].join('');
+        }
+     //
+        $('#addType').click(function (){
+            $('#type').hide();
+            $('#modalSelect').hide();        
+            $('#modalAdd').show();           
+        });
+    //
+       function checkAddModal(){
+            var formData = new FormData();
+           //           
+           var Content=$("#content").val();
+           if(Content == ''){
+                alert("类别描述为空");
+                return false;
+           }else{
+                formData.append('Tag',2);
+                formData.append('Content',Content);
+                $.ajax({
+                    url: '/CategoryListService/addCategory',
+                    type: 'POST',
+                    cache: false,
+                    data: formData,//向后台提交的参数
+                    processData: false,
+                    contentType: false,
+                }).done(function(MSg){
+                    alert("添加成功!");
+                    $('#modalAdd').hide();
+                    $('#type').show();           
+                    $('#modalSelect').show();
+                    $table1.bootstrapTable('refresh');
+                }).fail(function(){
+                    alert("添加失败!");
+                })
+           }
+       }
+        //
+        $('#cancelModal').click(function () {
+            $('#modalAdd').hide();
+            $('#type').show();           
+            $('#modalSelect').show();
+        });
+        //删除类别
+        $('#delType').click(function () {
+            
+            var data =$.map($table1.bootstrapTable('getSelections'), function (row) {
+                return row.no;
+            });
+            if(data.length != 0) {
+                $.ajax({
+                    type: "post",
+                    async: false,
+                    url: "/CategoryListService/delCategory?No=" + data,//请求地址
+                    success: function (data) {
+                        alert("删除成功");
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert(XMLHttpRequest.status);
+                        alert(XMLHttpRequest.readyState);
+                        alert(textStatus);
+                    },
+                })
+                  
+                $table1.bootstrapTable('remove', {
+                    field: 'no',
+                    values: data
+                });
+                $table1.bootstrapTable('refresh');
+            }
+            else
+            {
+                alert("请选择要删除的器材类别");
+            }
+        }); 
+    //
+    $('#equipmentTable').bootstrapTable({
+        url:"/EquipmentContent/getEquipmentContent",
+        //请求方法
+        method: 'get',
+        //dataType: "json",
+        //是否显示行间隔色
+        striped: true,
+        //是否显示 切换试图（table/card）按钮
+        showToggle: "true",
+        //显示搜索框 
+        search: "true", 
+        //显示刷新
+        showRefresh : "true",
+        //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）     
+        cache: false,    
+        //是否显示分页（*）  
+        pagination: true,   
+         //是否启用排序  
+        sortable: true,    
+         //排序方式 
+        sortOrder: "asc",
+        //如果设置了分页，首页页码     
+        pageNumber: 1,   
+        //每页的记录行数（*）   
+        pageSize: 10,  
+        //可供选择的每页的行数（*）    
+        pageList: [10, 25, 50, 100],
+        //客户端处理分页    
+        sidePagination: "client",
+        //指定主键列 
+        idField: "demandID",
+        columns: [
+            {
+                checkbox: true, 
+            },
+            {
+                field: 'demandID',//域值
+                title: '器材服务ID',//标题
+                visible: false,//false表示不显示
+            },
+            {
+                field: 'demandName',//域值
+                title: '器材名称',//标题
+                visible: true,//false表示不显示
+            },
+            {
+                field: 'demandCategory',//域值
+                title: '类别',//标题
+                visible: true,//false表示不显示
+            },
+             {
+                field: 'companyName',//域值
+                title: '所属企业',//标题
+                visible: true,//false表示不显示
+            },             
+             {
+                field: 'image',//域值
+                title: '图片',//标题
+                visible: false,//false表示不显示
+            },
+            {
+                field: 'demandRemarks',//域值
+                title: '详情介绍',//标题
+                visible: false,//false表示不显示
+            },
+            {
+                field: 'demandState',//域值
+                title: '审核状态',//标题
+                visible: true,//false表示不显示
+            },
+            {
+            title: '操作',//标题
+            visible: true,//false表示不显示
+            formatter:ActionFormatter,
+            events:window.ActionEvent = {
+               'click .edit':function (e,value,row,index) {
+                 $.ajax({
+                    type: "post",
+                    url: "/CategoryListService/showAllOptionsByTag?Tag=2",
+                    cache: false,
+                     processData: false,
+                     contentType: false,
+                }).done(function(data){
+                    var category=$('#Categorymdf');
+                    category.empty();
+                    for(var i = 0;i < data.length;i++)
+                    {                        
+                        category.append('<option>'+data[i].content+'</option>');
+                    }
+                }).fail(function(res){
+                    console.log("数据获取失败");
+                    // var state=$('#Category');
+                    // var v= 5;var va = "test";var vb = "智力障碍";
+                    // state.append('<option value="'+ v +'">' + va + '</option>');
+                    // $('#Category option:contains(' + vb + ')').each(function(){
+                    //   if ($(this).text() == vb) {
+                    //      $(this).attr('selected', true);
+                    //   }
+                    // });
+                });  
+                $('#equipment').hide();
+                $('#equipmentSelect').hide();
+                $('#modifyView').show();               
+                //Id
+                var DemandIDmdf=document.getElementById("IDmdf");
+                DemandIDmdf.value=row['demandID'];
+                //Name
+                var DemandNamemdf=document.getElementById("Namemdf");
+                DemandNamemdf.value=row['demandName'];
+                //Category
+                // var DemandCategorymdf=document.getElementById("Categorymdf");
+                // DemandCategorymdf.value=row['demandCategory'];
+                var vb = row['demandCategory'];
+                 $('#Categorymdf option:contains(' + vb + ')').each(function(){
+                  if ($(this).text() == vb) {
+                     $(this).attr('selected', true);
+                  }
+                });
+                //Picture
+                var Imagemdf=document.getElementById("previewmdf");
+                Imagemdf.src="../"+row['image'];
+                //Introduce2
+                var DemandIntroducemdf=document.getElementById("Introducemdf");
+                DemandIntroducemdf.value=row['demandRemarks'];
+                //State
+                // var DemandStatemdf=document.getElementById("Statemdf");
+                // DemandStatemdf.value=row['demandState'];
+                var vc = row['demandState']; 
+                 $('#Statemdf option:contains(' + vc + ')').each(function(){
+                  if ($(this).text() == vc) {
+                     $(this).attr('selected', true);
+                  }
+                });
+            },
+            'click .remove':function (e,value,row,index) {
+                var mymessage=confirm("确定删除吗?");
+                //
+                if (mymessage == true) {
+                    $.ajax({
+                        type: "POST",
+                        url: "/EquipmentContent/delEquipmentContent?EquipmentContentID=" + row['demandID'],
+                        success: function () {
+                        	alert("删除成功");
+                        	$table.bootstrapTable('remove', {
+			                    field: 'demandID',
+			                    values: [row['demandID']]
+			                });
+                            
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+	                        alert(XMLHttpRequest.status);
+	                        alert(XMLHttpRequest.readyState);
+	                        alert(textStatus);
+	                    },
+                    });
+                }
+            },
+            'click .preview':function (e,value,row,index) {
+            	$('#equipment').hide();
+            	$('#equipmentSelect').hide();
+                $('#detailView').show();                
+                //Id
+                // var DemandIDdtl=document.getElementById("IDdtl");
+                // DemandIDdtl.value=row['demandID'];
+                //Name
+                var DemandNamedtl=document.getElementById("Namedtl");
+                DemandNamedtl.innerText=row['demandName'];
+                //Category
+                var DemandCategorydtl=document.getElementById("Categorydtl");
+                DemandCategorydtl.innerText=row['demandCategory'];
+                //Picture
+                var Imagedtl=document.getElementById("previewdtl");
+                Imagedtl.src="../"+row['image'];
+                //Introduce2
+                var DemandIntroducedtl=document.getElementById("Introducedtl");
+                DemandIntroducedtl.value=row['demendRemarks'];
+                //State
+                // var DemandStatedtl=document.getElementById("Statedtl");
+                // DemandStatedtl.value=row['demandState'];
+	            //var num=row['demandState'];
+                document.getElementById("Statedtl").innerText=row['demandState'];
+            }
+            }
+        }
+    ]
+   });
+   		//获取添加界面所需元素
+        var name1=document.querySelector('#Name');
+        var introduce=document.querySelector('#Introduce');
+        var addform=document.querySelector('#addForm');
+        var span1=addform.getElementsByTagName('p');
+        //获取修改界面所需元素
+        var namemdf=document.querySelector('#Namemdf');       
+        var introducemdf=document.querySelector('#Introducemdf');
+        var modifyform=document.querySelector('#modifyForm');
+        var span2=modifyform.getElementsByTagName('p');
+        //
+        $('#Name').focusout(function(){
+        	checkName(name1,span1);
+        });
+        //
+        $('#Introduce').focusout(function(){
+	    	checkIntroduce(introduce,span1);
+	    });
+	    //
+	    $('#Name').focusin(function(){
+        	standardName(span1);
+        });
+        //
+        $('#Introduce').focusin(function(){
+	    	standardIntroduce(span1);
+	    });
+	    //
+	    $('#Namemdf').focusout(function(){
+        	checkName(namemdf,span2);
+        });       
+        //判断器材描述字数是否超过限定
+	    $('#Introducemdf').focusout(function(){
+	    	checkIntroduce(introducemdf,span2);
+	    });
+	    //
+	    $('#Namemdf').focusin(function(){
+        	standardName(span2);
+        });
+	    //
+	    $('#Introducemdf').focusin(function(){
+	    	standardIntroduce(span2);
+	    }); 
+        //
+         function checkName(nam,spa)
+        {	var l = nam.value.length;
+        	var span = spa;
+        	// alert(l);
+            if(l==0)
+            {	
+            	span[0].innerText='器材名称不能为空';
+                span[0].className='danger';          
+                return false;
+            }
+            if(l > 15){//限制15以内
+            	span[0].innerText='器材名称过长';
+                span[0].className='danger';
+                return false;
+            }
+            span[0].innerText='器材名称输入正确';
+            span[0].className='success';
+            return true;
+        }
+
+        //
+        function standardName(spa){
+        	var span = spa;
+        	span[0].innerText='输入器材名称,长度不超过15';
+            span[0].className='none';
+        }
+        //
+	    function checkIntroduce(introduc,spa){
+		    var l = introduc.value.length;
+		    var span = spa;
+	    	if(l > 100){
+	    		span[1].innerText='器材描述输入长度超过100';
+	            span[1].className='danger';
+	            return false;
+	    	}else if(l == 0){
+	    		//alert(l);
+	    		// $('#falseIntroduct').css('display','none');
+	    		span[1].innerText='输入器材描述,长度不超过100';
+	            span[1].className='none';
+	            return false;
+	    	}else{
+	    		span[1].innerText='器材描述输入成功';
+	            span[1].className='success';
+	            return true;
+	    	}
+	       
+     	}
+     	//
+	        function standardIntroduce(spa){
+	        	var span = spa;
+	        	span[1].innerText='输入器材描述,长度不超过100';
+	            span[1].className='none';
+	        }      
+       //验证添加器材
+       function checkAddInput(){
+       	   var formData = new FormData();
+       	   //           
+	       var DemandName=document.getElementById("Name").value;
+	       if(checkName(name1,span1)){
+	       		formData.append('DemandName',  DemandName);
+	       }else{
+	       		alert('请检查器材名称输入是否规范！');
+        		return false;
+	       }
+	       //
+	       var DemandCategory=$("#Category option:selected").text();
+           // alert(DemandCategory);
+	       formData.append('DemandCategory',DemandCategory);
+	       //alert(1);
+	       var DemandIntroduce=document.getElementById("Introduce").value;
+	       if(checkIntroduce(introduce,span1)){
+	        	formData.append('DemandRemarks', DemandIntroduce);
+	        }else if(DemandIntroduce == ""){
+	        	console.log("不向后台提交数据");
+	        }else {
+	        	alert('请检查器材描述输入是否规范，如果误填该选项请清空！');
+	        	return false;        	
+	        } 
+	       //alert(2);
+	       var DemandState=$("#State option:selected").text();
+           // alert(DemandState);
+	       formData.append('DemandState', DemandState);
+	       //alert(3);
+	       var fileObj = document.getElementById("imag").files[0];
+	       if(typeof(fileObj) == 'undefined'){
+	        	//alert(fileObj);
+	        	console.log("不向后台提交数据");        	
+        	}else{
+                formData.append('Image', fileObj);
+            }
+	       
+	       //alert(4);
+            $.ajax({
+	             url: '/EquipmentContent/addEquipmentContent',
+	             type: 'POST',
+	             cache: false,
+	             data: formData,//向后台提交的参数
+	             processData: false,
+	             contentType: false,
+	          }).done(function (res) {
+	           alert("添加成功！");
+	           $('#addView').hide();	           
+	           $('#equipment').show();
+	           $('#equipmentSelect').show();
+	           $('#equipmentTable').bootstrapTable('refresh');
+	          }).fail(function (res) {
+	              alert("添加失败！");
+	          });
+                 
+       }
+        //验证修改器材
+        function checkMdfInput(){
+            var formDatamdf = new FormData();
+            //
+            var DemandID=document.getElementById("IDmdf").value;
+            formDatamdf.append('DemandID',DemandID);
+            //
+            var DemandName=document.getElementById("Namemdf").value;
+            if(checkName(namemdf,span2)){
+	       		formDatamdf.append('DemandName', DemandName);
+	        }else{
+	       		alert('请检查器材名称输入是否规范！');
+        		return false;
+	        }
+            //
+            var DemandCategory=$("#Categorymdf option:selected").text();
+
+            formDatamdf.append('DemandCategory',DemandCategory);
+            //
+            var DemandIntroduce=document.getElementById("Introducemdf").value;
+            if(checkIntroduce(introducemdf,span2)){
+	        	formDatamdf.append('DemandRemarks', DemandIntroduce);
+	        }else if(DemandIntroduce == ""){
+	        	console.log("不向后台提交数据");
+	        }else {
+	        	alert('请检查器材描述输入是否规范，如果误填该选项请清空！');
+	        	return false;        	
+	        } 
+            //
+            var DemandState=$("#Statemdf option:selected").text();
+            formDatamdf.append('DemandState', DemandState);
+            //
+            var fileObj = document.getElementById("Imagemdf").files[0];
+            if(typeof(fileObj) == 'undefined'){
+	        	//alert(fileObj);
+	        	console.log("不向后台提交数据");
+	        	
+        	}else{
+                formDatamdf.append('Image',fileObj);
+            }          
+			$.ajax({
+	              url: '/EquipmentContent/updateEquipmentContent',
+	              type: 'POST',
+	              cache: false,
+	             data: formDatamdf,//向后台提交的参数
+	             processData: false,
+	             contentType: false,	           
+	          }).done(function (res) {
+	           alert("修改成功！");
+	           $('#modifyView').hide();
+               $('#equipment').show();
+               $('#equipmentSelect').show();
+               $('#equipmentTable').bootstrapTable('refresh');
+	          }).fail(function (res) {
+	              alert("修改失败！");
+	          });
+        }
+        var Image;
+        var $table=$("#equipmentTable");
+        function imgPreview(fileDom){
+            //判断是否支持FileReader
+            if (window.FileReader) {
+                var reader = new FileReader();
+            } else {
+                alert("您的设备不支持图片预览功能，如需该功能请升级您的设备！");
+            }
+
+            //获取文件
+            var file = fileDom.files[0];
+            var imageType = /^image\//;
+            //是否是图片
+            if (!imageType.test(file.type)) {
+                alert("请选择图片！");
+                return;
+            }
+            if(file.size > 10*1024*1024){
+	        	alert("图片大小超过10M，请重新选择！");
+	        	return false;
+	        }else{
+	        	 //读取完成
+	            reader.onload = function(e) {
+	                //获取图片dom
+	                var img = document.getElementById("preview");
+	                //图片路径设置为读取的图片
+	                img.src = e.target.result;
+	                Image=img.src;
+	            };
+	            reader.readAsDataURL(file);
+	        }
+        }
+        function imgPreviewmdf(fileDom){
+            //判断是否支持FileReader
+            if (window.FileReader) {
+                var reader = new FileReader();
+            } else {
+                alert("您的设备不支持图片预览功能，如需该功能请升级您的设备！");
+            }
+
+            //获取文件
+            var file = fileDom.files[0];
+            var imageType = /^image\//;
+            //是否是图片
+            if (!imageType.test(file.type)) {
+                alert("请选择图片！");
+                return;
+            }
+            if(file.size > 10*1024*1024){
+	        	alert("图片大小超过10M，请重新选择！");
+	        	return false;
+	        }else{
+	        	 //读取完成
+	            reader.onload = function(e) {
+	                //获取图片dom
+	                var img = document.getElementById("previewmdf");
+	                //图片路径设置为读取的图片
+	                img.src = e.target.result;
+	                Image=img.src;
+	            };
+	            reader.readAsDataURL(file);
+	        }
+        }
+        //
+        function ActionFormatter(value, row, index){
+            return [
+                '<a class="edit" title="Edit" style="display: inline;font-size: 12px;"> 编辑 </a>',
+                '<p style="display: inline;">|</p>',
+                '<a class="remove" title="Remove" style="display: inline;font-size: 12px;"> 删除 </a>',
+                '<p style="display: inline;">|</p>',
+                '<a class="preview" title="Preview" style="display: inline;font-size: 12px;"> 详情 </a>'
+            ].join('');
+        }
+        //
+        
+        //
+        $('#addEquipment').click(function(){
+            $.ajax({
+                type: "post",
+                url: "/CategoryListService/showAllOptionsByTag?Tag=2",
+                cache: false,
+                 processData: false,
+                 contentType: false,
+            }).done(function(data){
+                var category=$('#Category');
+                category.empty();
+                for(var i = 0;i < data.length;i++)
+                {                    
+                    category.append('<option>'+data[i].content+'</option>');
+                }
+            }).fail(function(res){
+                console.log("数据获取失败");
+                // var state=$('#Category');
+                // var v= 5;var va = "test";var vb = "智力障碍";
+                // state.append('<option value="'+ v +'">' + va + '</option>');
+                // $('#Category option:contains(' + vb + ')').each(function(){
+                //   if ($(this).text() == vb) {
+                //      $(this).attr('selected', true);
+                //   }
+                // });
+            });  
+            $('#addView').show();
+            $('#equipment').hide();           
+            $('#equipmentSelect').hide();
+
+        })
+        $('#cancel').click(function () {
+        	$('#addView').hide();
+            $('#equipment').show();           
+            $('#equipmentSelect').show();
+        });
+        $('#cancelmdf').click(function () {
+        	$('#modifyView').hide();
+            $('#equipment').show();            
+            $('#equipmentSelect').show();
+        });
+        //
+        $('#backdtl').click(function(){
+        	$('#detailView').hide();
+        	$('#equipment').show();            
+            $('#equipmentSelect').show();
+        })
+        //删除器材
+        $('#delEquipment').click(function () {
+            var data =$.map($table.bootstrapTable('getSelections'), function (row) {
+                return row.demandID;
+            });
+            if(data.length != 0) {
+                $.ajax({
+                    type: "post",
+                    async: false,
+                    url: "/EquipmentContent/delEquipmentContent?EquipmentContentID=" + data,//请求地址
+                    //data: {"EquipmentContentId": data[i]},//向后台提交的参数
+                    success: function (data) {
+                        alert("删除成功");
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert(XMLHttpRequest.status);
+                        alert(XMLHttpRequest.readyState);
+                        alert(textStatus);
+                    },
+                })
+                  
+                $table.bootstrapTable('remove', {
+                    field: 'demandID',
+                    values: data
+                });
+                $table.bootstrapTable('refresh');
+            }
+            else
+            {
+                alert("请选择要删除的器材");
+            }
+        });
+        
+        //select选择
+        function gradeChange(){
+            var select = document.getElementById("programme_view");
+            var value = select.options[select.selectedIndex].value;
+            if(value !="0")
+                $table.bootstrapTable('filterBy', {demand_Category:value});
+            else
+                $table.bootstrapTable('filterBy');
+        }
+        //详细视图显示图片,描述
+        function ShowImg(index, row)
+        {
+            var image = '<div class="photos">'
+                    +'<div class="row">'
+                        +'<div class="col-lg-2 col-md-offset-1">'
+                            +'<h5>'
+                                +'器材名称：'+row['demand_Name']
+                            +'</h5>'
+                            +'<h5>'
+                                +'器材类别：'+row['demand_Category']
+                            +'</h5>'
+                        +'</div>'
+                        +'<div class="col-lg-1 col-md-offset-1">'
+                            +'<h5>'
+                                +'器材描述：'
+                            +'</h5>'
+                        +'</div>'
+                        +'<div class="col-lg-3"  style="width: 200px;display:block;word-break: break-all;word-wrap: break-word;">'
+                            +'<h5>'
+                                +row['demand_Remarks']
+                            +'</h5>'
+                        +'</div>'
+                        +'<div class="col-lg-1 col-md-offset-1">'
+                            +'<h5>'
+                                +'器材图片：'
+                            +'</h5>'
+                        +'</div>'
+                        +'<div class="col-lg-2">'
+                            +'<img alt="image" class="feed-photo"  style="width: 200px;height: 200px; " src="'+row['image']+'">'
+                        +'</div>'
+                    +'</div>'
+                +'</div>';
+            return image;
+        }
+    </script>
+</body>
+</html>

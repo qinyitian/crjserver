@@ -1,0 +1,50 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.edu.fjnu.cjrserver.dao.EquipmentContentMapper">
+<!--按分页查询器材服务-->
+    <select id="findEquipmentContentServiceByPage" resultType="com.edu.fjnu.cjrserver.model.EquipmentContent">
+        select * from equipment_content limit #{0},#{1}
+    </select>
+<!--查询器材服务-->
+    <select id="findEquipmentContentService" resultType="com.edu.fjnu.cjrserver.model.EquipmentContent">
+        select * from equipment_content
+    </select>
+<!--根据ID查询器材服务-->
+    <select id="getEquipmentContentById" resultType="com.edu.fjnu.cjrserver.model.EquipmentContent" parameterType="Integer">
+        select * from equipment_content where Demand_ID=#{demandID}
+    </select>
+<!--删除器材服务-->
+    <delete id="delEquipmentContent" parameterType="Integer">
+        delete from equipment_content where Demand_ID=#{demandID}
+    </delete>
+<!--添加器材服务-->
+    <insert id="addEquipmentContent" parameterType="com.edu.fjnu.cjrserver.model.EquipmentContent">
+        insert into equipment_content(Demand_Name,Demand_Category,Demand_Remarks,Image,Demand_State,Demand_Model) values(#{demandName},#{demandCategory},#{demandRemarks},#{image},#{demandState},#{demandModel})
+    </insert>
+<!--修改器材服务-->
+    <update id="updateEquipmentContent" parameterType="com.edu.fjnu.cjrserver.model.EquipmentContent">
+        update equipment_content set
+        Demand_Name=#{demandName},Demand_Category=#{demandCategory},Demand_Remarks=#{demandRemarks},Image=#{image},Demand_Model=#{demandModel},Demand_State=#{demandState}
+        where Demand_ID=#{demandID}
+    </update>
+<!--根据ID查询图片路径-->
+    <select id="findImgPath" resultType="String" parameterType="Integer">
+        select Image from equipment_content where Demand_ID=#{demandID}
+    </select>
+<!--查询器材服务数量-->
+    <select id="findTotalQty" resultType="Integer">
+        select count(Demand_ID) from equipment_content;
+    </select>
+<!--根据名称查询器材服务数量-->
+    <select id="findTotalQtyByName" resultType="Integer" parameterType="String">
+        select count(Demand_ID) from  equipment_content where Demand_Name like CONCAT(CONCAT('%', #{0}), '%');
+    </select>
+<!--根据名称查询器材服务-->
+    <select id="findEquipmentContentServiceByName" resultType="com.edu.fjnu.cjrserver.model.EquipmentContent" >
+        select * from equipment_content where Demand_Name like CONCAT(CONCAT('%', #{2}), '%') limit #{0},#{1};
+    </select>
+
+
+</mapper>

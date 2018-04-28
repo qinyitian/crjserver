@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>发布招标计划</title>
+	<!-- Import google fonts - Heading first/ text second -->
+	<!-- <link rel='stylesheet' type='text/css' href='http://fonts.useso.com/css?family=Open+Sans:400,700|Droid+Sans:400,700' /> -->
+	<!--[if lt IE 9]>
+	<link href="http://fonts.useso.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.useso.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.useso.com/css?family=Droid+Sans:400" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.useso.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<!-- Favicon and touch icons -->
+	<link rel="shortcut icon" href="../asset/ico/favicon.ico" type="image/x-icon" />
+	<!-- Css files -->
+	<link href="../asset/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../asset/css/jquery.mmenu.css" rel="stylesheet">
+	<link href="../asset/css/font-awesome.min.css" rel="stylesheet">
+	<link href="../asset/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+	<link href="../asset/css/style.min.css" rel="stylesheet">
+	<link href="../asset/css/add-ons.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../asset/css/shijian.css"/>
+	<style type="text/css">
+		.icbc{
+			background: url(icbc.jpg);
+		}
+		.form-group{
+			padding-left: 209px;
+		}
+
+	</style>
+</head>
+
+
+<body>
+<!-- start: Header -->
+<div class="navbar" role="navigation">
+
+	<div class="container-fluid">
+
+		<ul class="nav navbar-nav navbar-right">
+
+			<li class="dropdown visible-md visible-lg">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="user-avatar" src="../asset/img/avatar.jpg" alt="user-mail">政府后台操作员</a>
+			</li>
+			<li><a href="index.html"><i class="fa fa-power-off"></i></a></li>
+		</ul>
+
+	</div>
+
+</div>
+<!-- end: Header -->
+
+<!-- start:    左侧导航栏    -->
+<div class="container-fluid content">
+
+	<div class="row">
+
+		<!-- start: Main Menu -->
+		<div class="sidebar ">
+
+			<div class="sidebar-collapse">
+				<div class="sidebar-header t-center">
+						  <br>
+                    <h2>政府后台</h2>
+				</div>
+				<div class="sidebar-menu">
+					<ul class="nav nav-sidebar">
+						<li><a href="../Admin_Index.html"><i class="fa fa-laptop"></i><span class="text">主页</span></a></li>
+						<li>
+							<a href="#"><i class="fa fa-font"></i><span class="text">首页管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+							<ul class="nav sub">
+								<li><a href="#"><i class="fa fa-th"></i><span class="text">头部导航栏管理</span></a></li>
+								<li><a href="#"><i class="fa fa-th"></i><span class="text">文章管理</span></a></li>
+								<li><a href="#"><i class="fa fa-th"></i><span class="text">内容管理</span></a></li>
+								<li><a href="#"><i class="fa fa-th"></i><span class="text">底部导航栏管理</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-signal"></i><span class="text">服务管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+							<ul class="nav sub">
+								<li><a href="../System_Service/equipment_service.html"><i class="fa fa-list"></i><span class="text">器材管理</span></a></li>
+								<li><a href="../System_Service/field_service.html"><i class="fa fa-list"></i><span class="text">场地服务管理</span></a></li>
+								<li><a href="../System_Service/sport_service.html"><i class="fa fa-list"></i><span class="text">赛事服务管理</span></a></li>
+								<li><a href="../System_Service/artificial_service.html"><i class="fa fa-list"></i><span class="text">人工服务管理</span></a></li>
+								<li><a href="../System_Service/activity_service.html"><i class="fa fa-list"></i><span class="text">活动服务管理</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-signal"></i><span class="text">需求</span> <span class="fa fa-angle-down pull-right"></span></a>
+							<ul class="nav sub">
+								<li><a href="../System_Demand/demand_table_input.html"><i class="fa fa-table"></i><span class="text">发布需求调查表</span></a></li>
+								<li><a href="../System_Demand/demand_table_list.html"><i class="fa fa-list"></i><span class="text">调查表管理</span></a></li>
+								<li><a href="../System_Demand/demand_directory.html"><i class="fa fa-list"></i><span class="text">需求目录管理</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-file-text"></i><span class="text">招标</span> <span class="fa fa-angle-down pull-right"></span></a>
+							<ul class="nav sub">
+								<li><a href="publish_tender_plan.html"><i class="fa fa-pencil"></i><span class="text">发布招标计划</span></a></li>
+								<!--<li><a href="/System_TenderPlan/goverment_check_evalution.html"><i class="fa fa-table"></i><span class="text">查看招标计划</span></a></li>-->
+								<li><a href="set_pass_company.html"><i class="fa fa-table"></i><span class="text">确定竞标企业</span></a></li>
+								<li><a href="set_win_company.html"><i class="fa fa-table"></i><span class="text">确定中标企业</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-file-text"></i><span class="text">评价报告</span> <span class="fa fa-angle-down pull-right"></span></a>
+							<ul class="nav sub">
+								<li><a href="../System_Assess/check_assess_report.html"><i class="fa fa-pencil"></i><span class="text">查看评价报告</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-font"></i><span class="text">认证</span> <span class="fa fa-angle-down pull-right"></span></a>
+							<ul class="nav sub">
+								<li><a href="#"><i class="fa fa-th"></i><span class="text">企业认证</span></a></li>
+								<li><a href="#"><i class="fa fa-th"></i><span class="text">媒体认证</span></a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="sidebar-footer">
+				<div class="sidebar-brand">
+					政府后台
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end:    左侧导航栏   -->
+<!-- start: Content -->
+<div class="main ">
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h3 class="page-header"><i class="fa fa-indent"></i>发布招标计划</h3>
+			<ol class="breadcrumb">
+				<li><i class="fa fa-home"></i><a href="Home.html">主页</a></li>
+				<li><i class="fa fa-indent"></i>发布招标计划</li>
+			</ol>
+		</div>
+	</div>
+	<div class="row" style="width: 900px;" >
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2><i class="fa fa-indent red"></i><strong>发布招标信息</strong></h2>
+				</div>
+				<div class="panel-body">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label class="col-md-2 control-label">收件对象</label>
+							<div class="col-md-6">
+								<p class="form-control-static">全体公司组织</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label" for="tenderPlanName">招标名</label>
+							<div class="col-md-6">
+								<input type="text" id="tenderPlanName" name="tenderPlanName" class="form-control" placeholder="名称">
+								<span class="help-block">本次招标的标题名</span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label" for="startTime"> 开始时间</label>
+							<div class="col-md-6">
+								<input type="date"  id="startTime" name="startTime" class="form-control" placeholder="开始时间">
+								<span class="help-block">本次招标的开始时间</span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label" for="endTime">结束时间</label>
+							<div class="col-md-6">
+								<input type="date"  id="endTime" name="endTime" class="form-control" placeholder="结束时间">
+								<span class="help-block">本次招标的结束时间</span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label" for="voteEndTime">投票结束时间</label>
+							<div class="col-md-6">
+								<input type="date"  id="voteEndTime" name="voteEndTime" class="form-control" placeholder="项目投票结束时间">
+								<span class="help-block">残疾人用户在公司参加竞标之后进行投票的时间</span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label" >具体实施文件</label>
+							<div class="col-md-6">
+								<input type="file" id="file_input" name="file_input">
+							</div>
+						</div>										
+						<div class="modal-footer" >                       
+                        	<button id="publish" type="button" class="btn btn-primary" style="margin-right: 8%;" onclick="addTenderPlan()">发布</button>     
+                        </div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div><!--/row-->
+</div><!--/container-->
+<div class="modal fade" id="myModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Modal title</h4>
+			</div>
+			<div class="modal-body">
+				<p>Here settings can be configured...</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="clearfix"></div>
+
+
+<!-- start: JavaScript-->
+<!--[if !IE]>-->
+
+<script src="../asset/js/jquery-2.1.1.min.js"></script>
+
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
+</script>
+
+<!--<![endif]-->
+
+<!--[if IE]>
+
+<script type="text/javascript">
+	window.jQuery || document.write("<script src='assets/js/jquery-1.11.1.min.js'>"+"<"+"/script>");
+</script>
+
+<![endif]-->
+<script src="../asset/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../asset/js/bootstrap.min.js"></script>
+
+
+<!-- page scripts -->
+<script src="../asset/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+<script src="../asset/plugins/chosen/js/chosen.jquery.min.js"></script>
+<script src="../asset/plugins/autosize/jquery.autosize.min.js"></script>
+<script src="../asset/plugins/placeholder/jquery.placeholder.min.js"></script>
+<script src="../asset/plugins/maskedinput/jquery.maskedinput.min.js"></script>
+<script src="../asset/plugins/moment/moment.min.js"></script>
+<!-- theme scripts -->
+<script src="../asset/js/SmoothScroll.js"></script>
+<script src="../asset/js/jquery.mmenu.min.js"></script>
+<script src="../asset/js/core.min.js"></script>
+<script>
+    //验证添加器材
+    function addTenderPlan(){
+    	var formData = new FormData();
+        var tenderPlanName = document.getElementById("tenderPlanName").value;
+        var tenderPlanStartTime = document.getElementById("startTime").value;
+        var tenderPlanEndTime = document.getElementById("endTime").value;
+        var voteEndTime = document.getElementById("voteEndTime").value;
+        var file=document.getElementById("file_input").files[0];
+        console.log(tenderPlanName+" "+tenderPlanStartTime+" "+tenderPlanEndTime+" "+ voteEndTime+" " +file);
+        if(tenderPlanName == "" || tenderPlanStartTime == "" || tenderPlanEndTime == "" ||voteEndTime == ""|| file == null)
+        {
+            alert("请填写完整信息");
+            return false;
+        }
+		if(checktime()){
+			formData.append('TenderPlanName',tenderPlanName);
+			formData.append('TenderPlanStartTime',tenderPlanStartTime);
+			formData.append('TenderPlanEndTime',tenderPlanEndTime);
+			formData.append('TenderPlanFile',file);
+			formData.append('VoteEndTime',voteEndTime);
+			console.log("进入提交发布！");
+			$.ajax({
+				url: '../TenderCompany/AddTenderPlan',
+                type: 'POST',
+                cache: false,
+                data: formData,//向后台提交的参数
+                processData: false,
+                contentType: false,
+			}).done(function(res){
+                alert("添加招标计划成功！");
+                alert("跳转到别的页面");
+            }).fail(function(res){
+                alert("添加失败!请稍后再试！");
+            });
+		}
+		    
+    };
+    //判断时间是否正确
+    function checktime() {
+        var btime = document.getElementById("startTime").value;
+        var etime = document.getElementById("endTime").value;
+        var vetime = document.getElementById("voteEndTime").value;
+        if (Date.parse(btime.replace(/-/g, '/ ')) < Date.parse(getNowDate().replace(/-/g, '/ '))) {
+            alert("竞标开始时间小于现实时间");
+            return false;
+        }
+        if (Date.parse(etime.replace(/-/g, '/ ')) < Date.parse(getNowDate().replace(/-/g, '/ '))) {
+            alert("竞标结束时间小于现实时间");
+            return false;
+        }
+        if (Date.parse(vetime.replace(/-/g, '/ ')) < Date.parse(getNowDate().replace(/-/g, '/ '))) {
+            alert("项目投票结束时间小于现实时间");
+            return false;
+        }
+        if (Date.parse(btime.replace(/-/g, '/ ')) >= Date.parse(etime.replace(/-/g, '/ '))) {
+            alert("竞标开始时间大于竞标结束时间");
+            return false;
+        }
+        if (Date.parse(etime.replace(/-/g, '/ ')) >= Date.parse(vetime.replace(/-/g, '/ '))) {
+            alert("竞标开始时间大于项目投票结束时间");
+            return false;
+        }    
+        return true;
+    }
+    function getNowDate()
+    {
+        var today = new Date();
+        var y = today.getFullYear();
+        var M = today.getMonth()+1;
+        var d = today.getDate();
+        if(M>=1 && M<=9)
+            M = "0"+M;
+        if(d>=0 && d<=9)
+            d = "0"+d;
+        var current = y+"-"+M+"-"+d;
+        return current;
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.fjnu.cjrserver.dao.AssessServiceMapper">
+    <!-- 插入残疾人服务评价信息到DisabledAssessServer表 -->
+    <insert id="insertDisabledAssessServer" parameterType="com.edu.fjnu.cjrserver.model.DisabledAssessServer">
+        INSERT INTO disabled_assess_server(Server_ID,Server_Table_Name,Disabled_ID,Grade) VALUES (#{serverID},#{serverTableName},#{disabledUser.disabilityId},#{grade})
+    </insert>
+    <!-- 插入残疾人需求表评价信息到DisabledAssessDemand表 -->
+    <insert id="insertDisabledAssessDemand" parameterType="com.edu.fjnu.cjrserver.model.DisabledAssessDemand">
+        INSERT INTO disabled_assess_demand(Demand_ID,Disabled_ID,Grade) VALUES (#{demandTable.demandTableID},#{disabledUser.disabilityId},#{grade})
+    </insert>
+    <!-- 插入残疾人服务招标评价信息到DisabledAssessTender表 -->
+    <insert id="insertDisabledAssessTender" parameterType="com.edu.fjnu.cjrserver.model.DisabledAssessTender">
+        INSERT INTO disabled_assess_tender(Tender_ID,Disabled_ID,Grade) VALUES (#{tenderID},#{disabledUser.disabilityId},#{grade})
+    </insert>
+
+    <!-- 更新服务的评价等级和评价数量 -->
+    <update id="updateActivity_service">
+        UPDATE activity_service SET AssessGrade = ((AssessGrade*AssessQty) + #{1})/(AssessQty+1),AssessQty=AssessQty+1 WHERE Activity_ID = #{0}
+    </update>
+    <update id="updateArtificial_service">
+        UPDATE artificial_service SET AssessGrade = ((AssessGrade*AssessQty) + #{1})/(AssessQty+1),AssessQty=AssessQty+1 WHERE Artificial_ID = #{0}
+    </update>
+    <update id="updateEquipment_content">
+        UPDATE equipment_content SET AssessGrade = ((AssessGrade*AssessQty) + #{1})/(AssessQty+1),AssessQty=AssessQty+1 WHERE Demand_ID = #{0}
+    </update>
+    <update id="updateField_service">
+        UPDATE field_service SET AssessGrade = ((AssessGrade*AssessQty) + #{1})/(AssessQty+1),AssessQty=AssessQty+1 WHERE Field_ID = #{0}
+    </update>
+    <update id="updateSport_service">
+        UPDATE sport_service SET AssessGrade = ((AssessGrade*AssessQty) + #{1})/(AssessQty+1),AssessQty=AssessQty+1 WHERE Sport_ID = #{0}
+    </update>
+
+    <!-- 更新需求表的评价等级和数量 -->
+    <update id="updateDemand_table">
+        UPDATE demand_table SET AssessGrade = ((AssessGrade*AssessQty) + #{1})/(AssessQty+1),AssessQty=AssessQty+1 WHERE DemandTable_ID = #{0}
+    </update>
+
+    <!-- 更新招标表的评价等级和数量 -->
+    <update id="updateTender_plan">
+        UPDATE tender_plan SET AssessGrade = ((AssessGrade*AssessQty) + #{1})/(AssessQty+1),AssessQty=AssessQty+1 WHERE TenderPlan_ID = #{0}
+    </update>
+
+</mapper>

@@ -1,0 +1,37 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.fjnu.cjrserver.dao.SportServiceMapper">
+    <!--按分页查询赛事服务-->
+    <select id="findSportServiceByPage" resultType="com.edu.fjnu.cjrserver.model.Sport" >
+        select * from sport_service limit #{0},#{1};
+    </select>
+    <!--查询赛事服务数量-->
+    <select id="findTotalQty" resultType="Integer">
+        select count(Sport_ID) from sport_service;
+    </select>
+    <!--查询赛事服务信息-->
+    <select id="findSportService" resultType="com.edu.fjnu.cjrserver.model.Sport">
+        SELECT a.*,b.Company_Name FROM sport_service a  LEFT JOIN  company b  ON(a.Company_ID = b.Company_ID )
+    </select>
+<!--根据ID查询赛事服务信息-->
+    <select id="getSportServiceByID" resultType="com.edu.fjnu.cjrserver.model.Sport" parameterType="Integer">
+        select * from sport_service where Sport_ID=#{SportID}
+    </select>
+<!--删除赛事服务-->
+    <delete id="delSportService" parameterType="int">
+        delete from sport_service where Sport_ID=#{SportID}
+    </delete>
+<!--添加赛事服务信息-->
+    <insert id="addSportService" parameterType="com.edu.fjnu.cjrserver.model.Sport">
+        insert into sport_service(Sport_Type,Sport_Name,IntroductFile,Company_ID) values(#{sportType},#{sportName},#{introductFile},#{company.companyID})
+    </insert>
+<!--修改赛事服务信息-->
+    <update id="updateSportService" parameterType="com.edu.fjnu.cjrserver.model.Sport">
+        update sport_service set Sport_Type=#{sportType},Sport_Name=#{sportName},IntroductFile=#{introductFile} where Sport_ID=#{sportID}
+    </update>
+<!--根据ID查询图片路径-->
+    <select id="fineFilepathByID" parameterType="Integer" resultType="String">
+        select IntroductFile from sport_service where Sport_ID=#{SportID}
+    </select>
+</mapper>

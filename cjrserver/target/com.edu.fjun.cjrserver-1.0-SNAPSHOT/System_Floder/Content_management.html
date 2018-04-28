@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>内容管理</title>
+    <!-- Import google fonts - Heading first/ text second -->
+    <!-- <link rel='stylesheet' type='text/css' href='http://fonts.useso.com/css?family=Open+Sans:400,700|Droid+Sans:400,700' /> -->
+    <!--[if lt IE 9]>
+    <link href="http://fonts.useso.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Droid+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="../asset/ico/favicon.ico" type="image/x-icon" />
+    <!-- Css files -->
+    <link href="../asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../asset/css/jquery.mmenu.css" rel="stylesheet">
+    <link href="../asset/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../asset/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="../asset/css/style.min.css" rel="stylesheet">
+    <link href="../asset/css/add-ons.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../asset/js/html5shiv.js"></script>
+    <script src="../asset/js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<!-- start: Header -->
+<div class="navbar" role="navigation">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown visible-md visible-lg">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="user-avatar" src="../asset/img/avatar.jpg" alt="user-mail">政府后台管理员</a>
+            </li>
+            <li><a href="Home.html"><i class="fa fa-power-off"></i></a></li>
+        </ul>
+    </div>
+</div>
+<!-- end: Header -->
+<!-- start:    左侧导航栏    -->
+<div class="container-fluid content">
+    <div class="row">
+        <!-- start: Main Menu -->
+        <div class="sidebar ">
+            <div class="sidebar-collapse">
+                <div class="sidebar-header t-center">
+                    <br>
+                    <h2>政府后台</h2>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="nav nav-sidebar">
+                        <li><a href="Home.html"><i class="fa fa-laptop"></i><span class="text">主页</span></a></li>
+                        <li>
+                            <a href="#"><i class="fa fa-font"></i><span class="text">首页管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="Floder.html"><i class="fa fa-th"></i><span class="text">头部导航栏管理</span></a></li>
+                                <li><a href="Article_management.html"><i class="fa fa-th"></i><span class="text">文章管理</span></a></li>
+                                <li><a href="Content_management.html"><i class="fa fa-th"></i><span class="text">内容管理</span></a></li>
+                                <li><a href="Information.html"><i class="fa fa-th"></i><span class="text">底部导航栏管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-file-text"></i><span class="text">招标</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_TenderPlan/publish_tender_plan.html"><i class="fa fa-pencil"></i><span class="text">发布招标计划</span></a></li>
+                                <li><a href="../System_TenderPlan/tender_form.html"><i class="fa fa-table"></i><span class="text">公布招标结果</span></a></li>
+                                <li><a href="../System_TenderPlan/BidingResult.html"><i class="fa fa-table"></i><span class="text">查看招标结果</span></a></li>
+                                <li><a href="../System_TenderPlan/goverment_check_evalution.html"><i class="fa fa-table"></i><span class="text">查看服务评价</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-signal"></i><span class="text">需求</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_Demand/issue_EquipmentContent.html"><i class="fa fa-table"></i><span class="text">需求调查表</span></a></li>
+                                <li><a href="../System_Demand/demand_form.html"><i class="fa fa-list"></i><span class="text">调查表</span></a></li>
+                                <li><a href="../System_Demand/equipment_service.html"><i class="fa fa-list"></i><span class="text">器材管理</span></a></li>
+                                <li><a href="../System_Demand/field_service.html"><i class="fa fa-list"></i><span class="text">场地服务管理</span></a></li>
+                                <li><a href="../System_Demand/activity_service.html"><i class="fa fa-list"></i><span class="text">活动服务管理</span></a></li>
+                                <li><a href="../System_Demand/sport_service.html"><i class="fa fa-list"></i><span class="text">赛事服务管理</span></a></li>
+                                <li><a href="../System_Demand/artificial_service.html"><i class="fa fa-list"></i><span class="text">人工服务管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-font"></i><span class="text">认证</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_Identify/Company_Identify.html"><i class="fa fa-th"></i><span class="text">企业认证</span></a></li>
+                                <li><a href="../System_Identify/Media_Identify.html"><i class="fa fa-th"></i><span class="text">媒体认证</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <div class="sidebar-brand">
+                    政府后台
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end:    左侧导航栏   -->
+    <!-- start:  招标目录表   -->
+    <div class="main sidebar-minified">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header"><i class="fa fa-table"></i>内容管理</h3>
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="Home.html">主页</a></li>
+                    <li><i class="fa fa-table"></i>首页管理</li>
+                </ol>
+            </div>
+        </div>
+        <!--  头部导航栏目录管理  -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2><i class="fa fa-table red"></i><span class="break"></span><strong>内容管理</strong></h2>
+                        <div class="panel-actions">
+                            <a href="table.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+
+                        <div id="view1" style="display: none">
+                                <div class="tpl-block ">
+
+                                    <div class="am-g tpl-amazeui-form">
+
+                                        <div style="margin-left: 45%">
+                                            <h4 class="h4">修改条目一信息</h4>
+                                        </div>
+
+                                        <div class="am-u-sm-12 am-u-md-9" style="margin-top: 32px;padding-left: 15%">
+                                            <form action="/Content/UpdateBodyOne" method="post" enctype="multipart/form-data" class="am-form am-form-horizontal" onsubmit="return checkMdfInput();">
+                                                <div class="am-form-group" style="display: none;">
+                                                    <label for="id" class="am-u-sm-3 am-form-label">ID</label>
+                                                    <div class="am-u-sm-9">
+                                                        <textarea class="" rows="1" id="id" name="id"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="am-form-group">
+                                                    <label for="head" class="am-u-sm-3 am-form-label">标题</label>
+                                                    <div class="am-u-sm-9">
+                                                        <textarea class="" rows="1" id="head" name="head"></textarea>
+                                                    </div>
+                                                </div>
+
+                                                <div class="am-form-group">
+                                                    <label  class="am-u-sm-3 am-form-label">图片</label>
+                                                    <div class="am-u-sm-9">
+                                                        <div class="am-form-group am-form-file">
+                                                            <div class="tpl-form-file-img">
+                                                                <img id="preview" alt="">
+                                                            </div>
+                                                            <button type="button" class="am-btn am-btn-danger am-btn-sm">
+                                                                <i class="am-icon-cloud-upload"></i>添加产品图片</button>
+                                                            <input id="img" type="file" name="img" onchange="imgPreview(this)" />
+                                                            <!--<input id="doc-form-file" type="file" multiple>-->
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="am-form-group">
+                                                    <label for="body" class="am-u-sm-3 am-form-label">描述</label>
+                                                    <div class="am-u-sm-9">
+                                                        <textarea class="" rows="5" id="body" name="body" placeholder="输入描述"></textarea>
+                                                        <small>250字以内写出描述信息...</small>
+                                                    </div>
+                                                </div>
+
+                                                <div class="am-form-group">
+                                                    <div class="am-u-sm-9 am-u-sm-push-3">
+                                                        <button type="submit" type="button" class="am-btn am-btn-primary">保存</button>
+                                                        <button id="cancel" type="button" class="am-btn am-btn-primary am-btn-success">取消</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <div id="view2" style="display: none">
+                            <div class="tpl-block ">
+
+                                <div class="am-g tpl-amazeui-form">
+
+                                    <div style="margin-left: 45%">
+                                        <h4 class="h4">修改条目三信息</h4>
+                                    </div>
+
+                                    <div class="am-u-sm-12 am-u-md-9" style="margin-top: 32px;padding-left: 15%">
+                                        <form action="/Content/UpdateBodyTwo" method="post" enctype="multipart/form-data" class="am-form am-form-horizontal" onsubmit="return checkMdfInput();">
+                                            <div class="am-form-group" style="display: none;">
+                                                <label for="id2" class="am-u-sm-3 am-form-label">ID</label>
+                                                <div class="am-u-sm-9">
+                                                    <textarea class="" rows="1" id="id2" name="id2"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="am-form-group">
+                                                <label for="head2" class="am-u-sm-3 am-form-label">标题</label>
+                                                <div class="am-u-sm-9">
+                                                    <textarea class="" rows="1" id="head2" name="head2"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="am-form-group">
+                                                <label for="img2" class="am-u-sm-3 am-form-label">更多链接</label>
+                                                <div class="am-u-sm-9">
+                                                    <textarea class="" rows="1" id="img2" name="img2"></textarea>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="am-form-group">
+                                                <label for="body2" class="am-u-sm-3 am-form-label">描述</label>
+                                                <div class="am-u-sm-9">
+                                                    <textarea class="" rows="5" id="body2" name="body2" placeholder="输入描述"></textarea>
+                                                    <small>250字以内写出描述信息...</small>
+                                                </div>
+                                            </div>
+
+                                            <div class="am-form-group">
+                                                <div class="am-u-sm-9 am-u-sm-push-3">
+                                                    <button type="submit" type="button" class="am-btn am-btn-primary">保存</button>
+                                                    <button id="cancel2" type="button" class="am-btn am-btn-primary am-btn-success">取消</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                            <!-- Nav tabs -->
+                            <ul id="select" class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">条目一</a></li>
+                                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">条目二</a></li>
+                                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">条目三</a></li>
+                                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">条目四</a></li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div id="content" class="tab-content" style="margin-bottom: 32px;">
+                                <div role="tabpanel" class="tab-pane active" id="home">
+                                    <div class="row" style=" margin-top: 32px;margin-bottom: 32px;">
+                                        <div class="col-md-2"></div>
+                                        <label  class="col-md-1 am-form-label">标题：</label>
+                                        <textarea class="col-md-5" rows="1" id="title1"></textarea>
+                                        <a id="mdf1" class="btn btn-default btn-sm col-md-1 col-md-offset-1" role="button">修改</a>
+
+                                    </div>
+                                    <small>提示：双击表格修改内容</small>
+                                    <table id="eventOne"
+                                                data-toggle="table"
+                                                data-url="/Content/ShowBodyOne">
+                                        <thead>
+                                        <tr>
+                                            <th data-field="id" data-valign="middle">ID</th>
+                                            <th data-field="head" data-valign="middle">标题</th>
+                                            <th data-field="body" data-valign="middle">内容</th>
+                                            <th data-field="Table_State" data-formatter="StateFormatter" data-events="StateEvents">图片</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="profile">
+                                    <div class="row" style=" margin-top: 32px;margin-bottom: 32px;">
+                                        <div class="col-md-2"></div>
+                                        <label  class="col-md-1 am-form-label">标题：</label>
+                                        <textarea class="col-md-5" rows="1" id="title2"></textarea>
+                                        <a id="mdf2" class="btn btn-default btn-sm col-md-1 col-md-offset-1" role="button">修改</a>
+                                    </div>
+                                    <table id="eventsTable"
+                                           data-toggle="table"
+                                           data-url="/Content/EquipmentShow_showall">
+                                        <thead>
+                                        <tr>
+                                            <th data-field="demand_State" data-valign="middle" data-formatter="reFormatter" data-events="reEvents" ></th>
+                                            <th data-field="ID" data-valign="middle" data-formatter="IDFormatter" data-events="IDEvents">行号</th>
+                                            <th data-field="demand_ID" data-valign="middle" data-visible="false" >器材ID</th>
+                                            <th data-field="demand_Name" data-valign="middle" >器材名称</th>
+                                            <th data-field="demand_Category" data-valign="middle" >类别</th>
+                                            <th data-field="demand_Remarks" data-valign="middle">描述</th>
+                                            <th data-field="demandTable_State" data-valign="middle" data-formatter="imgFormatter" data-events="imgEvents" >图片</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="messages">
+                                    <div class="row" style=" margin-top: 32px;margin-bottom: 32px;">
+                                        <div class="col-md-2"></div>
+                                        <label  class="col-md-1 am-form-label">标题：</label>
+                                        <textarea class="col-md-5" rows="1" id="title3"></textarea>
+                                        <a id="mdf3" class="btn btn-default btn-sm col-md-1 col-md-offset-1" role="button">修改</a>
+                                    </div>
+                                    <div class="row" style=" margin-top: 32px;margin-bottom: 32px;">
+                                        <div class="col-md-2"></div>
+                                        <label  class="col-md-1 am-form-label">内容：</label>
+                                        <textarea class="col-md-5" rows="1" id="title5"></textarea>
+                                        <a id="mdf5" class="btn btn-default btn-sm col-md-1 col-md-offset-1" role="button">修改</a>
+                                    </div>
+                                    <table id="Companyshow"
+                                           data-toggle="table"
+                                           data-url="/Content/FindCompanyShow">
+                                        <thead>
+                                        <tr>
+                                            <th data-width="60px" data-field="State" data-valign="middle" data-formatter="MFormatter" data-events="MEvents" ></th>
+                                            <th data-field="ID" data-align="center" data-valign="middle" data-formatter="IDFormatter" data-events="IDEvents">行号</th>
+                                            <th data-field="id" data-visible="false">ID</th>
+                                            <th data-field="name" data-align="center"data-valign="middle">名称</th>
+                                            <th data-field="gray" data-formatter="iFormatter" data-events="iEvents" data-align="center">商标·暗</th>
+                                            <th data-field="light" data-formatter="IFormatter" data-events="IEvents" data-align="center">商标·亮</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="settings">
+                                    <div class="row" style=" margin-top: 32px;margin-bottom: 32px;">
+                                        <div class="col-md-2"></div>
+                                        <label  class="col-md-1 am-form-label">标题：</label>
+                                        <textarea class="col-md-5" rows="1" id="title4"></textarea>
+                                        <a id="mdf4" class="btn btn-default btn-sm col-md-1 col-md-offset-1" role="button">修改</a>
+                                    </div>
+                                    <small>提示：双击表格修改内容</small>
+                                    <table id="eventTwo"
+                                           data-toggle="table"
+                                           data-url="/Content/ShowBodyTwo">
+                                        <thead>
+                                        <tr>
+                                            <th data-field="id" data-valign="middle">ID</th>
+                                            <th data-field="head" data-valign="middle">标题</th>
+                                            <th data-field="body" data-valign="middle">内容</th>
+                                            <th data-field="img" data-valign="middle">更多链接</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="eqModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">器材表</h4>
+            </div>
+            <div class="modal-body">
+                <table id="eqTable"
+                       data-toggle="table"
+                       data-url="/Demand/Equipment_Content_showAll"
+                       data-pagination="true"
+                       data-search="true"
+                       data-show-refresh="true"
+                       data-show-toggle="true"
+                       data-striped="true">
+                    <thead>
+                    <tr>
+                        <th data-field="State" data-valign="middle" data-formatter="addFormatter" data-events="addEvents" ></th>
+                        <th data-field="ID" data-formatter="IDFormatter" data-events="IDEvents">行号</th>
+                        <th data-field="demand_ID" data-visible="false" >器材ID</th>
+                        <th data-field="demand_Name" >器材名称</th>
+                        <th data-field="demand_Category" >类别</th>
+                        <th data-field="demand_Remarks">描述</th>
+                        <th data-field="demandTable_State" data-formatter="imgFormatter" data-events="imgEvents" >图片</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!-- start: JavaScript-->
+<!--[if !IE]>-->
+<script src="../asset/js/jquery-2.1.1.min.js"></script>
+<!--<![endif]-->
+<!--[if IE]>
+<script src="../asset/js/jquery-2.1.1.min.js"></script>
+
+<![endif]-->
+<!--[if !IE]>-->
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
+</script>
+<!--<![endif]-->
+<!--[if IE]>
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='assets/js/jquery-1.11.1.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+<script src="../asset/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../asset/js/bootstrap.min.js"></script>
+<!-- page scripts -->
+<script src="../asset/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+<script src="../asset/plugins/datatables/js/jquery.dataTables.min.js"></script>
+<script src="../asset/plugins/datatables/js/dataTables.bootstrap.min.js"></script>
+<!-- theme scripts -->
+<script src="../asset/js/SmoothScroll.js"></script>
+<script src="../asset/js/jquery.mmenu.min.js"></script>
+<script src="../asset/js/core.min.js"></script>
+<!-- end: JavaScript-->
+<script src="../asset/js/jquery-2.1.1.min.js"></script>
+<script src="../asset/js/avalon.js"></script>
+<!-- Latest compiled and minified CSS -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css"> -->
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery-3.2.1.min.js"></script>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/amazeui.min.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../js/bootstrap-table.js"></script>
+<script src="../js/bootstrap-table-zh-CN.min.js"></script>
+<script>
+    var ID;
+    function imgPreview(fileDom){
+        //判断是否支持FileReader
+        if (window.FileReader) {
+            var reader = new FileReader();
+        } else {
+            alert("您的设备不支持图片预览功能，如需该功能请升级您的设备！");
+        }
+
+        //获取文件
+        var file = fileDom.files[0];
+        var imageType = /^image\//;
+        //是否是图片
+        if (!imageType.test(file.type)) {
+            alert("请选择图片！");
+            return;
+        }
+        //读取完成
+        reader.onload = function(e) {
+            //获取图片dom
+            var img = document.getElementById("preview");
+            //图片路径设置为读取的图片
+            img.src = e.target.result;
+            Image=img.src;
+        };
+        reader.readAsDataURL(file);
+    }
+    function MFormatter(value, row, index) {
+        return [
+            '<a class="like" href="javascript:void(0)" title="Like">',
+            '<i class="glyphicon glyphicon-plus"></i>&nbsp;&nbsp;&nbsp;',
+            '</a>',
+            '<a class="edit" href="javascript:void(0)" title="Edit">',
+            '<i class="glyphicon glyphicon-minus"></i>',
+            '</a>'
+        ].join('');
+    }
+    window.MEvents = {
+        'click .like': function (e, value, row, index) {
+            alert(1);
+        },
+        'click .edit': function (e, value, row, index) {
+            $.ajax({
+                type: "POST",
+                url:"/Content/DeleteCompanyShow",
+                success: function(data){
+                    $('#Companyshow').bootstrapTable('refresh');
+                }
+            });
+        }
+    };
+    function reFormatter(value, row, index) {
+        return [
+            '<a class="like" href="javascript:void(0)" title="Like"  data-toggle="modal" data-target="#eqModal">',
+            '<i class="glyphicon glyphicon-refresh"></i>',
+            '</a>'
+        ].join('');
+    }
+    window.reEvents = {
+        'click .like': function (e, value, row, index) {
+            ID=row['demand_ID'];
+        }
+    };
+    function addFormatter(value, row, index) {
+        return [
+            '<a class="like" href="javascript:void(0)" title="Like" data-dismiss="modal">',
+            '<i class="glyphicon glyphicon-plus"></i>',
+            '</a>'
+        ].join('');
+    }
+    window.addEvents = {
+        'click .like': function (e, value, row, index) {
+            $.ajax({
+                type: "POST",
+                url:"/Content/EquipmentShow_repalce?id1=" + ID + "&id2=" + row['demand_ID'] ,
+                success: function(data){
+                    $('#eventsTable').bootstrapTable('refresh');
+                }
+            });
+        }
+    };
+    function IDFormatter(value, row, index) {
+        return index+1;
+    };
+    function iFormatter(value, row, index) {
+        if(row['gray']!==null)
+            src='../' + row['gray'];
+        return '<img src="' + src + '" style="width: 32px;height: 32px;"/>';
+    };
+    function IFormatter(value, row, index) {
+        if(row['light']!==null)
+            src='../' + row['light'];
+        return '<img src="' + src + '" style="width: 32px;height: 32px;"/>';
+    };
+    function imgFormatter(value, row, index) {
+        if(row['image']!==null)
+            src=row['image'];
+        return '<img src="' + src + '" style="width: 32px;height: 32px;"/>';
+    };
+    function StateFormatter(value, row, index) {
+        if(row['img']!==null)
+            src=row['img'];
+        return '<img src="../' + src + '" style="width: 100px;height: 100px;"/>';
+    };
+    document.body.onload=function () {
+        //条目列表
+        $.ajax({
+            type: "POST",
+            url:"/Content/ShowTitle",
+            success: function(data){
+                var title1=document.getElementById("title1");
+                title1.innerHTML=data[0].title;
+                var title2=document.getElementById("title2");
+                title2.innerHTML=data[1].title;
+                var title3=document.getElementById("title3");
+                title3.innerHTML=data[4].title;
+                var title5=document.getElementById("title5");
+                title5.innerHTML=data[2].title;
+                var title4=document.getElementById("title4");
+                title4.innerHTML=data[3].title;
+            }
+        });
+
+    };
+
+    $('#cancel').click(function () {
+        $('#view1').hide();
+        $('#select').show();
+        $('#content').show();
+    });
+
+    $('#cancel2').click(function () {
+        $('#view2').hide();
+        $('#select').show();
+        $('#content').show();
+    });
+    $('#mdf1').click(function () {
+       var title=document.getElementById("title1") ;
+       var tt=title.value;
+        $.ajax({
+            type: "POST",
+            url:"/Content/UpdateTitle?id=1&title=" + tt,
+            success: function(data){
+                alert("条目一标题修改成功！");
+            }
+        });
+    });
+    $('#mdf2').click(function () {
+        var title=document.getElementById("title2") ;
+        var tt=title.value;
+        $.ajax({
+            type: "POST",
+            url:"/Content/UpdateTitle?id=2&title=" + tt,
+            success: function(data){
+                alert("条目二标题修改成功！");
+            }
+        });
+    });
+    $('#mdf3').click(function () {
+        var title=document.getElementById("title3") ;
+        var tt=title.value;
+        $.ajax({
+            type: "POST",
+            url:"/Content/UpdateTitle?id=5&title=" + tt,
+            success: function(data){
+                alert("条目三标题修改成功！");
+            }
+        });
+    });
+    $('#mdf4').click(function () {
+        var title=document.getElementById("title4") ;
+        var tt=title.value;
+        $.ajax({
+            type: "POST",
+            url:"/Content/UpdateTitle?id=4&title=" + tt,
+            success: function(data){
+                alert("条目四标题修改成功！");
+            }
+        });
+    });
+    $('#mdf5').click(function () {
+        var title=document.getElementById("title5") ;
+        var tt=title.value;
+        $.ajax({
+            type: "POST",
+            url:"/Content/UpdateTitle?id=3&title=" + tt,
+            success: function(data){
+                alert("条目三小标题修改成功！");
+            }
+        });
+    });
+</script>
+<script>
+    $('#eventOne').bootstrapTable({
+        onDblClickRow:function (row,tr) {
+            $('#view1').show();
+            $('#select').hide();
+            $('#content').hide();
+            var id=document.getElementById("id");
+            id.innerHTML=row['id'];
+            var head=document.getElementById("head");
+            head.innerHTML=row['head'];
+            var img=document.getElementById("preview");
+            img.src="../"+row['img'];
+            var body=document.getElementById("body");
+            body.innerHTML=row['body'];
+        }
+    });
+    $('#eventTwo').bootstrapTable({
+        onDblClickRow:function (row,tr) {
+            $('#view2').show();
+            $('#select').hide();
+            $('#content').hide();
+            var id2=document.getElementById("id2");
+            id2.innerHTML=row['id'];
+            var head2=document.getElementById("head2");
+            head2.innerHTML=row['head'];
+            var img2=document.getElementById("img2");
+            img2.innerHTML=row['img'];
+            var body2=document.getElementById("body2");
+            body2.innerHTML=row['body'];
+        }
+    });
+</script>
+
+</body>
+</html>

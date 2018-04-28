@@ -1,0 +1,12 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.fjnu.cjrserver.dao.DemandNoticeMapper">
+    <!--查询通知信息服务信息，只包含残疾人用户的调查表填写通知-->
+    <!-- 1:需求调查表 2:需求目录 -->
+    <!-- 朱仲策 -->
+    <select id="findNoticeForDisable" resultType="com.edu.fjnu.cjrserver.model.Notice">
+        SELECT * FROM notice where notice_type = 1
+    </select>
+
+</mapper>

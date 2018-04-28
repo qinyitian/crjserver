@@ -1,0 +1,408 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>投选投标公司</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href=" assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href=" assets/css/admin.css">
+    <link rel="stylesheet" href=" assets/css/app.css">
+    <link rel="stylesheet" href=" css/my_style.css">
+    <link href=" assets/css/bootstrap.css" rel="stylesheet">
+    <link href=" assets/css/bootstrap.min.css" rel="stylesheet">
+    <script src=" assets/js/echarts.min.js"></script>
+    <script src=" assets/js/Disabled_index.js"></script>
+    <link href=" assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href=" assets/css/jquery.mmenu.css" rel="stylesheet">
+    <link href=" assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href=" assets/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href=" assets/css/style.min.css" rel="stylesheet">
+    <link href=" assets/css/add-ons.min.css" rel="stylesheet">
+</head>
+
+<body data-type="index">
+
+    <header class="am-topbar am-topbar-inverse admin-header">
+        <div class="am-topbar-brand">
+            <a href="javascript:;" class="tpl-logo">
+                <img src="assets/img/logo.png" style="width:160px; height:50px" alt="">
+            </a>
+        </div>
+        <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+        </div>
+
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+        <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+            <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
+               
+                <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen" class="tpl-header-list-link"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+
+                <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                    <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                        <span class="tpl-header-list-user-nick" id="user_name" data-number="" data-style="" data-userid="">吴祖根</span><span class="tpl-header-list-user-ico"> <img src="assets/img/user02.png" style="width:45px;"></span>
+                    </a>
+                    <ul class="am-dropdown-content">
+                        <li><a href="disabled_information_change.html"><span class="am-icon-bell-o"></span> 资料</a></li>               
+                        <li><a href="../System_management/Login.html"><span class="am-icon-power-off"></span> 退出</a></li>
+                    </ul>
+                </li>
+                <li><a href="###" class="tpl-header-list-link"><span class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
+            </ul>
+        </div>
+    </header>
+
+
+
+
+
+
+
+    <div class="tpl-page-container tpl-page-header-fixed">
+
+
+        <div class="tpl-left-nav tpl-left-nav-hover">
+            <div class="tpl-left-nav-title am-lg-text-left">
+                个 人 列 表
+            </div>
+            <div class="tpl-left-nav-list">
+                <ul class="tpl-left-nav-menu">
+                    <li class="tpl-left-nav-item">
+                        <a href="disabled_index.html" class="nav-link active">
+                            <i class="am-icon-home"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    
+                    <li class="tpl-left-nav-item">
+                        <a href="disabled_information_change.html" class="nav-link tpl-left-nav-link-list">
+                            <i class="	glyphicon glyphicon-user"></i>
+                            <span>个人信息修改</span>
+
+                        </a>
+                    </li>
+                    
+                    <li class="tpl-left-nav-item">
+                        <a href="disabled_remind.html" class="nav-link tpl-left-nav-link-list">
+                            <i class="glyphicon glyphicon-thumbs-up"></i>
+                            <span>与我相关</span>
+                            <i class="tpl-left-nav-content tpl-badge-danger"id="remind_number">0</i>
+                        </a>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="	glyphicon glyphicon-flag"></i>
+                            <span>我的权利</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <a href="Demand_catalog.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>提出我的需求</span>
+                                    <i class="tpl-left-nav-content-ico am-fr am-margin-right"></i><!--am-icon-star -->
+                                </a>
+                                 <a href="disabled_checking.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>查看需求目录</span>
+                                    <i class="tpl-left-nav-content-ico am-fr am-margin-right"></i><!--am-icon-star -->
+                                </a>
+                                <a href="disabled_voting.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>我要投票</span>
+                                </a>
+                                 <a href="disabled_comment.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>服务评价</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-wpforms"></i>
+                            <span>新闻发布</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu" >
+                            <li>
+                                <a href="tabloid.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>图片新闻</span>
+                                    <i class="tpl-left-nav-content-ico am-fr am-margin-right"></i>
+                                </a>
+
+                                <a href="#">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>政策浏览</span>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                            
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="tpl-content-wrapper">
+            <div class="tpl-content-page-title">
+                个人中心
+            </div>
+            <ol class="am-breadcrumb">
+                <li><a href="#" class="am-icon-home">首页</a></li>
+                <li><a href="Disabled_index.html">个人中心</a></li>
+                <li class="am-active">投选投标公司</li>
+            </ol>
+            
+            
+            <div id="body">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2><i class="fa fa-table red"></i><span class="break"></span><strong></strong></h2>
+                        </div>
+                        <table id="tenderPlanTable">
+                                                    
+                        </table>
+                        <!--<button id="test">test</button>-->
+                    </div>
+                </div><!--/col-->
+            </div>
+            
+        </div>
+        
+        <div class="modal fade" id="TenderPlanModal">
+            <div class="modal-dialog" style="top: 46px;width:900px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">投标公司</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table id="TenderCompanyTable">
+                            
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="votePassCompany" onclick="votePassCompany()">投选投标公司</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+   
+    <script src=" assets/js/jquery.min.js"></script>
+    <script src=" assets/js/amazeui.min.js"></script>
+    <script src=" assets/js/iscroll.js"></script>
+    <script src=" assets/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+    <script src=" assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src=" assets/plugins/datatables/js/dataTables.bootstrap.min.js"></script>
+
+    <!-- theme scripts -->
+    <script src=" assets/js/SmoothScroll.js"></script>
+    <script src=" assets/js/jquery.mmenu.min.js"></script>
+    <script src=" assets/js/core.min.js"></script>
+    <!-- end: JavaScript-->
+    <script src=" assets/js/jquery-2.1.1.min.js"></script>
+    <script src=" assets/js/avalon.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css"> -->
+<!--    <script src="../js/bootstrap.min.js"></script>-->
+    <script src=" assets/js/jquery-3.2.1.min.js"></script>
+    <script src=" assets/js/bootstrap-table.js"></script>
+    <script src=" assets/js/bootstrap-table-zh-CN.min.js"></script>
+    <script src=" assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src=" assets/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript">
+        //
+    $('#test').click(function(){
+        $('#TenderPlanModal').modal('show');
+    });
+    //获取招标计划ID
+    var TenderPlanID;
+    //
+    $('#tenderPlanTable').bootstrapTable({
+        url:"/TenderCompany/ShowTenderPlan",
+        //请求方法
+        method: 'get',
+        //dataType: "json",
+        //是否显示行间隔色
+        striped: true,
+        //是否显示 切换试图（table/card）按钮
+        showToggle: "true",
+        //显示搜索框 
+        search: "true", 
+        //显示刷新
+        showRefresh : "true",
+        //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）     
+        cache: false,    
+        //是否显示分页（*）  
+        pagination: true,   
+         //是否启用排序  
+        sortable: true,    
+         //排序方式 
+        sortOrder: "asc",
+        //如果设置了分页，首页页码     
+        pageNumber: 1,   
+        //每页的记录行数（*）   
+        pageSize: 10,  
+        //可供选择的每页的行数（*）    
+        pageList: [10, 25, 50, 100],
+        //客户端处理分页    
+        sidePagination: "client",
+        //指定主键列 idField: "fieldID",
+        columns: [
+            {
+                field: 'tenderPlanID',//域值
+                title: '招标ID',//标题
+                visible: false,//false表示不显示
+            },{
+                field: 'tenderPlanName',//域值
+                title: '招标名',//标题
+                visible: true,//false表示不显示
+            },{
+                field: 'tenderPlanStartTime',//域值
+                title: '招标开始时间',//标题
+                visible: true,//false表示不显示
+            },{
+                field: 'tenderPlanEndTime',//域值
+                title: '招标结束时间',//标题
+                visible: true,//false表示不显示
+            },{
+                field: 'tenderPlanFilePath',//域值
+                title: '招标文件路径',//标题
+                visible: false,//false表示不显示
+            },{
+                field: 'voteEndTime',//域值
+                title: '项目投票结束时间',//标题
+                visible: true,//false表示不显示
+            },{
+                title: '操作',//标题
+                visible: true,//false表示不显示
+                formatter:ActionFormatter,
+                events:window.ActionEvent = {
+                    'click .check':function (e,value,row,index) {
+                         TenderPlanID = row['tenderPlanID'];
+                         $('#TenderPlanModal').modal('show');
+                         loadCompany(TenderPlanID);   
+                        }
+                    }
+                    
+            }
+        ]
+    });
+    //
+    function ActionFormatter(value, row, index){
+        return [
+                '<a class="check" title="Check" style="display: inline;font-size: 12px;"> 查看投标公司 </a>'
+        ].join('');
+    };
+    //
+    function loadCompany(id){
+        $('#TenderCompanyTable').bootstrapTable({
+            url:"/TenderCompany/getCompanyInfoInTender?TenderPlanID="+id,
+            //请求方法
+            method: 'get',
+            //dataType: "json",
+            //是否显示行间隔色
+            striped: true,
+            //是否显示 切换试图（table/card）按钮
+            showToggle: "true",
+            //显示搜索框 
+            search: "true", 
+            //显示刷新
+            showRefresh : "true",
+            //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）     
+            cache: false,    
+            //是否显示分页（*）  
+            pagination: true,   
+             //是否启用排序  
+            sortable: true,    
+             //排序方式 
+            sortOrder: "asc",
+            //如果设置了分页，首页页码     
+            pageNumber: 1,   
+            //每页的记录行数（*）   
+            pageSize: 10,  
+            //可供选择的每页的行数（*）    
+            pageList: [10, 25, 50, 100],
+            //客户端处理分页    
+            sidePagination: "client",
+            //指定主键列 idField: "fieldID",
+            columns: [
+                {
+                    checkbox: true, 
+                },
+                {
+                    field: 'companyID',//域值
+                    title: '企业ID',//标题
+                    visible: false,//false表示不显示
+                },{
+                    field: 'companyName',//域值
+                    title: '企业名称',//标题
+                    visible: true,//false表示不显示
+                },{
+                    field: 'companyAddress',//域值
+                    title: '地址',//标题
+                    visible: true,//false表示不显示
+                },{
+                    field: 'companyEmail',//域值
+                    title: '邮箱',//标题
+                    visible: true,//false表示不显示
+                },{
+                    field: 'companyBusinessScope',//域值
+                    title: '业务范围',//标题
+                    visible: true,//false表示不显示
+                },{
+                    field: 'businessLicense',//域值
+                    title: '营业执照',//标题
+                    visible: false,//false表示不显示
+                }
+            ]
+        });
+    };    
+    //投选投标公司
+    function votePassCompany(){
+        console.log("进行投选投标公司！");
+        alert("投票成功！");
+        $("#TenderPlanModal").modal('hide');
+        // var formData = new FormData();       
+        // var companyList =$.map( $('#TenderCompanyTable').bootstrapTable('getSelections'), function (row) {
+        //     return row.companyID;
+        // });
+        // formData.append('TenderPlanID',TenderPlanID);
+        // formData.append('CheckCompanyList',companyList);
+        // console.log("提交竞标公司！");
+        // $.ajax({
+        //     url: '/TenderCompany/setPassedCompany',
+        //     type: 'POST',
+        //     cache: false,
+        //     data: formData,//向后台提交的参数
+        //     processData: false,
+        //     contentType: false,
+        // }).done(function(data){
+        //     alert("提交成功！");
+        //     $("#TenderPlanModal").modal('hide');
+        // }).fail(function(msg){
+        //      alert(msg);
+        // }); 
+    }
+    </script>
+</body>
+
+</html>
+<!doctype html>

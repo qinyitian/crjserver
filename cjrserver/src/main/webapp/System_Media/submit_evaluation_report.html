@@ -1,0 +1,652 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>提交评价报告</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/js/echarts.min.js"></script>
+    <link rel="stylesheet" href="css/my_style.css">
+    <script src="assets/js/echarts.min.js"></script>
+    <link href="assets/css/jquery.mmenu.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="assets/css/style.min.css" rel="stylesheet">
+    <link href="assets/css/add-ons.min.css" rel="stylesheet">
+    <link href="../System_Disable/assets/css/star.css" rel="stylesheet" type="text/css">
+    
+</head>
+
+<body data-type="index" onload="load();">
+
+
+<header class="am-topbar am-topbar-inverse admin-header" style="z-index: 1;">
+    <div class="am-topbar-brand">
+        <a href="javascript:;" class="tpl-logo">
+            <img src="assets/img/logo.png" style="width:160px; height:50px" alt="">
+        </a>
+    </div>
+    <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+    </div>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+        <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
+            
+            <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen" class="tpl-header-list-link"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+
+            <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                    <span class="tpl-header-list-user-nick" id="user_name"data-number=""data-style=""data-userid=""data-username="">吴祖根</span><span class="tpl-header-list-user-ico"> <img src="assets/img/user02.png" style="width:45px;"></span>
+                </a>
+                <ul class="am-dropdown-content">
+                        <li><a href="company_information_change.html"><span class="am-icon-bell-o"></span> 资料</a></li>               
+                        <li><a href="../System_management/Login.html"><span class="am-icon-power-off"></span> 退出</a></li>
+                </ul>
+            </li>
+            <li><a href="###" class="tpl-header-list-link"><span class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
+        </ul>
+    </div>
+</header>
+
+
+
+
+
+
+
+<div class="tpl-page-container tpl-page-header-fixed">
+
+
+    <div class="tpl-left-nav tpl-left-nav-hover">
+        <div class="tpl-left-nav-title am-lg-text-left">
+            个 人 列 表
+        </div>
+        <div class="tpl-left-nav-list">
+            <ul class="tpl-left-nav-menu">
+                <li class="tpl-left-nav-item">
+                    <a href="../index.html?type=C" class="nav-link active">
+                        <i class="am-icon-home"></i>
+                        <span>首页</span>
+                    </a>
+                </li>
+                <li class="tpl-left-nav-item">
+                    <a href="company_information_change.html" class="nav-link tpl-left-nav-link-list">
+                        <i class="glyphicon glyphicon-user"></i>
+                        <span>个人信息修改</span>
+                    </a>
+                </li>
+
+                <li class="tpl-left-nav-item">
+                        <a href="index_information.html" class="nav-link tpl-left-nav-link-list">
+                            <i class="glyphicon glyphicon-list-alt"></i>
+                            <span>主页信息修改</span>
+                        </a>
+                    </li>
+                <li class="tpl-left-nav-item">
+                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-table"></i>
+                        <span>监督管理</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                    <ul class="tpl-left-nav-sub-menu">
+                        <li>
+                            <a href="submit_evaluation_report.html">
+                                <i class="am-icon-angle-right"></i>
+                                <span>查看服务评价</span>
+                                <i class="tpl-left-nav-content-ico am-fr am-margin-right"></i><!--am-icon-star -->
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="tpl-left-nav-item">
+                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                        <i class="am-icon-wpforms"></i>
+                        <span>新闻发布</span>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                    </a>
+                    <ul class="tpl-left-nav-sub-menu" >
+                        <li>
+                            <a href="">
+                                <i class="am-icon-angle-right"></i>
+                                <span>图片新闻</span>
+                                <i class="tpl-left-nav-content-ico am-fr am-margin-right"></i>
+                            </a>
+
+                            <a href="">
+                                <i class="am-icon-angle-right"></i>
+                                <span>政策浏览</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="tpl-content-wrapper">
+        <div class="tpl-content-page-title">
+            个人中心
+        </div>
+        <ol class="am-breadcrumb">
+            <li><a href="../index.html?type=C" class="am-icon-home">首页</a></li>
+            <li><a href="media_index.html">个人中心</a></li>
+            <li class="am-active">提交评价报告</li>
+        </ol>
+
+        <div id="body">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                   
+                        <div class="panel-heading">
+                            <h2><i class="fa fa-indent red"></i><strong>选择文件</strong></h2>
+                        </div>
+                    <div class="panel-body">
+                      
+                        <div class="am-u-sm-8 am-u-md-4" style="margin-top: 10px;">
+                            <div id="reportSelect" class="am-btn-toolbar" style="display: block;">
+                                <div class="row">
+                                    <button id="addReport" type="button" class="btn btn-default col-lg-2 " style="color:#000000"><span class="am-icon-plus"></span> 新增</button>
+                                    <button id="delReport" type="button" class="btn btn-default col-lg-2 " style="color:#000000"><span class="am-icon-trash-o"></span> 删除</button>
+                                    <!-- <button id="test" type="button" class="btn btn-default col-lg-2 " style="color:#000000"><span class="am-icon-trash-o"></span> test</button> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="report" style="margin-top: 10px; margin-bottom: 16px;">
+                            <table id="reportTable"></table>
+                        </div>
+
+                        <!--添加评价报告-->
+                        <div id="addView" style="display: none">
+                            <div class="tpl-block ">
+
+                                <div class="am-g tpl-amazeui-form">
+
+                                    <div style="margin-left: 45%">
+                                        <h4 class="h4">添加评价报告</h4>
+                                    </div>
+
+                                    <div class="am-u-sm-12 am-u-md-9" style="margin-top: 32px;padding-left: 15%">
+                                        <form id="formAdd" class="am-form am-form-horizontal">
+
+                                            <div class="row form-group">
+                                                <label for="Name" class="am-u-sm-3 am-form-label">报告名称</label>
+                                                <div class="am-u-sm-9">
+                                                    <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Name" />
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row form-group">
+                                                <label for="Type" class="am-u-sm-3 am-form-label">报告类别</label>
+                                                <div class="am-u-sm-9">
+                                                    <!-- <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Type" /> -->
+                                                    <select style="margin-top: 15px;" prompt="Plaese Choose" id="Type">
+                                                      <option value="1">政府绩效报告</option>
+                                                      <option value="2">服务提供方资质过程监督效果报告</option>
+                                                      <option value="3">残疾人用户需求合理性报告</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                       
+                                            <div class="row form-group">
+                                                <label for="upload_file" class="am-u-sm-3 am-form-label">报告文件</label>
+                                                <div class="col-sm-4" style="width: 36%;margin-left: 5px;">
+                                                    <input type="file" class="form-control" id="upload_file" name="upload_file" style="display: none;" onchange="change();">  
+                                                    <input type="text" class="form-control" id="upload_file_tmp" name="upload_file_tmp" readonly="readonly" onclick="upload_file.click();">
+                                                </div>
+                                                <div class="col-sm-2">  
+                                                     <button type="button" class="am-btn am-btn-primary" id="select_file"onclick="upload_file.click();">浏览</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group">
+                                                <div class="am-u-sm-9 am-u-sm-push-3">
+                                                    <button id="submit" type="botton" class="am-btn am-btn-primary" onclick="checkAddInput()">保存</button>
+                                                    <button id="cancel" type="button" class="am-btn am-btn-primary am-btn-success">取消</button>
+                                                </div>
+                                            </div>
+                                            <br><br><br>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--修改评价报告-->
+                        <div id="modifyView" style="display: none">
+                            <div class="tpl-block ">
+
+                                <div class="am-g tpl-amazeui-form">
+
+                                    <div style="margin-left: 45%">
+                                        <h4 class="h4">修改评价报告</h4>
+                                    </div>
+
+                                    <div class="am-u-sm-12 am-u-md-9" style="margin-top: 32px;padding-left: 15%">
+                                        <form enctype="multipart/form-data" class="am-form am-form-horizontal">
+                                            
+                                            <div class="row form-group" style="display: none;">
+                                                <label for="assessID" class="am-u-sm-3 am-form-label">评价报告ID</label>
+                                                <div class="am-u-sm-9">
+                                                   <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="assessID" />
+                                                </div>
+                                            </div>
+                                            
+                                             <div class="row form-group" style="display: none;">
+                                                <label for="mediaID" class="am-u-sm-3 am-form-label">评价主体ID</label>
+                                                <div class="am-u-sm-9">
+                                                   <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="mediaID"/>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group">
+                                                <label for="Namemdf" class="am-u-sm-3 am-form-label">报告名称</label>
+                                                <div class="am-u-sm-9">
+                                                    <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Namemdf" />
+                                                </div>
+                                            </div>
+                                            
+                                             <div class="row form-group">
+                                                <label for="Typemdf" class="am-u-sm-3 am-form-label">报告类别</label>
+                                                <div class="am-u-sm-9">
+                                                    <!-- <input type="text" style="font-size:15px;" class="form-control" placeholder="" id="Typemdf" /> -->
+                                                    <select style="margin-top: 15px;" prompt="Plaese Choose" id="Typemdf">
+                                                      <option value="1">政府绩效报告</option>
+                                                      <option value="2">服务提供方资质过程监督效果报告</option>
+                                                      <option value="3">残疾人用户需求合理性报告</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                             <div class="row form-group">
+                                                <label for="upload_filemdf" class="am-u-sm-3 am-form-label">报告文件</label>
+                                                <div class="col-sm-4" style="width: 36%;margin-left: 5px;">
+                                                    <input type="file" class="form-control" id="upload_filemdf" name="upload_filemdf" style="display: none;" onchange="changemdf();">  
+                                                    <input type="text" class="form-control" id="upload_file_tmpmdf" name="upload_file_tmpmdf" readonly="readonly" onclick="upload_filemdf.click();">
+                                                </div>
+                                                <div class="col-sm-2">  
+                                                     <button type="button" class="am-btn am-btn-primary" id="select_filemdf"onclick="upload_filemdf.click();">浏览</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group">
+                                                <div class="am-u-sm-9 am-u-sm-push-3">
+                                                    <button id="submitmdf" type="botton" class="am-btn am-btn-primary" onclick="checkMdfInput()">保存</button>
+                                                    <button id="cancelmdf" type="button" class="am-btn am-btn-primary am-btn-success">取消</button>
+                                                </div>
+                                            </div>
+                                            <br><br><br>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div><!--/col-->
+            </div><!--/row-->
+
+
+
+        </div>
+    </div>
+
+</div>
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <p>Here settings can be configured...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/iscroll.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+<script src="assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
+<script src="assets/plugins/datatables/js/dataTables.bootstrap.min.js"></script>
+<!-- theme scripts -->
+<script src="assets/js/SmoothScroll.js"></script>
+<script src="assets/js/jquery.mmenu.min.js"></script>
+<script src="assets/js/core.min.js"></script>
+<!-- end: JavaScript-->
+<!--<script src="assets/js/jquery-2.1.1.min.js"></script>-->
+<script src="assets/js/avalon.js"></script>
+<!-- Latest compiled and minified CSS -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css"> -->
+<!--    <script src="../js/bootstrap.min.js"></script>-->
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/bootstrap-table.js"></script>
+<script src="assets/js/bootstrap-table-zh-CN.min.js"></script>
+<script src="assets/js/Bidding_information.js"></script>
+<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+     function change(){  
+        var filePath=document.getElementById("upload_file").value;
+        var path1=filePath.lastIndexOf("\\");
+        var name = filePath.substring(path1+1);
+        document.getElementById("upload_file_tmp").value=name;  
+    }
+     function changemdf(){  
+        var filePath=document.getElementById("upload_filemdf").value;
+        var path1=filePath.lastIndexOf("\\");
+        var name = filePath.substring(path1+1);
+        document.getElementById("upload_file_tmpmdf").value=name;  
+    }
+    $('#test').click(function(){
+        $('#reportSelect').hide();
+        $('#report').hide();
+        $('#modifyView').show();
+    });    
+    //
+    var $table=$("#reportTable");
+    //
+    $('#reportTable').bootstrapTable({
+        url:"../AssessReport/getAssessReportByID?MediaID="+1,
+        //请求方法
+        method: 'get',
+        //dataType: "json",
+        //是否显示行间隔色
+        striped: true,
+        //是否显示 切换试图（table/card）按钮
+        showToggle: "true",
+        //显示搜索框 
+        search: "true", 
+        //显示刷新
+        showRefresh : "true",
+        //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）     
+        cache: false,    
+        //是否显示分页（*）  
+        pagination: true,   
+         //是否启用排序  
+        sortable: true,    
+         //排序方式 
+        sortOrder: "asc",
+        //如果设置了分页，首页页码     
+        pageNumber: 1,   
+        //每页的记录行数（*）   
+        pageSize: 10,  
+        //可供选择的每页的行数（*）    
+        pageList: [10, 25, 50, 100],
+        //客户端处理分页    
+        sidePagination: "client",
+        //指定主键列 idField: "fieldID",
+        columns: [
+            {
+                checkbox: true, 
+            },
+            {
+                field: 'assessID',//域值
+                title: '评价报告ID',//标题
+                visible: false,//false表示不显示
+            },{
+                field: 'mediaID',//域值
+                title: '评价主体ID',//标题
+                visible: false,//false表示不显示
+            },{
+                field: 'assessName',//域值
+                title: '报告名称',//标题
+                visible: true,//false表示不显示
+            },
+            {
+                field: 'reportType',//域值
+                title: '文件类别',//标题
+                visible: true,//false表示不显示
+                formatter:function (value, row, index){
+                    if(row['reportType'] == 1){
+                        return "政府绩效报告";
+                    }
+                    else if(row['reportType'] == 2){
+                        return "服务提供方资质过程监督效果报告";
+                    }
+                    else if(row['reportType'] == 3){
+                        return "残疾人用户需求合理性报告";
+                    }
+                    else{
+                        return "未知报告！";
+                    }
+                }
+            },
+             {
+                field: 'path',//域值
+                title: '文件路径',//标题
+                visible: false,//false表示不显示
+            },{
+                title: '操作',//标题
+                visible: true,//false表示不显示
+                formatter:ActionFormatter,
+                events:window.ActionEvent = {
+                    'click .edit':function (e,value,row,index) {
+                        $('#reportSelect').hide();
+                        $('#report').hide();
+                        $('#modifyView').show();
+                        //assessID
+                        document.getElementById("assessID").value = row['assessID'];
+                        //assessID
+                        //document.getElementById("mediaID").value = row['mediaID'];
+                        document.getElementById("mediaID").value = "1";                       
+                        //Name
+                        document.getElementById("Namemdf").value = row['assessName'];
+                        //类型
+                        document.getElementById("Typemdf").value = row['reportType'];
+                        //赞助商
+                        // document.getElementById("Companymdf").value = row['companyID'];
+                        //介绍文件
+                        var filePath=row['path'];
+                        var path1=filePath.lastIndexOf("\\");
+                        var name = filePath.substring(path1+14);
+                        document.getElementById("upload_file_tmpmdf").value=name;
+                    },
+                    'click .remove':function (e,value,row,index) {
+                        var mymessage=confirm("确定删除吗?");
+                        //根据招标计划ID查询对应CompanyInfo
+                        if (mymessage == true) {
+                            $.ajax({
+                                type: "POST",
+                                url: "../AssessReport/delAssessReport?AssessID=" + row['assessID'],
+                                success: function () {
+                                    alert("删除成功");
+                                    //window.location.reload();
+                                    $table.bootstrapTable('remove', {
+                                        field: 'assessID',
+                                        values: [row['assessID']]
+                                    });
+                                    $table.bootstrapTable('refresh'); 
+                                },
+                                 error: function (XMLHttpRequest, textStatus, errorThrown) {
+                                    alert(XMLHttpRequest.status);
+                                    alert(XMLHttpRequest.readyState);
+                                    alert(textStatus);
+                                },
+                            });
+                        }
+                        
+                    },
+                    
+                }
+            }
+        ]
+    });
+    //
+    function ActionFormatter(value, row, index){
+        return [
+                '<a class="edit" title="Edit" style="display: inline;font-size: 12px;"> 编辑 </a>',
+                '<p style="display: inline;">|</p>',
+                '<a class="remove" title="Remove" style="display: inline;font-size: 12px;"> 删除 </a>'
+        ].join('');
+    }
+    //
+    $('#addReport').click(function(){
+        $('#reportSelect').hide();
+        $('#report').hide();
+        $('#addView').show();
+    });
+    //
+    function checkAddInput(){
+       
+        var formData = new FormData();
+        var AssessName=document.getElementById("Name").value;
+        var ReportType=document.getElementById("Type").value;
+        //var CompanyID=document.getElementById("Company").value;
+        var AssessReport = document.getElementById("upload_file").files[0];
+        console.log(AssessName+" "+ ReportType+" "+AssessReport);
+        if(AssessName == "" || ReportType == "" || AssessReport == ""){
+             alert("请填写完整信息");
+        }
+        else{  
+             formData.append('ReportType',ReportType);
+             formData.append('AssessName',AssessName);
+             formData.append('MediaID',1);
+             formData.append('AssessReport',AssessReport);
+             console.log("进入提交评价报告");
+            $.ajax({
+                url: '../AssessReport/uploadAssessReport',
+                    type: 'POST',
+                    cache: false,
+                    data: formData,//向后台提交的参数
+                    processData: false,
+                    contentType: false,
+                    //success:function(data){alert("添加成功！");console.log(data);}
+            }).done(function(res){
+                alert("添加成功！");
+                $('#addView').hide();
+                $('#reportSelect').show();
+                $('#report').show();
+                $table.bootstrapTable('refresh');
+            }).fail(function(res){
+            });
+        }
+       
+    } 
+    //
+    function checkMdfInput(){
+        var formDatamdf = new FormData();
+        var AssessID=document.getElementById("assessID").value;
+        var MediaID=document.getElementById("mediaID").value;
+        var AssessName=document.getElementById("Namemdf").value;
+        var ReportType=document.getElementById("Typemdf").value;
+        //var CompanyID=document.getElementById("Companymdf").value;
+        var AssessReport = document.getElementById("upload_filemdf").files[0];
+        console.log(AssessID+" "+MediaID +" "+ AssessName+" "+ ReportType+" "+AssessReport);
+        if(AssessName == "" || ReportType == "" || AssessReport == ""){
+             alert("请填写完整信息");
+        }
+        else{
+             formDatamdf.append('AssessID',AssessID);
+             formDatamdf.append('MediaID',MediaID);
+             formDatamdf.append('ReportType',ReportType);
+             formDatamdf.append('AssessName',AssessName);
+             formDatamdf.append('AssessReport',AssessReport);
+             console.log("进入提交修改评价报告");
+            $.ajax({
+                url: '../AssessReport/updateAssessReport',
+                    type: 'POST',
+                    cache: false,
+                    data: formDatamdf,//向后台提交的参数
+                    processData: false,
+                    contentType: false,
+                    //success:function(data){alert("添加成功！");console.log(data);}
+            }).done(function(res){
+                alert("修改成功！");
+                $('#modifyView').hide();
+                $('#reportSelect').show();
+                $('#report').show();
+                $table.bootstrapTable('refresh');
+            }).fail(function(res){
+                // alert("修改失败！");
+            });
+        }
+    }
+    //
+    $('#delReport').click(function(){
+        var data =$.map($table.bootstrapTable('getSelections'), function (row) {
+                return row.assessID;
+            });
+            if(data.length != 0) {
+                var mymessage=confirm("确定删除吗?");
+                if (mymessage == true) {
+                    $.ajax({
+                    type: "post",
+                    async: false,
+                    url: "../AssessReport/delAssessReport?AssessID=" + data,//请求地址
+                    //data: {"EquipmentContentId": data[i]},//向后台提交的参数
+                    success: function (data) {
+                        alert("删除成功");
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert(XMLHttpRequest.status);
+                        alert(XMLHttpRequest.readyState);
+                        alert(textStatus);
+                    },
+                })
+                    $table.bootstrapTable('remove', {
+                        field: 'assessID',
+                        values: data
+                    });
+                    $table.bootstrapTable('refresh');                   
+                }
+                 
+            }
+            else
+            {
+                alert("请选择要删除的报告");
+            }
+    })
+    //
+    $('#cancel').click(function () {
+        $('#report').show();
+        $('#addView').hide();
+        $('#reportSelect').show();
+    })
+    //
+    $('#cancelmdf').click(function () {
+        $('#report').show();
+        $('#modifyView').hide();
+        $('#reportSelect').show();
+    })
+     
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+

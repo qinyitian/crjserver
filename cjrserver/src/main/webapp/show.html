@@ -1,0 +1,613 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>残疾人体育公共服务平台</title>
+
+    <link href="asset-image/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="asset-image/css/demo_style.css" rel="stylesheet">
+    <link href="asset-image/css/style.css" rel="stylesheet">
+    <link href="asset-image/css/slimbox2.css" rel="stylesheet">
+    
+    <!--<link href="index/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link href="index/css/theme.css" rel="stylesheet">-->
+    <!--<link href="index/css/bootstrap-reset.css" rel="stylesheet">-->
+        <!--external css-->
+    <link href="index/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="index/css/flexslider.css"/>
+    <link href="index/assets/bxslider/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="index/css/animate.css">
+    <link rel="stylesheet" href="index/assets/owlcarousel/owl.carousel.css">
+    <link rel="stylesheet" href="index/assets/owlcarousel/owl.theme.css">
+
+    <!-- showdemand-->
+    <link rel="stylesheet" type="text/css" href="ShowDemand/Font-Awesome-4.7/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="ShowDemand/css/templatemo-style.css">
+
+
+
+    <link href="index/css/superfish.css" rel="stylesheet" media="screen">
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
+
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="index/css/component.css">
+    <link href="index/css/style.css" rel="stylesheet">
+    <link href="index/css/style-responsive.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="index/css/parallax-slider/parallax-slider.css" />
+    <script type="text/javascript" src="index/js/parallax-slider/modernizr.custom.28468.js">
+    </script>
+    <link rel="stylesheet" href="index/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+    <link rel="stylesheet" href="css/baguetteBox.min.css">
+    <link rel="stylesheet" href="css/thumbnail-gallery.css">
+    <link rel="stylesheet" href="index/css/css/reset.css">
+    <link rel="stylesheet" href="index/css/css/style.css">
+    <style>
+        .content{
+            opacity: 1;
+            animation-duration: 1s;
+            animation-delay: .5s;
+            animation-name: fadeInUp;
+            animation-fill-mode:both;
+        }
+        p{
+          text-shadow: none;
+        }
+        .head-section{
+          position: fixed;
+          width: 100%;
+          z-index: 100;
+        }
+        .show-container{
+          padding-bottom: 100px;
+        }
+        .show-container img{
+          width:50%;
+          height: 50%;
+          margin-left: 25%;
+        }
+        .show-container>section:after{
+          display: block;
+          content: " ";
+          clear: both;
+        }
+        .footer .wow{
+          font-size: 14px;
+          font-weight: 400;
+        }
+        .container{
+          width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <!--header start-->
+    <header class="head-section">
+      <div class="navbar navbar-default navbar-static-top container">
+          <div class="navbar-header">
+              <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">残疾人<span style=" font-size:16px">体育公共服务平台</span></a>
+          </div>
+          <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                  <li>
+                      <a href="index.html">首页 </a>   
+                  </li>
+                  <li class="dropdown">
+                      <a id="A1" class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
+                              "dropdown" data-toggle="dropdown" >新闻
+                      </a>
+                      <ul id="UL1"class="dropdown-menu">
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                      <a id="A2" class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
+                              "dropdown" data-toggle="dropdown" >政策
+                      </a>
+                      <ul id="UL2" class="dropdown-menu">
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                      <a id="A3" class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
+                      "dropdown" data-toggle="dropdown" href="show.html">需求表
+                      </a>
+                      <ul id="UL3" class="dropdown-menu">
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                      <a id="A4" class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
+                              "dropdown" data-toggle="dropdown" >服务
+                      </a>
+                      <ul id="UL4" class="dropdown-menu">
+                          <li><a href="fieldService_list.html">场地服务</a></li>
+                          <li><a href="artificialService_list.html">人工服务</a></li>
+                          <li><a href="activityService_list.html">活动服务</a></li>
+                          <li><a href="equipmentService_list.html">器材服务</a></li>
+                          <li><a href="sportService_list.html">赛事服务</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="contacts.html">联系我们</a>
+                  </li>
+                  <li><a id="usersType"></a></li>
+                  <li><input class="form-control search" placeholder=" Search" type="text"></li>
+              </ul>
+          </div>
+      </div>
+    </header>
+
+  <section class="showBtn">
+    
+  </section>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+            <table id="listTable">  </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+    <div class="show-container">
+
+      <section class="col-md-12 content">
+           <div class="col-lg-6 col-md-6 content-item tm-black-translucent-bg tm-logo-box" id="1">
+             <i class="fa fa-snowflake-o fa-4x tm-logo"></i>
+             <p class="text-uppercase">需求目录</p>              
+             <p class="text-uppercase">发布时间：<span id="time">xxxx-x-xx</span></p>              
+             <p class="text-uppercase">预期完成时间：<span id="e-time">xxxx-x-xx</span></p>                    
+           </div>           
+         <!--   <div class="col-lg-6 col-md-6 content-item content-item-1 background tm-white-translucent-bg">
+             <h2 class="main-title text-center dark-blue-text">篮球场</h2>               
+             <img src="ShowDemand/1.jpg">               
+             <p>地点：师大篮球场</p>               
+             <p>球场个数：3个</p>               
+           </div>
+          <div class="col-lg-6 col-md-6 content-item tm-black-translucent-bg">
+          <h2 class="main-title text-center dark-blue-text">趣味足球大赛</h2>
+           <img src="ShowDemand/2.jpg">
+           <p>地点：师大足球场</p>
+           <p>报名时间：即日起至2018-5-15</p>
+           <p>报名方式：137-888-72436</p>
+          </div>  
+          <div class="col-lg-6 col-md-6 content-item content-item-1 background tm-white-translucent-bg">
+           <h2 class="main-title text-center dark-blue-text">残疾公益行</h2>
+           <img src="ShowDemand/3.jpg">
+           <p>地点：福州市残疾人康复中心</p>   
+           <p>时间：2018-5-20</p> 
+           <p>加入我们：137-888-72436</p>   
+          </div> -->
+      </section>
+      <div style="clear: both;"></div>
+    </div>
+
+  <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="address wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                  <div style="display:block;height: 160px;float: left;padding-left: 30px;">
+                    <h1>
+                        联系方式
+                    </h1>
+                    <address>
+                        <p><i class="fa fa-home pr-10"></i>地址: 福建师范大学 软件学院</p>
+                        <p><i class="fa fa-globe pr-10"></i>所在城市： 福州 </p>
+                        <p><i class="fa fa-mobile pr-10"></i>移动电话 : (123) 456-7890 </p>
+                        <p><i class="fa fa-phone pr-10"></i>固定电话 : (123) 456-7890 </p>
+                        <p><i class="fa fa-envelope pr-10"></i>邮箱 :   <a href="javascript:;">support@example.com</a></p>
+                    </address>
+                  </div>
+                  <div style="display:block;float: right;padding-right: 30px;">
+                    <h1>
+                        残疾人公共体育服务平台
+                    </h1>
+                    <p>
+                        为创建更友好的助残文化而生,
+                        为您的美好生活而努力奋斗。
+                    </p>
+                  </div>
+                </div>
+            </div>
+        </div>
+  </footer>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/baguetteBox.min.js"></script>
+
+<!-- 如果要使用Bootstrap的js插件，必须先调入jQuery -->
+<!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+    <script type="text/javascript" src="asset-image/js/jquery-latest.js"></script>
+    <script type="text/javascript" src="asset-image/js/js.js"></script>
+    <script type="text/javascript" src="asset-image/js/slimbox2.js"></script>
+    <script type="text/javascript" src="index/js/hover-dropdown.js"></script>
+    <script defer src="index/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="index/assets/bxslider/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="index/js/jquery.parallax-1.1.3.js"></script>
+    <script src="index/js/wow.min.js"></script>
+    <script src="index/assets/owlcarousel/owl.carousel.js"></script>
+    <script src="index/js/jquery.easing.min.js"></script>
+    <script src="index/js/link-hover.js"></script>
+    <script src="index/js/superfish.js"></script>
+    <script type="text/javascript" src="index/js/parallax-slider/jquery.cslider.js"></script>
+    <script src="js/bootstrap-table.js"></script>
+    <script src="js/bootstrap-table.min.js"></script>
+    <script src="js/bootstrap-table-zh-CN.min.js"></script>
+<script>//以前的保留的不知道干嘛用
+    $(function () {
+            //add by zugen for get url-param：
+            (function ($) {
+                $.getUrlParam = function (name) {
+                    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                    var r = window.location.search.substr(1).match(reg);
+                    if (r != null) return unescape(r[2]); return null;
+                }
+                $.gotoDisable = function() {
+                   $("#usersType").text('欢迎您，XX用户');
+                   $('#usersType').attr('href','System_Disable/Disabled_index.html');
+                }
+                $.gotoCompany = function() {
+                  $("#usersType").text('欢迎您，XX企业'); 
+                  $('#usersType').attr('href','System_Company/company_index.html');
+                }
+                $.gotoMedia = function() {
+                  $("#usersType").text('欢迎您，XX记者');
+                  $('#usersType').attr('href','System_Media/media_index.html');
+                }
+                $.gotoLogin = function() {
+                  $("#usersType").text('欢迎您，游客');
+                  $('#usersType').attr('href','System_management/Login.html');
+                }
+            })(jQuery);
+    });
+        $(window).load(function() {
+
+          var type = $.getUrlParam('type');
+
+          if (type == 'A') {
+            $.gotoDisable();  
+          } 
+          if (type == 'B') {
+            $.gotoCompany();
+          } 
+          if (type == 'C')  {
+            $.gotoMedia();
+          } 
+          if (type == null) {
+            $.gotoLogin();
+          }
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function(slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+        $(document).ready(function() {
+
+            $("#owl-demo").owlCarousel({
+
+                items : 4
+
+            });
+
+        });
+        jQuery(document).ready(function(){
+            jQuery('ul.superfish').superfish();
+        });
+        new WOW().init();
+    </script>
+
+    <script src="index/dist/easySlider.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#slider").easySlider( {
+                slideSpeed: 500,
+                paginationSpacing: "15px",
+                paginationDiameter: "12px",
+                paginationPositionFromBottom: "20px",
+                slidesClass: ".slides",
+                controlsClass: ".controls",
+                paginationClass: ".pagination"
+            });
+        });
+    </script>
+<script type="text/javascript"> 
+    //section中的div数量，用来区分单双,默认为1是封面
+
+    var divCnt=1;
+    //更多按钮  展示列表
+    $("#moreBtn").click(function(){
+         $('#listTable').bootstrapTable({
+          url:"../DemandTable/getDemandTableList?State=1",
+          //请求方法
+          method: 'get',
+          //dataType: "json",
+          //是否显示行间隔色
+          striped: true,
+          //是否显示 切换试图（table/card）按钮
+          //showToggle: "true",
+          //显示搜索框 
+          //search: "true", 
+          //显示刷新
+          //showRefresh : "true",
+          //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）     
+          cache: false,    
+          //是否显示分页（*）  
+          pagination: true,   
+           //是否启用排序  
+          sortable: true,    
+           //排序方式 
+          sortOrder: "asc",
+          //如果设置了分页，首页页码     
+          pageNumber: 1,   
+          //每页的记录行数（*）   
+          pageSize: 10,  
+          //可供选择的每页的行数（*）    
+          pageList: [10, 25, 50, 100],
+          //客户端处理分页    
+          sidePagination: "client",
+          //指定主键列 idField: "fieldID",
+          columns: [
+              {
+                  field: 'demandTableID',//域值
+                  title: '调查表ID',//标题
+                  visible: false,//false表示不显示
+              },
+              {
+                  field: 'demandTableName',//域值
+                  title: '需求目录名',//标题
+                  visible: true,//false表示不显示
+              },{
+                  field: 'demandTableStartTime',//域值
+                  title: '发布时间',//标题
+                  visible: true,//false表示不显示
+              },
+               {
+                  field: 'demandTableEndTime',//域值
+                  title: '结束时间',//标题
+                  visible: false,//false表示不显示
+              },
+               {
+                  field: 'demandTableState',//域值
+                  title: '可否投票',//标题
+                  visible: false,//false表示不显示
+              },
+               {
+                  field: 'assessGrade',//域值
+                  title: '评价等级',//标题
+                  visible: false,//false表示不显示
+              },
+               {
+                  field: 'assessQty',//域值
+                  title: '已经评价数量',//标题
+                  visible: false,//false表示不显示
+              },{
+                  title: '操作',//标题
+                  visible: true,//false表示不显示
+                  formatter:ActionFormatter,
+                  events:window.ActionEvent = {
+                      'click .check':function (e,value,row,index) {
+                          console.log("查看"+row['demandTableStartTime']);
+                          load(row['demandTableID'],row['demandTableStartTime']);
+                      },
+                  }
+                }
+            ]
+        });
+        function ActionFormatter(value, row, index){
+          return [
+                  '<a class="check" title="Check" style="display: inline;font-size: 12px;"> 展示 </a>'
+          ].join('');
+        }
+    });
+      
+    //进入页面自动加载最新一期的需求目录内容(window.onload)
+    $(document).ready(function(){
+        $.ajax({
+            type : 'get',
+            url : '../DemandCatalog/newDemandCatalog?state=1&qty=3',
+            error : function() {
+                console.log("获取最新3期按钮失败");
+            },
+            success : function(data) {
+                for(var i=0;i<data.length;i++){
+                  console.log("添加按钮"+data[i].value);
+                  $(".showBtn").append('<a href="#" class="btn btn-primary" onclick="load('+data[i].key+',\''+data[i].value+'\');">'+data[i].value+'需求目录</a>');
+                  }
+                $(".showBtn").append('<a href="#" id="moreBtn" class="btn btn-info" data-toggle="modal" data-target="#myModal">更多需求目录</a>');
+            }
+        });
+        $.ajax({
+            type : 'get',
+            url : '../DemandCatalog/newDemandCatalog?state=1&qty=1',
+            error : function() {
+                console.log("获取最新一期id失败");
+            },
+            success : function(data) {
+                console.log("最新一期id="+data[0].key+",发布时间="+data[0].value);
+                load(data[0].key,data[0].value);
+            }
+        });
+      });
+
+    //加载数据到div的实现  time是发布时间
+    function load(tableID,time){
+        divCnt=1;
+        $("section.content>div:gt(0)").remove();//删除除了封面以外的div
+        $("#time").text(time);//封面发布时间
+        var etime=time.split("-");etime[0]=parseInt(etime[0])+1;
+        $("#e-time").text(etime.join("-"));//预期时间就是一年后
+        //加载五个服务，传入tableID
+        loadActivity(tableID);
+        loadArtificial(tableID);
+        loadEquipment(tableID);
+        loadField(tableID);
+        loadSport(tableID);
+    }
+
+    function loadActivity(tableID){
+      $.ajax({
+        type : 'get',
+        url:"../DemandCatalog/getActivityService?DemandTableId="+tableID,
+        error : function() {
+            console.log("获取id="+tableID+"的需求目录活动内容失败");
+        },
+        success : function(data) {
+            console.log("获取id="+tableID+"的需求目录活动内容成功");
+            for(var i=0;i<data.length;i++){
+              divCnt++;
+              
+              //按单双区分，设置它们的id为第几个div
+              if(divCnt%2==0){ 
+                $(".content").append('<div class="col-lg-6 col-md-6 content-item content-item-1 background tm-white-translucent-bg" data-id="' + divCnt+ '"></div>'); 
+              }else{
+                $(".content").append('<div class="col-lg-6 col-md-6 content-item tm-black-translucent-bg" id="'+ divCnt +'">');
+              }
+              $(".content>div:nth-child("+divCnt+")").append('<p style="display:none;">活动ID：'+data[i].serviceID.activityID+'</p>');//id隐藏输出
+              $(".content>div:nth-child("+divCnt+")").append('<h2 class="main-title text-center dark-blue-text">活动名称：'+data[i].serviceID.activityName+'</h2>');
+              $(".content>div:nth-child("+divCnt+")").append('<p>活动地址：'+data[i].serviceID.activityAddress+'</p>');
+              $(".content>div:nth-child("+divCnt+")").append('<p>所属企业：'+data[i].serviceID.companyName+'</p>');
+              $(".content>div:nth-child("+divCnt+")").append('<p>联系电话：'+data[i].serviceID.linkmanTelephone+'</p>');
+            }
+        }
+      });
+      console.log("loadActivity完成，当前divCnt="+divCnt);
+    }
+    function loadArtificial(tableID){
+      $.ajax({
+        type : 'get',
+        url:"../DemandCatalog/getArtificialService?DemandTableId="+tableID,
+        error : function() {
+            console.log("获取id="+tableID+"的需求目录人工服务内容失败");
+        },
+        success : function(data) {
+            console.log("获取id="+tableID+"的需求目录人工服务内容成功");
+            for(var i=0;i<data.length;i++){
+              divCnt++;
+              
+              //按单双区分，设置它们的id为第几个div
+              if(divCnt%2==0){ 
+                $(".content").append('<div class="col-lg-6 col-md-6 content-item content-item-1 background tm-white-translucent-bg" data-id="' + divCnt+ '"></div>'); 
+              }else{
+                $(".content").append('<div class="col-lg-6 col-md-6 content-item tm-black-translucent-bg" id="'+ divCnt +'">');
+              }
+              $(".content>div:nth-child("+divCnt+")").append('<p style="display:none;">人工服务ID：'+data[i].serviceID.artificialID+'</p>');//id隐藏输出
+              $(".content>div:nth-child("+divCnt+")").append('<h2 class="main-title text-center dark-blue-text">人工服务名称：'+data[i].serviceID.artificialName+'</h2>');
+              $(".content>div:nth-child("+divCnt+")").append('<p>适用人群：'+data[i].serviceID.suitableCrowd+'</p>');
+              $(".content>div:nth-child("+divCnt+")").append('<p>所属企业：'+data[i].serviceID.companyName+'</p>');
+              $(".content>div:nth-child("+divCnt+")").append('<p>联系电话：'+data[i].serviceID.phone+'</p>');
+            }
+        }
+      });
+      console.log("loadArtificial完成，当前divCnt="+divCnt);
+    }
+    function loadEquipment(tableID){
+      $.ajax({
+        type : 'get',
+        url:"../DemandCatalog/getEquipmentContent?DemandTableId="+tableID,
+        error : function() {
+            console.log("获取id="+tableID+"的需求目录器材内容失败");
+        },
+        success : function(data) {
+            console.log("获取id="+tableID+"的需求目录器材内容成功");
+            for(var i=0;i<data.length;i++){
+              divCnt++;
+              
+              //按单双区分，设置它们的id为第几个div
+              if(divCnt%2==0){ 
+                $(".content").append('<div class="col-lg-6 col-md-6 content-item content-item-1 background tm-white-translucent-bg" data-id="' + divCnt+ '"></div>'); 
+              }else{
+                $(".content").append('<div class="col-lg-6 col-md-6 content-item tm-black-translucent-bg" id="'+ divCnt +'">');
+              }
+              $(".content>div:nth-child("+divCnt+")").append('<p style="display:none;">器材ID：'+data[i].serviceID.demandID+'</p>');//id隐藏输出
+              $(".content>div:nth-child("+divCnt+")").append('<h2 class="main-title text-center dark-blue-text">器材名称：'+data[i].serviceID.demandName+'</h2>');
+              $(".content>div:nth-child("+divCnt+")").append('图片:<img src="'+data[i].serviceID.image+'">');
+              $(".content>div:nth-child("+divCnt+")").append('<p>器材种类：'+data[i].serviceID.demandCategory+'</p>');
+            }
+        }
+      });
+      console.log("loadEquipment完成，当前divCnt="+divCnt);
+    }
+    function loadField(tableID){
+      $.ajax({
+        type : 'get',
+        url:"../DemandCatalog/getFieldService?DemandTableId="+tableID,
+        error : function() {
+            console.log("获取id="+tableID+"的需求目录场地内容失败");
+        },
+        success : function(data) {
+            console.log("获取id="+tableID+"的需求目录场地内容成功");
+            for(var i=0;i<data.length;i++){
+              divCnt++;
+              
+              //按单双区分，设置它们的id为第几个div
+              if(divCnt%2==0){ 
+                $(".content").append('<div class="col-lg-6 col-md-6 content-item content-item-1 background tm-white-translucent-bg" data-id="' + divCnt+ '"></div>'); 
+              }else{
+                $(".content").append('<div class="col-lg-6 col-md-6 content-item tm-black-translucent-bg" id="'+ divCnt +'">');
+              }
+              $(".content>div:nth-child("+divCnt+")").append('<p style="display:none;">场地服务ID：'+data[i].serviceID.fieldID+'</p>');//id隐藏输出
+              $(".content>div:nth-child("+divCnt+")").append('<h2 class="main-title text-center dark-blue-text">场地服务名称：'+data[i].serviceID.fieldName+'</h2>');
+              $(".content>div:nth-child("+divCnt+")").append('图片:<img src="'+data[i].serviceID.fieldImg+'">');
+              $(".content>div:nth-child("+divCnt+")").append('<p>所属企业：'+data[i].serviceID.companyName+'</p>');
+              $(".content>div:nth-child("+divCnt+")").append('<p>详细地址：'+data[i].serviceID.fieldAddress+'</p>');
+              $(".content>div:nth-child("+divCnt+")").append('<p>联系电话：'+data[i].serviceID.phone+'</p>');
+            }
+        }
+      });
+      console.log("loadField完成，当前divCnt="+divCnt);
+    }
+    function loadSport(tableID){
+      $.ajax({
+        type : 'get',
+        url:"../DemandCatalog/getSportService?DemandTableId="+tableID,
+        error : function() {
+            console.log("获取id="+tableID+"的需求目录赛事内容失败");
+        },
+        success : function(data) {
+            console.log("获取id="+tableID+"的需求目录赛事内容成功");
+            for(var i=0;i<data.length;i++){
+              divCnt++;
+              
+              //按单双区分，设置它们的id为第几个div
+              if(divCnt%2==0){ 
+                $(".content").append('<div class="col-lg-6 col-md-6 content-item content-item-1 background tm-white-translucent-bg" data-id="' + divCnt+ '"></div>'); 
+              }else{
+                $(".content").append('<div class="col-lg-6 col-md-6 content-item tm-black-translucent-bg" id="'+ divCnt +'">');
+              }
+              $(".content>div:nth-child("+divCnt+")").append('<p style="display:none;">赛事ID'+data[i].serviceID.sportID+'</p>');//id隐藏输出
+              $(".content>div:nth-child("+divCnt+")").append('<h2 class="main-title text-center dark-blue-text">赛事名称：'+data[i].serviceID.sportName+'</h2>');
+              $(".content>div:nth-child("+divCnt+")").append('<p>赛事类型：'+data[i].serviceID.sportType+'</p>');
+              $(".content>div:nth-child("+divCnt+")").append('<p>所属企业：'+data[i].serviceID.companyName+'</p>');
+            }
+        }
+      });
+      console.log("loadSport完成，当前divCnt="+divCnt);
+    }
+
+</script>
+
+
+
+
+</body>
+</html>

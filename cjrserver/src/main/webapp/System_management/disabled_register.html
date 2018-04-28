@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Minimal and Clean Sign up / Login and Forgot Form by FreeHTML5.co</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FreeHTML5.co" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+
+
+
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/shijian.css">
+	<!-- Modernizr JS -->
+	<script src="../js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body class="style-3">
+
+<div class="container">
+	<div class="row">
+	</div>
+	<div class="row">
+		<div class="col-md-4 col-md-push-8">
+
+			<!-- Start Sign In Form -->
+			<form action="#" class="fh5co-form animate-box" data-animate-effect="fadeInRight">
+				<h2>残 疾 人 注 册</h2>
+				<!--
+                                        <div class="form-group">
+                                            <div class="alert alert-success" role="alert">Your info has been saved.</div>
+                                        </div>
+                -->
+				<div class="form-group">
+					<label for="account" ><font size=3>残疾人证件号:</font></label>
+					<input type="text" class="form-control" id="number" name="disable_number" placeholder="" autocomplete="off">
+				</div>
+				<div class="form-group">
+					<label for="account" ><font size=3>电话号码:</font></label>
+					<input type="text" class="form-control" id="phone1" name="disable_phone" placeholder="" autocomplete="off">
+				</div>
+				<div class="form-group">
+					<label for="account" ><font size=3>密码:</font></label>
+					<input type="password" class="form-control" id="password" name="disable_password" placeholder="" autocomplete="off">
+				</div>
+				<div class="form-group">
+					<label for="account" ><font size=3>确认密码:</font></label>
+					<input type="password" class="form-control" id="re_password" name="disable_re_password" placeholder="" autocomplete="off">
+				</div>
+				<div class="form-group">
+					<a role="button" id="submit_gain" class="btn btn-info">免费获取验证码</a>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" id="phone_code"  name="disable_ver_code" placeholder="填入验证码" autocomplete="off">
+				</div>
+				<div class="form-group">
+					<p>已注册?<a href="Login.html">登录</a></p>
+				</div>
+				<div class="form-group">
+                    <a id="submit3" role="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">下一步</a>
+				</div>
+			</form>
+			<!-- END Sign In Form -->
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">完善注册信息</h4>
+      </div>
+      <div class="modal-body">
+        <label for="account" ><font size=3>残疾人证件号:</font></label>
+        <input type="text" class="form-control" id="disabled_idenity" name="media_name" placeholder="" autocomplete="off">
+        <label for="account" ><font size=3>真实姓名:</font></label>
+        <input type="text" class="form-control" id="disabled_name" name="media_name" placeholder="" autocomplete="off">
+        <label for="account" ><font size=3>性别:</font></label>
+        <input type="text" class="form-control" id="disabled_sex" name="media_name" placeholder="" autocomplete="off">
+        <label for="account" ><font size=3>出生日期:</font></label>
+        <input type="text" class="form-control" id="disabled_date" name="media_name" placeholder="" autocomplete="off">
+        <label for="account" ><font size=3>工作:</font></label>
+        <input type="text" class="form-control" id="disabled_job" name="media_name" placeholder="" autocomplete="off">
+        <label for="account" ><font size=3>家庭地址:</font></label>
+        <input type="text" class="form-control" id="disabled_address" name="media_name" placeholder="" autocomplete="off">
+        <label for="account" ><font size=3>邮箱:</font></label>
+        <input type="text" class="form-control" id="disabled_email" name="media_name" placeholder="" autocomplete="off">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button id="disability" type="button" class="btn btn-default">注册</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../js/bootstrap.min.js"></script>
+<!-- Placeholder -->
+<script src="../js/jquery.placeholder.min.js"></script>
+<!-- Waypoints -->
+<script src="../js/jquery.waypoints.min.js"></script>
+<!-- Main JS -->
+<script src="../js/main.js"></script>
+
+<!-以下是ajax的请求代码-->
+<script>
+    $("#disability").click(function() {
+            var Disability_identity = document.getElementById("number").value;
+            var phone = document.getElementById("phone1").value;
+            var Password = document.getElementById("password").value;
+            var phone_code=document.getElementById("phone_code").value;
+            $.ajax({
+                type: "post",
+                traditional:true,
+                url: "/Register/Disable_Register",//请求地址
+                data: {
+                    "Disability_identity": Disability_identity,
+                    "phone": phone,
+                    "Password": Password,
+                    "phone_code": phone_code
+                },//向后台提交的参数
+                success: function(data) {
+                    alert(data);
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                }
+            })
+        }
+
+    )
+</script>
+<script>
+    $("#submit_gain").click(function() {
+
+            var phone=document.getElementById("phone1").value;
+
+            $.ajax({
+                type: "post",
+                traditional:true,
+                url: "/Register/code",//请求地址
+                data: {
+                    "phone": phone,
+
+                },//向后台提交的参数
+                success: function(data) {
+                    alert(data);
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                }
+            })
+        }
+
+    )
+</script>
+
+
+<script src="../js/jquer_shijian.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    $("#disabled_date").shijian({
+        y:10//当前年份+10
+    })
+</script>
+<script type="text/javascript">
+    sjObj.defaults = {
+        type: "time",
+        Format: "yyyy-mm-dd", //显示时间格式//yyyy表示年份 ，mm月份 ，dd天数  支持三种格式 dd-mm-yyyy ，mm-dd-yyyy yyyy-mm-dd
+        Order: 'yymmdd',
+        width: 100, //默认宽度
+        height: 32,//默认数值高度
+        Year: true, //是否显示年//
+        Month: true, //是否显示月//
+        Day: true, //是否显示日//
+        Hour: true, //是否显示小时
+        Minute: true, //是否显示分钟
+        Seconds: false, //是否显示秒
+        yyyy: "0000", //当前显示年
+        mm: "00", //当前显示月
+        dd: "00", //当前显示日
+        h: "00", //当前显示小时
+        m: "00", //当前显示分
+        s: "00", //当前显示秒
+        yearText: "年", //顶部时间 年单位 文字
+        monthText: "月", //顶部时间 月单位 文字
+        dayText: '日', //顶部时间 日单位 文字
+        hourText: '时', //顶部时间 时单位 文字
+        minuteText: '分', //顶部时间 分单位 文字
+        secondsText: '秒', //顶部时间 秒单位 文字
+        okText: "确认", //按钮确认键文字
+        cancelText: "取消", //按钮取消键文字
+        showNowTime: true, //是否默认显示当前时间
+        alwaysShow: false, //是否默认直接显示插件
+        timeElm: null, //放时间插件的box
+        onfun: function() { //取消改变时间时候执行事件
+
+        },
+        okfun: function() { //确认时间时候执行事件
+
+        },
+    }
+</script>
+<script src="../js/jquer_shijian.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    $("#input3").shijian({
+        y:10//当前年份+10
+    })
+</script>
+
+</body>
+</html>
+

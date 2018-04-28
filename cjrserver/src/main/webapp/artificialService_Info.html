@@ -1,0 +1,572 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>残疾人体育公共服务平台</title>
+
+    <link href="asset-image/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="asset-image/css/demo_style.css" rel="stylesheet">
+    <link href="asset-image/css/style.css" rel="stylesheet">
+    <link href="asset-image/css/slimbox2.css" rel="stylesheet">
+    
+    <link href="index/css/bootstrap.min.css" rel="stylesheet">
+    <link href="index/css/theme.css" rel="stylesheet">
+    <link href="index/css/bootstrap-reset.css" rel="stylesheet">
+        <!--external css-->
+    <link href="index/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="index/css/flexslider.css"/>
+    <link href="index/assets/bxslider/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="index/css/animate.css">
+    <link rel="stylesheet" href="index/assets/owlcarousel/owl.carousel.css">
+    <link rel="stylesheet" href="index/assets/owlcarousel/owl.theme.css">
+
+    <link href="index/css/superfish.css" rel="stylesheet" media="screen">
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
+
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="index/css/component.css">
+    <link href="index/css/style.css" rel="stylesheet">
+    <link href="index/css/style-responsive.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="index/css/parallax-slider/parallax-slider.css" />
+    <script type="text/javascript" src="index/js/parallax-slider/modernizr.custom.28468.js">
+    </script>
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <!--header start-->
+    <header class="head-section">
+      <div class="navbar navbar-default navbar-static-top container">
+          <div class="navbar-header">
+              <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">残疾人<span style=" font-size:16px">体育公共服务平台</span></a>
+          </div>
+          <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                  <li>
+                      <a href="index.html">首页 </a>
+                  </li>
+                  <li class="dropdown">
+                      <a id="A1" class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
+                              "dropdown" data-toggle="dropdown" onclick='window.open("news.html","_self")'>新闻
+                      </a>
+                      <ul id="UL1"class="dropdown-menu">
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                      <a id="A2" class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
+                              "dropdown" data-toggle="dropdown" onclick='window.open("policy.html","_self")'>政策
+                      </a>
+                      <ul id="UL2" class="dropdown-menu">
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                      <a id="A3" class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
+                              "dropdown" data-toggle="dropdown" >照片墙
+                      </a>
+                      <ul id="UL3" class="dropdown-menu">
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                      <a id="A4" class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
+                              "dropdown" data-toggle="dropdown" onclick='window.open("publicservice.html","_self")'>服务
+                      </a>
+                      <ul id="UL4" class="dropdown-menu">
+                          <li><a href="fieldService_list.html">场地服务</a></li>
+                          <li><a href="artificialService_list.html">人工服务</a></li>
+                          <li><a href="activityService_list.html">活动服务</a></li>
+                          <li><a href="equipmentService_list.html">器材服务</a></li>
+                          <li><a href="sportService_list.html">赛事服务</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="contacts.html">联系我们</a>
+                  </li>
+                  <li><a href="#">欢迎您，游客！</a></li>
+                  <li><input class="form-control search" placeholder=" Search" type="text"></li>
+              </ul>
+          </div>
+      </div>
+    </header>
+    <!--header end-->
+    
+    <!--breadnews start-->
+    <div class="breadcrumbs">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-4">
+            <h1>
+              服务介绍
+            </h1>
+          </div>
+          <div class="col-lg-8 col-sm-8">
+            <ol class="breadcrumb pull-right">
+              <li>
+                <a href="index.html">
+                  首页
+                </a>
+              </li>
+              <li class="active">
+                服务介绍
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--breadnews end-->
+    
+    <!--companyimage start-->
+   <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                     <h3 id="ServiceName"></h3>
+                    <hr>
+                </div>
+                <ul class="list-unstyled pf-list">
+                    <li><i class="fa fa-arrow-circle-right pr-10"></i><b>赞助商： </b> <span id="Company"></span></li>
+                    <li><i class="fa fa-arrow-circle-right pr-10"></i><b>适用人群: </b><span id="SuitableCrowd"></span></li>
+                    <li><i class="fa fa-arrow-circle-right pr-10"></i><b>联系电话: </b><span><a id="Telephone" href="javascript:;"></a></span></li>
+                    <li><i class="fa fa-arrow-circle-right pr-10"></i><b>价格: </b><span id="Price"></span></li>             
+                    <li><i class="fa fa-arrow-circle-right pr-10"></i><b>官网: </b><span><a href="http://www.alibaba.com/">www.alibaba.com</a></span></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="row" id="Detail">
+            <!--portfolio-single start-->
+            <div class="col-lg-12 ">
+                <div class="title">
+                    <h3>详情介绍</h3>
+                    <hr>
+                </div>
+                <!--<div id="Infomation">-->
+
+                <!--</div>-->
+                <div id="container2" style="margin-bottom: 35px">
+                  <i class="fa fa-file-text fa-2x"></i><span id="File" style="margin:0 10px;"></span>
+                    <a href="#" id="Download"><i class="fa fa-download "></i>下载到电脑</a>
+
+                </div>
+            </div>
+
+        </div>
+       <ul class="pager">
+           <li class="previous"><a href="#">&larr; 上一个</a></li>
+           <li class="next"><a href="#">下一个 &rarr;</a></li>
+       </ul>
+       <hr>
+    </div>
+
+    <!--footer start-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!--联系方式-->
+                <div id="Foot1"  class="col-lg-3 col-sm-3 address wow fadeInUp" data-wow-duration="2s" data-wow-delay=".1s">
+                    <h1 id="FootTitle1">
+                        联系方式
+                    </h1>
+                    <address>
+                        <p id="Address" ><i class="fa fa-home pr-10"></i>地址: 福建师范大学 软件学院</p>
+                        <p id="City" ><i class="fa fa-globe pr-10"></i>所在城市： 福州 </p>
+                        <p id="MobilePhone" ><i class="fa fa-mobile pr-10"></i>移动电话 : (123) 456-7890 </p>
+                        <p id="FixedLinePhone" ><i class="fa fa-phone pr-10"></i>固定电话 : (123) 456-7890 </p>
+                        <p id="Email" ><i class="fa fa-envelope pr-10"></i>邮箱 :   <a href="javascript:;">support@example.com</a></p>
+                    </address>
+                </div>
+                <!--最新资讯-->
+                <div id="Foot2"  class="col-lg-3 col-sm-3 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">
+                    <h1>
+                        最新资讯
+                    </h1>
+                    <div class="tweet-box" id="WeiBoDiv" >
+                        <i class="fa fa-weibo fa-weibo"></i>
+                        <em>
+                            关注最新残联微博
+                            <a href="javascript:;"id="WeiBo">@example</a>
+                            享受最新最好看的新闻速递!
+                        </em>
+                    </div>
+                    <div class="tweet-box" id="WeiXinDiv" >
+                        <i class="fa fa-cloud"></i>
+                        <em>
+                            关注最新残联微信公共服务平台
+                            <a href="javascript:;" id="WeiXin">@example</a>
+                            享受最新最好看的新闻速递!
+                        </em>
+                    </div>
+                    <div class="tweet-box" id="KeFuDiv" >
+                        <i class="fa fa-phone"></i>
+                        <em>
+                            请联系
+                            <a href="javascript:;" id="KeFu">@example</a>
+                            残联客服人员为您解答！
+                        </em>
+                    </div>
+                </div>
+                <!--我们残联-->
+                <div id="Foot3"  class="col-lg-3 col-sm-3">
+                    <div class="page-footer wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
+                        <h1 id="FootTitle3">
+                            我们残联
+                        </h1>
+                        <ul class="page-footer-list">
+                            <li id="AboutLi" >
+                                <i class="fa fa-angle-right"></i>
+                                <a id="About" href="#">关于残联</a>
+                            </li>
+                            <li id="SupportLi" >
+                                <i class="fa fa-angle-right"></i>
+                                <a id="Support" href="#">生活提供</a>
+                            </li>
+                            <li id="ServeLi" >
+                                <i class="fa fa-angle-right"></i>
+                                <a id="Serve" href="#">社会服务</a>
+                            </li>
+                            <li id="PolicyLi" >
+                                <i class="fa fa-angle-right"></i>
+                                <a id="Policy" href="#">国家政策</a>
+                            </li>
+                            <li id="Company2Li" >
+                                <i class="fa fa-angle-right"></i>
+                                <a id="Company2" href="#">企业&评价机构</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--残疾人体育公共服务平台-->
+                <div id="Foot4"  class="col-lg-3 col-sm-3">
+                    <div class="page-footer wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
+                        <h1 id="FootTitle4">
+                            残疾人公共体育服务平台
+                        </h1>
+                        <p id="Introduce">
+                            为创建更友好的助残文化而生。
+                            为您的美好生活而努力奋斗》》
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+<!-- 如果要使用Bootstrap的js插件，必须先调入jQuery -->
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+<!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+        window.onload=function () {
+            var filePath;
+            var a=GetRequest();
+            var index=a['artificialID'];
+            $.ajax({
+                type: "POST",
+                url:"/ArtificialService/getArtificialServiceId?ServiceId=" + index ,
+                success: function(data){
+                    var ServiceName=document.getElementById("ServiceName");
+                    var Company=document.getElementById("Company");
+                    var SuitableCrowd=document.getElementById("SuitableCrowd");
+                    var Telephone=document.getElementById("Telephone");
+                    var Price=document.getElementById("Price");
+                    var File=document.getElementById("File");
+                    ServiceName.innerHTML=data.artificialName;
+                    //Company.innerHTML=data.companyName;
+                    Company.innerHTML='倪氏集团';
+                    SuitableCrowd.innerHTML=data.suitableCrowd;
+                    Telephone.innerHTML=data.phone;
+                    Price.innerHTML=data.price;
+                    filePath=data.artificialFile;
+                    if(filePath == null){
+                       $("#container2") .empty();
+                        $("#container2") .addClass('alert alert-warning');
+                        $("#container2").append('暂无，如有相关信息会尽快更新！');
+                    }else{
+                        var path1=filePath.lastIndexOf("\\");
+                        var name = filePath.substring(path1+14);
+                        File.innerHTML=name;
+                        $('#Download').attr('href',filePath);
+
+                    }
+                    // $('#Infomation').load("../"+filePath);
+
+                 
+                }
+            });
+        };
+        //
+        function GetRequest() {
+            var url = location.search; //获取url中"?"符后的字串
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for (var i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = decodeURIComponent(strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        };
+         // 直接下载，用户体验好
+        function downloadFile(url) {
+            var form=$("<form>");//定义form表单,通过表单发送请求
+            form.attr("style","display:none");//设置为不显示
+            form.attr("target","");
+            form.attr("method","get");//设置请求类型  
+            form.attr("action",url);//设置请求路径
+            $("body").append(form);//添加表单到页面(body)中
+            form.submit();//表单提交
+        };
+        //
+        $("#Download").click(function(){
+          var mymessage=confirm("确定下载文件?");               
+          if (mymessage == true) {                 
+              console.log("进入下载文件！");
+              //下载文件
+              downloadFile("../"+filePath);
+          }else{
+            alert("取消成功");
+          }
+        });
+//         //底部标题 最新资讯中h2标题不能含id，否则“菱形”样式会偏移
+//         $.ajax({
+//             type: "post",
+//             traditional: true,
+//             async: false,    // 使用同步操作
+//             url: "/Floder/ReturnFootTitle",//请求地址
+//             success: function (data) {
+//                 document.getElementById("FootTitle1").innerHTML = data[0].name;
+// //                    document.getElementById("FootTitle2").innerHTML = data[1].name;
+//                 document.getElementById("Foot2").children[0].innerHTML = data[1].name;
+//                 document.getElementById("FootTitle3").innerHTML = data[2].name;
+//                 document.getElementById("FootTitle4").innerHTML = data[3].name;
+//                 if(data[0].myShow == 1)
+//                     document.getElementById("Foot1").style.display = "";
+//                 if(data[1].myShow == 1)
+//                     document.getElementById("Foot2").style.display = "";
+//                 if(data[2].myShow == 1)
+//                     document.getElementById("Foot3").style.display = "";
+//                 if(data[3].myShow == 1)
+//                     document.getElementById("Foot4").style.display = "";
+//             },
+//             error: function (XMLHttpRequest, textStatus, errorThrown) {
+//                 alert(XMLHttpRequest.status);
+//                 alert(XMLHttpRequest.readyState);
+//                 alert(textStatus);
+//             },
+//         })
+//         //联系方式数据
+//         var title1 = document.getElementById("FootTitle1").innerHTML;
+//         $.ajax({
+//             type: "post",
+//             traditional: true,
+//             async: false,    // 使用同步操作
+//             url: "/Floder/ReturnWebInfo",//请求地址
+//             data: {"InfoType":title1 },//向后台提交的参数
+//             success: function (data) {
+//                 for (var i = 0; i < data.length; i++) {
+//                     if (data[i].infoName == "地址") {
+//                         document.getElementById("Address").innerHTML= '<i class="fa fa-home pr-10"></i>'+data[i].infoName+" : "+data[i].infoValue;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("Address").style.display = "";
+//                     }
+//                     if (data[i].infoName == "所在城市") {
+//                         document.getElementById("City").innerHTML = '<i class="fa fa-globe pr-10"></i>'+data[i].infoName+" : "+data[i].infoValue;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("City").style.display = "";
+//                     }
+//                     if (data[i].infoName == "移动电话") {
+//                         document.getElementById("MobilePhone").innerHTML = '<i class="fa fa-mobile pr-10"></i>'+data[i].infoName+" : "+data[i].infoValue;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("MobilePhone").style.display = "";
+//                     }
+//                     if (data[i].infoName == "固定电话") {
+//                         document.getElementById("FixedLinePhone").innerHTML = '<i class="fa fa-phone pr-10"></i>'+data[i].infoName+" : "+data[i].infoValue;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("FixedLinePhone").style.display = "";
+//                     }
+//                     if (data[i].infoName == "邮箱") {
+//                         document.getElementById("Email").innerHTML = '<i class="fa fa-envelope pr-10"></i>'+data[i].infoName+" : "+data[i].infoValue;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("Email").style.display = "";
+//                     }
+//                 }
+//             },
+//             error: function (XMLHttpRequest, textStatus, errorThrown) {
+//                 alert(XMLHttpRequest.status);
+//                 alert(XMLHttpRequest.readyState);
+//                 alert(textStatus);
+//             },
+//         })
+//         //    最新咨询
+//         //            var title2 = document.getElementById("FootTitle2").innerHTML;
+//         var title2 = document.getElementById("Foot2").children[0].innerHTML;
+//         $.ajax({
+//             type: "post",
+//             traditional: true,
+//             async: false,    // 使用同步操作
+//             url: "/Floder/ReturnWebInfo",//请求地址
+//             data: {"InfoType": title2},//向后台提交的参数
+//             success: function (data) {
+//                 for (var i = 0; i < data.length; i++) {
+//                     if (data[i].infoName == "微博") {
+//                         document.getElementById("WeiBo").innerHTML = data[i].infoValue;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("WeiBoDiv").style.display = "";
+//                     }
+//                     if (data[i].infoName == "微信") {
+//                         document.getElementById("WeiXin").innerHTML = data[i].infoValue;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("WeiXinDiv").style.display = "";
+//                     }
+//                     if (data[i].infoName == "客服") {
+//                         document.getElementById("KeFu").innerHTML = data[i].infoValue;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("KeFuDiv").style.display = "";
+//                     }
+//                 }
+//             },
+//             error: function (XMLHttpRequest, textStatus, errorThrown) {
+//                 alert(XMLHttpRequest.status);
+//                 alert(XMLHttpRequest.readyState);
+//                 alert(textStatus);
+//             },
+//         })
+//         //    我们残联
+//         var title3 = document.getElementById("FootTitle3").innerHTML;
+//         $.ajax({
+//             type: "post",
+//             traditional: true,
+//             async: false,    // 使用同步操作
+//             url: "/Floder/ReturnWebInfo",//请求地址
+//             data: {"InfoType": title3},//向后台提交的参数
+//             success: function (data) {
+//                 for (var i = 0; i < data.length; i++) {
+//                     if (data[i].infoName == "关于残联") {
+//                         document.getElementById("About").innerHTML = data[i].infoName;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("AboutLi").style.display = "";
+//                     }
+//                     if (data[i].infoName == "生活提供") {
+//                         document.getElementById("Support").innerHTML = data[i].infoName;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("SupportLi").style.display = "";
+//                     }
+//                     if (data[i].infoName == "社会服务") {
+//                         document.getElementById("Serve").innerHTML = data[i].infoName;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("ServeLi").style.display = "";
+//                     }
+//                     if (data[i].infoName == "国家政策") {
+//                         document.getElementById("Policy").innerHTML = data[i].infoName;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("PolicyLi").style.display = "";
+//
+//                     }
+//                     if (data[i].infoName == "企业&评价机构") {
+//                         document.getElementById("Company2").innerHTML = data[i].infoName;
+//                         if (data[i].infoShow == "1")
+//                             document.getElementById("Company2Li").style.display = "";
+//                     }
+//                 }
+//             },
+//             error: function (XMLHttpRequest, textStatus, errorThrown) {
+//                 alert(XMLHttpRequest.status);
+//                 alert(XMLHttpRequest.readyState);
+//                 alert(textStatus);
+//             },
+//         })
+//         //残疾人体育公共服务平台
+//         var title4 = document.getElementById("FootTitle4").innerHTML;
+//         $.ajax({
+//             type: "post",
+//             traditional: true,
+//             async: false,    // 使用同步操作
+//             url: "/Floder/ReturnWebInfo",//请求地址
+//             data: {"InfoType": title4},//向后台提交的参数
+//             success: function (data) {
+//                 document.getElementById("Introduce").innerHTML = data[0].infoValue;
+//
+//             },
+//             error: function (XMLHttpRequest, textStatus, errorThrown) {
+//                 alert(XMLHttpRequest.status);
+//                 alert(XMLHttpRequest.readyState);
+//                 alert(textStatus);
+//             },
+//         })
+//         //头部导航栏
+//         $.ajax({
+//             type: "POST",
+//             async :false,
+//             url:"/Floder/ReturnRootHeadFloder",
+//             success: function(data) {
+//                 for(var i=1;i<5;i++)
+//                 {
+//                     document.getElementById("A"+i).innerHTML = data[i-1].name;
+//                 }//for
+//             }//success
+//         });//ajax
+    </script>
+
+
+
+    <script type="text/javascript" src="asset-image/js/jquery-latest.js"></script>
+    <script type="text/javascript" src="asset-image/js/js.js"></script>
+    <script type="text/javascript" src="asset-image/js/slimbox2.js"></script>
+    <script type="text/javascript" src="asset-image/js/bootstrap.min.js"></script>
+    
+    <script src="index/js/jquery-1.8.3.min.js"></script>
+
+    <script type="text/javascript" src="index/js/hover-dropdown.js"></script>
+    <script defer src="index/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="index/assets/bxslider/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="index/js/jquery.parallax-1.1.3.js"></script>
+    <script src="index/js/wow.min.js"></script>
+    <script src="index/assets/owlcarousel/owl.carousel.js"></script>
+	<script src="index/js/jquery.easing.min.js"></script>
+    <script src="index/js/link-hover.js"></script>
+    <script src="index/js/superfish.js"></script>
+    <script type="text/javascript" src="index/js/parallax-slider/jquery.cslider.js"></script>
+    <script type="text/javascript">
+      $(function() {
+
+        $('#da-slider').cslider({
+          autoplay    : true,
+          bgincrement : 100
+        });
+
+      });
+    </script>
+
+    <script type="text/javascript">
+      jQuery(document).ready(function() {
+
+
+        $('.bxslider1').bxSlider({
+          minSlides: 5,
+          maxSlides: 6,
+          slideWidth: 360,
+          slideMargin: 2,
+          moveSlides: 1,
+          responsive: true,
+          nextSelector: '#slider-next',
+          prevSelector: '#slider-prev',
+          nextText: 'Onward →',
+          prevText: '← Go back'
+        });
+
+      });
+    </script>
+</body>
+</html>

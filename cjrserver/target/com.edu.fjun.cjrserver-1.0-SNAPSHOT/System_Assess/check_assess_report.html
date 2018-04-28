@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>查看评价报告</title>
+    
+   <!--  <link rel="stylesheet" href="../assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link href="../asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../asset/css/style.min.css" rel="stylesheet">
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script> -->
+    <!-- Import google fonts - Heading first/ text second -->
+    <!-- <link rel='stylesheet' type='text/css' href='http://fonts.useso.com/css?family=Open+Sans:400,700|Droid+Sans:400,700' /> -->
+    <!--[if lt IE 9]>
+    <link href="http://fonts.useso.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Droid+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="../asset/ico/favicon.ico" type="image/x-icon" />
+
+    <!-- Css files -->
+    <link href="../asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../asset/css/jquery.mmenu.css" rel="stylesheet">
+    <link href="../asset/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../asset/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="../asset/css/style.min.css" rel="stylesheet">
+    <link href="../asset/css/add-ons.min.css" rel="stylesheet">
+    <link href="../css/city-picker.css" rel="stylesheet" type="text/css" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../asset/js/html5shiv.js"></script>
+    <script src="../asset/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+
+</head>
+<body>
+<!-- start: Header -->
+<div class="navbar" role="navigation">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown visible-md visible-lg">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="user-avatar" src="../asset/img/avatar.jpg" alt="user-mail">政府后台管理员</a>
+            </li>
+            <li><a href="Home.html"><i class="fa fa-power-off"></i></a></li>
+        </ul>
+    </div>
+</div>
+<!-- end: Header -->
+<!-- start:    左侧导航栏    -->
+<div class="container-fluid content">
+    <div class="row">
+        <!-- start: Main Menu -->
+        <div class="sidebar ">
+            <div class="sidebar-collapse">
+                <div class="sidebar-header t-center">
+                    <br>
+                    <h2>政府后台</h2>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="nav nav-sidebar">
+                        <li><a href="../Admin_Index.html"><i class="fa fa-laptop"></i><span class="text">主页</span></a></li>
+                        <li>
+                            <a href="#"><i class="fa fa-font"></i><span class="text">首页管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">头部导航栏管理</span></a></li>
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">文章管理</span></a></li>
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">内容管理</span></a></li>
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">底部导航栏管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-signal"></i><span class="text">服务管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_Service/equipment_service.html"><i class="fa fa-list"></i><span class="text">器材管理</span></a></li>
+                                <li><a href="../System_Service/field_service.html"><i class="fa fa-list"></i><span class="text">场地服务管理</span></a></li>
+                                <li><a href="../System_Service/sport_service.html"><i class="fa fa-list"></i><span class="text">赛事服务管理</span></a></li>
+                                <li><a href="../System_Service/artificial_service.html"><i class="fa fa-list"></i><span class="text">人工服务管理</span></a></li>
+                                <li><a href="../System_Service/activity_service.html"><i class="fa fa-list"></i><span class="text">活动服务管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-signal"></i><span class="text">需求</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_Demand/demand_table_input.html"><i class="fa fa-table"></i><span class="text">发布需求调查表</span></a></li>
+                                <li><a href="../System_Demand/demand_table_list.html"><i class="fa fa-list"></i><span class="text">调查表管理</span></a></li>
+                                <li><a href="../System_Demand/demand_directory.html"><i class="fa fa-list"></i><span class="text">需求目录管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-file-text"></i><span class="text">招标</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_TenderPlan/publish_tender_plan.html"><i class="fa fa-pencil"></i><span class="text">发布招标计划</span></a></li>
+                                <!--<li><a href="/System_TenderPlan/goverment_check_evalution.html"><i class="fa fa-table"></i><span class="text">查看招标计划</span></a></li>-->
+                                <li><a href="../System_TenderPlan/set_pass_company.html"><i class="fa fa-table"></i><span class="text">确定竞标企业</span></a></li>
+                                <li><a href="../System_TenderPlan/set_win_company.html"><i class="fa fa-table"></i><span class="text">确定中标企业</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-file-text"></i><span class="text">评价报告</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="check_assess_report.html"><i class="fa fa-pencil"></i><span class="text">查看评价报告</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-font"></i><span class="text">认证</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">企业认证</span></a></li>
+                                <li><a href="#"><i class="fa fa-th"></i><span class="text">媒体认证</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+
+                <div class="sidebar-brand">
+                    政府后台
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end:    左侧导航栏   -->
+<div class="main ">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header"><i class="fa fa-indent"></i>查看评价报告</h3>
+            <ol class="breadcrumb">
+                <li><i class="fa fa-home"></i><a href="Home.html">主页</a></li>
+
+                <li><i class="fa fa-indent"></i>查看评价报告</li>
+            </ol>
+        </div>
+    </div>
+    <!--已经发布的需求-->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2><i class="fa fa-table red"></i><span class="break"></span><strong>查看评价报告</strong></h2>
+                    <div class="panel-actions">
+                        <a href="table.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+                    </div>
+                </div>
+                <div class="panel-body">                   
+                    <table id="reportTable"></table>                  
+                </div>
+        </div><!--/col-->
+    </div><!--/row-->
+</div>
+
+   
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../asset/js/jquery-2.1.1.min.js"></script>
+    <!--[if !IE]>-->
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
+    </script>
+    <!--<![endif]-->
+    <!--[if IE]>
+
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='assets/js/jquery-1.11.1.min.js'>"+"<"+"/script>");
+    </script>
+
+    <![endif]-->
+    <script src="../asset/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../asset/js/bootstrap.min.js"></script>
+    <!-- page scripts -->
+    <script src="../asset/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+    <script src="../asset/plugins/chosen/js/chosen.jquery.min.js"></script>
+    <script src="../asset/plugins/autosize/jquery.autosize.min.js"></script>
+    <script src="../asset/plugins/placeholder/jquery.placeholder.min.js"></script>
+    <script src="../asset/plugins/maskedinput/jquery.maskedinput.min.js"></script>
+    <script src="../asset/plugins/moment/moment.min.js"></script>
+    <!-- theme scripts -->
+    <script src="../asset/js/SmoothScroll.js"></script>
+     <script src="../asset/js/jquery.mmenu.min.js"></script>
+    <script src="../asset/js/core.min.js"></script> 
+    <!-- inline scripts related to this page -->
+    <!-- end: JavaScript-->
+    <script src="../asset/js/jquery-2.1.1.min.js"></script>
+    <script src="../asset/js/avalon.js"></script>
+    <script src="../asset/js/bootstrap.min.js"></script>
+    <script charset="utf-8" src="../kindeditor/lang/zh-CN.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/amazeui.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../js/bootstrap-table.js"></script>
+    <script src="../js/bootstrap-table.min.js"></script>
+    <script src="../js/bootstrap-table-zh-CN.min.js"></script>
+    <script src="../js/city-picker.data.js"></script>
+    <script src="../js/city-picker.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+     // 直接下载，用户体验好
+    function downloadFile(url) {
+        var form=$("<form>");//定义form表单,通过表单发送请求
+        form.attr("style","display:none");//设置为不显示
+        form.attr("target","");
+        form.attr("method","get");//设置请求类型  
+        form.attr("action",url);//设置请求路径
+        $("body").append(form);//添加表单到页面(body)中
+        form.submit();//表单提交
+    };   
+  $('#reportTable').bootstrapTable({
+    url:'../AssessReport/getAssessReport',
+    //请求方法
+    method: 'get',
+    //dataType: "json",
+    //是否显示行间隔色
+    striped: true,
+    //是否显示 切换试图（table/card）按钮
+    showToggle: "true",
+    //显示搜索框 
+    search: "true", 
+    //显示刷新
+    showRefresh : "true",
+    //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）     
+    cache: false,    
+    //是否显示分页（*）  
+    pagination: true,   
+     //是否启用排序  
+    sortable: true,    
+     //排序方式 
+    sortOrder: "asc",
+    //如果设置了分页，首页页码     
+    pageNumber: 1,   
+    //每页的记录行数（*）   
+    pageSize: 10,  
+    //可供选择的每页的行数（*）    
+    pageList: [10, 25, 50, 100],
+    //客户端处理分页    
+    sidePagination: "client",
+    //指定主键列 idField: "fieldID",
+    columns: [
+        {
+            checkbox: true, 
+        },
+        {
+            field: 'assessID',//域值
+            title: '评价报告ID',//标题
+            visible: false,//false表示不显示
+        },{
+            field: 'mediaID',//域值
+            title: '评价主体ID',//标题
+            visible: false,//false表示不显示
+        },{
+            field: 'assessName',//域值
+            title: '报告名称',//标题
+            visible: true,//false表示不显示
+        },
+        {
+            field: 'reportType',//域值
+            title: '文件类别',//标题
+            visible: true,//false表示不显示
+            formatter:function (value, row, index){
+                if(row['reportType'] == 1){
+                    return "政府绩效报告";
+                }
+                else if(row['reportType'] == 2){
+                    return "服务提供方资质过程监督效果报告";
+                }
+                else if(row['reportType'] == 3){
+                    return "残疾人用户需求合理性报告";
+                }
+                else{
+                    return "未知报告！";
+                }
+            }
+        },
+         {
+            field: 'path',//域值
+            title: '文件路径',//标题
+            visible: false,//false表示不显示
+        },{
+            title: '操作',//标题
+            visible: true,//false表示不显示
+            formatter:ActionFormatter,
+            events:window.ActionEvent = {
+                'click .download':function (e,value,row,index) {
+                     var mymessage=confirm("确定下载评价报告?");               
+                    if (mymessage == true) {
+                        //
+                        var fileURL = row['path'];                           
+                        console.log("进入下载评价报告！");
+                        //下载文件
+                        downloadFile("../"+fileURL);
+                        
+                    }
+                }
+                
+            }
+        }
+    ]
+});
+    //
+    function ActionFormatter(value, row, index){
+        return [
+                '<a class="download" title="Download" style="display: inline;font-size: 12px;"> 文件下载 </a>'
+        ].join('');
+    }
+    </script>
+
+  
+</body>
+</html>

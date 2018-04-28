@@ -1,0 +1,82 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.fjnu.cjrserver.dao.TenderMapper">
+    <!--根据招标计划ID查询竞标公司信息-->
+    <select id="findCompanyInfoInTender" resultMap="getCompanyInfo" >
+        SELECT * from company_info where  Company_Name in (SELECT Company_Name from tender_detail where TenderPlan_ID = #{0} AND Check_status = #{1})
+    </select>
+    <resultMap type="com.edu.fjnu.cjrserver.model.CompanyInfo" id="getCompanyInfo">
+        <result column="Company_Name" property="companyName"/>
+        <result column="Company_Address" property="companyAddress"/>
+        <result column="Company_Email" property="companyEmail"/>
+        <result column="Company_BusinessScope" property="companyBusinessScope"/>
+        <result column="Business_License" property="businessLicense"/>
+        <collection property="companyID" column="Company_Name" select="getCompanyIDByName">
+        </collection>
+    </resultMap>
+    <select id="getCompanyIDByName" resultType="Integer">
+        SELECT Company_ID FROM company WHERE Company_Name =#{Company_Name}
+    </select>
+
+    <!--根据招标计划ID查询中标公司-->
+    <select id="findWinBidCompany" resultMap="getWinBidCompany" parameterType="Integer">
+        SELECT * FROM win_bid_company where TenderPlanID = #{TenderPlanId}
+    </select>
+    <resultMap type="com.edu.fjnu.cjrserver.model.WinBidCompany" id="getWinBidCompany">
+        <id column="WinBidCompanyID" property="winBidCompanyID"/>
+        <result column="Vote" property="vote"/>
+        <collection property="tenderPlan" column="TenderPlanID" select="getTenderPlanByName">
+        </collection>
+        <collection property="company" column="CompanyName" select="getCompanyByName">
+        </collection>
+    </resultMap>
+    <select id="getTenderPlanByName" resultType="com.edu.fjnu.cjrserver.model.TenderPlan">
+        select * from tender_plan where TenderPlan_ID=#{TenderPlanID}
+    </select>
+    <select id="getCompanyByName" resultType="com.edu.fjnu.cjrserver.model.CompanyInfo">
+        select * from company_info where Company_Name=#{company}
+    </select>
+    <!--确认竞标企业-->
+    <update id="setPassedCompany"  parameterType="Integer">
+        update tender_detail set Check_status = 1 where TenderPlan_ID = #{0} AND Company_Name in (SELECT Company_Name FROM company WHERE Company_ID = #{1})
+    </update>
+
+    <!-- 添加新的招标计划 -->
+    <insert id="insertTenderPlan" parameterType="com.edu.fjnu.cjrserver.model.TenderPlan">
+        INSERT INTO tender_plan(TenderPlan_name,TenderPlan_StartTime,TenderPlan_EndTime,TenderPlan_FilePath,VoteEndTime,TenderNotice,TenderWin_status)
+            VALUES (#{tenderPlanName},#{tenderPlanStartTime},#{tenderPlanEndTime},
+                      #{tenderPlanFilePath},#{voteEndTime},#{tenderNotice},#{tenderWinstatus})
+    </insert>
+
+    <!-- 显示所有招标文件信息 -->
+    <select id="findAllTenderPlan" resultType="com.edu.fjnu.cjrserver.model.TenderPlan">
+        SELECT  * FROM tender_plan
+    </select>
+
+    <!-- 根据调查表ID,查询新增招标计划 -->
+    <select id="findTenderPlanByID" resultType="com.edu.fjnu.cjrserver.model.TenderPlan">
+        SELECT  * FROM  tender_plan WHERE TenderPlan_ID = #{0}
+    </select>
+
+    <!-- 修改新增招标计划 -->
+    <update id="updateTenderPlanByID" parameterType="com.edu.fjnu.cjrserver.model.TenderPlan">
+        UPDATE tender_plan SET TenderPlan_name=#{tenderPlanName},TenderPlan_StartTime=#{tenderPlanStartTime},TenderPlan_EndTime=#{tenderPlanEndTime},
+            TenderPlan_FileName=#{tenderPlanFileName},VoteEndTime=#{voteEndTime},
+            TenderNotice=#{tenderNotice},TenderWin_status=#{tenderWinstatus}
+            WHERE TenderPlan_ID=#{tenderPlanID}
+    </update>
+
+    <!-- 企业参与竞标，插入招标详表记录 -->
+    <insert id="insertTenderDetail">
+        INSERT INTO tender_detail(TenderPlan_ID,Company_Name,Votes,Check_status) VALUES (#{0},#{1},0,0)
+    </insert>
+    <!--根据企业ID查找企业-->
+    <select id="findCompanyByID" parameterType="Integer" resultType="com.edu.fjnu.cjrserver.model.Company">
+        SELECT * FROM company WHERE Company_ID = #{CompanyID};
+    </select>
+    <!--确定中标企业-->
+    <insert id="insertWinBidCompany" >
+        INSERT INTO win_bid_company(TenderPlanID,CompanyName,Vote)VALUES(#{0},#{1},0)
+    </insert>
+</mapper>

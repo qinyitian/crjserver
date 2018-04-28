@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>文章管理</title>
+
+    <!-- Import google fonts - Heading first/ text second -->
+    <!-- <link rel='stylesheet' type='text/css' href='http://fonts.useso.com/css?family=Open+Sans:400,700|Droid+Sans:400,700' /> -->
+    <!--[if lt IE 9]>
+    <link href="http://fonts.useso.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Droid+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.useso.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="../asset/ico/favicon.ico" type="image/x-icon" />
+
+    <!-- Css files -->
+    <link href="../asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../asset/css/jquery.mmenu.css" rel="stylesheet">
+    <link href="../asset/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../asset/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="../asset/css/style.min.css" rel="stylesheet">
+    <link href="../asset/css/add-ons.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../asset/js/html5shiv.js"></script>
+    <script src="../asset/js/respond.min.js"></script>
+    <![endif]-->
+    <!--<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="../asset/css/shijian.css"/>
+</head>
+<body>
+<!-- start: Header -->
+<div class="navbar" role="navigation">
+
+    <div class="container-fluid">
+
+        <ul class="nav navbar-nav navbar-right">
+
+
+            <li class="dropdown visible-md visible-lg">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="user-avatar" src="../asset/img/avatar.jpg" alt="user-mail">政府后台管理员</a>
+            </li>
+            <li><a href="Home.html"><i class="fa fa-power-off"></i></a></li>
+        </ul>
+
+    </div>
+
+</div>
+<!-- end: Header -->
+<div class="container-fluid content">
+    <div class="row">
+        <!-- start: Main Menu -->
+        <div class="sidebar ">
+            <div class="sidebar-collapse">
+                <div class="sidebar-header t-center">
+                    <br>
+                    <h2>政府后台</h2>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="nav nav-sidebar">
+                        <li><a href="Home.html"><i class="fa fa-laptop"></i><span class="text">主页</span></a></li>
+                        <li>
+                            <a href="#"><i class="fa fa-font"></i><span class="text">界面管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="Floder.html"><i class="fa fa-th"></i><span class="text">头部导航栏管理</span></a></li>
+                                <li><a href="Article_management.html"><i class="fa fa-th"></i><span class="text">文章管理</span></a></li>
+                                <li><a href="Content_management.html"><i class="fa fa-th"></i><span class="text">内容管理</span></a></li>
+                                <li><a href="Information.html"><i class="fa fa-th"></i><span class="text">底部导航栏管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-file-text"></i><span class="text">招标</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_TenderPlan/publish_tender_plan.html"><i class="fa fa-pencil"></i><span class="text">发布招标计划</span></a></li>
+                                <li><a href="../System_TenderPlan/tender_form.html"><i class="fa fa-table"></i><span class="text">公布招标结果</span></a></li>
+                                <li><a href="../System_TenderPlan/BidingResult.html"><i class="fa fa-table"></i><span class="text">查看招标结果</span></a></li>
+                                <li><a href="../System_TenderPlan/goverment_check_evalution.html"><i class="fa fa-table"></i><span class="text">查看服务评价</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-signal"></i><span class="text">需求</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_Demand/issue_EquipmentContent.html"><i class="fa fa-table"></i><span class="text">需求调查表</span></a></li>
+                                <li><a href="../System_Demand/demand_form.html"><i class="fa fa-list"></i><span class="text">调查表</span></a></li>
+                                <li><a href="../System_Demand/equipment_service.html"><i class="fa fa-list"></i><span class="text">器材管理</span></a></li>
+                                <li><a href="../System_Demand/field_service.html"><i class="fa fa-list"></i><span class="text">场地服务管理</span></a></li>
+                                <li><a href="../System_Demand/activity_service.html"><i class="fa fa-list"></i><span class="text">活动服务管理</span></a></li>
+                                <li><a href="../System_Demand/sport_service.html"><i class="fa fa-list"></i><span class="text">赛事服务管理</span></a></li>
+                                <li><a href="../System_Demand/artificial_service.html"><i class="fa fa-list"></i><span class="text">人工服务管理</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-font"></i><span class="text">认证</span> <span class="fa fa-angle-down pull-right"></span></a>
+                            <ul class="nav sub">
+                                <li><a href="../System_Identify/Company_Identify.html"><i class="fa fa-th"></i><span class="text">企业认证</span></a></li>
+                                <li><a href="../System_Identify/Media_Identify.html"><i class="fa fa-th"></i><span class="text">媒体认证</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <div class="sidebar-brand">
+                    政府后台
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- end:    左侧导航栏   -->
+    <!-- start:  招标目录表   -->
+    <div class="main sidebar-minified">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header"><i class="fa fa-table"></i>文章管理</h3>
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="Home.html">主页</a></li>
+                    <li><i class="fa fa-table"></i>文章管理</li>
+                </ol>
+            </div>
+        </div>
+
+        <!--已经发布的新闻-->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2><i class="fa fa-table red"></i><span class="break"></span><strong>基本表</strong></h2>
+                        <div class="panel-actions">
+                            <a href="table.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="am-u-sm-8 am-u-md-4" style="margin-top: 16px;">
+                            <div id="select" class="am-btn-toolbar">
+                                <div class="row">
+                                    <button id="add" type="button" class="btn btn-default col-lg-2 " style="color:#000000"><span class="am-icon-plus"></span> 新增</button>
+                                    <div style="margin-top: 6px;" class="col-lg-3 col-md-offset-2">
+                                        <p>新闻类别</p>
+                                    </div>
+                                    <div   class="col-lg-3">
+                                        <select class="form-control" name="programme" id="programme_view" style="height: 30px;" onchange="graChange()">
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="view1" style="margin-top: 16px; margin-bottom: 16px;">
+                            <table id="eventsTable"
+                                   data-toggle="table"
+                                   data-url="/Article/ShowAll"
+                                   data-pagination="true"
+                                   data-search="true"
+                                   data-show-refresh="true"
+                                   data-show-toggle="true"
+                                   data-striped="true">
+                                <thead>
+                                <tr>
+                                    <th data-field="ID" data-formatter="IDFormatter" data-events="IDEvents">行号</th>
+                                    <th data-field="articleId" data-visible="false" >文章ID</th>
+                                    <th data-field="summary" data-visible="false" >简述</th>
+                                    <th data-field="content" data-visible="false" >正文</th>
+                                    <th data-field="picture" data-visible="false" >图片</th>
+                                    <th data-field="title" >标题</th>
+                                    <th data-field="tag" data-formatter="tagactionFormatter">分类</th>
+                                    <th data-field="type">类别</th>
+                                    <th data-field="createTime">发布时间</th>
+                                    <th data-field="action" data-formatter="actionFormatter" data-events="actionEvents">操作</th>
+                                </tr>
+                                </thead>
+                            </table>
+
+                        </div>
+
+                        <div id="view2" style="display: none;">
+                            <div class="tpl-block ">
+
+                                <div class="am-g tpl-amazeui-form">
+
+                                    <div style="margin-left: 45%;margin-bottom: 16px;">
+                                        <h4 class="h4">编辑文章</h4>
+                                    </div>
+
+                                    <div class="am-u-sm-12 am-u-md-9">
+                                        <form action="/Article/Article_mdf" method="post" enctype="multipart/form-data" class="am-form am-form-horizontal">
+                                            <div class="am-form-group" style="display: none;">
+                                                <label for="articleIdmdf" class="am-u-sm-3 am-form-label">文章ID</label>
+                                                <div class="am-u-sm-9">
+                                                    <textarea class="" rows="1" id="articleIdmdf" name="articleIdmdf"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="am-form-group">
+                                                <label for="titlemdf" class="am-u-sm-3 am-form-label">标题</label>
+                                                <div class="am-u-sm-9">
+                                                    <textarea class="" rows="1" id="titlemdf" name="titlemdf"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="am-form-group">
+                                                <label for="summarymdf" class="am-u-sm-3 am-form-label">简述</label>
+                                                <div class="am-u-sm-9">
+                                                    <textarea class="" rows="3" id="summarymdf" name="summarymdf"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="am-form-group">
+                                                <label for="typemdf" class="am-u-sm-3 am-form-label">类别</label>
+                                                <div class="am-u-sm-9">
+                                                    <!--<textarea class="" rows="1" id="typemdf" name="typemdf" ></textarea>-->
+                                                        <select class="form-control" name="programme" id="typemdf"  onchange="typemdfChange()">
+                                                        </select>
+                                                    <textarea id="tagmdf" rows="1" style="display: none" name="tagmdf"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="am-form-group">
+                                                <label  class="am-u-sm-3 am-form-label">图片</label>
+                                                <div class="am-u-sm-9">
+                                                    <div class="am-form-group am-form-file">
+                                                        <div class="tpl-form-file-img">
+                                                            <img id="previewmdf" alt="">
+                                                        </div>
+                                                        <button type="button" class="am-btn am-btn-danger am-btn-sm">
+                                                            <i class="am-icon-cloud-upload"></i>添加文章图片</button>
+                                                        <input id="picturemdf" type="file" name="picturemdf" onchange="imgPreviewmdf(this)" />
+                                                        <!--<input id="doc-form-file" type="file" multiple>-->
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="am-form-group">
+                                                <label for="contentmdf" class="am-u-sm-3 am-form-label">正文</label>
+                                                <div class="am-u-sm-9">
+                                                    <textarea id="contentmdf" name="contentmdf" style="width: 300px;height: 200px;">
+                                                    从这里开始记录我的美好时光
+                                                    </textarea>
+                                                    <small>文章正文请认真检查后保存...</small>
+                                                </div>
+                                            </div>
+                                            <div class="am-form-group">
+                                                <label for="createTimemdf" class="am-u-sm-3 am-form-label">发布时间</label>
+                                                <div class="am-u-sm-9">
+                                                    <!--<textarea class="" rows="1" id="createTimemdf" name="createTimemdf"></textarea>-->
+                                                    <input type="text"  id="createTimemdf" name="createTimemdf" class="form-control" placeholder="发布时间">
+                                                </div>
+                                            </div>
+                                            <div class="am-form-group">
+                                                <div class="am-u-sm-9 am-u-sm-push-3">
+                                                    <button type="submitmdf" type="button" class="am-btn am-btn-primary">保存</button>
+                                                    <button id="cancelmdf" type="button" class="am-btn am-btn-primary am-btn-success">取消</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="view3" style="display: none;">
+                            <div class="tpl-block ">
+
+                                <div class="am-g tpl-amazeui-form">
+
+                                    <div style="margin-left: 45%;margin-bottom: 16px;">
+                                        <h4 class="h4">增加文章</h4>
+                                    </div>
+
+                                    <div class="am-u-sm-12 am-u-md-9">
+                                        <form action="/Article/Article_add" method="post" enctype="multipart/form-data" class="am-form am-form-horizontal" >
+                                            <div class="am-form-group">
+                                                <label for="title" class="am-u-sm-3 am-form-label">标题</label>
+                                                <div class="am-u-sm-9">
+                                                    <textarea class="" rows="1" id="title" name="title"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="am-form-group">
+                                                <label for="summary" class="am-u-sm-3 am-form-label">简述</label>
+                                                <div class="am-u-sm-9">
+                                                    <textarea class="" rows="3" id="summary" name="summary"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="am-form-group">
+                                                <label for="type" class="am-u-sm-3 am-form-label">类别</label>
+                                                <div class="am-u-sm-9">
+                                                    <!--<textarea class="" rows="1" id="typemdf" name="typemdf" ></textarea>-->
+                                                    <select class="form-control" name="programme" id="type"  onchange="typemdfChange()">
+                                                    </select>
+                                                    <textarea id="tag" rows="1" style="display: none" name="tag"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="am-form-group">
+                                                <label  class="am-u-sm-3 am-form-label">图片</label>
+                                                <div class="am-u-sm-9">
+                                                    <div class="am-form-group am-form-file">
+                                                        <div class="tpl-form-file-img">
+                                                            <img id="preview" alt="">
+                                                        </div>
+                                                        <button type="button" class="am-btn am-btn-danger am-btn-sm">
+                                                            <i class="am-icon-cloud-upload"></i>添加文章图片</button>
+                                                        <input id="picture" type="file" name="picture" onchange="imgPreview(this)" />
+                                                        <!--<input id="doc-form-file" type="file" multiple>-->
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="am-form-group">
+                                                <label for="content" class="am-u-sm-3 am-form-label">正文</label>
+                                                <div class="am-u-sm-9">
+                                                    <textarea id="content" name="content" style="width: 300px;height: 200px;">
+
+                                                    </textarea>
+                                                    <small>文章正文请认真检查后保存...</small>
+                                                </div>
+                                            </div>
+                                            <div class="am-form-group">
+                                                <label for="createTime" class="am-u-sm-3 am-form-label">发布时间</label>
+                                                <div class="am-u-sm-9">
+                                                    <!--<textarea class="" rows="1" id="createTimemdf" name="createTimemdf"></textarea>-->
+                                                    <input type="text"  id="createTime" name="createTime" class="form-control" placeholder="发布时间">
+                                                </div>
+                                            </div>
+                                            <div class="am-form-group">
+                                                <div class="am-u-sm-9 am-u-sm-push-3">
+                                                    <button type="submit" type="button" class="am-btn am-btn-primary">保存</button>
+                                                    <button id="cancel" type="button" class="am-btn am-btn-primary am-btn-success">取消</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="../asset/js/jquery-2.1.1.min.js"></script>
+<!--[if !IE]>-->
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
+</script>
+<!--<![endif]-->
+<!--[if IE]>
+
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='assets/js/jquery-1.11.1.min.js'>"+"<"+"/script>");
+</script>
+
+<![endif]-->
+<script src="../asset/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../asset/js/bootstrap.min.js"></script>
+<!-- page scripts -->
+<script src="../asset/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+<script src="../asset/plugins/chosen/js/chosen.jquery.min.js"></script>
+<script src="../asset/plugins/autosize/jquery.autosize.min.js"></script>
+<script src="../asset/plugins/placeholder/jquery.placeholder.min.js"></script>
+<script src="../asset/plugins/maskedinput/jquery.maskedinput.min.js"></script>
+<script src="../asset/plugins/moment/moment.min.js"></script>
+<!-- theme scripts -->
+<script src="../asset/js/SmoothScroll.js"></script>
+<script src="../asset/js/jquery.mmenu.min.js"></script>
+<script src="../asset/js/core.min.js"></script>
+<!-- inline scripts related to this page -->
+<!-- end: JavaScript-->
+<script src="../asset/js/jquery-2.1.1.min.js"></script>
+<script src="../asset/js/avalon.js"></script>
+<script src="../asset/js/bootstrap.min.js"></script>
+<script src="../js/bootstrap-table.js"></script>
+<script src="../js/bootstrap-table.min.js"></script>
+<script src="../js/bootstrap-table-zh-CN.min.js"></script>
+<script charset="utf-8" src="../kindeditor/kindeditor-all.js"></script>
+<script charset="utf-8" src="../kindeditor/lang/zh-CN.js"></script>
+
+<script>
+    KindEditor.ready(function(K) {
+        window.editor=K.create('#contentmdf', {
+            uploadJson : '/fileUpload',
+            fileManagerJson : '/fileManager',
+            allowFileManager : true
+        });
+    });
+    KindEditor.ready(function(K) {
+        window.editor=K.create('#content', {
+            uploadJson : '/fileUpload',
+            fileManagerJson : '/fileManager',
+            allowFileManager : true
+        });
+    });
+    var $table=$("#eventsTable");
+    function dropdown(data) {
+        var typemdf=document.getElementById("typemdf");
+        typemdf.innerHTML=data;
+    }
+    function imgPreview(fileDom){
+        //判断是否支持FileReader
+        if (window.FileReader) {
+            var reader = new FileReader();
+        } else {
+            alert("您的设备不支持图片预览功能，如需该功能请升级您的设备！");
+        }
+
+        //获取文件
+        var file = fileDom.files[0];
+        var imageType = /^image\//;
+        //是否是图片
+        if (!imageType.test(file.type)) {
+            alert("请选择图片！");
+            return;
+        }
+        //读取完成
+        reader.onload = function(e) {
+            //获取图片dom
+            var img = document.getElementById("preview");
+            //图片路径设置为读取的图片
+            img.src = e.target.result;
+            Image=img.src;
+        };
+        reader.readAsDataURL(file);
+    }
+    function imgPreviewmdf(fileDom){
+        //判断是否支持FileReader
+        if (window.FileReader) {
+            var reader = new FileReader();
+        } else {
+            alert("您的设备不支持图片预览功能，如需该功能请升级您的设备！");
+        }
+
+        //获取文件
+        var file = fileDom.files[0];
+        var imageType = /^image\//;
+        //是否是图片
+        if (!imageType.test(file.type)) {
+            alert("请选择图片！");
+            return;
+        }
+        //读取完成
+        reader.onload = function(e) {
+            //获取图片dom
+            var img = document.getElementById("previewmdf");
+            //图片路径设置为读取的图片
+            img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+    function IDFormatter(value, row, index) {
+        return index+1;
+    }
+    function tagactionFormatter(value, row, index) {
+        if (row['tag']==0){
+            return [
+                '<a> 新闻 </a>',
+            ].join('');
+        }
+        else{
+            return [
+                '<a> 政策 </a>',
+            ].join('');
+        }
+
+    }
+    function actionFormatter(value, row, index) {
+        return [
+            '<a class="edit" title="Edit" style="display: inline;font-size: 12px;"> 编辑 </a>',
+            '<p style="display: inline;">|</p>',
+            '<a class="remove" title="Remove" style="display: inline;font-size: 12px;"> 删除 </a>',
+            '<p style="display: inline;">|</p>',
+            '<a class="preview" title="Preview" style="display: inline;font-size: 12px;"> 预览 </a>'
+        ].join('');
+    }
+    $('#add').click(function () {
+        $('#view1').hide();
+        $('#view3').show();
+        $('#select').hide();
+    });
+    $('#cancel').click(function () {
+        $('#view1').show();
+        $('#view3').hide();
+        $('#select').show();
+    });
+    window.actionEvents= {
+        'click .edit':function (e,value,row,index) {
+            $('#view1').hide();
+            $('#view2').show();
+            $('#select').hide();
+            var articleIdmdf=document.getElementById("articleIdmdf");
+            articleIdmdf.innerHTML=row['articleId'];
+            var titlemdf=document.getElementById("titlemdf");
+            titlemdf.innerHTML=row['title'];
+            var summarymdf=document.getElementById("summarymdf");
+            summarymdf.innerHTML=row['summary'];
+            var createTimemdf=document.getElementById("createTimemdf");
+            createTimemdf.value=row['createTime'];
+            var typemdf=document.getElementById("typemdf");
+            if (row['tag']==0){
+                typemdf.value="新闻-"+row['type'];
+            }else {
+                typemdf.value="政策-"+row['type'];
+            }
+            var picturemdf=document.getElementById("previewmdf");
+            picturemdf.src=row['picture'];
+            KindEditor.html("#contentmdf",row['content']);
+        },
+        'click .remove':function (e,value,row,index) {
+            $.ajax({
+                type: "post",
+                async: false,
+                url: "/Article/Article_del?articleId=" + row['articleId'],//请求地址
+                success: function () {
+                    alert("标题为: " + row['title'] + " 删除成功！");
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                },
+            });
+            location.reload();
+        },
+        'click .preview':function (e,value,row,index) {
+            window.open("http://localhost:8004/cjrserver/ArticlePreview.html?articleId="+row['articleId']);
+        }
+    };
+    $('#cancelmdf').click(function () {
+        $('#view1').show();
+        $('#view2').hide();
+        $('#select').show();
+    });
+    //分类
+    $.ajax({
+        url : '/Article/ReturnArticleCategory',
+        type : 'GET',
+        async : false,
+        datatype : 'json',
+        success : function(data) {
+            if(data){
+                var programme_sel=[];
+                programme_sel.push('<option value="0" selected>全部</option>')
+                programme_sel.push('<option value="1">新闻</option>')
+                for(var i=0,len=data.length;i<len;i++){
+                    var array=data[i].split("-");
+                    if (array[0]=="政策"){
+                        var arr=data[i-1].split("-");
+                        if (arr[0]=="新闻") {
+                            programme_sel.push('<option value="2">政策</option>')
+                        }
+                    }
+                    var programme = array[1];
+                    programme_sel.push('<option value="'+data[i]+'">'+ "--" +programme+'</option>')
+                }
+                $("#programme_view").html(programme_sel.join(' '));
+                $("#typemdf").html(programme_sel.join(' '));
+                $("#type").html(programme_sel.join(' '));
+            }
+        },
+        error : function() {
+            alert('查询异常');
+        }
+    });
+    //select选择
+    function graChange(){
+        var select = document.getElementById("programme_view");
+        var value = select.options[select.selectedIndex].value;
+        var tt=value.substring(3);
+
+        if (value == "1") {
+            $table.bootstrapTable('filterBy', {tag:0});
+        }
+        else if (value == "2")
+            $table.bootstrapTable('filterBy', {tag:1});
+        else if(value !="0")
+            $table.bootstrapTable('filterBy', {type:tt});
+        else
+            $table.bootstrapTable('filterBy');
+    }
+    function typemdfChange() {
+        var select = document.getElementById("typemdf");
+        var value = select.options[select.selectedIndex].value;
+        var array=value.split("-");
+        var tagmdf=document.getElementById("tagmdf");
+        if (array[0]=="新闻"){
+            tagmdf.innerHTML=0;
+        }
+        else{
+            tagmdf.innerHTML=1
+        }
+    }
+    function typeChange() {
+        var select = document.getElementById("typemdf");
+        var value = select.options[select.selectedIndex].value;
+        var array=value.split("-");
+        var tag=document.getElementById("tag");
+        if (array[0]=="新闻"){
+            tag.innerHTML=0;
+        }
+        else{
+            tag.innerHTML=1
+        }
+    }
+    function checkAddInput(){
+        var title = document.getElementById("title").value;
+        var summary = document.getElementById("summary").value;
+        var select = document.getElementById("type");
+        var value = select.options[select.selectedIndex].value;
+        var tag = document.getElementById("tag").value;
+        var picture = document.getElementById("picture").value;
+        editor.sync();
+        var content=$('#content').val();
+        var createTime = document.getElementById("createTime").value;
+        if(title == "" || summary == "" || select == "" || value == "" || picture == "" || tag == "" ||content == "" || createTime == "") {
+
+            alert("请输入完整信息！");
+            return false;
+        }
+        else
+            return true;
+    }
+    function checkMdfInput() {
+        var title = document.getElementById("titlemdf").value;
+        var summary = document.getElementById("summarymdf").value;
+        var select = document.getElementById("typemdf");
+        var value = select.options[select.selectedIndex].value;
+        var picture = document.getElementById("picturemdf").value;
+        editor.sync();
+        var content=$('#contentmdf').val();
+        var createTime = document.getElementById("createTimemdf").value;
+        if(title == "" || summary == "" || select == "" || value == "" || picture == "" || content == "" || createTime == "") {
+
+            alert("请输入完整信息！");
+            return false;
+        }
+        else
+            return true;
+    }
+</script>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/amazeui.min.js"></script>
+<script src="../assets/js/app.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="../asset/js/jquer_shijian.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    $("#createTimemdf").shijian({
+        y:10//当前年份+10
+    })
+</script>
+<script type="text/javascript">
+    sjObj.defaults = {
+        type: "time",
+        Format: "yyyy-mm-dd", //显示时间格式//yyyy表示年份 ，mm月份 ，dd天数  支持三种格式 dd-mm-yyyy ，mm-dd-yyyy yyyy-mm-dd
+        Order: 'yymmdd',
+        width: 100, //默认宽度
+        height: 32,//默认数值高度
+        Year: true, //是否显示年//
+        Month: true, //是否显示月//
+        Day: true, //是否显示日//
+        Hour: true, //是否显示小时
+        Minute: true, //是否显示分钟
+        Seconds: false, //是否显示秒
+        yyyy: "0000", //当前显示年
+        mm: "00", //当前显示月
+        dd: "00", //当前显示日
+        h: "00", //当前显示小时
+        m: "00", //当前显示分
+        s: "00", //当前显示秒
+        yearText: "年", //顶部时间 年单位 文字
+        monthText: "月", //顶部时间 月单位 文字
+        dayText: '日', //顶部时间 日单位 文字
+        hourText: '时', //顶部时间 时单位 文字
+        minuteText: '分', //顶部时间 分单位 文字
+        secondsText: '秒', //顶部时间 秒单位 文字
+        okText: "确认", //按钮确认键文字
+        cancelText: "取消", //按钮取消键文字
+        showNowTime: true, //是否默认显示当前时间
+        alwaysShow: false, //是否默认直接显示插件
+        timeElm: null, //放时间插件的box
+        onfun: function() { //取消改变时间时候执行事件
+
+        },
+        okfun: function() { //确认时间时候执行事件
+
+        },
+    }
+</script>
+<script src="../asset/js/jquer_shijian.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    $("#createTime").shijian({
+        y:10//当前年份+10
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>产品表</title>
+
+    <!-- Import google fonts - Heading first/ text second -->
+    
+    <!-- Css files -->
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link href="../asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../asset/css/style.min.css" rel="stylesheet">
+</head>
+<body>
+    <div role="tabpanel" class="tab-pane" id="page_equipment">
+        <div class="am-u-sm-8 am-u-md-4" style="margin-top: 10px;">
+            <div id="equipmentSelect" class="am-btn-toolbar" style="display: block;">
+                <div class="row">
+                    <button id="testdemo" type="button" class="btn btn-default col-lg-2 " style="color:#000000" onclick="test()"><span class="am-icon-plus"></span> test</button>
+                </div>
+            </div>
+    </div>
+    <div id="equipmentTable" style="margin-top: 10px; margin-bottom: 16px;">
+        <table id="eventsTable"
+              >
+            <thead>
+                <tr>
+                    <th data-checkbox="true"></th>
+                    <!-- <th data-field="rows" data-formatter="IDFormatter" data-events="IDEvents">行号</th> -->
+                    <th data-field="demandId" data-visible="false" >器材ID</th>
+                    <th data-field="demandName" >器材名称</th>
+                    <th data-field="demandCategory" >类别</th>
+                    <th data-field="companyName" >所属企业名称</th>
+                    <!-- <th data-field="demand_Remarks">描述</th>-->
+                    <th data-formatter="ActionFormatter" data-events="ActionEvents" >操作</th> 
+                </tr>
+            </thead>
+        </table>
+    </div>
+    
+    
+    <script src="../asset/js/jquery-2.1.1.min.js"></script>
+    <!--[if !IE]>-->
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
+    </script>
+    <!--<![endif]-->
+    <!--[if IE]>
+
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='assets/js/jquery-1.11.1.min.js'>"+"<"+"/script>");
+    </script>
+
+    <![endif]-->
+    <script src="../asset/js/jquery-migrate-1.2.1.min.js"></script>
+  
+    <script src="../asset/js/jquery-2.1.1.min.js"></script>
+    <script src="../asset/js/avalon.js"></script>
+    <script src="../asset/js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-table.js"></script>
+    <script src="../js/bootstrap-table.min.js"></script>
+    <script src="../js/bootstrap-table-zh-CN.min.js"></script>
+    <script>
+        //
+        function test(){
+            $.ajax({
+                url:'/EquipmentContent/getEquipmentContent',
+                async:true,
+                type:'GET',
+                dataType:'json',//这里注意一定要是json类型
+                data:{"pageNumber":0,"pageSize":10},
+                success:function(resMsg){//resMsg是一个jsonarray字符串，经过前台解析后会变成一个对象
+                    var list=new StringBuffer();//自定义的拼接字符串函数，高效。
+                    $.each(resMsg.rows,function(i,actObj){//i表示循环的下标，actObj表示循环的对象，可自定义名字
+                        list.append("<tr>");
+                        list.append("<td>"+actObj.demandId+"</td>");
+                        list.append("<td>"+actObj.demandName+"</td>");
+                        list.append("<td>"+actObj.demandCategory+"</td>");
+                        list.append("<td>"+actObj.demandPicture+"</td>");
+                        list.append("<td>"+actObj.demandIntroduce+"</td>");
+                        list.append("<td>"+actObj.demandState+"</td>");
+                        list.append("<td class='text-center'>");
+                        list.append("<button class='btn btn-info'>报名</button>");
+                        list.append("<button class='btn btn-info disabled'>取消报名</button>");
+                        list.append("<button class='btn btn-info disabled'>删除</button>");
+                        list.append("</td>");
+                        list.append("</tr>");
+                    });
+                    var head="<tr class='text-center'><td>编号</td><td>发布人</td><td>工号</td><td>电话</td><td>发布时间</td><td>标题</td><td>内容</td><td>报名人数</td><td>操作</td></tr>";
+                    $("#eventsTable").html(head+list.toString());
+                },
+                
+            });
+        }
+        //
+        function StringBuffer() {
+            this.__strings__ = new Array();
+        }
+        StringBuffer.prototype.append = function (str) {
+            this.__strings__.push(str);
+            return this;    //方便链式操作
+        }
+        StringBuffer.prototype.toString = function () {
+            return this.__strings__.join("");
+        }
+       //验证添加器材
+       function checkAddInput(){
+           alert(1);
+           var formData = new FormData();
+////            function imgPreview(fileDom){
+//            //判断是否支持FileReader
+////            if (window.FileReader) {
+////                var reader = new FileReader();
+////            } else {
+////                alert("您的设备不支持图片预览功能，如需该功能请升级您的设备！");
+////            }
+////
+//            //获取文件
+////            var file = fileDom.files[0];
+////            var imageType = /^image\//;
+//            //是否是图片
+////            if (!imageType.test(file.type)) {
+////                alert("请选择图片！");
+////                return;
+////            }
+////            //读取完成
+////            reader.onload = function(e) {
+////                //获取图片dom
+////                var img = document.getElementById("preview");
+////                //图片路径设置为读取的图片
+////                img.src = e.target.result;
+////                Image=img.src;
+////            };
+////            reader.readAsDataURL(file);
+////            //formData.append('file', file);
+////            }
+           var addForm=document.getElementById("formAdd");
+           var DemandName=document.getElementById("Name").value;
+           var DemandCategory=document.getElementById("Category").value;
+           var DemandIntroduce=document.getElementById("Introduce").value;
+           var DemandState=document.getElementById("State").value;
+           var fileObj = document.getElementById("test").files[0];
+           alert("设置完成");
+//            if(Demand_Name == "" || Demand_Category == "" || Demand_Introduce == ""){
+//                alert("请填写完整信息");
+//                //return false;
+//            }
+//            else if(Demand_Introduce.length>100){
+//                alert("描述长度超过100");
+//                //return false;
+//            }
+//            else{
+               // addForm.submit(function(){
+//                      $.ajax({
+//                        type: "post",
+//                        traditional: true,
+//                        async: false,    // 使用同步操作
+//                        url: "/EquipmentContent/addEquipmentContent",//请求地址
+//                        data: {
+//                            "DemandCategory": DemandCategory,
+//                            "DemandName": DemandName,
+//                            "Image": fileObj,
+//                            "DemandRemarks": DemandIntroduce,
+//                            "DemandState":DemandState,
+//                        },//向后台提交的参数
+//                        success: function (data) {
+////                            $('#PassTable').bootstrapTable('refresh');
+////                            $('#FailTable').bootstrapTable('refresh');
+////                            $('#WaitTable').bootstrapTable('refresh');
+//                            alert("添加成功");
+//                        },
+//                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+//                            alert(XMLHttpRequest.status);
+//                            alert(XMLHttpRequest.readyState);
+//                            alert(textStatus);
+//                        },
+//                    });
+                     formData.append('DemandCategory',DemandCategory);
+                     formData.append('DemandName',  DemandName);
+                     formData.append('Image', fileObj);
+                     formData.append('DemandRemarks', DemandIntroduce);
+                     formData.append('DemandState', DemandState);
+//
+alert("wanc");
+                     // $.ajax({
+                     //   type: 'POST',
+                     //   url: '/EquipmentContent/addEquipmentContent',
+                     //   dataType: "json",
+                     //   data: formData,
+                     //   processData: false,
+                     //   contentType: false,
+                     //   success: function(data) {
+                     //     console.log(data);
+                     //     if (data.code == 200) {
+                     //       console.log("success");
+                     //       // _self.$router.push('/');
+                     //     } else {
+                     //       alert(data.message);
+                     //     }
+                     //   }
+                     // });
+                     $.ajax({
+                          url: '/EquipmentContent/addEquipmentContent',
+                          type: 'POST',
+                          cache: false,
+                         data: formData,//向后台提交的参数
+                         processData: false,
+                         contentType: false,
+                        success:function(data){alert("添加成功！");console.log(data);}
+                      }).done(function (res) {
+//                        $('#eventsTable').bootstrapTable('refresh');
+//                        $('#equipmentTable').show();
+//                        $('#addView').hide();
+//                        $('#equipmentSelect').show();
+
+                      }).fail(function (res) {
+                          alert("false");
+                      });
+                     // return false;//阻止表单提交
+               // });
+
+
+//            }
+        alert(2);
+       }
+        //验证修改器材
+        function checkMdfInput(){
+            var Demand_Name=document.getElementById("Demand_Namemdf").value;
+            var Demand_Category=document.getElementById("Demand_Categorymdf").value;
+            var Demand_Remarks=document.getElementById("Demand_Remarksmdf").value;
+            if(Demand_Name == "" || Demand_Category == "" || Demand_Remarks == "")
+            {
+                alert("请填写完整信息");
+                return false;
+            }
+            return true;
+        }
+        var Image;
+        var $table=$("#eventsTable");
+        function imgPreview(fileDom){
+            //判断是否支持FileReader
+            if (window.FileReader) {
+                var reader = new FileReader();
+            } else {
+                alert("您的设备不支持图片预览功能，如需该功能请升级您的设备！");
+            }
+
+            //获取文件
+            var file = fileDom.files[0];
+            var imageType = /^image\//;
+            //是否是图片
+            if (!imageType.test(file.type)) {
+                alert("请选择图片！");
+                return;
+            }
+            //读取完成
+            reader.onload = function(e) {
+                //获取图片dom
+                var img = document.getElementById("preview");
+                //图片路径设置为读取的图片
+                img.src = e.target.result;
+                Image=img.src;
+            };
+            reader.readAsDataURL(file);
+        }
+        function imgPreviewmdf(fileDom){
+            //判断是否支持FileReader
+            if (window.FileReader) {
+                var reader = new FileReader();
+            } else {
+                alert("您的设备不支持图片预览功能，如需该功能请升级您的设备！");
+            }
+
+            //获取文件
+            var file = fileDom.files[0];
+            var imageType = /^image\//;
+            //是否是图片
+            if (!imageType.test(file.type)) {
+                alert("请选择图片！");
+                return;
+            }
+            //读取完成
+            reader.onload = function(e) {
+                //获取图片dom
+                var img = document.getElementById("previewmdf");
+                //图片路径设置为读取的图片
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+            formData.append('file', file);
+        }
+        function IDFormatter(value, row, index) {
+            return index+1;
+        }
+        function StateFormatter(value, row, index) {
+            if(row['image']!==null)
+                src=row['image'];
+                return '<img src="' + src + '" style="width: 32px;height: 32px;"/>';
+        }
+        function ActionFormatter(value, row, index){
+            return [
+                '<a class="edit" title="Edit" style="display: inline;font-size: 12px;"> 编辑 </a>',
+                '<p style="display: inline;">|</p>',
+                '<a class="preview" title="Preview" style="display: inline;font-size: 12px;"> 详情 </a>'
+            ].join('');
+        }
+         window.ActionEvents = {
+            'click .edit':function (e,value,row,index) {
+                $('#equipmentTable').hide();
+                $('#modifyView').show();
+                $('#select').hide();
+                var Demand_IDmdf=document.getElementById("Demand_IDmdf");
+                Demand_IDmdf.innerHTML=row['demand_ID'];
+                var Demand_Namemdf=document.getElementById("Demand_Namemdf");
+                Demand_Namemdf.innerHTML=row['demand_Name'];
+                var Demand_Categorymdf=document.getElementById("Demand_Categorymdf");
+                Demand_Categorymdf.innerHTML=row['demand_Category'];
+                var Imagemdf=document.getElementById("previewmdf");
+                Imagemdf.src=row['image'];
+                var Demand_Remarksmdf=document.getElementById("Demand_Remarksmdf");
+                Demand_Remarksmdf.innerHTML=row['demand_Remarks'];
+                // document.getElementById("ServiceIDmdf").value = row['iD'];
+                // document.getElementById("ServiceNamemdf").value = row['serviceName'];
+                // document.getElementById("test").innerText = "原地址："+row['provincial']+"/"+row['city']+"/"+row['county'];
+                // document.getElementById("test").value = row['provincial']+"/"+row['city']+"/"+row['county'];
+                // document.getElementById("Addressmdf").value = row['address'];
+                // document.getElementById("Pricemdf").value = row['price'];
+                // document.getElementById("BusinessTimemdf").value = row['businessTime'];
+                // document.getElementById("Telephonemdf").value = row['telephone'];
+                // KindEditor.html("#Remarksmdf",row['remarks']);
+                // document.getElementById("programme_viewmdf").value = row['audit'];
+            },
+            'click .remove':function (e,value,row,index) {
+                var mymessage=confirm("确定删除吗?");
+                //根据招标计划ID查询对应CompanyInfo
+                if (mymessage == true) {
+                    $.ajax({
+                        type: "POST",
+                        url: "/PublicService/DeletePublicService?ID=" + row['iD'],
+                        success: function () {
+                            window.location.reload();
+                        }
+                    });
+                }
+            },
+            'click .preview':function (e,value,row,index) {
+//                window.open("http://localhost:8004/cjrserver/ArticlePreview.html?articleId="+row['articleId']);
+            }
+        };
+        $('#addEquipment').click(function (){
+            $('#equipmentTable').hide();
+            $('#addView').show();
+            $('#equipmentSelect').hide();
+        });
+        $('#cancel').click(function () {
+            $('#equipmentTable').show();
+            $('#addView').hide();
+            $('#equipmentSelect').show();
+        });
+        //修改产品页面
+        $table.bootstrapTable({
+            onDblClickRow:function (row,tr) {
+                $('#view1').hide();
+                $('#view3').show();
+                $('#select').hide();
+                var Demand_IDmdf=document.getElementById("Demand_IDmdf");
+                Demand_IDmdf.innerHTML=row['demand_ID'];
+                var Demand_Namemdf=document.getElementById("Demand_Namemdf");
+                Demand_Namemdf.innerHTML=row['demand_Name'];
+                var Demand_Categorymdf=document.getElementById("Demand_Categorymdf");
+                Demand_Categorymdf.innerHTML=row['demand_Category'];
+                var Imagemdf=document.getElementById("previewmdf");
+                Imagemdf.src=row['image'];
+                var Demand_Remarksmdf=document.getElementById("Demand_Remarksmdf");
+                Demand_Remarksmdf.innerHTML=row['demand_Remarks'];
+            }
+        });
+        $('#cancelmdf').click(function () {
+            $('#view1').show();
+            $('#view3').hide();
+            $('#select').show();
+        });
+        //删除产品
+        $('#delEquipment').click(function () {
+            var data =$.map($table.bootstrapTable('getSelections'), function (row) {
+                return row.demandId;
+            });
+            if(data.length != 0) {
+                $.ajax({
+                    type: "post",
+                    async: false,
+                    url: "/EquipmentContent/delEquipmentContent?EquipmentContentId=" + data,//请求地址
+                    //data: {"EquipmentContentId": data[i]},//向后台提交的参数
+                    success: function (data) {
+                        alert("删除成功");
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert(XMLHttpRequest.status);
+                        alert(XMLHttpRequest.readyState);
+                        alert(textStatus);
+                    },
+                })
+                  
+                $table.bootstrapTable('remove', {
+                    field: 'demandId',
+                    values: data
+                });
+                $table.bootstrapTable('refresh');
+            }
+            else
+            {
+                alert("请选择要删除的器材");
+            }
+        });
+        
+        //select选择
+        function gradeChange(){
+            var select = document.getElementById("programme_view");
+            var value = select.options[select.selectedIndex].value;
+            if(value !="0")
+                $table.bootstrapTable('filterBy', {demand_Category:value});
+            else
+                $table.bootstrapTable('filterBy');
+        }
+        //详细视图显示图片,描述
+        function ShowImg(index, row)
+        {
+            var image = '<div class="photos">'
+                    +'<div class="row">'
+                        +'<div class="col-lg-2 col-md-offset-1">'
+                            +'<h5>'
+                                +'器材名称：'+row['demand_Name']
+                            +'</h5>'
+                            +'<h5>'
+                                +'器材类别：'+row['demand_Category']
+                            +'</h5>'
+                        +'</div>'
+                        +'<div class="col-lg-1 col-md-offset-1">'
+                            +'<h5>'
+                                +'器材描述：'
+                            +'</h5>'
+                        +'</div>'
+                        +'<div class="col-lg-3"  style="width: 200px;display:block;word-break: break-all;word-wrap: break-word;">'
+                            +'<h5>'
+                                +row['demand_Remarks']
+                            +'</h5>'
+                        +'</div>'
+                        +'<div class="col-lg-1 col-md-offset-1">'
+                            +'<h5>'
+                                +'器材图片：'
+                            +'</h5>'
+                        +'</div>'
+                        +'<div class="col-lg-2">'
+                            +'<img alt="image" class="feed-photo"  style="width: 200px;height: 200px; " src="'+row['image']+'">'
+                        +'</div>'
+                    +'</div>'
+                +'</div>';
+            return image;
+        }
+    </script>
+    <script src="../asset/js/jquer_shijian.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $("#DemandStarTime").shijian({
+            y:10//当前年份+10
+        })
+    </script>
+    <script type="text/javascript">
+        sjObj.defaults = {
+            type: "time",
+            Format: "yyyy-mm-dd", //显示时间格式//yyyy表示年份 ，mm月份 ，dd天数  支持三种格式 dd-mm-yyyy ，mm-dd-yyyy yyyy-mm-dd
+            Order: 'yymmdd',
+            width: 100, //默认宽度
+            height: 32,//默认数值高度
+            Year: true, //是否显示年//
+            Month: true, //是否显示月//
+            Day: true, //是否显示日//
+            Hour: true, //是否显示小时
+            Minute: true, //是否显示分钟
+            Seconds: false, //是否显示秒
+            yyyy: "0000", //当前显示年
+            mm: "00", //当前显示月
+            dd: "00", //当前显示日
+            h: "00", //当前显示小时
+            m: "00", //当前显示分
+            s: "00", //当前显示秒
+            yearText: "年", //顶部时间 年单位 文字
+            monthText: "月", //顶部时间 月单位 文字
+            dayText: '日', //顶部时间 日单位 文字
+            hourText: '时', //顶部时间 时单位 文字
+            minuteText: '分', //顶部时间 分单位 文字
+            secondsText: '秒', //顶部时间 秒单位 文字
+            okText: "确认", //按钮确认键文字
+            cancelText: "取消", //按钮取消键文字
+            showNowTime: true, //是否默认显示当前时间
+            alwaysShow: false, //是否默认直接显示插件
+            timeElm: null, //放时间插件的box
+            onfun: function() { //取消改变时间时候执行事件
+
+            },
+            okfun: function() { //确认时间时候执行事件
+
+            },
+        }
+    </script>
+    <script src="../asset/js/jquer_shijian.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $("#DemandEndTime").shijian({
+            y:10//当前年份+10
+        })
+    </script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/amazeui.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+</body>
+</html>

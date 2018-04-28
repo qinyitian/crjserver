@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Minimal and Clean Sign up / Login and Forgot Form by FreeHTML5.co</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FreeHTML5.co" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+
+
+
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<style>
+    .form-group span.tip{
+            background-color:#FFFFDA ;
+            border: 1px solid #FFCD00;
+            font-size: 12px;
+            height: 20px;
+            line-height: 20px;
+            display: inline-block;
+    }
+    .success{
+        background-image: url("li_ok.gif");
+        background-color:#E6FEE4;
+        border-color:#01BE00;
+        background-repeat: no-repeat;
+        background-position: left 2px;
+        padding:0 18px;
+    }
+    .danger{
+        background-image: url("li_err.gif");
+        background-color:#FFF2E5;
+        border-color:#FF3300;
+        background-repeat: no-repeat;
+        background-position: left 2px;
+        padding:0 18px;
+    }
+    </style>
+	<!-- Modernizr JS -->
+	<script src="../js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body class="style-3">
+
+<div class="container">
+	<div class="row">
+	</div>
+	<div class="row">
+		<div class="col-md-4 col-md-push-8">
+
+			<!-- Start Sign In Form -->
+			<form class="fh5co-form animate-box" data-animate-effect="fadeInRight">
+				<h2>媒 体 注 册</h2>
+				<!--
+                                        <div class="form-group">
+                                            <div class="alert alert-success" role="alert">Your info has been saved.</div>
+                                        </div>
+                -->
+				<div class="form-group">
+					<label for="account" ><font size=3>媒体机构名:</font></label>
+					<input type="text" class="form-control" id="media_name" name="media_name" placeholder="" autocomplete="off">
+                    <span class="tip">输入媒体机构名,长度不超过15</span>
+				</div>
+				<div class="form-group">
+					<label for="account" ><font size=3>邀请码:</font></label>
+					<input type="text" class="form-control" id="invite_code" name="invite_code" placeholder="" autocomplete="off">
+                    <span class="tip">输入邀请码</span>
+				</div>
+				<div class="form-group">
+					<label for="account" ><font size=3>手机号码:</font></label>
+					<input type="text" class="form-control" id="phone" name="phone" placeholder="" autocomplete="off">
+                    <span class="tip">输入手机号码</span>
+				</div>
+				<div class="form-group">
+					<label for="account" ><font size=3>密码:</font></label>
+					<input type="password" class="form-control" id="password" name="password" placeholder="" autocomplete="off">
+                    <span class="tip">输入密码</span>
+				</div>
+				<div class="form-group">
+					<label for="account" ><font size=3>确认密码:</font></label>
+					<input type="password" class="form-control" id="re_password" name="re_password" placeholder="" autocomplete="off">
+                    <span class="tip">再次确认密码</span>
+				</div>
+				<div class="form-group">
+					<a id="getCodeBtn" class="btn btn-info" role="button">免费获取验证码</a>
+					<!--<input type="submit" id="submit5" value="免费获取验证码" class="btn btn-defalut">-->
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" id="megcode" name="megcode" placeholder="填入验证码" autocomplete="off">
+                    <span class="tip">输入验证码</span>
+				</div>
+				<div class="form-group">
+					<p>已注册?<a href="Login.html">登录</a></p>
+				</div>
+				<div class="form-group">
+                    <a id="submit4" role="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">下一步</a>
+				</div>
+            </form>
+			<!-- END Sign In Form -->
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">完善注册信息</h4>
+      </div>
+      <div class="modal-body">
+      	<div class="form-group">
+	        <label for="account" ><font size=3>地址:</font></label>
+	        <input type="text" class="form-control" id="address" name="address" placeholder="" autocomplete="off">
+	        <span class="tip">输入地址</span>
+        </div>
+        <div class="form-group">
+	        <label for="account" ><font size=3>电子邮箱:</font></label>
+	        <input type="text" class="form-control" id="email" name="email" placeholder="" autocomplete="off">
+        	<span class="tip">输入电子邮箱</span>
+        </div>
+        <div class="form-group">
+			<label for="account" ><font size=3>介绍:</font></label>
+			<input type="text" class="form-control" id="introduce" name="introduce" placeholder="" autocomplete="off">
+			<span class="tip">输入详细介绍</span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-default" id="registerMediaButton">注册</button>
+        <button type="button" class="btn btn-default" id="registerMediaButton2">注册(不使用短信)</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../js/bootstrap.min.js"></script>
+<!-- Placeholder -->
+<script src="../js/jquery.placeholder.min.js"></script>
+<!-- Waypoints -->
+<script src="../js/jquery.waypoints.min.js"></script>
+<!-- Main JS -->
+<script src="../js/main.js"></script>
+
+
+<script>
+
+	var media_name = document.getElementById("media_name");
+    var invite_code = document.getElementById("invite_code");
+    var phone = document.getElementById("phone");
+    var password = document.getElementById("password");
+    var re_password = document.getElementById("re_password");
+    var megcode=document.getElementById("megcode");
+    var span=$(".form-group span.tip");
+
+	var address = document.getElementById("address");
+	var email = document.getElementById("email");
+	var introduction = document.getElementById("introduce");
+	
+	media_name.onfocus=function(){
+            span[0].innerText='输入媒体机构名,长度不超过15';
+            span[0].className='tip';
+    };
+    invite_code.onfocus=function(){
+            span[1].innerText='输入邀请码';
+            span[1].className='tip';
+    };
+    phone.onfocus=function(){
+            span[2].innerText='输入手机号码';
+            span[2].className='tip';
+    };
+    password.onfocus=function(){
+            span[3].innerText='输入密码';
+            span[3].className='tip';
+    };
+    re_password.onfocus=function(){
+            span[4].innerText='再次确认密码';
+            span[4].className='tip';
+    };
+    email.onfocus=function(){
+            span[7].innerText='输入电子邮箱';
+            span[7].className='tip';
+    };
+
+	media_name.onblur=function(){checkName();};
+    phone.onblur=function(){checkPhone();};
+    password.onblur=function(){checkPassword();};
+    re_password.onblur=function(){checkPassword();};
+    email.onblur=function(){checkEmail();};
+
+	function checkName(){
+		var pattern=/^.{1,15}$/;
+        if(!pattern.test(media_name.value)){
+            span[0].innerText='输入媒体机构名,长度不超过15';
+            span[0].className='danger tip';
+            return false;
+        }
+        span[0].innerText='名称输入正确';
+        span[0].className='success tip';
+        return true;
+	}
+	function checkPhone(){
+		var pattern= /^1[34578]\d{9}$/;
+        if(!pattern.test(phone.value)){   
+            span[2].innerText='输入手机号码';
+            span[2].className='danger tip';
+            return false;
+        }else{
+            span[2].innerText='输入正确';
+            span[2].className='success tip';
+            return true;
+        }
+	}
+	function checkPassword(){
+		if(password.value==re_password.value){
+        	span[3].innerText="输入正确";
+        	span[3].className='success tip';
+        	span[4].innerText="输入正确";
+        	span[4].className='success tip';
+        	return true;
+        }else{
+        	span[3].innerText="两次密码输入不一致";
+        	span[3].className='danger tip';
+        	span[4].innerText="两次密码输入不一致";
+        	span[4].className='danger tip';
+        	return false;
+        }
+	}
+	function checkEmail(){
+		var pattern= /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        if(!pattern.test(email.value)){   
+            span[7].innerText='输入电子邮箱';
+            span[7].className='danger tip';
+            return false;
+        }else{
+            span[7].innerText='输入正确';
+            span[7].className='success tip';
+            return true;
+        }
+	}
+
+	function checkAll(){
+		if(checkName()&&checkPhone()&&checkPassword()&&checkEmail())
+			return true;
+		else 
+			return false;
+	}
+
+    $("#getCodeBtn").click(function() {
+    	console.log("手机号"+phone.value+"请求验证码");
+    	$.ajax({ 
+            type: "post",
+            url: "../media/register/judgephone",
+            data: {
+                "phone": phone.value
+            },//向后台提交的参数
+            success: function(data) {
+                if("exit"==data) {
+                	alert("手机号码已被注册！");
+                	span[2].innerText='手机号码已被注册！';
+            		span[2].className='danger tip';
+                	return false;
+                }
+                else if("nonexit"==data) {
+                	console.log("手机号码可以使用，进行获取验证码");
+                	span[2].innerText='手机号码未被注册，可以使用';
+            		span[2].className='success tip';
+                	$.ajax({
+			            type: "post",
+			            url: "../utils/register/sendmessage",//请求地址
+			            data: {
+			                "phone": phone.value
+ 			            },//向后台提交的参数
+			            success: function(data) {
+			                if("success"==data) alert("验证码已发送到您手机！");
+			                else if("fail"==data) alert("验证码发送失败，稍后再试！");
+			                else alert("请求验证码返回的data="+data);
+			            },
+			            error: function() {
+			            	alert("请求手机验证码失败，请检查网络！");
+			            }
+			        });
+                }
+                else alert("验证是否注册返回的data="+data);
+            },
+            error: function() {
+            	alert("验证手机是否注册失败，请检查网络！");
+            }
+        });
+    });
+
+
+    $("#registerMediaButton").click(function() {
+    	//验证表单
+    	if(checkAll()==false) {
+    		alert("填写有误!");
+    		return false;
+    	}
+    	//验证邀请码
+		$.ajax({
+            type: "post",
+            url: "../media/register/judgeinvitecode",//请求地址
+            data: {
+                "invitecode": invite_code.value
+            },//向后台提交的参数
+            success: function(data) {
+                if("valid"==data){
+                	console.log("邀请码有效！"+invite_code.value);
+                	//验证短信验证码
+                	$.ajax({
+			            type: "post",
+			            url: "../utils/register/judgemsgcode",//请求地址
+			            data: {
+			                "msgcode": megcode.value
+			            },//向后台提交的参数
+			            success: function(data) {
+			                if("right"==data){
+			                	console.log("验证短信验证码通过，进行注册");
+			                	register();
+			                }
+			                else if("error"==data){
+			                	alert("短信验证码错误！");
+			                	return false;
+			                }
+			                else
+			                	alert("验证短信验证码返回data="+data);
+			            },
+			            error: function() {
+			            	alert("验证短信验证码失败，请检查网络");
+			            	return false;
+			            }
+			        });
+            	}
+                else if("invalid"==data)
+                	alert("邀请码无效！"+invite_code.value);
+                else 
+                	alert("请求验证码返回的data="+data);
+            },
+            error: function() {
+            	alert("验证邀请码失败，请检查网络！邀请码"+invite_code.value);
+            	return false;
+            }
+        });
+    });
+    function register(){
+    	$.ajax({
+            type: "post",
+            url: "../media/register/postinfo",//请求地址
+            data: {
+                "media_name": media_name.value,
+                "invite_code": invite_code.value,
+                "phone": phone.value,
+                "password": password.value,
+
+                "address": address.value,
+                "email": email.value,
+                "introduction": introduction.value
+            },//向后台提交的参数
+            success: function(data) {
+                if("success"==data){
+                	alert("注册成功！");
+                	$(window).attr('location','Login.html');
+                }
+                else if("fail"==data){
+                	alert("注册失败，请稍后再试！");
+                }
+            },
+            error: function() {
+                alert("注册失败，请检查网络！");
+            }
+        });
+    }
+
+    $("#registerMediaButton2").click(function() {
+    	//验证表单
+    	if(checkAll()==false) {
+    		alert("填写有误!");
+    		return false;
+    	}
+    	//验证邀请码
+		$.ajax({
+            type: "post",
+            url: "../media/register/judgeinvitecode",//请求地址
+            data: {
+                "invitecode": invite_code.value
+            },//向后台提交的参数
+            success: function(data) {
+                if("valid"==data){
+                	console.log("邀请码有效！"+invite_code.value);
+                	//不验证短信验证码
+                	register();     
+            	}
+                else if("invalid"==data)
+                	alert("邀请码无效！"+invite_code.value);
+                else 
+                	alert("请求验证码返回的data="+data);
+            },
+            error: function() {
+            	alert("验证邀请码失败，请检查网络！邀请码"+invite_code.value);
+            	return false;
+            }
+        });
+    });
+    
+</script>
+</body>
+</html>
+
